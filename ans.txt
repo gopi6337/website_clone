@@ -1,0 +1,9 @@
+EduVerseJr is an online education platform providing Math and Coding classes for grades 5 to 10. We serve students in the US, Australia, UK, Singapore, Dubai, and Canada. To answer your questions:
+
+1)We offer both Math and Coding. Since the Math curriculum varies greatly, we need to simplify it into a single, unified content structure that works across all countries—similar to how we handle Coding. Please analyze this and suggest a better content strategy for both.
+
+2)We prefer a single-page layout with expandable sections.
+
+3)The target audience is parents who are browsing quickly.
+
+4)I will leave the final decision on the best approach to you.if you have any questions pls ask beforer proces sand  Please provide the details so we can discuss further

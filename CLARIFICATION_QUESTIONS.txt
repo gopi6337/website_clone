@@ -1,0 +1,109 @@
+============================================================
+CLARIFICATION QUESTIONS - EduVerseJr
+============================================================
+
+Thank you for the answers! I understand:
+
+- Platform: EduVerseJr
+- Subjects: Math and Coding (Grades 5-10)
+- Countries: US, Australia, UK, Singapore, Dubai, Canada
+- Layout: Single page with expandable sections
+- Audience: Parents browsing quickly
+
+Before I create the content strategy, I have a few questions:
+
+============================================================
+QUESTION 1: BRAND NAME CHANGE
+
+Should I update ALL content from "beGalileo" to "EduVerseJr"?
+This includes:
+- All text in website components
+- Hero section
+- Testimonials
+- Footer
+- Everywhere the brand name appears
+
+Answer: Yes/No
+
+============================================================
+QUESTION 2: MATH CURRICULUM PRESENTATION
+
+For Math, you want unified content across all countries.
+Which approach do you prefer?
+
+Option A: Show common math topics that apply to all countries
+         (Example: "Algebra, Geometry, Statistics, etc.")
+         With a note: "Aligned with US, UK, Canadian,
+         Australian, Singapore, and UAE curricula"
+
+Option B: Show grade-by-grade topics
+         (Example: "Grade 5: Fractions, Decimals, etc.")
+         Same topics work for all countries
+
+Option C: Show learning outcomes instead of curriculum
+         (Example: "Master problem-solving, Build strong
+         foundation, Excel in school exams")
+
+Which option? A, B, or C (or suggest another)
+
+============================================================
+QUESTION 3: COUNTRY-SPECIFIC INFORMATION
+
+Do you want to mention country-specific curriculum names
+anywhere on the website?
+
+Examples:
+- "Aligned with US Common Core Standards"
+- "Follows UK National Curriculum"
+- "Based on Singapore Math approach"
+
+Or keep it generic?
+- "Aligned with international standards"
+- "Covers all major curriculum requirements"
+
+Answer: Specific or Generic
+
+============================================================
+QUESTION 4: CODING CURRICULUM
+
+For Coding, the current website shows:
+1. Game Development with Scratch
+2. Foundational Python
+3. Advanced Python
+
+Is this the final Coding curriculum or do you want
+to update it based on the PDFs?
+
+Answer: Keep current / Update from PDFs
+
+============================================================
+QUESTION 5: EXPANDABLE SECTIONS
+
+Which sections should have expandable content?
+(Select all that apply)
+
+A. Math curriculum details
+B. Coding curriculum details
+C. FAQ (already expandable)
+D. Testimonials (carousel)
+E. Pricing details
+F. How it works details
+
+List the letters: Example: A, B, C
+
+============================================================
+QUESTION 6: PDF DOWNLOAD OPTION
+
+Should we keep the detailed PDF brochures available
+for download on the website?
+
+Example: "Download our detailed Math curriculum" button
+
+Answer: Yes/No
+
+============================================================
+
+Please answer these 6 questions in the terminal or in a
+new file, then I will create the complete content strategy.
+
+============================================================
