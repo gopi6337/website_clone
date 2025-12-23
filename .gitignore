@@ -104,3 +104,12 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Claude settings
+.claude/
+
+# Screenshots and temporary files
+*.png
+*.jpg
+*.jpeg
+SESSION_SUMMARY*.txt
