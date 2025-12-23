@@ -10,6 +10,7 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
+  base: '/', // Base path for custom domain
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
