@@ -21,6 +21,9 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            <a href="#about" className="nav-link">
+              About
+            </a>
             <a href="#curriculum" className="nav-link">
               Curriculum
             </a>
@@ -57,6 +60,9 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4 space-y-4">
+            <a href="#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              About
+            </a>
             <a href="#curriculum" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Curriculum
             </a>
