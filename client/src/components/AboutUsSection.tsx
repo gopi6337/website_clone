@@ -4,7 +4,7 @@ export default function AboutUsSection() {
   const teamFeatures = [
     {
       icon: <Users className="w-6 h-6 text-blue-600" />,
-      text: "Extensive experience with grades 5-8 students",
+      text: "Extensive experience with grades 5-10 students",
     },
     {
       icon: <Award className="w-6 h-6 text-blue-600" />,
@@ -34,7 +34,7 @@ export default function AboutUsSection() {
               Our Mission
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed text-center">
-              At EduVerseJr, we empower students in grades 5-8 with the critical
+              At EduVerseJr, we empower students in grades 5 to 10 with the critical
               math and coding skills necessary to thrive in the 21st century.
               Through exceptional one-to-one online instruction, we cultivate a
               love for learning, build confidence, and foster problem-solving

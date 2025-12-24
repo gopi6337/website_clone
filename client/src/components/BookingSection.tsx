@@ -48,7 +48,7 @@ export default function BookingSection() {
 
         {/* Booking Form */}
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto border border-gray-100">
-          <BookingForm />
+          <BookingForm formspreeEndpoint={import.meta.env.VITE_FORMSPREE_ENDPOINT} />
         </div>
 
         {/* Trust Indicators */}

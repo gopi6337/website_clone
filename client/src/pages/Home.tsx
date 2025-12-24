@@ -12,6 +12,7 @@ import CountryAlignmentSection from "@/components/CountryAlignmentSection";
 import BeyondMathSection from "@/components/BeyondMathSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
+import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
@@ -36,6 +37,9 @@ export default function Home() {
       </div>
       <div id="booking">
         <BookingSection />
+      </div>
+      <div id="faq">
+        <FAQSection />
       </div>
       <FooterSection />
     </div>
