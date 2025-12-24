@@ -10,12 +10,19 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex flex-col">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              EduVerseJr
-            </div>
-            <div className="text-xs md:text-sm text-gray-600 italic">
-              Explore Your Learning Universe
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo.avif"
+              alt="EduVerseJr Logo"
+              className="h-12 w-12 md:h-14 md:w-14 object-contain"
+            />
+            <div className="flex flex-col">
+              <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                EduVerseJr
+              </div>
+              <div className="text-xs md:text-sm text-gray-600 italic">
+                Explore Your Learning Universe
+              </div>
             </div>
           </div>
 
