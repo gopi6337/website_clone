@@ -14,7 +14,7 @@ export default function Header() {
             <img
               src="/logo.jpg"
               alt="EduVerseJr Logo"
-              className="h-12 w-12 md:h-14 md:w-14 object-contain"
+              className="h-16 w-16 md:h-20 md:w-20 object-contain"
             />
             <div className="flex flex-col">
               <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
