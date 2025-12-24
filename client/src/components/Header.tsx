@@ -12,7 +12,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="/logo.avif"
+              src="/logo.jpg"
               alt="EduVerseJr Logo"
               className="h-12 w-12 md:h-14 md:w-14 object-contain"
             />

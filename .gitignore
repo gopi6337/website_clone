@@ -113,3 +113,10 @@ temp/
 *.jpg
 *.jpeg
 SESSION_SUMMARY*.txt
+
+# Except logo files
+!logo.png
+!logo.jpg
+!logo.jpeg
+!logo.svg
+!client/public/logo.*
