@@ -23,19 +23,18 @@ export default function HeroSection() {
               at their own pace.
             </p>
 
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold">
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.location.hash = '#booking'}>
               Parents, Start FREE Trial
             </Button>
           </div>
 
-          {/* Right Content - Illustration Placeholder */}
+          {/* Right Content - Illustration */}
           <div className="relative h-96 md:h-full flex items-center justify-center">
-            <div className="w-full h-full bg-white/10 rounded-3xl flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">👧</div>
-                <p className="text-lg">Child Learning Illustration</p>
-              </div>
-            </div>
+            <img
+              src="/edu_pic1.jpg"
+              alt="Child Learning Illustration"
+              className="w-full h-full object-contain rounded-3xl"
+            />
           </div>
         </div>
       </div>

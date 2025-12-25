@@ -41,7 +41,9 @@ export default function Home() {
       <div id="faq">
         <FAQSection />
       </div>
-      <FooterSection />
+      <div id="contact">
+        <FooterSection />
+      </div>
     </div>
   );
 }

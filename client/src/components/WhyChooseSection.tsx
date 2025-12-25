@@ -31,11 +31,6 @@ export default function WhyChooseSection() {
       description: "Excel in School Math and ace Olympiads, Math Kangaroo, and Gifted tests with advanced content.",
     },
     {
-      icon: <Eye className="w-8 h-8 text-blue-600" />,
-      title: "Parent Involvement Tools",
-      description: "Features like 'Parent Peek' allow you to discreetly monitor progress.",
-    },
-    {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
       title: "Global Curriculum Alignment",
       description: "Designed to meet US Common Core, British, and CBSE standards.",
@@ -48,10 +43,10 @@ export default function WhyChooseSection() {
         <div className="text-center mb-16">
           <h2 className="section-heading">Why Choose EduVerseJr?</h2>
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            0% Worries About Your Child's Math Learning
+            0% Worries About Your Child's Math and Coding Journey
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unlock your child's potential in math with personalized learning,
+            Unlock your child's potential in math and coding with personalized learning,
             expert tutors, and engaging tools for mastery
           </p>
         </div>

@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { ChevronDown, Download, Code, Lightbulb, Target, Rocket, Users } from "lucide-react";
+import { ChevronDown, Download, Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CodingCurriculumSection() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedLevels, setExpandedLevels] = useState<{ [key: number]: boolean }>({});
 
   const codingConcepts = [
-    { name: "Python", icon: "🐍", color: "from-blue-400 to-blue-600" },
-    { name: "JavaScript", icon: "⚡", color: "from-yellow-400 to-yellow-600" },
-    { name: "HTML/CSS", icon: "🎨", color: "from-pink-400 to-pink-600" },
-    { name: "Web/App/Game Development", icon: "🎮", color: "from-purple-400 to-purple-600" },
-    { name: "Artificial Intelligence", icon: "🤖", color: "from-cyan-400 to-cyan-600" },
-    { name: "Internet of Things", icon: "🌐", color: "from-green-400 to-green-600" },
-    { name: "Block Based Coding", icon: "🧩", color: "from-orange-400 to-orange-600" },
+    { name: "Python", icon: <Code2 className="w-12 h-12" />, color: "from-blue-400 to-blue-600" },
+    { name: "JavaScript", icon: <Zap className="w-12 h-12" />, color: "from-yellow-400 to-yellow-600" },
+    { name: "HTML/CSS", icon: <Palette className="w-12 h-12" />, color: "from-pink-400 to-pink-600" },
+    { name: "Web/App/Game Development", icon: <Gamepad2 className="w-12 h-12" />, color: "from-purple-400 to-purple-600" },
+    { name: "Artificial Intelligence", icon: <Bot className="w-12 h-12" />, color: "from-cyan-400 to-cyan-600" },
+    { name: "Internet of Things", icon: <Wifi className="w-12 h-12" />, color: "from-green-400 to-green-600" },
+    { name: "Block Based Coding", icon: <Blocks className="w-12 h-12" />, color: "from-orange-400 to-orange-600" },
   ];
 
   const keyFeatures = [
@@ -135,7 +135,7 @@ export default function CodingCurriculumSection() {
                 key={idx}
                 className="group bg-white hover:shadow-xl rounded-xl p-4 text-center transition-all duration-300 hover:scale-105 border-2 border-gray-100"
               >
-                <div className={`text-5xl mb-3 transform group-hover:scale-110 transition-transform`}>
+                <div className={`bg-gradient-to-br ${concept.color} text-white p-4 rounded-lg mb-3 transform group-hover:scale-110 transition-transform inline-flex items-center justify-center`}>
                   {concept.icon}
                 </div>
                 <h4 className="text-sm font-bold text-gray-900 leading-tight">{concept.name}</h4>
@@ -167,15 +167,15 @@ export default function CodingCurriculumSection() {
               </div>
             ))}
 
-            {/* 1:1 Fun Interactive Sessions - Special Card */}
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow text-white">
+            {/* 1:1 Fun Interactive Sessions */}
+            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border-l-4 border-blue-600">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/20 rounded-lg flex-shrink-0">
+                <div className="p-3 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg text-blue-600 flex-shrink-0">
                   <Users className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold mb-2">1:1 Fun Interactive Sessions</h4>
-                  <p className="text-sm text-white/90">
+                  <h4 className="font-bold text-gray-900 mb-2">1:1 Fun Interactive Sessions</h4>
+                  <p className="text-sm text-gray-600">
                     Personalized attention with expert instructors in engaging, hands-on classes
                   </p>
                 </div>
@@ -186,30 +186,30 @@ export default function CodingCurriculumSection() {
 
         {/* Expandable Detailed Breakdown */}
         <div className="max-w-5xl mx-auto mb-12">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl p-6 flex justify-between items-center transition-all shadow-lg"
-          >
-            <span className="text-xl font-bold">
-              View Complete Curriculum by Age Group
-            </span>
-            <ChevronDown
-              size={28}
-              className={`transition-transform ${isExpanded ? "rotate-180" : ""}`}
-            />
-          </button>
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
+            View Complete Curriculum by Age Group
+          </h3>
+          <div className="space-y-4">
+            {detailedCurriculum.map((level, idx) => (
+              <div key={idx} className="bg-white rounded-xl shadow-lg border-2 border-gray-100 overflow-hidden">
+                <button
+                  onClick={() => setExpandedLevels(prev => ({ ...prev, [idx]: !prev[idx] }))}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-6 flex justify-between items-center transition-all"
+                >
+                  <span className="text-xl font-bold">
+                    {level.category}
+                  </span>
+                  <ChevronDown
+                    size={28}
+                    className={`transition-transform ${expandedLevels[idx] ? "rotate-180" : ""}`}
+                  />
+                </button>
 
-          {isExpanded && (
-            <div className="bg-white rounded-xl shadow-xl p-8 mt-4 border-2 border-gray-100">
-              <div className="space-y-8">
-                {detailedCurriculum.map((level, idx) => (
-                  <div key={idx} className="border-b border-gray-200 pb-8 last:border-b-0 last:pb-0">
-                    <h4 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-6">
-                      {level.category}
-                    </h4>
+                {expandedLevels[idx] && (
+                  <div className="p-8 bg-gray-50">
                     <div className="space-y-4">
                       {level.programs.map((program, pidx) => (
-                        <div key={pidx} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+                        <div key={pidx} className="bg-white rounded-lg p-6 hover:shadow-md transition-shadow border border-gray-200">
                           <h5 className="text-lg font-bold text-gray-900 mb-3">{program.name}</h5>
                           <div className="grid md:grid-cols-2 gap-4">
                             <div>
@@ -232,10 +232,10 @@ export default function CodingCurriculumSection() {
                       ))}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          )}
+            ))}
+          </div>
         </div>
 
         {/* PDF Download Section */}

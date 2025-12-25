@@ -31,17 +31,20 @@ export default function Header() {
             <a href="#about" className="nav-link">
               About
             </a>
-            <a href="#curriculum" className="nav-link">
-              Curriculum
-            </a>
             <a href="#why-choose" className="nav-link">
               Why Choose Us
+            </a>
+            <a href="#curriculum" className="nav-link">
+              Curriculum
             </a>
             <a href="#testimonials" className="nav-link">
               Testimonials
             </a>
             <a href="#faq" className="nav-link">
               FAQ
+            </a>
+            <a href="#contact" className="nav-link">
+              Contact Us
             </a>
           </nav>
 
@@ -70,17 +73,20 @@ export default function Header() {
             <a href="#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               About
             </a>
-            <a href="#curriculum" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
-              Curriculum
-            </a>
             <a href="#why-choose" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Why Choose Us
+            </a>
+            <a href="#curriculum" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Curriculum
             </a>
             <a href="#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
             <a href="#faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               FAQ
+            </a>
+            <a href="#contact" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Contact Us
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.hash = '#booking'; }}>Book a FREE Trial</Button>

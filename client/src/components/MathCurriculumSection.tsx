@@ -33,12 +33,12 @@ export default function MathCurriculumSection() {
   ];
 
   const countries = [
-    { code: "🇺🇸", name: "US" },
-    { code: "🇬🇧", name: "UK" },
-    { code: "🇨🇦", name: "Canada" },
-    { code: "🇦🇺", name: "Australia" },
-    { code: "🇸🇬", name: "Singapore" },
-    { code: "🇦🇪", name: "UAE" },
+    { code: "🇺🇸", name: "US", curriculum: "/content/maths/Highlighted US Math Curriculum for Grades 5-8.pdf" },
+    { code: "🇬🇧", name: "UK", curriculum: "/content/maths/Highlighted UK Mathematics Curriculum for Grades 5-8.pdf" },
+    { code: "🇨🇦", name: "Canada", curriculum: "/content/maths/Canadian Mathematics Curriculum for Grades 5-8.pdf" },
+    { code: "🇦🇺", name: "Australia", curriculum: "/content/maths/Highlighted Australian Mathematics Curriculum for Grades 5-10.pdf" },
+    { code: "🇸🇬", name: "Singapore", curriculum: "/content/maths/Singapore Mathematics Curriculum.pdf" },
+    { code: "🇦🇪", name: "UAE", curriculum: "/content/maths/UAE Mathematics Curriculum for Grades 5-8.pdf" },
   ];
 
   return (
@@ -95,31 +95,29 @@ export default function MathCurriculumSection() {
           </div>
         </div>
 
-        {/* Expandable Grade Breakdown */}
-        <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="w-full bg-gray-50 hover:bg-gray-100 rounded-lg p-6 flex justify-between items-center transition-colors mb-4"
-          >
-            <span className="text-xl font-bold text-gray-900">
-              See Grade-by-Grade Breakdown
-            </span>
-            <ChevronDown
-              size={24}
-              className={`transition-transform ${isExpanded ? "rotate-180" : ""}`}
-            />
-          </button>
-
-          {isExpanded && (
-            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 space-y-4">
-              {gradeBreakdown.map((item, idx) => (
-                <div key={idx} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
-                  <h4 className="text-lg font-bold text-blue-600 mb-2">{item.grade}</h4>
-                  <p className="text-gray-700">{item.topics}</p>
+        {/* Country-Specific Curriculum Alignment */}
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
+            Country-Specific Curriculum Alignment
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {countries.map((country, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-200 hover:border-blue-400 transition-all">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <span className="text-5xl">{country.code}</span>
+                  <h4 className="text-xl font-bold text-gray-900">{country.name}</h4>
                 </div>
-              ))}
-            </div>
-          )}
+                <a
+                  href={country.curriculum}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Grade Wise Curriculum
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
