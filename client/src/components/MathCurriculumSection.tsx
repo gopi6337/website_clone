@@ -6,7 +6,7 @@ export default function MathCurriculumSection() {
 
   const topics = [
     "Algebra & Equations",
-    "Geometry & Shapes",
+    "Geometry & Trigonometry",
     "Statistics & Probability",
     "Number Systems & Operations",
     "Ratios, Proportions & Percentages",

@@ -11,7 +11,6 @@ export default function CodingCurriculumSection() {
     { name: "HTML/CSS", icon: <Palette className="w-12 h-12" />, color: "from-pink-400 to-pink-600" },
     { name: "Web/App/Game Development", icon: <Gamepad2 className="w-12 h-12" />, color: "from-purple-400 to-purple-600" },
     { name: "Artificial Intelligence", icon: <Bot className="w-12 h-12" />, color: "from-cyan-400 to-cyan-600" },
-    { name: "Internet of Things", icon: <Wifi className="w-12 h-12" />, color: "from-green-400 to-green-600" },
     { name: "Block Based Coding", icon: <Blocks className="w-12 h-12" />, color: "from-orange-400 to-orange-600" },
   ];
 

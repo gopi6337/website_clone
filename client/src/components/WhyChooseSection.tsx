@@ -28,7 +28,7 @@ export default function WhyChooseSection() {
     {
       icon: <Target className="w-8 h-8 text-blue-600" />,
       title: "Comprehensive Coverage",
-      description: "Excel in School Math and ace Olympiads, Math Kangaroo, PSAT, PCEP, WDA and other certifications.",
+      description: "Excel in School Math and ace Olympiads, Math Kangaroo, PSAT, NAPLAN, PCEP, WDA and other certifications.",
     },
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,

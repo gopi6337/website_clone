@@ -8,7 +8,7 @@ export default function FAQSection() {
     {
       question: "What age group is EduVerseJr designed for?",
       answer:
-        "EduVerseJr is designed for children from Pre-K to Grade 10, with specialized programs tailored to different age groups and learning levels.",
+        "EduVerseJr is designed for children from Grade 5 to Grade 10, with specialized programs tailored to different age groups and learning levels.",
     },
     {
       question: "Can I try EduVerseJr before committing to a package?",
@@ -29,17 +29,17 @@ export default function FAQSection() {
     {
       question: "What curriculum does EduVerseJr follow?",
       answer:
-        "EduVerseJr aligns with US Common Core, British, and CBSE standards, ensuring global curriculum compatibility.",
+        "Aligned with US, UK, Canadian, Australian, Singapore, and UAE curricula.",
     },
     {
       question: "How can I track my child's progress?",
       answer:
-        "Our Parent Peek feature allows you to monitor your child's progress in real-time through our dedicated parent dashboard.",
+        "We partner with parents through open communication and regular progress updates, ensuring your child receives the best support in a safe, nurturing online environment.",
     },
     {
       question: "What is the frequency and duration of EduVerseJr tutoring classes?",
       answer:
-        "Class frequency and duration vary based on your selected plan, ranging from 2 to unlimited classes per week.",
+        "Class frequency and duration vary based on your selected plan, ranging from 2 or more classes per week, each with a duration of 1hr (60min).",
     },
     {
       question:
