@@ -9,6 +9,7 @@ export default function CountryAlignmentSection() {
         "Covers all major mathematical domains",
         "Prepares students for state assessments",
       ],
+      curriculum: "/content/maths/Highlighted US Math Curriculum for Grades 5-8.pdf",
     },
     {
       flag: "🇬🇧",
@@ -19,6 +20,7 @@ export default function CountryAlignmentSection() {
         "Meets Key Stage 2 & 3 requirements",
         "Supports GCSE preparation",
       ],
+      curriculum: "/content/maths/Highlighted UK Mathematics Curriculum for Grades 5-8.pdf",
     },
     {
       flag: "🇨🇦",
@@ -29,6 +31,7 @@ export default function CountryAlignmentSection() {
         "Covers Ontario, BC, Alberta requirements",
         "Supports standardized testing preparation",
       ],
+      curriculum: "/content/maths/Canadian Mathematics Curriculum for Grades 5-8.pdf",
     },
     {
       flag: "🇦🇺",
@@ -39,6 +42,7 @@ export default function CountryAlignmentSection() {
         "Covers all content strands",
         "Supports NAPLAN preparation",
       ],
+      curriculum: "/content/maths/Highlighted Australian Mathematics Curriculum for Grades 5-10.pdf",
     },
     {
       flag: "🇸🇬",
@@ -49,6 +53,7 @@ export default function CountryAlignmentSection() {
         "Follows Ministry of Education syllabus",
         "Emphasizes problem-solving approach",
       ],
+      curriculum: "/content/maths/Singapore Mathematics Curriculum.pdf",
     },
     {
       flag: "🇦🇪",
@@ -59,6 +64,7 @@ export default function CountryAlignmentSection() {
         "Supports both CBSE and British curricula",
         "Prepares for local assessments",
       ],
+      curriculum: "/content/maths/UAE Mathematics Curriculum for Grades 5-8.pdf",
     },
   ];
 
@@ -86,7 +92,7 @@ export default function CountryAlignmentSection() {
               </div>
 
               {/* Details */}
-              <div className="space-y-3">
+              <div className="space-y-3 mb-6">
                 {country.details.map((detail, didx) => (
                   <div key={didx} className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">✓</span>
@@ -94,6 +100,16 @@ export default function CountryAlignmentSection() {
                   </div>
                 ))}
               </div>
+
+              {/* Grade Wise Curriculum Button */}
+              <a
+                href={country.curriculum}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
+              >
+                Grade Wise Curriculum
+              </a>
             </div>
           ))}
         </div>

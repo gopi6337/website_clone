@@ -120,7 +120,7 @@ export default function CodingCurriculumSection() {
           </h2>
           <p className="text-2xl font-semibold text-gray-700 mb-2">Learn • Code • Innovate</p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            From visual programming to AI - Master the technologies that power our digital world with 1:1 fun interactive sessions
+            From learning software languages, building apps and games, developing websites to delving into the new world of AI - Master the technologies that power our digital world with 1:1 fun interactive sessions
           </p>
         </div>
 

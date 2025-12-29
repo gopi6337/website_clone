@@ -101,7 +101,7 @@ export default function BeyondMathSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.location.hash = '#booking'}>
             Start Your FREE Trial
           </Button>
         </div>

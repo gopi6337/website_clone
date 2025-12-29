@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -31,11 +32,31 @@ export default function Header() {
             <a href="#about" className="nav-link">
               About
             </a>
+            <div
+              className="relative"
+              onMouseEnter={() => setIsCoursesOpen(true)}
+              onMouseLeave={() => setIsCoursesOpen(false)}
+            >
+              <button
+                onClick={() => setIsCoursesOpen(!isCoursesOpen)}
+                className="nav-link flex items-center gap-1"
+              >
+                Courses
+                <ChevronDown size={16} className={`transition-transform ${isCoursesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isCoursesOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[150px] border border-gray-100">
+                  <a href="#curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">
+                    Math
+                  </a>
+                  <a href="#curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">
+                    Coding
+                  </a>
+                </div>
+              )}
+            </div>
             <a href="#why-choose" className="nav-link">
               Why Choose Us
-            </a>
-            <a href="#curriculum" className="nav-link">
-              Curriculum
             </a>
             <a href="#testimonials" className="nav-link">
               Testimonials
@@ -73,11 +94,27 @@ export default function Header() {
             <a href="#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               About
             </a>
+            <div>
+              <button
+                onClick={() => setIsCoursesOpen(!isCoursesOpen)}
+                className="nav-link flex items-center gap-1 w-full text-left"
+              >
+                Courses
+                <ChevronDown size={16} className={`transition-transform ${isCoursesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isCoursesOpen && (
+                <div className="ml-4 mt-2 space-y-2">
+                  <a href="#curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
+                    Math
+                  </a>
+                  <a href="#curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
+                    Coding
+                  </a>
+                </div>
+              )}
+            </div>
             <a href="#why-choose" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Why Choose Us
-            </a>
-            <a href="#curriculum" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
-              Curriculum
             </a>
             <a href="#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials

@@ -28,21 +28,7 @@ export default function FooterSection() {
           {/* Math Programs */}
           <div>
             <h4 className="font-bold mb-4">Math Programs</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">KG</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 1</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 2</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 3</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 4</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 5</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 6</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 7</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 8</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 9</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grade 10</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">IB Curriculum</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">IGCSE Curriculum</a></li>
-            </ul>
+            <p className="text-gray-300">Math education aligned with international standards</p>
           </div>
 
           {/* Coding Programs */}
@@ -68,26 +54,11 @@ export default function FooterSection() {
             </ul>
           </div>
 
-          {/* Free Resources */}
-          <div>
-            <h4 className="font-bold mb-4">Free Resources</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Games</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Worksheets</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Math Calculators</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Articles</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blogs</a></li>
-            </ul>
-          </div>
-
           {/* Company */}
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Schools and Teachers</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Online Program</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Become a Teacher</a></li>
               <li><a href="#" className="hover:text-white transition-colors">About EduVerseJr</a></li>
               <li><a href="#" className="hover:text-white transition-colors">In the News</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>

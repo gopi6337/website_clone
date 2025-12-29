@@ -47,26 +47,8 @@ export default function BookingSection() {
         </div>
 
         {/* Booking Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto border border-gray-100">
+        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto border-2 border-blue-100">
           <BookingForm formspreeEndpoint={import.meta.env.VITE_FORMSPREE_ENDPOINT} />
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-12 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-gray-500 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>1000+ Happy Families</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>Trusted in 40+ Countries</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>4.8/5 Parent Rating</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

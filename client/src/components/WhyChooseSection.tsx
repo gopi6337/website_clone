@@ -28,12 +28,12 @@ export default function WhyChooseSection() {
     {
       icon: <Target className="w-8 h-8 text-blue-600" />,
       title: "Comprehensive Coverage",
-      description: "Excel in School Math and ace Olympiads, Math Kangaroo, and Gifted tests with advanced content.",
+      description: "Excel in School Math and ace Olympiads, Math Kangaroo, PSAT, PCEP, WDA and other certifications.",
     },
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
       title: "Global Curriculum Alignment",
-      description: "Designed to meet US Common Core, British, and CBSE standards.",
+      description: "Designed to meet US Common Core, British, Australian, Singapore, UAE standards.",
     },
   ];
 
@@ -64,7 +64,7 @@ export default function WhyChooseSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.location.hash = '#booking'}>
             Start Your FREE Trial
           </Button>
         </div>

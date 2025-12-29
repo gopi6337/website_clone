@@ -21,7 +21,7 @@ export default function LearningStyleSection() {
         {/* Tab Buttons */}
         <div className="flex justify-center gap-4 mb-12">
           <button
-            onClick={() => setActiveTab("tutoring")}
+            onClick={() => { setActiveTab("tutoring"); window.location.hash = '#booking'; }}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
               activeTab === "tutoring"
                 ? "bg-blue-600 text-white"
@@ -31,7 +31,7 @@ export default function LearningStyleSection() {
             1 to 1 Tutoring
           </button>
           <button
-            onClick={() => setActiveTab("selfpaced")}
+            onClick={() => { setActiveTab("selfpaced"); window.location.hash = '#booking'; }}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
               activeTab === "selfpaced"
                 ? "bg-blue-600 text-white"
@@ -71,7 +71,7 @@ export default function LearningStyleSection() {
                 </p>
               </>
             )}
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full" onClick={() => window.location.hash = '#booking'}>
               Start Your FREE Trial
             </Button>
           </div>

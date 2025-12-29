@@ -88,12 +88,6 @@ export default function TestimonialsSection() {
             ))}
           </div>
         </div>
-
-        {/* Stats */}
-        <div className="mt-16 text-center bg-blue-50 rounded-lg p-8">
-          <div className="text-4xl font-bold text-blue-600 mb-2">1,00,000+</div>
-          <p className="text-lg text-gray-600">Active students worldwide</p>
-        </div>
       </div>
     </section>
   );

@@ -45,6 +45,10 @@ export default function MathCurriculumSection() {
     <section className="py-10 md:py-14 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <span className="text-xl">💻</span>
+            Online Math Classes
+          </div>
           <h2 className="section-heading">Math Curriculum (Grades 5-10)</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
             Comprehensive math education aligned with international standards
@@ -53,9 +57,9 @@ export default function MathCurriculumSection() {
           {/* Country Badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {countries.map((country, idx) => (
-              <div key={idx} className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
-                <span className="text-2xl">{country.code}</span>
-                <span className="text-sm font-medium text-gray-700">{country.name}</span>
+              <div key={idx} className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 md:px-6 md:py-3 rounded-full">
+                <span className="text-3xl md:text-4xl">{country.code}</span>
+                <span className="text-sm md:text-base font-medium text-gray-700">{country.name}</span>
               </div>
             ))}
           </div>
@@ -95,30 +99,6 @@ export default function MathCurriculumSection() {
           </div>
         </div>
 
-        {/* Country-Specific Curriculum Alignment */}
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-            Country-Specific Curriculum Alignment
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {countries.map((country, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-200 hover:border-blue-400 transition-all">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <span className="text-5xl">{country.code}</span>
-                  <h4 className="text-xl font-bold text-gray-900">{country.name}</h4>
-                </div>
-                <a
-                  href={country.curriculum}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
-                >
-                  Grade Wise Curriculum
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
