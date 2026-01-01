@@ -37,36 +37,66 @@ export default function MathCurriculumSection() {
       code: "🇺🇸",
       name: "United States",
       standards: "Common Core State Standards (CCSS)",
+      details: [
+        "Aligned with Common Core State Standards (CCSS)",
+        "Covers Grades 5-10 comprehensive curriculum",
+        "Prepares for SAT, ACT, PSAT assessments",
+      ],
       curriculum: "/content/maths/US Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
       code: "🇬🇧",
       name: "United Kingdom",
       standards: "UK National Curriculum",
+      details: [
+        "Follows UK National Curriculum guidelines",
+        "Covers Key Stage 2, 3 & 4 (Grades 5-10)",
+        "Supports SATs and GCSE preparation",
+      ],
       curriculum: "/content/maths/UK Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
       code: "🇨🇦",
       name: "Canada",
       standards: "Provincial Curriculum Standards",
+      details: [
+        "Aligned with provincial curriculum standards",
+        "Covers Grades 5-10 across all provinces",
+        "Supports standardized testing preparation",
+      ],
       curriculum: "/content/maths/Canadian Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
       code: "🇦🇺",
       name: "Australia",
       standards: "Australian Curriculum",
+      details: [
+        "Meets Australian Curriculum requirements",
+        "Covers Years 5-10 across all states",
+        "Supports NAPLAN and ATAR preparation",
+      ],
       curriculum: "/content/maths/Australian Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
       code: "🇸🇬",
       name: "Singapore",
       standards: "Singapore Math Methodology",
+      details: [
+        "Based on Singapore Math methodology",
+        "Covers Primary 5-6 to Secondary 4 (Grades 5-10)",
+        "Prepares for PSLE and O-Level examinations",
+      ],
       curriculum: "/content/maths/Singapore Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
       code: "🇦🇪",
       name: "UAE (Dubai)",
       standards: "UAE Ministry of Education",
+      details: [
+        "Aligned with UAE Ministry of Education standards",
+        "Covers Cycle 2 & 3 (Grades 5-10)",
+        "Prepares for EmSAT and local assessments",
+      ],
       curriculum: "/content/maths/UAE Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
   ];
@@ -134,6 +164,16 @@ export default function MathCurriculumSection() {
                   <div className="text-6xl mb-3">{country.code}</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{country.name}</h3>
                   <p className="text-sm font-semibold text-blue-600">{country.standards}</p>
+                </div>
+
+                {/* Details */}
+                <div className="space-y-3 mb-6">
+                  {country.details.map((detail, didx) => (
+                    <div key={didx} className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">✓</span>
+                      <span className="text-gray-700">{detail}</span>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Grade Wise Curriculum Button */}

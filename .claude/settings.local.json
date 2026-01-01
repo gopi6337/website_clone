@@ -22,7 +22,8 @@
       "Bash(pip install:*)",
       "Bash(where:*)",
       "WebFetch(domain:www.eduversejr.com)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(cat:*)"
     ]
   }
 }
