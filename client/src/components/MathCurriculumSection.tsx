@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 
+// Force rebuild: 2026-01-02 - Ensure emojis and 404 handling deploy correctly
 export default function MathCurriculumSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
