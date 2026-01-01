@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, CheckCircle } from "lucide-react";
+import { Link } from "wouter";
 
 export default function MathCurriculumSection() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -177,12 +178,12 @@ export default function MathCurriculumSection() {
                 </div>
 
                 {/* Grade Wise Curriculum Button */}
-                <a
+                <Link
                   href={`/curriculum/${country.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
                 >
                   Grade Wise Curriculum
-                </a>
+                </Link>
               </div>
             ))}
           </div>
