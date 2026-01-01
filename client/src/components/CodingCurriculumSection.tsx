@@ -6,12 +6,12 @@ export default function CodingCurriculumSection() {
   const [expandedLevels, setExpandedLevels] = useState<{ [key: number]: boolean }>({});
 
   const codingConcepts = [
-    { name: "Python", icon: <Code2 className="w-12 h-12" />, color: "from-blue-400 to-blue-600" },
-    { name: "JavaScript", icon: <Zap className="w-12 h-12" />, color: "from-yellow-400 to-yellow-600" },
-    { name: "HTML/CSS", icon: <Palette className="w-12 h-12" />, color: "from-pink-400 to-pink-600" },
-    { name: "Web/App/Game Development", icon: <Gamepad2 className="w-12 h-12" />, color: "from-purple-400 to-purple-600" },
+    { name: "Python", iconImg: "/python.webp", color: "from-blue-400 to-blue-600" },
+    { name: "JavaScript", iconImg: "/javascript.webp", color: "from-yellow-400 to-yellow-600" },
+    { name: "HTML/CSS", iconImg: "/html-css.webp", color: "from-pink-400 to-pink-600" },
+    { name: "Web/App/Game Development", iconImg: "/webgameapp-development.webp", color: "from-purple-400 to-purple-600" },
     { name: "Artificial Intelligence", icon: <Bot className="w-12 h-12" />, color: "from-cyan-400 to-cyan-600" },
-    { name: "Block Based Coding", icon: <Blocks className="w-12 h-12" />, color: "from-orange-400 to-orange-600" },
+    { name: "Block Based Coding", iconImg: "/block-based-coding.webp", color: "from-orange-400 to-orange-600" },
   ];
 
   const keyFeatures = [
@@ -135,7 +135,11 @@ export default function CodingCurriculumSection() {
                 className="group bg-white hover:shadow-xl rounded-xl p-4 text-center transition-all duration-300 hover:scale-105 border-2 border-gray-100"
               >
                 <div className={`bg-gradient-to-br ${concept.color} text-white p-4 rounded-lg mb-3 transform group-hover:scale-110 transition-transform inline-flex items-center justify-center`}>
-                  {concept.icon}
+                  {concept.iconImg ? (
+                    <img src={concept.iconImg} alt={concept.name} className="w-12 h-12 object-contain" />
+                  ) : (
+                    concept.icon
+                  )}
                 </div>
                 <h4 className="text-sm font-bold text-gray-900 leading-tight">{concept.name}</h4>
               </div>

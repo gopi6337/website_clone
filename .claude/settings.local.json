@@ -3,7 +3,26 @@
     "allow": [
       "Bash(npm run build:*)",
       "Bash(npm install:*)",
-      "Bash(pnpm add:*)"
+      "Bash(pnpm add:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh run list:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm run check:*)",
+      "Bash(git restore:*)",
+      "WebFetch(domain:eduversejr.com)",
+      "Bash(where convert magick ffmpeg)",
+      "Bash(ls:*)",
+      "Bash(pnpm run build:*)",
+      "Bash(pnpm run dev)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(where:*)",
+      "WebFetch(domain:www.eduversejr.com)",
+      "Bash(curl:*)"
     ]
   }
 }

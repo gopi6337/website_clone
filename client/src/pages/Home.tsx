@@ -8,7 +8,6 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import LearningStyleSection from "@/components/LearningStyleSection";
 import MathCurriculumSection from "@/components/MathCurriculumSection";
 import CodingCurriculumSection from "@/components/CodingCurriculumSection";
-import CountryAlignmentSection from "@/components/CountryAlignmentSection";
 import BeyondMathSection from "@/components/BeyondMathSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
@@ -30,7 +29,6 @@ export default function Home() {
         <MathCurriculumSection />
         <CodingCurriculumSection />
       </div>
-      <CountryAlignmentSection />
       <LearningStyleSection />
       <div id="testimonials">
         <TestimonialsSection />

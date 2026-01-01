@@ -1,0 +1,22 @@
+following changes to be made to the website..
+1) logo on top of the webpage , make it a little bigger
+2) tab name should show logo with eduversejr 
+3) menu- change order of menu why choose us and curriculum interchange these places.
+4) menu- after FAQ put contact us in the menu option
+5)change the image in the child learning illustration image to this image in the link - 
+6) when clicked on parents start free trial button , go to free trial section where it say "Book Your FREE Trial Class Today!"
+7) "Why Choose EduVerseJr?
+0% Worries About Your Child's Math Learning " here change from math to math and coding journey
+8) next line 'Unlock your child's potential in math with personalized learning, expert tutors, and engaging tools for mastery' again add coding after math like math and coding 
+9)remove "Parent Involvement Tools"
+10) in this section'Math Curriculum (Grades 5-10)
+Comprehensive math education aligned with international standards', remove the superscript of cuntries,just keep country name
+11) in section 'see grade by grade breakdown', remove this n add this which is below in the web page'Country-Specific Curriculum Alignment" .also inside each , put a button 'grade wise curriculum' .. n add garde wise math curriculum inside each ..grade wise curriculm should open on a new tab.. also u can get its content from this link : E:\res_soft\website_clone-main\content\maths  ... also the country US needs to be shown as flag like on mobile version. do this for all countries mentioned
+12) in this section 'Coding Concepts We Teach', the icons for each is wrong .. take the actual professional icon from internet . each one has its own.
+13) in section'Why Choose Our Coding Program?', the last option 1:1 fun.. is not same as others.has color n all...make it look the same as other options
+14) in section 'view complete curriculum by age group', make seperate sections for each like beginner level n all n put contents inside of it n should be visible when level clicked like expanding folder
+15) 'Trusted by Parents in 6 Countries
+Whether you're in New York, London, Toronto, Sydney, Singapore, or Dubai, EduVerseJr provides curriculum-aligned education that meets your local standards while maintaining international excellence.' change it to "Trusted by Parents around the world
+ EduVerseJr provides curriculum-aligned education that meets your local standards while maintaining international excellence."
+16)
+

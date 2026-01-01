@@ -1,0 +1,10 @@
+1) when clicked on self paced learning , the paragraph show a content remove it n replace it with " Experience the flexibility of self paced leaning where you can progress at your own pace , learn anytime ,anywhere and achieve your goals on your own terms." check for grammer and make proper sentences if required.
+2) at the bottom of the web page remove Best kept secrets till subscribe button
+3) in coding programs at the bottom of the web page , remove tht and replave it with block based coding, app developemnt game development, web development, HTML,CSS,JS all 3 in one line ,Python , AI and Machine learning in one line,
+4) in the footer, change the address for India : D No 38, Gem Enclave , Maniyakaranpalam, Idikarai, Coimbatore-641022
+Ph No: +914224924192 
+remove US address
+5) below 1:1 and self paced learning button, remove that video placeholder and add a photo .. use this file E:\res_soft\website_clone-main\icons for webpage\replace video.jpg
+6)use the folder from this link E:\res_soft\website_clone-main\icons for webpage icons folder n change the icons for the pyrhon js etc given under Coding Concepts We Teach section. use the icons reapectively .
+7) in menu section courses.. make it visible not when clicked but whren cursor is moved on it n same for all menu option and go to respective blocks when clicked
+8) when i click on grade wise button it is not showing the content..it gives 404 error, also when clicked it should appear as a seperate page as a part of our webpage let it have the sdame color scheme ..dont make it downloadable , also the the whole country specified curriculum alignment should be in math section before what will your child achieve section

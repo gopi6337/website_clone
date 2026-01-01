@@ -1,0 +1,35 @@
+do the following modifications:
+1) in comprehensive coverage, change gifted tests with adv content to PSAT , PCEP ,WDA and other certifications..
+2) under Global Curriculum Alignment
+"Designed to meet US Common Core, British, and CBSE standards." 
+change it to this to this ,"Designed to meet US Common Core, British, Australian ,Singapore ,UAE standards.
+3) Start your free trial button today is not working ..connet it to trail section
+4) Math Curriculum (Grades 5-10)
+Comprehensive math education aligned with international standards 
+under this section country names have flags superscripted on them which is visible only in phone view..make it so we can see it on other ddevices also 
+5) Country-Specific Curriculum Alignment which below what your child will achieve ..remove it and replace it with the below 
+ Country-Specific Curriculum Alignment which is after download curriculum..dont make changes AND in this add the button "grade wise curriculum" which shows the curriculum details in a new page as previously designed for the above section. use that same file to update the content in the button
+6) we have a computer icon with text 💻
+Online Coding Classes for coding section, put the same like this for math section above where we say "math curriculum (grade5-10) .put a computer icon n write Online Math Classes as we did for coding
+7)"from visual programming to AI " change it to "from learning software languages, building aaps and games, developing websites to delving into the new world of AI" - check if its a good statement n make changes if its wrong grammerly or sounds wrong prfessionally... 
+8)when we click on 1:1tutoring or self paced learning button..it shows tht particular section below which has the start ur free traol button... it is not working..connect it to trail section
+9) remove this sectoion "1,00,000+
+Active students worldwide"
+10) the form which is for trail information .. taking info from parents , make it look effective by adding a background color suitable as per the website ..consistent with the web page look
+11) remove 
+1000+ Happy Families
+Trusted in 40+ Countries
+4.8/5 Parent Rating
+12) remove 
+1000+ Happy Families
+Trusted in 40+ Countries
+4.8/5 Parent Rating along with subscribe button
+13) math program below simplyfy it   put "math education aligned with international standards"
+14) remove Free Resources
+15) in company , remove pricing, schools and teachers,become a teacher , in the new
+16) in menu section change curriculum to courses.. it should have two options math and coding..math should lead to math curriculum and coding to coding curriculum
+17) also from this folder E:\res_soft\website_clone-main\content\maths got to highlighted US math curriculum pdf, make it optimised , it has too much info , reduce it to specifics enough for parent information and also make the information from grade 5-10 , make the changes and save as a seperate file in the same folder , also analyse the content and make sure its correct.
+
+
+
+

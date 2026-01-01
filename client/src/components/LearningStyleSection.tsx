@@ -64,10 +64,7 @@ export default function LearningStyleSection() {
                   Self-Paced Learning: Learn at your own rhythm.
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Explore concepts at your own pace with our comprehensive
-                  self-paced learning platform. Access lessons anytime,
-                  anywhere, and progress through the material as quickly or
-                  slowly as you need.
+                  Experience the flexibility of self-paced learning where you can progress at your own pace, learn anytime, anywhere, and achieve your goals on your own terms.
                 </p>
               </>
             )}
@@ -76,12 +73,13 @@ export default function LearningStyleSection() {
             </Button>
           </div>
 
-          {/* Video Placeholder */}
-          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🎥</div>
-              <p className="text-gray-600">Video Placeholder</p>
-            </div>
+          {/* Image */}
+          <div className="rounded-lg h-96 overflow-hidden">
+            <img
+              src="/replace-video.jpg"
+              alt="Learning Experience"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
