@@ -6,10 +6,10 @@ export default function CountryAlignmentSection() {
       standards: "Common Core State Standards (CCSS)",
       details: [
         "Aligned with Common Core State Standards (CCSS)",
-        "Covers all major mathematical domains",
-        "Prepares students for state assessments",
+        "Covers Grades 5-10 comprehensive curriculum",
+        "Prepares for SAT, ACT, PSAT assessments",
       ],
-      curriculum: "/content/maths/Highlighted US Math Curriculum for Grades 5-8.pdf",
+      curriculum: "/content/maths/US Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
       flag: "🇬🇧",
@@ -17,10 +17,10 @@ export default function CountryAlignmentSection() {
       standards: "UK National Curriculum",
       details: [
         "Follows UK National Curriculum guidelines",
-        "Meets Key Stage 2 & 3 requirements",
-        "Supports GCSE preparation",
+        "Covers Key Stage 2, 3 & 4 (Grades 5-10)",
+        "Supports SATs and GCSE preparation",
       ],
-      curriculum: "/content/maths/Highlighted UK Mathematics Curriculum for Grades 5-8.pdf",
+      curriculum: "/content/maths/UK Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
       flag: "🇨🇦",
@@ -28,10 +28,10 @@ export default function CountryAlignmentSection() {
       standards: "Provincial Curriculum Standards",
       details: [
         "Aligned with provincial curriculum standards",
-        "Covers Ontario, BC, Alberta requirements",
+        "Covers Grades 5-10 across all provinces",
         "Supports standardized testing preparation",
       ],
-      curriculum: "/content/maths/Canadian Mathematics Curriculum for Grades 5-8.pdf",
+      curriculum: "/content/maths/Canadian Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
       flag: "🇦🇺",
@@ -39,10 +39,10 @@ export default function CountryAlignmentSection() {
       standards: "Australian Curriculum",
       details: [
         "Meets Australian Curriculum requirements",
-        "Covers all content strands",
-        "Supports NAPLAN preparation",
+        "Covers Years 5-10 across all states",
+        "Supports NAPLAN and ATAR preparation",
       ],
-      curriculum: "/content/maths/Highlighted Australian Mathematics Curriculum for Grades 5-10.pdf",
+      curriculum: "/content/maths/Australian Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
       flag: "🇸🇬",
@@ -50,10 +50,10 @@ export default function CountryAlignmentSection() {
       standards: "Singapore Math Methodology",
       details: [
         "Based on Singapore Math methodology",
-        "Follows Ministry of Education syllabus",
-        "Emphasizes problem-solving approach",
+        "Covers Primary 5-6 to Secondary 4 (Grades 5-10)",
+        "Prepares for PSLE and O-Level examinations",
       ],
-      curriculum: "/content/maths/Singapore Mathematics Curriculum.pdf",
+      curriculum: "/content/maths/Singapore Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
       flag: "🇦🇪",
@@ -61,10 +61,10 @@ export default function CountryAlignmentSection() {
       standards: "UAE Ministry of Education",
       details: [
         "Aligned with UAE Ministry of Education standards",
-        "Supports both CBSE and British curricula",
-        "Prepares for local assessments",
+        "Covers Cycle 2 & 3 (Grades 5-10)",
+        "Prepares for EmSAT and local assessments",
       ],
-      curriculum: "/content/maths/UAE Mathematics Curriculum for Grades 5-8.pdf",
+      curriculum: "/content/maths/UAE Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
   ];
 
