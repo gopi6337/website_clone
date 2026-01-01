@@ -112,11 +112,14 @@ temp/
 *.png
 *.jpg
 *.jpeg
+*.webp
 SESSION_SUMMARY*.txt
 
-# Except logo files
+# Except logo files and public assets
 !logo.png
 !logo.jpg
 !logo.jpeg
 !logo.svg
 !client/public/logo.*
+!client/public/replace-video.jpg
+!client/public/*.webp
