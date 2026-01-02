@@ -1,7 +1,7 @@
 export default function CountryAlignmentSection() {
   const countries = [
     {
-      flag: "🇺🇸",
+      countryCode: "us",
       name: "United States",
       standards: "Common Core State Standards (CCSS)",
       details: [
@@ -12,7 +12,7 @@ export default function CountryAlignmentSection() {
       curriculum: "/content/maths/US Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
-      flag: "🇬🇧",
+      countryCode: "gb",
       name: "United Kingdom",
       standards: "UK National Curriculum",
       details: [
@@ -23,7 +23,7 @@ export default function CountryAlignmentSection() {
       curriculum: "/content/maths/UK Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
-      flag: "🇨🇦",
+      countryCode: "ca",
       name: "Canada",
       standards: "Provincial Curriculum Standards",
       details: [
@@ -34,7 +34,7 @@ export default function CountryAlignmentSection() {
       curriculum: "/content/maths/Canadian Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
-      flag: "🇦🇺",
+      countryCode: "au",
       name: "Australia",
       standards: "Australian Curriculum",
       details: [
@@ -45,7 +45,7 @@ export default function CountryAlignmentSection() {
       curriculum: "/content/maths/Australian Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
-      flag: "🇸🇬",
+      countryCode: "sg",
       name: "Singapore",
       standards: "Singapore Math Methodology",
       details: [
@@ -56,7 +56,7 @@ export default function CountryAlignmentSection() {
       curriculum: "/content/maths/Singapore Math Curriculum Grades 5-10 Parent Guide.pdf",
     },
     {
-      flag: "🇦🇪",
+      countryCode: "ae",
       name: "UAE (Dubai)",
       standards: "UAE Ministry of Education",
       details: [
@@ -86,7 +86,7 @@ export default function CountryAlignmentSection() {
             >
               {/* Flag and Name */}
               <div className="text-center mb-6">
-                <div className="text-6xl mb-3">{country.flag}</div>
+                <span className={`fi fi-${country.countryCode} text-6xl mb-3 inline-block`} style={{ fontSize: '4rem' }}></span>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{country.name}</h3>
                 <p className="text-sm font-semibold text-blue-600">{country.standards}</p>
               </div>
