@@ -86,7 +86,7 @@ export default function CountryAlignmentSection() {
             >
               {/* Flag and Name */}
               <div className="text-center mb-6">
-                <span className={`fi fi-${country.countryCode} text-6xl mb-3 inline-block`} style={{ fontSize: '4rem' }}></span>
+                <span className={`fi fi-${country.countryCode}`} style={{ fontSize: '4rem', display: 'inline-block', marginBottom: '0.75rem' }}></span>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{country.name}</h3>
                 <p className="text-sm font-semibold text-blue-600">{country.standards}</p>
               </div>

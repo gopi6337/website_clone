@@ -36,7 +36,7 @@ export default function MathCurriculumSection() {
 
   const countries = [
     {
-      code: "🇺🇸",
+      countryCode: "us",
       name: "United States",
       standards: "Common Core State Standards (CCSS)",
       details: [
@@ -47,7 +47,7 @@ export default function MathCurriculumSection() {
       curriculum: "/content/maths/US Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
-      code: "🇬🇧",
+      countryCode: "gb",
       name: "United Kingdom",
       standards: "UK National Curriculum",
       details: [
@@ -58,7 +58,7 @@ export default function MathCurriculumSection() {
       curriculum: "/content/maths/UK Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
-      code: "🇨🇦",
+      countryCode: "ca",
       name: "Canada",
       standards: "Provincial Curriculum Standards",
       details: [
@@ -69,7 +69,7 @@ export default function MathCurriculumSection() {
       curriculum: "/content/maths/Canadian Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
-      code: "🇦🇺",
+      countryCode: "au",
       name: "Australia",
       standards: "Australian Curriculum",
       details: [
@@ -80,7 +80,7 @@ export default function MathCurriculumSection() {
       curriculum: "/content/maths/Australian Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
-      code: "🇸🇬",
+      countryCode: "sg",
       name: "Singapore",
       standards: "Singapore Math Methodology",
       details: [
@@ -91,7 +91,7 @@ export default function MathCurriculumSection() {
       curriculum: "/content/maths/Singapore Math Curriculum Grades 5-10 Parent Guide.pdf"
     },
     {
-      code: "🇦🇪",
+      countryCode: "ae",
       name: "UAE (Dubai)",
       standards: "UAE Ministry of Education",
       details: [
@@ -120,7 +120,7 @@ export default function MathCurriculumSection() {
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {countries.map((country, idx) => (
               <div key={idx} className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 md:px-6 md:py-3 rounded-full">
-                <span className="text-3xl md:text-4xl">{country.code}</span>
+                <span className={`fi fi-${country.countryCode}`} style={{ fontSize: '2rem' }}></span>
                 <span className="text-sm md:text-base font-medium text-gray-700">{country.name}</span>
               </div>
             ))}
@@ -163,7 +163,7 @@ export default function MathCurriculumSection() {
               >
                 {/* Flag and Name */}
                 <div className="text-center mb-6">
-                  <div className="text-6xl mb-3">{country.code}</div>
+                  <span className={`fi fi-${country.countryCode}`} style={{ fontSize: '4rem', display: 'inline-block', marginBottom: '0.75rem' }}></span>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{country.name}</h3>
                   <p className="text-sm font-semibold text-blue-600">{country.standards}</p>
                 </div>
