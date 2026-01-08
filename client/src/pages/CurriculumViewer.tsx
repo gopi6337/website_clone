@@ -1,5 +1,6 @@
 import { useRoute, Link } from "wouter";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -93,6 +94,11 @@ export default function CurriculumViewer() {
   if (!curriculum) {
     return (
       <div className="min-h-screen bg-white">
+        <Helmet>
+          <title>Curriculum Not Found - EduVerseJr</title>
+          <meta name="description" content="The curriculum you're looking for doesn't exist. Return to EduVerseJr homepage to explore our math and coding programs." />
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <Header />
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Curriculum Not Found</h1>
@@ -110,6 +116,24 @@ export default function CurriculumViewer() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{curriculum.name} - EduVerseJr Math Curriculum Guide</title>
+        <meta
+          name="description"
+          content={`Comprehensive ${curriculum.name} parent information guide for EduVerseJr. Explore our detailed math curriculum aligned with ${country.replace(/-/g, ' ')} educational standards for grades 5-10.`}
+        />
+        <link rel="canonical" href={`https://www.eduversejr.com/curriculum/${country}`} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={`${curriculum.name} - EduVerseJr`} />
+        <meta property="og:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed math curriculum for grades 5-10.`} />
+        <meta property="og:url" content={`https://www.eduversejr.com/curriculum/${country}`} />
+        <meta property="og:type" content="article" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content={`${curriculum.name} - EduVerseJr`} />
+        <meta name="twitter:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed math curriculum for grades 5-10.`} />
+      </Helmet>
       <Header />
 
       {/* Header Banner */}
