@@ -122,7 +122,7 @@ export default function CurriculumViewer() {
           name="description"
           content={`Comprehensive ${curriculum.name} parent information guide for EduVerseJr. Explore our detailed math curriculum aligned with ${country.replace(/-/g, ' ')} educational standards for grades 5-10.`}
         />
-        <link rel="canonical" href={`https://eduversejr.com/curriculum/${country}`} />
+        <link rel="canonical" href={`https://eduversejr.com/curriculum/${country}/`} />
 
         {/* Open Graph */}
         <meta property="og:title" content={`${curriculum.name} - EduVerseJr`} />
