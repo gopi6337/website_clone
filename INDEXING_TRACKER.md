@@ -8,6 +8,8 @@ Track the indexing status of all pages on eduversejr.com
 
 **Date Started:** January 8, 2026
 **Total Pages:** 7
+**Indexed:** 5/7 pages
+**Pending:** 2/7 pages (United States, Australia - technical issues found and fixed)
 **Indexing Requests Submitted:** ✅ Yes (All 6 curriculum pages)
 
 ---
@@ -26,45 +28,45 @@ Check daily using Google Search Console URL Inspection tool.
 
 #### 1. United States
 - **URL:** https://eduversejr.com/curriculum/united-states/
-- **Status:** ⏳ Indexing Requested
+- **Status:** ⚠️ Technical Issue Fixed - Re-request Needed
 - **Date Requested:** January 8, 2026
 - **Date Indexed:** _Pending_
-- **Notes:**
+- **Notes:** Canonical URL issue fixed (missing trailing slash). Need to re-request indexing.
 
 #### 2. United Kingdom
 - **URL:** https://eduversejr.com/curriculum/united-kingdom/
-- **Status:** ⏳ Indexing Requested
+- **Status:** ✅ Indexed
 - **Date Requested:** January 8, 2026
-- **Date Indexed:** _Pending_
-- **Notes:**
+- **Date Indexed:** January 8, 2026
+- **Notes:** Successfully indexed
 
 #### 3. Canada
 - **URL:** https://eduversejr.com/curriculum/canada/
-- **Status:** ⏳ Indexing Requested
+- **Status:** ✅ Indexed
 - **Date Requested:** January 8, 2026
-- **Date Indexed:** _Pending_
-- **Notes:**
+- **Date Indexed:** January 8, 2026
+- **Notes:** Successfully indexed
 
 #### 4. Australia
 - **URL:** https://eduversejr.com/curriculum/australia/
-- **Status:** ⏳ Indexing Requested
+- **Status:** ⚠️ Technical Issue Fixed - Re-request Needed
 - **Date Requested:** January 8, 2026
 - **Date Indexed:** _Pending_
-- **Notes:**
+- **Notes:** Canonical URL issue fixed (missing trailing slash). Need to re-request indexing.
 
 #### 5. Singapore
 - **URL:** https://eduversejr.com/curriculum/singapore/
-- **Status:** ⏳ Indexing Requested
+- **Status:** ✅ Indexed
 - **Date Requested:** January 8, 2026
-- **Date Indexed:** _Pending_
-- **Notes:**
+- **Date Indexed:** January 8, 2026
+- **Notes:** Successfully indexed
 
 #### 6. UAE (Dubai)
 - **URL:** https://eduversejr.com/curriculum/uae-(dubai)/
-- **Status:** ⏳ Indexing Requested
+- **Status:** ✅ Indexed
 - **Date Requested:** January 8, 2026
-- **Date Indexed:** _Pending_
-- **Notes:**
+- **Date Indexed:** January 8, 2026
+- **Notes:** Successfully indexed
 
 ---
 
@@ -72,7 +74,9 @@ Check daily using Google Search Console URL Inspection tool.
 
 | Date | Indexed Pages | Notes |
 |------|--------------|-------|
-| Jan 8, 2026 | 1/7 | Homepage only |
+| Jan 8, 2026 AM | 1/7 | Homepage only |
+| Jan 8, 2026 PM | 5/7 | UK, Canada, Singapore, UAE indexed. US & AUS have tech issues |
+| Jan 8, 2026 PM | 5/7 | Fixed canonical URL issue. Deployed fix. Re-request needed for US & AUS |
 | Jan 9, 2026 | _/7 | Check status |
 | Jan 10, 2026 | _/7 | Check status |
 | Jan 11, 2026 | _/7 | Check status |
@@ -144,5 +148,20 @@ If a page isn't indexed after 7 days:
 
 ---
 
-**Last Updated:** January 8, 2026
+**Last Updated:** January 8, 2026 (Evening)
 **Next Check:** January 9, 2026
+
+## 🔧 Issue Found and Fixed (January 8, 2026 PM)
+
+**Problem:** US and Australia pages showed "technical issue" in Google Search Console
+
+**Root Cause:** Canonical URLs were missing trailing slashes
+- Expected: `https://eduversejr.com/curriculum/united-states/`
+- Was: `https://eduversejr.com/curriculum/united-states`
+
+**Fix Applied:**
+- Updated CurriculumViewer.tsx to add trailing slash to canonical URLs
+- Rebuilt and deployed to GitHub Pages
+- All curriculum pages now have correct canonical URLs
+
+**Next Steps:** Re-request indexing for US and Australia pages after deployment completes
