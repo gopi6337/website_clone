@@ -47,6 +47,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
+        env:
+          VITE_FORMSPREE_ENDPOINT: mvzgelrw
         run: pnpm run build
 
       - name: Setup Pages
