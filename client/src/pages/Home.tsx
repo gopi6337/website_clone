@@ -25,12 +25,12 @@ export default function Home() {
           name="description"
           content="EduVerseJr offers personalized coding and math programs for kids aged 6-15. Expert-led online learning with curriculum aligned to US, UK, Canada, Australia, Singapore, and UAE standards. Empower your child's future with fun, interactive STEM education."
         />
-        <link rel="canonical" href="https://www.eduversejr.com/" />
+        <link rel="canonical" href="https://eduversejr.com/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="EduVerseJr - Personalized Coding & Math Learning for Kids Ages 6-15" />
         <meta property="og:description" content="Transform your child's future with expert-led coding and math programs. Interactive, fun, and curriculum-aligned learning for kids aged 6-15. Join thousands of young learners today!" />
-        <meta property="og:url" content="https://www.eduversejr.com/" />
+        <meta property="og:url" content="https://eduversejr.com/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
