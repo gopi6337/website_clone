@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
@@ -38,10 +38,19 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
+    control,
     reset,
   } = useForm<BookingFormData>({
     resolver: zodResolver(bookingSchema),
+    mode: "onSubmit",
+    defaultValues: {
+      parentName: "",
+      parentEmail: "",
+      phoneNumber: "",
+      childGrade: "",
+      subjectInterest: "",
+      message: "",
+    },
   });
 
   const onSubmit = async (data: BookingFormData) => {
@@ -146,22 +155,29 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
             <Label htmlFor="childGrade" className="text-base font-semibold">
               Child's Grade <span className="text-red-500">*</span>
             </Label>
-            <Select
-              onValueChange={(value) => setValue("childGrade", value)}
-              disabled={submitStatus === "loading"}
-            >
-              <SelectTrigger className="mt-2">
-                <SelectValue placeholder="Select grade" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="grade-5">Grade 5</SelectItem>
-                <SelectItem value="grade-6">Grade 6</SelectItem>
-                <SelectItem value="grade-7">Grade 7</SelectItem>
-                <SelectItem value="grade-8">Grade 8</SelectItem>
-                <SelectItem value="grade-9">Grade 9</SelectItem>
-                <SelectItem value="grade-10">Grade 10</SelectItem>
-              </SelectContent>
-            </Select>
+            <Controller
+              name="childGrade"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  disabled={submitStatus === "loading"}
+                >
+                  <SelectTrigger className="mt-2">
+                    <SelectValue placeholder="Select grade" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="grade-5">Grade 5</SelectItem>
+                    <SelectItem value="grade-6">Grade 6</SelectItem>
+                    <SelectItem value="grade-7">Grade 7</SelectItem>
+                    <SelectItem value="grade-8">Grade 8</SelectItem>
+                    <SelectItem value="grade-9">Grade 9</SelectItem>
+                    <SelectItem value="grade-10">Grade 10</SelectItem>
+                  </SelectContent>
+                </Select>
+              )}
+            />
             {errors.childGrade && (
               <p className="text-red-500 text-sm mt-1">{errors.childGrade.message}</p>
             )}
@@ -172,19 +188,26 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
             <Label htmlFor="subjectInterest" className="text-base font-semibold">
               Subject of Interest <span className="text-red-500">*</span>
             </Label>
-            <Select
-              onValueChange={(value) => setValue("subjectInterest", value)}
-              disabled={submitStatus === "loading"}
-            >
-              <SelectTrigger className="mt-2">
-                <SelectValue placeholder="Select subject" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="Math">Mathematics</SelectItem>
-                <SelectItem value="Coding">Coding & Programming</SelectItem>
-                <SelectItem value="Both">Both Math & Coding</SelectItem>
-              </SelectContent>
-            </Select>
+            <Controller
+              name="subjectInterest"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  disabled={submitStatus === "loading"}
+                >
+                  <SelectTrigger className="mt-2">
+                    <SelectValue placeholder="Select subject" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Math">Mathematics</SelectItem>
+                    <SelectItem value="Coding">Coding & Programming</SelectItem>
+                    <SelectItem value="Both">Both Math & Coding</SelectItem>
+                  </SelectContent>
+                </Select>
+              )}
+            />
             {errors.subjectInterest && (
               <p className="text-red-500 text-sm mt-1">{errors.subjectInterest.message}</p>
             )}
