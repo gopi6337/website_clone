@@ -1,6 +1,18 @@
-import { Users, Globe, Award, Heart } from "lucide-react";
+import { Users, Globe, Award, Heart, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function AboutUsSection() {
+  const keyFacts = [
+    { label: "Age Range", value: "Grades 5-10 (Ages 10-16)" },
+    { label: "Countries Served", value: "6 countries (US, UK, Canada, Australia, Singapore, UAE)" },
+    { label: "Learning Mode", value: "100% Online, Live 1-on-1 Classes" },
+    { label: "Class Duration", value: "60 minutes per session" },
+    { label: "Class Frequency", value: "2+ classes per week" },
+    { label: "Subjects Offered", value: "Mathematics & Coding/Programming" },
+    { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Math, Australian, Canadian, UAE" },
+    { label: "Trial Offer", value: "FREE trial class available" },
+  ];
+
   const teamFeatures = [
     {
       icon: <Users className="w-6 h-6 text-blue-600" />,
@@ -20,11 +32,81 @@ export default function AboutUsSection() {
     },
   ];
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EduVerseJr",
+    "description": "Online personalized coding and math education for children grades 5-10 across 6 countries",
+    "url": "https://eduversejr.com",
+    "serviceArea": [
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Australia",
+      "Singapore",
+      "United Arab Emirates"
+    ],
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": "Expert instructors"
+    },
+    "slogan": "Explore Your Learning Universe",
+    "knowsAbout": [
+      "Online Math Education for Grades 5-10",
+      "Coding Education for Children Ages 10-16",
+      "One-on-One Tutoring",
+      "US Common Core Mathematics",
+      "UK National Curriculum",
+      "Singapore Math",
+      "Python Programming for Kids",
+      "JavaScript for Kids",
+      "Web Development Education"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Multiple Countries"
+    }
+  };
+
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(aboutSchema)}
+        </script>
+      </Helmet>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-heading">About EduVerseJr</h2>
+        </div>
+
+        {/* Quick Facts - AI Optimized */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 md:p-10 shadow-xl">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+              Quick Facts About EduVerseJr
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {keyFacts.map((fact, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-colors"
+                >
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-cyan-200 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-cyan-100 text-sm font-medium mb-1">
+                        {fact.label}
+                      </div>
+                      <div className="text-white font-semibold">
+                        {fact.value}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Mission Statement */}
