@@ -9,7 +9,7 @@ export default function AboutUsSection() {
     { label: "Class Duration", value: "60 minutes per session" },
     { label: "Class Frequency", value: "2+ classes per week" },
     { label: "Subjects Offered", value: "Mathematics & Coding/Programming" },
-    { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Math, Australian, Canadian, UAE" },
+    { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Maths, Australian, Canadian, UAE" },
     { label: "Trial Offer", value: "FREE trial class available" },
   ];
 
@@ -57,7 +57,7 @@ export default function AboutUsSection() {
       "One-on-One Tutoring",
       "US Common Core Mathematics",
       "UK National Curriculum",
-      "Singapore Math",
+      "Singapore Maths",
       "Python Programming for Kids",
       "JavaScript for Kids",
       "Web Development Education"

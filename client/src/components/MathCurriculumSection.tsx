@@ -82,9 +82,9 @@ export default function MathCurriculumSection() {
     {
       countryCode: "sg",
       name: "Singapore",
-      standards: "Singapore Math Methodology",
+      standards: "Singapore Maths Methodology",
       details: [
-        "Based on Singapore Math methodology",
+        "Based on Singapore Maths methodology",
         "Covers Primary 5-6 to Secondary 4 (Grades 5-10)",
         "Prepares for PSLE and O-Level examinations",
       ],
