@@ -47,6 +47,8 @@ export default function Home() {
       </div>
       <div id="curriculum">
         <MathCurriculumSection />
+      </div>
+      <div id="coding-curriculum">
         <CodingCurriculumSection />
       </div>
       <LearningStyleSection />

@@ -1,9 +1,7 @@
-import { useState } from "react";
-import { ChevronDown, Download, Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks } from "lucide-react";
+import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CodingCurriculumSection() {
-  const [expandedLevels, setExpandedLevels] = useState<{ [key: number]: boolean }>({});
 
   const codingConcepts = [
     { name: "Python", iconImg: "/python.webp", color: "from-blue-400 to-blue-600" },
@@ -42,66 +40,82 @@ export default function CodingCurriculumSection() {
     },
   ];
 
-  const detailedCurriculum = [
+  const codingCourses = [
     {
-      category: "Beginner Level (Ages 6-9)",
-      programs: [
-        {
-          name: "Block-Based Coding",
-          topics: ["Visual programming", "Drag-and-drop coding", "Basic logic", "Animation creation"],
-          projects: "Interactive stories, simple games, animations",
-        },
-        {
-          name: "Scratch Programming",
-          topics: ["Game design", "Character creation", "Sound effects", "Storytelling"],
-          projects: "Arcade games, animated stories, creative projects",
-        },
+      title: "Python Fundamentals and Data Visualization",
+      lessons: 60,
+      grade: "Grade 5-10",
+      description: "Learn Python fundamentals with interactive apps and games. Explore the basics, learn about different libraries, OOPs and data visualization concepts with real-time examples.",
+      outcomes: [
+        "Master Python fundamentals",
+        "Build cool GUI-based apps and games",
+        "Object-oriented programming concepts learned",
       ],
+      color: "from-blue-500 to-blue-700",
+      icon: "🐍",
     },
     {
-      category: "Intermediate Level (Ages 10-12)",
-      programs: [
-        {
-          name: "Python Fundamentals",
-          topics: ["Syntax & basics", "Variables & data types", "Loops & conditions", "Functions"],
-          projects: "Text games, calculators, quiz applications",
-        },
-        {
-          name: "HTML/CSS Basics",
-          topics: ["Web page structure", "Styling elements", "Responsive design", "Basic layouts"],
-          projects: "Personal websites, portfolios, landing pages",
-        },
-        {
-          name: "JavaScript Introduction",
-          topics: ["DOM manipulation", "Events & interactions", "Basic animations", "Form validation"],
-          projects: "Interactive web pages, simple web apps, games",
-        },
+      title: "Python with AI",
+      lessons: 36,
+      grade: "Grade 5-10",
+      description: "Master AI-based concepts like machine learning, neural networks, natural language processing etc. with real-world projects.",
+      outcomes: [
+        "Learn to code like a pro",
+        "Create amazing apps and games",
+        "Clear understanding of AI concepts",
       ],
+      color: "from-purple-500 to-purple-700",
+      icon: "🤖",
     },
     {
-      category: "Advanced Level (Ages 13-15)",
-      programs: [
-        {
-          name: "Full-Stack Web Development",
-          topics: ["Frontend frameworks", "Backend basics", "Databases", "API integration"],
-          projects: "Complete web applications, e-commerce sites, social platforms",
-        },
-        {
-          name: "Game Development",
-          topics: ["Game engines", "Physics", "AI behavior", "Multiplayer concepts"],
-          projects: "2D/3D games, platformers, puzzle games",
-        },
-        {
-          name: "Artificial Intelligence",
-          topics: ["Machine learning basics", "Neural networks", "AI applications", "Data science"],
-          projects: "Chatbots, image recognition, prediction models",
-        },
-        {
-          name: "Internet of Things (IoT)",
-          topics: ["Sensors & actuators", "Arduino/Raspberry Pi", "Smart devices", "Automation"],
-          projects: "Smart home systems, robots, wearable tech",
-        },
+      title: "Block-Based Coding",
+      lessons: 30,
+      grade: "Grade 5-10",
+      description: "Dive into the world of coding with blocks, easy to learn and use. Learn logic of app and game creation, animations with ease.",
+      outcomes: [
+        "Create apps, games, animation using code.org",
+        "Understand concepts and logic of programming easily",
       ],
+      color: "from-orange-500 to-orange-700",
+      icon: "🧩",
+    },
+    {
+      title: "Web Development",
+      lessons: 50,
+      grade: "Grade 5-10",
+      description: "Learn fundamentals of website development using HTML, CSS, JavaScript and incorporate AI into it. Build interactive websites.",
+      outcomes: [
+        "Build interactive and responsive websites",
+        "Build personal websites, portfolios, landing pages",
+        "Learn HTML, CSS and JavaScript together to create amazing web pages, web apps and games",
+      ],
+      color: "from-cyan-500 to-cyan-700",
+      icon: "🌐",
+    },
+    {
+      title: "App/Game Development with AI",
+      lessons: 96,
+      grade: "Grade 5-10",
+      description: "Learn to create interactive responsive apps and games using HTML, CSS, JS. Boost your app and game development skills with Visual Studio platform and database connectivity.",
+      outcomes: [
+        "Build interactive and responsive apps and games",
+        "Connect, store and retrieve values from a database",
+        "Learn HTML, CSS and JavaScript together to create amazing apps and games and share with the world",
+      ],
+      color: "from-pink-500 to-pink-700",
+      icon: "🎮",
+    },
+    {
+      title: "Certifications",
+      lessons: null,
+      grade: "Grade 5-10",
+      description: "Excellent support for professional certifications. Providing resources like course materials, study guides, PowerPoint presentations and practice assessments.",
+      outcomes: [
+        "PCEP (Certified Entry-Level Python Programmer) Certification by Python Institute",
+        "WDA (Certified Associate Web Developer) Certification by OpenEDG",
+      ],
+      color: "from-green-500 to-green-700",
+      icon: "🏆",
     },
   ];
 
@@ -187,77 +201,49 @@ export default function CodingCurriculumSection() {
           </div>
         </div>
 
-        {/* Expandable Detailed Breakdown */}
-        <div className="max-w-5xl mx-auto mb-12">
+        {/* Coding Courses - Grid Layout */}
+        <div className="mb-12">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
-            View Complete Curriculum by Age Group
+            Our Coding Courses
           </h3>
-          <div className="space-y-4">
-            {detailedCurriculum.map((level, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-lg border-2 border-gray-100 overflow-hidden">
-                <button
-                  onClick={() => setExpandedLevels(prev => ({ ...prev, [idx]: !prev[idx] }))}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-6 flex justify-between items-center transition-all"
-                >
-                  <span className="text-xl font-bold">
-                    {level.category}
-                  </span>
-                  <ChevronDown
-                    size={28}
-                    className={`transition-transform ${expandedLevels[idx] ? "rotate-180" : ""}`}
-                  />
-                </button>
-
-                {expandedLevels[idx] && (
-                  <div className="p-8 bg-gray-50">
-                    <div className="space-y-4">
-                      {level.programs.map((program, pidx) => (
-                        <div key={pidx} className="bg-white rounded-lg p-6 hover:shadow-md transition-shadow border border-gray-200">
-                          <h5 className="text-lg font-bold text-gray-900 mb-3">{program.name}</h5>
-                          <div className="grid md:grid-cols-2 gap-4">
-                            <div>
-                              <span className="font-semibold text-gray-700 block mb-2">Topics Covered:</span>
-                              <ul className="space-y-1">
-                                {program.topics.map((topic, tidx) => (
-                                  <li key={tidx} className="text-sm text-gray-600 flex items-start gap-2">
-                                    <span className="text-blue-600 mt-1">•</span>
-                                    <span>{topic}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                            <div>
-                              <span className="font-semibold text-gray-700 block mb-2">Example Projects:</span>
-                              <p className="text-sm text-gray-600">{program.projects}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {codingCourses.map((course, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-8 hover:shadow-lg transition-shadow border-2 border-blue-100"
+              >
+                {/* Course Icon and Title */}
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">{course.icon}</div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">{course.title}</h4>
+                  <p className="text-sm font-semibold text-blue-600 mb-2">{course.grade}</p>
+                  {course.lessons && (
+                    <div className="flex items-center justify-center gap-2 text-gray-600">
+                      <Code2 className="w-4 h-4" />
+                      <span className="text-sm font-semibold">{course.lessons} Lessons</span>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
+
+                {/* Course Description */}
+                <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                  {course.description}
+                </p>
+
+                {/* Learning Outcomes */}
+                <div className="space-y-3 mb-6">
+                  {course.outcomes.map((outcome, oidx) => (
+                    <div key={oidx} className="flex items-start gap-2">
+                      <span className="text-blue-600 mt-1">✓</span>
+                      <span className="text-gray-700">{outcome}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* PDF Download Section */}
-        <div className="max-w-2xl mx-auto bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl">
-          <div className="text-6xl mb-4">📥</div>
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Download Our Complete Coding Curriculum
-          </h3>
-          <p className="text-lg mb-6 text-white/90">
-            Get detailed curriculum breakdown, lesson plans, and learning outcomes for all age groups (6-15 years)
-          </p>
-          <Button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-6 rounded-full text-lg font-semibold shadow-xl hover:shadow-2xl transition-all">
-            <Download className="w-5 h-5 mr-2" />
-            Download Full Curriculum (PDF)
-          </Button>
-          <p className="text-sm text-white/70 mt-4">
-            Includes detailed breakdown of all 7 coding concepts and age-appropriate learning paths
-          </p>
-        </div>
       </div>
     </section>
   );

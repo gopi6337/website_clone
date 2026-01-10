@@ -224,4 +224,14 @@
   .accordion-trigger {
     @apply w-full text-left py-4 px-4 font-semibold text-gray-900 hover:bg-gray-50 transition-colors;
   }
+
+  /* Hide scrollbar for horizontal scrollable sections */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

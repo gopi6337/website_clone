@@ -159,7 +159,7 @@ export default function MathCurriculumSection() {
             {countries.map((country, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-8 hover:shadow-lg transition-shadow border-2 border-blue-100"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-8 hover:shadow-lg transition-shadow border-2 border-blue-100 flex flex-col"
               >
                 {/* Flag and Name */}
                 <div className="text-center mb-6">
@@ -169,7 +169,7 @@ export default function MathCurriculumSection() {
                 </div>
 
                 {/* Details */}
-                <div className="space-y-3 mb-6">
+                <div className="space-y-3 mb-6 flex-grow">
                   {country.details.map((detail, didx) => (
                     <div key={didx} className="flex items-start gap-2">
                       <span className="text-blue-600 mt-1">✓</span>
@@ -181,7 +181,7 @@ export default function MathCurriculumSection() {
                 {/* Grade Wise Curriculum Button */}
                 <Link
                   href={`/curriculum/${country.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors mt-auto"
                 >
                   Grade Wise Curriculum
                 </Link>

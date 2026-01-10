@@ -32,11 +32,7 @@ export default function Header() {
             <a href="#about" className="nav-link">
               About
             </a>
-            <div
-              className="relative"
-              onMouseEnter={() => setIsCoursesOpen(true)}
-              onMouseLeave={() => setIsCoursesOpen(false)}
-            >
+            <div className="relative">
               <button
                 onClick={() => setIsCoursesOpen(!isCoursesOpen)}
                 className="nav-link flex items-center gap-1"
@@ -46,10 +42,10 @@ export default function Header() {
               </button>
               {isCoursesOpen && (
                 <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[150px] border border-gray-100">
-                  <a href="#curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">
+                  <a href="#curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
                     Math
                   </a>
-                  <a href="#curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors">
+                  <a href="#coding-curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
                     Coding
                   </a>
                 </div>
@@ -64,7 +60,7 @@ export default function Header() {
             <a href="#faq" className="nav-link">
               FAQ
             </a>
-            <a href="#contact" className="nav-link">
+            <a href="#booking" className="nav-link">
               Contact Us
             </a>
           </nav>
@@ -107,7 +103,7 @@ export default function Header() {
                   <a href="#curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
                     Math
                   </a>
-                  <a href="#curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
+                  <a href="#coding-curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
                     Coding
                   </a>
                 </div>
@@ -122,7 +118,7 @@ export default function Header() {
             <a href="#faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </a>
-            <a href="#contact" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="#booking" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Contact Us
             </a>
             <div className="space-y-2 pt-4">
