@@ -28,10 +28,11 @@ Check daily using Google Search Console URL Inspection tool.
 
 #### 1. United States
 - **URL:** https://eduversejr.com/curriculum/united-states/
-- **Status:** ⚠️ Technical Issue Fixed - Re-request Needed
-- **Date Requested:** January 8, 2026
+- **Status:** ⏳ Indexing Requested (Re-requested Jan 11, 2026)
+- **Date First Requested:** January 8, 2026
+- **Date Re-requested:** January 11, 2026
 - **Date Indexed:** _Pending_
-- **Notes:** Canonical URL issue fixed (missing trailing slash). Need to re-request indexing.
+- **Notes:** Sitemap URL fixed with trailing slash. Re-requested indexing after deployment.
 
 #### 2. United Kingdom
 - **URL:** https://eduversejr.com/curriculum/united-kingdom/
@@ -49,10 +50,11 @@ Check daily using Google Search Console URL Inspection tool.
 
 #### 4. Australia
 - **URL:** https://eduversejr.com/curriculum/australia/
-- **Status:** ⚠️ Technical Issue Fixed - Re-request Needed
-- **Date Requested:** January 8, 2026
+- **Status:** ⏳ Indexing Requested (Re-requested Jan 11, 2026)
+- **Date First Requested:** January 8, 2026
+- **Date Re-requested:** January 11, 2026
 - **Date Indexed:** _Pending_
-- **Notes:** Canonical URL issue fixed (missing trailing slash). Need to re-request indexing.
+- **Notes:** Sitemap URL fixed with trailing slash. Re-requested indexing after deployment.
 
 #### 5. Singapore
 - **URL:** https://eduversejr.com/curriculum/singapore/
@@ -79,7 +81,7 @@ Check daily using Google Search Console URL Inspection tool.
 | Jan 8, 2026 PM | 5/7 | Fixed canonical URL issue. Deployed fix. Re-request needed for US & AUS |
 | Jan 9, 2026 | _/7 | Check status |
 | Jan 10, 2026 | _/7 | Check status |
-| Jan 11, 2026 | _/7 | Google Search Console processing data - check back in 24-48 hours |
+| Jan 11, 2026 | 5/7 | Re-requested indexing for US & Australia. Sitemap fixes deployed. |
 | Jan 15, 2026 | _/7 | Week 1 check |
 | Jan 22, 2026 | _/7 | Week 2 check |
 | Feb 8, 2026 | _/7 | Month 1 check |
