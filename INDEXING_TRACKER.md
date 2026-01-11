@@ -81,7 +81,7 @@ Check daily using Google Search Console URL Inspection tool.
 | Jan 8, 2026 PM | 5/7 | Fixed canonical URL issue. Deployed fix. Re-request needed for US & AUS |
 | Jan 9, 2026 | _/7 | Check status |
 | Jan 10, 2026 | _/7 | Check status |
-| Jan 11, 2026 | 5/7 | Re-requested indexing for US & Australia. Sitemap fixes deployed. |
+| Jan 11, 2026 | 5/7 | Re-requested indexing for US & Australia. Sitemap fixes deployed. Sitemap resubmitted to GSC. |
 | Jan 15, 2026 | _/7 | Week 1 check |
 | Jan 22, 2026 | _/7 | Week 2 check |
 | Feb 8, 2026 | _/7 | Month 1 check |
@@ -166,4 +166,26 @@ If a page isn't indexed after 7 days:
 - Rebuilt and deployed to GitHub Pages
 - All curriculum pages now have correct canonical URLs
 
-**Next Steps:** Re-request indexing for US and Australia pages after deployment completes
+**Next Steps:** Monitor Google Search Console for indexing progress (Jan 12-13)
+
+---
+
+## 🔄 Latest Actions (January 11, 2026 - Evening)
+
+**Actions Completed:**
+1. ✅ **Sitemap URLs Fixed** - Added trailing slashes to all curriculum URLs
+2. ✅ **Sitemap Deployed** - Updated lastmod dates to 2026-01-11
+3. ✅ **Re-indexed US & Australia** - Requested indexing via URL Inspection tool
+4. ✅ **Sitemap Resubmitted** - Resubmitted sitemap.xml to Google Search Console
+
+**What Google Is Doing Now:**
+- Reading the updated sitemap (with trailing slashes)
+- Processing re-indexing requests for US & Australia
+- Crawling pages with corrected URLs
+
+**Expected Timeline:**
+- **Jan 12-13:** Google finishes processing requests
+- **Jan 15:** First check - should see indexing progress
+- **Jan 18-22:** All 7 pages likely indexed
+
+**Next Checkpoint:** January 12-13 (24-48 hours from now)
