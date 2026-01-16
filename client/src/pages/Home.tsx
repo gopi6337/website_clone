@@ -10,8 +10,7 @@ import LearningStyleSection from "@/components/LearningStyleSection";
 import MathCurriculumSection from "@/components/MathCurriculumSection";
 import CodingCurriculumSection from "@/components/CodingCurriculumSection";
 import BeyondMathSection from "@/components/BeyondMathSection";
-// Temporarily disabled - waiting for parent testimonials
-// import TestimonialsSection from "@/components/TestimonialsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
@@ -52,10 +51,9 @@ export default function Home() {
         <CodingCurriculumSection />
       </div>
       <LearningStyleSection />
-      {/* Testimonials section temporarily disabled - waiting for parent testimonials */}
-      {/* <div id="testimonials">
+      <div id="testimonials">
         <TestimonialsSection />
-      </div> */}
+      </div>
       <div id="booking">
         <BookingSection />
       </div>

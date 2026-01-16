@@ -33,7 +33,7 @@ export default function WhyChooseSection() {
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
       title: "Global Curriculum Alignment",
-      description: "Designed to meet US Common Core, British, Australian, Singapore, UAE standards.",
+      description: "Designed to meet US Common Core, British, Canadian, Australian, Singapore, UAE standards.",
     },
   ];
 
