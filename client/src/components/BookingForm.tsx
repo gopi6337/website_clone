@@ -180,7 +180,7 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
               <Input
                 id="phoneNumber"
                 type="tel"
-                placeholder="9876543210"
+                placeholder="Enter phone number"
                 {...register("phoneNumber")}
                 className="flex-1"
                 disabled={submitStatus === "loading"}
