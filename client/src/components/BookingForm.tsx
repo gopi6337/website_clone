@@ -14,11 +14,26 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle, Loader2, AlertCircle } from "lucide-react";
 
+// Country codes list
+const countryCodes = [
+  { code: "+91", country: "India", flag: "IN" },
+  { code: "+1", country: "US/Canada", flag: "US" },
+  { code: "+44", country: "UK", flag: "GB" },
+  { code: "+61", country: "Australia", flag: "AU" },
+  { code: "+971", country: "UAE", flag: "AE" },
+  { code: "+65", country: "Singapore", flag: "SG" },
+  { code: "+60", country: "Malaysia", flag: "MY" },
+  { code: "+49", country: "Germany", flag: "DE" },
+  { code: "+33", country: "France", flag: "FR" },
+  { code: "+81", country: "Japan", flag: "JP" },
+];
+
 // Form validation schema
 const bookingSchema = z.object({
   parentName: z.string().min(2, "Name must be at least 2 characters"),
   parentEmail: z.string().email("Please enter a valid email address"),
-  phoneNumber: z.string().min(10, "Please enter a valid phone number"),
+  countryCode: z.string().min(1, "Please select a country code"),
+  phoneNumber: z.string().min(6, "Please enter a valid phone number"),
   childGrade: z.string().min(1, "Please select a grade"),
   subjectInterest: z.string().min(1, "Please select a subject"),
   message: z.string().optional(),
@@ -46,6 +61,7 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
     defaultValues: {
       parentName: "",
       parentEmail: "",
+      countryCode: "+91",
       phoneNumber: "",
       childGrade: "",
       subjectInterest: "",
@@ -65,6 +81,7 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
         },
         body: JSON.stringify({
           ...data,
+          phoneNumber: `${data.countryCode} ${data.phoneNumber}`,
           _subject: `New Trial Class Booking - ${data.subjectInterest}`,
         }),
       });
@@ -132,19 +149,46 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
             )}
           </div>
 
-          {/* Phone Number */}
+          {/* Phone Number with Country Code */}
           <div>
             <Label htmlFor="phoneNumber" className="text-base font-semibold">
               Phone Number <span className="text-red-500">*</span>
             </Label>
-            <Input
-              id="phoneNumber"
-              type="tel"
-              placeholder="+1 (555) 123-4567"
-              {...register("phoneNumber")}
-              className="mt-2"
-              disabled={submitStatus === "loading"}
-            />
+            <div className="flex gap-2 mt-2">
+              <Controller
+                name="countryCode"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    onValueChange={field.onChange}
+                    value={field.value}
+                    disabled={submitStatus === "loading"}
+                  >
+                    <SelectTrigger className="w-[140px]">
+                      <SelectValue placeholder="Code" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {countryCodes.map((country) => (
+                        <SelectItem key={country.code} value={country.code}>
+                          {country.code} {country.country}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              <Input
+                id="phoneNumber"
+                type="tel"
+                placeholder="9876543210"
+                {...register("phoneNumber")}
+                className="flex-1"
+                disabled={submitStatus === "loading"}
+              />
+            </div>
+            {errors.countryCode && (
+              <p className="text-red-500 text-sm mt-1">{errors.countryCode.message}</p>
+            )}
             {errors.phoneNumber && (
               <p className="text-red-500 text-sm mt-1">{errors.phoneNumber.message}</p>
             )}

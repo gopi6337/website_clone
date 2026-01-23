@@ -1,4 +1,3 @@
-import { Linkedin, Instagram, Youtube, Facebook } from "lucide-react";
 
 export default function FooterSection() {
   return (
@@ -48,33 +47,17 @@ export default function FooterSection() {
           </div>
         </div>
 
-        {/* Social Media */}
-        <div className="flex justify-center gap-6 mb-12">
-          <a href="#" className="text-gray-300 hover:text-white transition-colors">
-            <Linkedin size={24} />
-          </a>
-          <a href="#" className="text-gray-300 hover:text-white transition-colors">
-            <Instagram size={24} />
-          </a>
-          <a href="#" className="text-gray-300 hover:text-white transition-colors">
-            <Youtube size={24} />
-          </a>
-          <a href="#" className="text-gray-300 hover:text-white transition-colors">
-            <Facebook size={24} />
-          </a>
-        </div>
-
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p className="mb-4">© 2025 EduVerseJr. All rights reserved.</p>
+          <p className="mb-4">© 2026 EduVerseJr. All rights reserved.</p>
           <p className="mb-4">
             By using this site you agree to our Terms Of Use & Privacy Policy
           </p>
           <p className="text-sm">
-            India: D No 38, Gem Enclave, Maniyakaranpalam, Idikarai, Coimbatore-641022
+            India: D.no 78, Gem Enclave, Maniyakaranpalam, Idikarai, Coimbatore, Tamilnadu-641022
           </p>
           <p className="text-sm">
-            Ph No: +914224924192
+            Ph No: +914224924192 | Email: eduversejr@gmail.com
           </p>
         </div>
       </div>
