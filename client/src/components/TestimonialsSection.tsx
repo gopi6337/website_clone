@@ -38,8 +38,8 @@ export default function TestimonialsSection() {
     {
       quote:
         "I've been tutored from EduVerseJr for many years and my experience with them has been excellent. The tutor explains everything clearly and provides personalised support. The lessons are well structured and engaging. Highly recommended.",
-      author: "Saira Sagga",
-      role: "Student, Australia",
+      author: "Saira Saggar",
+      role: "Student, Class 10, Australia",
     },
   ];
 

@@ -53,12 +53,6 @@ export default function FooterSection() {
           <p className="mb-4">
             By using this site you agree to our Terms Of Use & Privacy Policy
           </p>
-          <p className="text-sm">
-            India: D.no 78, Gem Enclave, Maniyakaranpalam, Idikarai, Coimbatore, Tamilnadu-641022
-          </p>
-          <p className="text-sm">
-            Ph No: +914224924192 | Email: eduversejr@gmail.com
-          </p>
         </div>
       </div>
     </footer>
