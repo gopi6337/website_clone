@@ -4,7 +4,7 @@ export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   // Your WhatsApp number (include country code without + or spaces)
-  const phoneNumber = "918608663377";
+  const phoneNumber = "917010879998";
 
   // Default message that will be pre-filled
   const defaultMessage = "Hi! I'm interested in learning more about EduVerseJr's programs for my child.";
