@@ -1,4 +1,4 @@
-import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award } from "lucide-react";
+import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CodingCurriculumSection() {
@@ -65,7 +65,7 @@ export default function CodingCurriculumSection() {
         "Clear understanding of AI concepts",
       ],
       color: "from-purple-500 to-purple-700",
-      iconImg: "/python.webp",
+      icon: <Brain className="w-16 h-16 text-purple-600" />,
     },
     {
       title: "Block-Based Coding",
