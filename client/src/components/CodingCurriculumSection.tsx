@@ -103,7 +103,7 @@ export default function CodingCurriculumSection() {
         "Learn HTML, CSS and JavaScript together to create amazing apps and games and share with the world",
       ],
       color: "from-pink-500 to-pink-700",
-      iconImg: "/webgameapp-development.webp",
+      icon: <Gamepad2 className="w-16 h-16 text-pink-600" />,
     },
     {
       title: "Certifications",
