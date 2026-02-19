@@ -1,4 +1,4 @@
-import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks } from "lucide-react";
+import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CodingCurriculumSection() {
@@ -115,7 +115,7 @@ export default function CodingCurriculumSection() {
         "WDA (Certified Associate Web Developer) Certification by OpenEDG",
       ],
       color: "from-green-500 to-green-700",
-      iconImg: "/javascript.webp",
+      icon: <Award className="w-16 h-16 text-green-600" />,
     },
   ];
 
@@ -215,7 +215,11 @@ export default function CodingCurriculumSection() {
                 {/* Course Icon and Title */}
                 <div className="text-center mb-6">
                   <div className="flex justify-center mb-4">
-                    <img src={course.iconImg} alt={course.title} className="w-16 h-16 object-contain" />
+                    {course.iconImg ? (
+                      <img src={course.iconImg} alt={course.title} className="w-16 h-16 object-contain" />
+                    ) : (
+                      course.icon
+                    )}
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-2">{course.title}</h4>
                   <p className="text-sm font-semibold text-blue-600 mb-2">{course.grade}</p>
