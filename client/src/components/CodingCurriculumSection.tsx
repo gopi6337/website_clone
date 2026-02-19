@@ -52,7 +52,7 @@ export default function CodingCurriculumSection() {
         "Object-oriented programming concepts learned",
       ],
       color: "from-blue-500 to-blue-700",
-      icon: "🐍",
+      iconImg: "/python.webp",
     },
     {
       title: "Python with AI",
@@ -65,7 +65,7 @@ export default function CodingCurriculumSection() {
         "Clear understanding of AI concepts",
       ],
       color: "from-purple-500 to-purple-700",
-      icon: "🤖",
+      iconImg: "/python.webp",
     },
     {
       title: "Block-Based Coding",
@@ -77,7 +77,7 @@ export default function CodingCurriculumSection() {
         "Understand concepts and logic of programming easily",
       ],
       color: "from-orange-500 to-orange-700",
-      icon: "🧩",
+      iconImg: "/block-based-coding.webp",
     },
     {
       title: "Web Development",
@@ -90,7 +90,7 @@ export default function CodingCurriculumSection() {
         "Learn HTML, CSS and JavaScript together to create amazing web pages, web apps and games",
       ],
       color: "from-cyan-500 to-cyan-700",
-      icon: "🌐",
+      iconImg: "/html-css.webp",
     },
     {
       title: "App/Game Development with AI",
@@ -103,7 +103,7 @@ export default function CodingCurriculumSection() {
         "Learn HTML, CSS and JavaScript together to create amazing apps and games and share with the world",
       ],
       color: "from-pink-500 to-pink-700",
-      icon: "🎮",
+      iconImg: "/webgameapp-development.webp",
     },
     {
       title: "Certifications",
@@ -115,7 +115,7 @@ export default function CodingCurriculumSection() {
         "WDA (Certified Associate Web Developer) Certification by OpenEDG",
       ],
       color: "from-green-500 to-green-700",
-      icon: "🏆",
+      iconImg: "/javascript.webp",
     },
   ];
 
@@ -214,7 +214,9 @@ export default function CodingCurriculumSection() {
               >
                 {/* Course Icon and Title */}
                 <div className="text-center mb-6">
-                  <div className="text-6xl mb-4">{course.icon}</div>
+                  <div className="flex justify-center mb-4">
+                    <img src={course.iconImg} alt={course.title} className="w-16 h-16 object-contain" />
+                  </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-2">{course.title}</h4>
                   <p className="text-sm font-semibold text-blue-600 mb-2">{course.grade}</p>
                   {course.lessons && (
