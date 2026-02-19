@@ -41,6 +41,12 @@ export default function TestimonialsSection() {
       author: "Saira Saggar",
       role: "Student, Class 10, Australia",
     },
+    {
+      quote:
+        "Miss teaches really well and she makes sure the student is always understanding the concept. She will always only finish a subject or question once she makes sure a student has fully understood it. Ma'am is also very flexible on class timings and can also change a class time if required. Overall, Revathi Ma'am is an amazing teacher and she always helps me understand the topic in math clearly",
+      author: "Aadit Bahri",
+      role: "Student, Class 8, Australia",
+    },
   ];
 
   const nextSlide = () => {
