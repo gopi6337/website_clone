@@ -1,4 +1,4 @@
-import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award, Sparkles } from "lucide-react";
+import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award, Sparkles, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CodingCurriculumSection() {
@@ -90,7 +90,7 @@ export default function CodingCurriculumSection() {
         "Learn HTML, CSS and JavaScript together to create amazing web pages, web apps and games",
       ],
       color: "from-cyan-500 to-cyan-700",
-      iconImg: "/html-css.webp",
+      icon: <Globe className="w-16 h-16 text-cyan-600" />,
     },
     {
       title: "App/Game Development with AI",
