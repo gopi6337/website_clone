@@ -121,10 +121,10 @@ export default function CurriculumViewer() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{curriculum.name} - EduVerseJr Math Curriculum Guide</title>
+        <title>{curriculum.name} - Online Math Tutor Grade 5-10 | EduVerseJr</title>
         <meta
           name="description"
-          content={`Comprehensive ${curriculum.name} parent information guide for EduVerseJr. Explore our detailed math curriculum aligned with ${country.replace(/-/g, ' ')} educational standards for grades 5-10.`}
+          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Algebra, Geometry, Statistics and more aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Math tutoring for Grade 5-10.`}
         />
         <link rel="canonical" href={`https://eduversejr.com/curriculum/${country}`} />
 
@@ -136,7 +136,21 @@ export default function CurriculumViewer() {
 
         {/* Twitter */}
         <meta name="twitter:title" content={`${curriculum.name} - EduVerseJr`} />
-        <meta name="twitter:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed math curriculum for grades 5-10.`} />
+        <meta name="twitter:description" content={`Grade-by-grade Math curriculum for ${country.replace(/-/g, ' ')}. Algebra, Geometry, Statistics and more for Grade 5-10 by EduVerseJr.`} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": curriculum.name,
+          "description": `Online Math tutoring for Grade 5-10 aligned with ${country.replace(/-/g, ' ')} curriculum. Covers Algebra, Geometry, Statistics, Trigonometry and more.`,
+          "provider": {
+            "@type": "Organization",
+            "name": "EduVerseJr",
+            "url": "https://eduversejr.com"
+          },
+          "educationalLevel": "Grade 5-10",
+          "url": `https://eduversejr.com/curriculum/${country}`,
+          "teaches": ["Algebra", "Geometry", "Trigonometry", "Statistics", "Number Systems", "Data Analysis"]
+        })}</script>
       </Helmet>
       <Header />
 

@@ -105,10 +105,10 @@ export default function ScienceCurriculumViewer() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{curriculum.name} - EduVerseJr Science Curriculum Guide</title>
+        <title>{curriculum.name} - Online Science Tutor Grade 5-10 | EduVerseJr</title>
         <meta
           name="description"
-          content={`Comprehensive ${curriculum.name} parent information guide for EduVerseJr. Explore our detailed science curriculum aligned with ${country.replace(/-/g, ' ')} educational standards for grades 5-10.`}
+          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Biology, Chemistry and Physics topics aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Science tutoring for Grade 5-10.`}
         />
         <link rel="canonical" href={`https://eduversejr.com/science-curriculum/${country}/`} />
 
@@ -118,7 +118,21 @@ export default function ScienceCurriculumViewer() {
         <meta property="og:type" content="article" />
 
         <meta name="twitter:title" content={`${curriculum.name} - EduVerseJr`} />
-        <meta name="twitter:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed science curriculum for grades 5-10.`} />
+        <meta name="twitter:description" content={`Grade-by-grade Science curriculum for ${country.replace(/-/g, ' ')}. Biology, Chemistry and Physics for Grade 5-10 by EduVerseJr.`} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": curriculum.name,
+          "description": `Online Science tutoring for Grade 5-10 aligned with ${country.replace(/-/g, ' ')} curriculum. Covers Biology, Chemistry, Physics and Earth Science.`,
+          "provider": {
+            "@type": "Organization",
+            "name": "EduVerseJr",
+            "url": "https://eduversejr.com"
+          },
+          "educationalLevel": "Grade 5-10",
+          "url": `https://eduversejr.com/science-curriculum/${country}`,
+          "teaches": ["Biology", "Chemistry", "Physics", "Earth Science", "Environmental Science"]
+        })}</script>
       </Helmet>
       <Header />
 

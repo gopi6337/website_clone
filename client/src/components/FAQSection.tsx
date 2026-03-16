@@ -70,6 +70,21 @@ export default function FAQSection() {
       answer:
         "Simply click the 'Start FREE Trial' button, fill in your details, and our team will guide you through the enrollment process.",
     },
+    {
+      question: "Does EduVerseJr offer Science classes?",
+      answer:
+        "Yes! EduVerseJr offers comprehensive online Science classes for Grades 5-10, covering Biology, Chemistry, Physics, and Earth & Space Science. Our Science curriculum is aligned with international standards including NGSS (US), UK National Curriculum (KS2-KS4), Australian Curriculum (ACARA), Singapore MOE Syllabus, Canadian Provincial Standards, and UAE Ministry of Education standards.",
+    },
+    {
+      question: "What Science topics are covered at EduVerseJr?",
+      answer:
+        "Our Science program covers all core areas: Biology (cells, genetics, ecology, human body systems), Chemistry (atoms, periodic table, chemical reactions, organic chemistry), Physics (forces, energy, electricity, waves), and Earth & Space Science. Content is tailored grade by grade from Grade 5 through Grade 10.",
+    },
+    {
+      question: "Is EduVerseJr's Science curriculum aligned with my child's school?",
+      answer:
+        "Absolutely. Our Science curriculum is carefully aligned with the educational standards of six countries — US (NGSS), UK (KS2-KS4), Canada (Provincial Standards), Australia (ACARA), Singapore (MOE), and UAE (Ministry of Education) — ensuring your child learns exactly what is required for their local school exams and assessments.",
+    },
   ];
 
   const faqSchema = {

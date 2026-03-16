@@ -9,6 +9,7 @@ export default function AboutUsSection() {
     { label: "Class Duration", value: "60 minutes per session" },
     { label: "Class Frequency", value: "2+ classes per week" },
     { label: "Subjects Offered", value: "Mathematics, Science & Coding/Programming" },
+
     { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Maths, Australian, Canadian, UAE" },
     { label: "Trial Offer", value: "FREE trial class available" },
   ];
@@ -36,7 +37,7 @@ export default function AboutUsSection() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "EduVerseJr",
-    "description": "Online personalized coding and math education for children grades 5-10 across 6 countries",
+    "description": "Online personalized Math, Science and Coding education for children Grades 5-10 across 6 countries",
     "url": "https://eduversejr.com",
     "serviceArea": [
       "United States",
@@ -53,14 +54,21 @@ export default function AboutUsSection() {
     "slogan": "Explore Your Learning Universe",
     "knowsAbout": [
       "Online Math Education for Grades 5-10",
-      "Coding Education for Children Ages 10-16",
+      "Online Science Education for Grades 5-10",
+      "Coding Education for Children Grades 5-10",
       "One-on-One Tutoring",
       "US Common Core Mathematics",
+      "Next Generation Science Standards (NGSS)",
       "UK National Curriculum",
       "Singapore Maths",
+      "MOE Singapore Science Syllabus",
+      "Australian Curriculum ACARA",
+      "UAE Ministry of Education Standards",
       "Python Programming for Kids",
       "JavaScript for Kids",
-      "Web Development Education"
+      "Web Development Education",
+      "Biology Chemistry Physics for Kids",
+      "STEM Education Grades 5-10"
     ],
     "address": {
       "@type": "PostalAddress",

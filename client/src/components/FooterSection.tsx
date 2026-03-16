@@ -4,17 +4,31 @@ export default function FooterSection() {
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         {/* Footer Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Math Programs */}
           <div>
             <h4 className="font-bold mb-4">Math Programs</h4>
-            <p className="text-gray-300">Math education aligned with international standards</p>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="/curriculum/united-states" className="hover:text-white transition-colors">US Math Curriculum</a></li>
+              <li><a href="/curriculum/united-kingdom" className="hover:text-white transition-colors">UK Math Curriculum</a></li>
+              <li><a href="/curriculum/australia" className="hover:text-white transition-colors">Australian Math Curriculum</a></li>
+              <li><a href="/curriculum/singapore" className="hover:text-white transition-colors">Singapore Math Curriculum</a></li>
+              <li><a href="/curriculum/canada" className="hover:text-white transition-colors">Canadian Math Curriculum</a></li>
+              <li><a href="/curriculum/uae-(dubai)" className="hover:text-white transition-colors">UAE Math Curriculum</a></li>
+            </ul>
           </div>
 
           {/* Science Programs */}
           <div>
             <h4 className="font-bold mb-4">Science Programs</h4>
-            <p className="text-gray-300">Science classes aligned with international standards</p>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="/science-curriculum/united-states" className="hover:text-white transition-colors">US Science Curriculum</a></li>
+              <li><a href="/science-curriculum/united-kingdom" className="hover:text-white transition-colors">UK Science Curriculum</a></li>
+              <li><a href="/science-curriculum/australia" className="hover:text-white transition-colors">Australian Science Curriculum</a></li>
+              <li><a href="/science-curriculum/singapore" className="hover:text-white transition-colors">Singapore Science Curriculum</a></li>
+              <li><a href="/science-curriculum/canada" className="hover:text-white transition-colors">Canadian Science Curriculum</a></li>
+              <li><a href="/science-curriculum/uae-(dubai)" className="hover:text-white transition-colors">UAE Science Curriculum</a></li>
+            </ul>
           </div>
 
           {/* Coding Programs */}

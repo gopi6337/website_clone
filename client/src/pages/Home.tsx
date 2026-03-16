@@ -30,22 +30,22 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>EduVerseJr - Personalized Coding & Math Learning for Kids Ages 6-15</title>
+        <title>EduVerseJr - Personalized Math, Science & Coding Learning for Kids Grades 5-10</title>
         <meta
           name="description"
-          content="EduVerseJr offers personalized coding and math programs for kids aged 6-15. Expert-led online learning with curriculum aligned to US, UK, Canada, Australia, Singapore, and UAE standards. Empower your child's future with fun, interactive STEM education."
+          content="EduVerseJr offers personalized Math, Science and Coding programs for kids in Grades 5-10. Expert-led 1-on-1 online classes aligned with US, UK, Canada, Australia, Singapore, and UAE curricula. Empower your child's future with fun, interactive STEM education."
         />
         <link rel="canonical" href="https://eduversejr.com/" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="EduVerseJr - Personalized Coding & Math Learning for Kids Ages 6-15" />
-        <meta property="og:description" content="Transform your child's future with expert-led coding and math programs. Interactive, fun, and curriculum-aligned learning for kids aged 6-15. Join thousands of young learners today!" />
+        <meta property="og:title" content="EduVerseJr - Personalized Math, Science & Coding for Kids Grades 5-10" />
+        <meta property="og:description" content="Transform your child's future with expert-led Math, Science and Coding programs. Interactive 1-on-1 online classes, curriculum-aligned for Grades 5-10 across US, UK, Canada, Australia, Singapore and UAE." />
         <meta property="og:url" content="https://eduversejr.com/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="EduVerseJr - Personalized Coding & Math Learning for Kids Ages 6-15" />
-        <meta name="twitter:description" content="Transform your child's future with expert-led coding and math programs. Interactive, fun, and curriculum-aligned learning for kids aged 6-15." />
+        <meta name="twitter:title" content="EduVerseJr - Personalized Math, Science & Coding for Kids Grades 5-10" />
+        <meta name="twitter:description" content="Transform your child's future with expert-led Math, Science and Coding programs. Interactive 1-on-1 online classes for Grades 5-10." />
       </Helmet>
       <Header />
       <HeroSection />
