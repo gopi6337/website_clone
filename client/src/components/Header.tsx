@@ -48,6 +48,9 @@ export default function Header() {
                   <a href="#coding-curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
                     Coding
                   </a>
+                  <a href="#science-curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
+                    Science
+                  </a>
                 </div>
               )}
             </div>
@@ -70,7 +73,7 @@ export default function Header() {
             <Button variant="outline" className="rounded-full" onClick={() => window.location.hash = '#booking'}>
               Book a FREE Trial
             </Button>
-            <Button variant="ghost" className="rounded-full">
+            <Button variant="ghost" className="rounded-full" onClick={() => window.location.href = '/login'}>
               Login
             </Button>
           </div>
@@ -106,6 +109,9 @@ export default function Header() {
                   <a href="#coding-curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
                     Coding
                   </a>
+                  <a href="#science-curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
+                    Science
+                  </a>
                 </div>
               )}
             </div>
@@ -123,7 +129,7 @@ export default function Header() {
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.hash = '#booking'; }}>Book a FREE Trial</Button>
-              <Button variant="ghost" className="w-full rounded-full">
+              <Button variant="ghost" className="w-full rounded-full" onClick={() => window.location.href = '/login'}>
                 Login
               </Button>
             </div>

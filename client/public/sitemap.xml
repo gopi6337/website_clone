@@ -7,55 +7,93 @@
   <!-- Homepage -->
   <url>
     <loc>https://eduversejr.com/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Curriculum Pages - United States -->
+  <!-- Math Curriculum Pages -->
   <url>
-    <loc>https://eduversejr.com/curriculum/united-states/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <loc>https://eduversejr.com/curriculum/united-states</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Curriculum Pages - United Kingdom -->
   <url>
-    <loc>https://eduversejr.com/curriculum/united-kingdom/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <loc>https://eduversejr.com/curriculum/united-kingdom</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Curriculum Pages - Canada -->
   <url>
-    <loc>https://eduversejr.com/curriculum/canada/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <loc>https://eduversejr.com/curriculum/canada</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Curriculum Pages - Australia -->
   <url>
-    <loc>https://eduversejr.com/curriculum/australia/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <loc>https://eduversejr.com/curriculum/australia</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Curriculum Pages - Singapore -->
   <url>
-    <loc>https://eduversejr.com/curriculum/singapore/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <loc>https://eduversejr.com/curriculum/singapore</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Curriculum Pages - UAE (Dubai) -->
   <url>
-    <loc>https://eduversejr.com/curriculum/uae-(dubai)/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <loc>https://eduversejr.com/curriculum/uae-(dubai)</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Science Curriculum Pages -->
+  <url>
+    <loc>https://eduversejr.com/science-curriculum/united-states</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eduversejr.com/science-curriculum/united-kingdom</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eduversejr.com/science-curriculum/canada</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eduversejr.com/science-curriculum/australia</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eduversejr.com/science-curriculum/singapore</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eduversejr.com/science-curriculum/uae-(dubai)</loc>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

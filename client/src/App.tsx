@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import CurriculumViewer from "./pages/CurriculumViewer";
+import ScienceCurriculumViewer from "./pages/ScienceCurriculumViewer";
+import Login from "./pages/Login";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 function Router() {
@@ -13,6 +15,8 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/curriculum/:country"} component={CurriculumViewer} />
+      <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
+      <Route path={"/login"} component={Login} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

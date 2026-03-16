@@ -64,7 +64,7 @@ export default function WhyChooseSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.location.hash = '#booking'}>
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => { window.location.href = '/#booking'; }}>
             Start Your FREE Trial
           </Button>
         </div>

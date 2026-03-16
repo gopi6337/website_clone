@@ -8,7 +8,7 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="text-white">
             <div className="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold mb-6">
-              Math & Coding | Grades 5-10
+              Math, Science & Coding | Grades 5-10
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">

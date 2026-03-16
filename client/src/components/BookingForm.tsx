@@ -247,6 +247,7 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
                   <SelectContent>
                     <SelectItem value="Math">Mathematics</SelectItem>
                     <SelectItem value="Coding">Coding & Programming</SelectItem>
+                    <SelectItem value="Science">Science</SelectItem>
                     <SelectItem value="Both">Both Math & Coding</SelectItem>
                   </SelectContent>
                 </Select>

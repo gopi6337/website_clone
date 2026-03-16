@@ -2,93 +2,92 @@ import { useState } from "react";
 import { ChevronDown, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 
-// Force rebuild: 2026-01-02 - Ensure emojis and 404 handling deploy correctly
-export default function MathCurriculumSection() {
+export default function ScienceCurriculumSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const topics = [
-    "Algebra & Equations",
-    "Geometry & Trigonometry",
-    "Statistics & Probability",
-    "Number Systems & Operations",
-    "Ratios, Proportions & Percentages",
-    "Measurement & Units",
-    "Data Analysis & Graphs",
+    "Biology: Cells, Genetics & Ecology",
+    "Chemistry: Atoms, Reactions & Periodic Table",
+    "Physics: Forces, Energy & Electricity",
+    "Earth & Space Science",
+    "Scientific Inquiry & Experimentation",
+    "Environmental Science & Sustainability",
+    "Human Body Systems & Health",
   ];
 
   const learningOutcomes = [
-    "Master problem-solving skills",
-    "Build strong mathematical foundation",
-    "Excel in school exams and assessments",
-    "Develop critical thinking abilities",
-    "Gain confidence in mathematical concepts",
-    "Apply math to real-world situations",
+    "Develop strong scientific reasoning skills",
+    "Build a solid foundation in Biology, Chemistry & Physics",
+    "Excel in school science exams and assessments",
+    "Cultivate curiosity and analytical thinking",
+    "Gain confidence in scientific concepts",
+    "Apply science knowledge to real-world situations",
   ];
 
   const gradeBreakdown = [
-    { grade: "Grade 5", topics: "Fractions, Decimals, Basic Geometry, Introduction to Algebra" },
-    { grade: "Grade 6", topics: "Ratios, Percentages, Negative Numbers, Basic Statistics" },
-    { grade: "Grade 7", topics: "Algebraic Expressions, Linear Equations, Probability" },
-    { grade: "Grade 8", topics: "Advanced Algebra, Pythagorean Theorem, Data Analysis" },
-    { grade: "Grade 9", topics: "Quadratic Equations, Trigonometry, Advanced Geometry" },
-    { grade: "Grade 10", topics: "Functions, Advanced Statistics, Coordinate Geometry" },
+    { grade: "Grade 5", topics: "Ecosystems, Matter Properties, Solar System, Earth's Layers" },
+    { grade: "Grade 6", topics: "Cells, Atoms & Molecules, Rock Cycle, Simple Machines" },
+    { grade: "Grade 7", topics: "Genetics, Periodic Table, Plate Tectonics, Chemical Changes" },
+    { grade: "Grade 8", topics: "Evolution, Newton's Laws, Waves, Astronomy" },
+    { grade: "Grade 9", topics: "Cell Biology, Atomic Structure, Chemical Bonding, Motion & Forces" },
+    { grade: "Grade 10", topics: "Biotechnology, Organic Chemistry, Nuclear Physics, Electromagnetism" },
   ];
 
   const countries = [
     {
       countryCode: "us",
       name: "United States",
-      standards: "Common Core State Standards (CCSS)",
+      standards: "Next Generation Science Standards (NGSS)",
       details: [
-        "Aligned with Common Core State Standards (CCSS)",
+        "Aligned with Next Generation Science Standards (NGSS)",
         "Covers Grade 5-10 comprehensive curriculum",
-        "Prepares for SAT, ACT, PSAT assessments",
+        "Prepares for state science assessments and SAT Subject Tests",
       ],
-      curriculum: "/content/maths/US Math Curriculum Grade 5-10 Parent Guide.pdf"
+      curriculum: "/content/science/US Science Curriculum Grade 5-10.md"
     },
     {
       countryCode: "gb",
       name: "United Kingdom",
-      standards: "UK National Curriculum",
+      standards: "UK National Curriculum (KS2–KS4)",
       details: [
         "Follows UK National Curriculum guidelines",
         "Covers Key Stage 2, 3 & 4 (Grade 5-10)",
-        "Supports SATs and GCSE preparation",
+        "Supports SATs and GCSE Science preparation",
       ],
-      curriculum: "/content/maths/UK Math Curriculum Grade 5-10 Parent Guide.pdf"
+      curriculum: "/content/science/UK Science Curriculum Grade 5-10.md"
     },
     {
       countryCode: "ca",
       name: "Canada",
       standards: "Provincial Curriculum Standards",
       details: [
-        "Aligned with provincial curriculum standards",
+        "Aligned with provincial science curriculum standards",
         "Covers Grade 5-10 across all provinces",
-        "Supports standardized testing preparation",
+        "Supports standardized science testing preparation",
       ],
-      curriculum: "/content/maths/Canadian Math Curriculum Grade 5-10 Parent Guide.pdf"
+      curriculum: "/content/science/Canadian Science Curriculum Grade 5-10.md"
     },
     {
       countryCode: "au",
       name: "Australia",
-      standards: "Australian Curriculum",
+      standards: "Australian Curriculum (ACARA)",
       details: [
-        "Meets Australian Curriculum requirements",
+        "Meets Australian Curriculum (ACARA) requirements",
         "Covers Years 5-10 across all states",
-        "Supports NAPLAN and ATAR preparation",
+        "Supports NAPLAN and ATAR Science preparation",
       ],
-      curriculum: "/content/maths/Australian Math Curriculum Grade 5-10 Parent Guide.pdf"
+      curriculum: "/content/science/Australian Science Curriculum Grade 5-10.md"
     },
     {
       countryCode: "sg",
       name: "Singapore",
-      standards: "Singapore Maths Methodology",
+      standards: "MOE Singapore Syllabus",
       details: [
-        "Based on Singapore Maths methodology",
+        "Based on MOE Singapore Science syllabus",
         "Covers Primary 5-6 to Secondary 4 (Grade 5-10)",
-        "Prepares for PSLE and O-Level examinations",
+        "Prepares for PSLE and O-Level Science examinations",
       ],
-      curriculum: "/content/maths/Singapore Math Curriculum Grade 5-10 Parent Guide.pdf"
+      curriculum: "/content/science/Singapore Science Curriculum Grade 5-10.md"
     },
     {
       countryCode: "ae",
@@ -97,9 +96,9 @@ export default function MathCurriculumSection() {
       details: [
         "Aligned with UAE Ministry of Education standards",
         "Covers Cycle 2 & 3 (Grade 5-10)",
-        "Prepares for EmSAT and local assessments",
+        "Prepares for EmSAT Science and local assessments",
       ],
-      curriculum: "/content/maths/UAE Math Curriculum Grade 5-10 Parent Guide.pdf"
+      curriculum: "/content/science/UAE Science Curriculum Grade 5-10.md"
     },
   ];
 
@@ -108,12 +107,12 @@ export default function MathCurriculumSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <span className="text-xl">💻</span>
-            Online Math Classes
+            <span className="text-xl">🔬</span>
+            Online Science Classes
           </div>
-          <h2 className="section-heading">Math Curriculum (Grade 5-10)</h2>
+          <h2 className="section-heading">Science Curriculum (Grade 5-10)</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            Comprehensive math education aligned with international standards
+            Comprehensive science education aligned with international standards
           </p>
 
           {/* Country Badges */}
@@ -151,7 +150,7 @@ export default function MathCurriculumSection() {
           <div className="text-center mb-16">
             <h2 className="section-heading">Country-Specific Curriculum Alignment</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our curriculum is carefully aligned with the educational standards of six countries, ensuring your child learns exactly what they need for success in their local school system.
+              Our science curriculum is carefully aligned with the educational standards of six countries, ensuring your child learns exactly what they need for success in their local school system.
             </p>
           </div>
 
@@ -180,7 +179,7 @@ export default function MathCurriculumSection() {
 
                 {/* Grade Wise Curriculum Button */}
                 <Link
-                  href={`/curriculum/${country.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/science-curriculum/${country.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors mt-auto"
                 >
                   Grade Wise Curriculum
@@ -195,7 +194,7 @@ export default function MathCurriculumSection() {
               Trusted by Parents around the world
             </h3>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              EduVerseJr provides curriculum-aligned education that meets your local standards while maintaining international excellence.
+              EduVerseJr provides curriculum-aligned science education that meets your local standards while maintaining international excellence.
             </p>
           </div>
         </div>

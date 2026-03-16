@@ -11,6 +11,12 @@ export default function FooterSection() {
             <p className="text-gray-300">Math education aligned with international standards</p>
           </div>
 
+          {/* Science Programs */}
+          <div>
+            <h4 className="font-bold mb-4">Science Programs</h4>
+            <p className="text-gray-300">Science classes aligned with international standards</p>
+          </div>
+
           {/* Coding Programs */}
           <div>
             <h4 className="font-bold mb-4">Coding Programs</h4>

@@ -8,7 +8,7 @@ export default function AboutUsSection() {
     { label: "Learning Mode", value: "100% Online, Live 1-on-1 Classes" },
     { label: "Class Duration", value: "60 minutes per session" },
     { label: "Class Frequency", value: "2+ classes per week" },
-    { label: "Subjects Offered", value: "Mathematics & Coding/Programming" },
+    { label: "Subjects Offered", value: "Mathematics, Science & Coding/Programming" },
     { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Maths, Australian, Canadian, UAE" },
     { label: "Trial Offer", value: "FREE trial class available" },
   ];

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Play } from "lucide-react";
@@ -9,6 +9,7 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import LearningStyleSection from "@/components/LearningStyleSection";
 import MathCurriculumSection from "@/components/MathCurriculumSection";
 import CodingCurriculumSection from "@/components/CodingCurriculumSection";
+import ScienceCurriculumSection from "@/components/ScienceCurriculumSection";
 import BeyondMathSection from "@/components/BeyondMathSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
@@ -16,6 +17,16 @@ import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -49,6 +60,9 @@ export default function Home() {
       </div>
       <div id="coding-curriculum">
         <CodingCurriculumSection />
+      </div>
+      <div id="science-curriculum">
+        <ScienceCurriculumSection />
       </div>
       <LearningStyleSection />
       <div id="testimonials">
