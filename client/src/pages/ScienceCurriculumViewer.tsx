@@ -116,9 +116,13 @@ export default function ScienceCurriculumViewer() {
         <meta property="og:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed science curriculum for grades 5-10.`} />
         <meta property="og:url" content={`https://eduversejr.com/science-curriculum/${country}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image:alt" content="EduVerseJr Science Curriculum" />
 
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${curriculum.name} - EduVerseJr`} />
         <meta name="twitter:description" content={`Grade-by-grade Science curriculum for ${country.replace(/-/g, ' ')}. Biology, Chemistry and Physics for Grade 5-10 by EduVerseJr.`} />
+        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Course",

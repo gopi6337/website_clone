@@ -125,7 +125,7 @@ export default function AboutUsSection() {
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed text-center">
               At EduVerseJr, we empower students in grades 5 to 10 with the critical
-              math and coding skills necessary to thrive in the 21st century.
+              Math, Science and Coding skills necessary to thrive in the 21st century.
               Through exceptional one-to-one online instruction, we cultivate a
               love for learning, build confidence, and foster problem-solving
               abilities that serve students throughout their academic journey.

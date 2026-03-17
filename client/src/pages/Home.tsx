@@ -42,10 +42,14 @@ export default function Home() {
         <meta property="og:description" content="Transform your child's future with expert-led Math, Science and Coding programs. Interactive 1-on-1 online classes, curriculum-aligned for Grades 5-10 across US, UK, Canada, Australia, Singapore and UAE." />
         <meta property="og:url" content="https://eduversejr.com/" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image:alt" content="EduVerseJr - Personalized Math, Science & Coding for Kids" />
 
         {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="EduVerseJr - Personalized Math, Science & Coding for Kids Grades 5-10" />
         <meta name="twitter:description" content="Transform your child's future with expert-led Math, Science and Coding programs. Interactive 1-on-1 online classes for Grades 5-10." />
+        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
       </Helmet>
       <Header />
       <HeroSection />
