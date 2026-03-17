@@ -110,7 +110,7 @@ export default function ScienceCurriculumViewer() {
           name="description"
           content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Biology, Chemistry and Physics topics aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Science tutoring for Grade 5-10.`}
         />
-        <link rel="canonical" href={`https://eduversejr.com/science-curriculum/${country}/`} />
+        <link rel="canonical" href={`https://eduversejr.com/science-curriculum/${country}`} />
 
         <meta property="og:title" content={`${curriculum.name} - EduVerseJr`} />
         <meta property="og:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed science curriculum for grades 5-10.`} />

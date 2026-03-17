@@ -26,20 +26,12 @@ if (!fs.existsSync(curriculumDir)) {
 }
 
 // Generate flat HTML files for each curriculum page (avoids 301 redirect from directory structure)
+// NOTE: Only flat files — no directory/index.html. GitHub Pages redirects /page → /page/ when
+// a directory exists, which causes "Page with redirect" in GSC. Flat files prevent this.
 curriculumPages.forEach(page => {
-  // Flat file: /curriculum/singapore.html → served at /curriculum/singapore (no redirect)
   const flatHtmlPath = path.join(curriculumDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, indexHtml, 'utf-8');
   console.log(`✓ Created curriculum/${page}.html`);
-
-  // Also keep directory structure for backward compatibility
-  const pageDir = path.join(curriculumDir, page);
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  }
-  const pageHtmlPath = path.join(pageDir, 'index.html');
-  fs.writeFileSync(pageHtmlPath, indexHtml, 'utf-8');
-  console.log(`✓ Created curriculum/${page}/index.html`);
 });
 
 // Science curriculum pages
@@ -52,14 +44,6 @@ curriculumPages.forEach(page => {
   const flatHtmlPath = path.join(scienceCurriculumDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, indexHtml, 'utf-8');
   console.log(`✓ Created science-curriculum/${page}.html`);
-
-  const pageDir = path.join(scienceCurriculumDir, page);
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  }
-  const pageHtmlPath = path.join(pageDir, 'index.html');
-  fs.writeFileSync(pageHtmlPath, indexHtml, 'utf-8');
-  console.log(`✓ Created science-curriculum/${page}/index.html`);
 });
 
 // Also copy to 404.html
