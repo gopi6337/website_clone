@@ -12,6 +12,7 @@ import CodingCurriculumSection from "@/components/CodingCurriculumSection";
 import ScienceCurriculumSection from "@/components/ScienceCurriculumSection";
 import BeyondMathSection from "@/components/BeyondMathSection";
 import RevaAISection from "@/components/RevaAISection";
+import RevaDemo from "@/components/RevaDemo";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
 import FAQSection from "@/components/FAQSection";
@@ -72,6 +73,9 @@ export default function Home() {
       <LearningStyleSection />
       <div id="reva-ai">
         <RevaAISection />
+      </div>
+      <div id="reva-demo">
+        <RevaDemo />
       </div>
       <div id="testimonials">
         <TestimonialsSection />
