@@ -2,9 +2,13 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ChevronDown, Users, Sparkles } from "lucide-react";
 
-export default function FAQSection() {
+interface FAQSectionProps {
+  defaultTab?: "all" | "human" | "reva";
+}
+
+export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<"all" | "human" | "reva">("all");
+  const [activeTab, setActiveTab] = useState<"all" | "human" | "reva">(defaultTab);
 
   const humanFaqs = [
     {

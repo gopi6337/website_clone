@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,25 +12,27 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo.jpg"
-              alt="EduVerseJr Logo"
-              className="h-16 w-16 md:h-20 md:w-20 object-contain"
-            />
-            <div className="flex flex-col">
-              <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
-                EduVerseJr
-              </div>
-              <div className="text-xs md:text-sm text-gray-600 italic">
-                Explore Your Learning Universe
+          <Link href="/">
+            <div className="flex items-center gap-3 cursor-pointer">
+              <img
+                src="/logo.jpg"
+                alt="EduVerseJr Logo"
+                className="h-16 w-16 md:h-20 md:w-20 object-contain"
+              />
+              <div className="flex flex-col">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                  EduVerseJr
+                </div>
+                <div className="text-xs md:text-sm text-gray-600 italic">
+                  Explore Your Learning Universe
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="nav-link">
+            <a href="/#about" className="nav-link">
               About
             </a>
             <div className="relative">
@@ -42,38 +45,38 @@ export default function Header() {
               </button>
               {isCoursesOpen && (
                 <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[150px] border border-gray-100">
-                  <a href="#curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
-                    Math
-                  </a>
-                  <a href="#coding-curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
-                    Coding
-                  </a>
-                  <a href="#science-curriculum" className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setIsCoursesOpen(false)}>
-                    Science
-                  </a>
+                  <Link href="/courses" onClick={() => setIsCoursesOpen(false)}>
+                    <span className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Maths</span>
+                  </Link>
+                  <Link href="/courses" onClick={() => setIsCoursesOpen(false)}>
+                    <span className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Science</span>
+                  </Link>
+                  <Link href="/courses" onClick={() => setIsCoursesOpen(false)}>
+                    <span className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Coding</span>
+                  </Link>
                 </div>
               )}
             </div>
-            <a href="#why-choose" className="nav-link">
-              Why Choose Us
-            </a>
-            <a href="#reva-ai" className="nav-link font-semibold text-purple-600">
+            <Link href="/tutors" className="nav-link">
+              Human Tutors
+            </Link>
+            <Link href="/reva" className="nav-link font-semibold text-purple-600">
               Reva AI
-            </a>
-            <a href="#testimonials" className="nav-link">
+            </Link>
+            <a href="/#testimonials" className="nav-link">
               Testimonials
             </a>
-            <a href="#faq" className="nav-link">
+            <a href="/#faq" className="nav-link">
               FAQ
             </a>
-            <a href="#booking" className="nav-link">
+            <a href="/#booking" className="nav-link">
               Contact Us
             </a>
           </nav>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="outline" className="rounded-full" onClick={() => window.location.hash = '#booking'}>
+            <Button variant="outline" className="rounded-full" onClick={() => window.location.href = '/#booking'}>
               Book a FREE Trial
             </Button>
             <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.open('http://agenticaifirst.in', '_blank')}>
@@ -93,48 +96,29 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4 space-y-4">
-            <a href="#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               About
             </a>
-            <div>
-              <button
-                onClick={() => setIsCoursesOpen(!isCoursesOpen)}
-                className="nav-link flex items-center gap-1 w-full text-left"
-              >
-                Courses
-                <ChevronDown size={16} className={`transition-transform ${isCoursesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {isCoursesOpen && (
-                <div className="ml-4 mt-2 space-y-2">
-                  <a href="#curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
-                    Math
-                  </a>
-                  <a href="#coding-curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
-                    Coding
-                  </a>
-                  <a href="#science-curriculum" className="block nav-link text-sm" onClick={() => setIsMenuOpen(false)}>
-                    Science
-                  </a>
-                </div>
-              )}
-            </div>
-            <a href="#why-choose" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
-              Why Choose Us
-            </a>
-            <a href="#reva-ai" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/courses" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Courses
+            </Link>
+            <Link href="/tutors" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Human Tutors
+            </Link>
+            <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
               Reva AI Tutor
-            </a>
-            <a href="#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <a href="/#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
-            <a href="#faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </a>
-            <a href="#booking" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+            <a href="/#booking" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Contact Us
             </a>
             <div className="space-y-2 pt-4">
-              <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.hash = '#booking'; }}>Book a FREE Trial</Button>
+              <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.href = '/#booking'; }}>Book a FREE Trial</Button>
               <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.open('http://agenticaifirst.in', '_blank'); }}>
                 Try Reva AI
               </Button>

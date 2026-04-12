@@ -5,6 +5,9 @@ import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import RevaPage from "./pages/RevaPage";
+import CoursesPage from "./pages/CoursesPage";
+import TutorsPage from "./pages/TutorsPage";
 import CurriculumViewer from "./pages/CurriculumViewer";
 import ScienceCurriculumViewer from "./pages/ScienceCurriculumViewer";
 import Login from "./pages/Login";
@@ -17,6 +20,9 @@ function Router() {
     <WouterRouter base={base}>
       <Switch>
         <Route path={"/"} component={Home} />
+        <Route path={"/reva"} component={RevaPage} />
+        <Route path={"/courses"} component={CoursesPage} />
+        <Route path={"/tutors"} component={TutorsPage} />
         <Route path={"/curriculum/:country"} component={CurriculumViewer} />
         <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
         <Route path={"/login"} component={Login} />
