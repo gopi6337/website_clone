@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -11,16 +11,20 @@ import Login from "./pages/Login";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 function Router() {
+  // Use Vite's BASE_URL so routing works whether served at / or /website/
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/curriculum/:country"} component={CurriculumViewer} />
-      <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
-      <Route path={"/login"} component={Login} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <WouterRouter base={base}>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/curriculum/:country"} component={CurriculumViewer} />
+        <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
+        <Route path={"/login"} component={Login} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </WouterRouter>
   );
 }
 

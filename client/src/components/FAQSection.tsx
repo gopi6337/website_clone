@@ -1,137 +1,195 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Users, Sparkles } from "lucide-react";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<"all" | "human" | "reva">("all");
 
-  const faqs = [
+  const humanFaqs = [
     {
+      type: "human",
       question: "What age group is EduVerseJr designed for?",
-      answer:
-        "EduVerseJr is designed for children from Grade 5 to Grade 10, with specialized programs tailored to different age groups and learning levels.",
+      answer: "EduVerseJr is designed for children from Grade 5 to Grade 10 (ages 10–16), with programmes tailored to different learning levels and school curricula.",
     },
     {
+      type: "human",
       question: "Can I try EduVerseJr before committing to a package?",
-      answer:
-        "Yes! We offer a FREE trial so you can experience our platform and teaching methodology before making any commitment.",
+      answer: "Yes! We offer a FREE trial class so you can experience our teaching methodology and meet your child's tutor before making any commitment.",
     },
     {
-      question:
-        "What is the difference between self-paced and live class options in EduVerseJr?",
-      answer:
-        "Self-paced learning allows students to progress at their own speed with recorded lessons, while live classes provide real-time interaction with expert tutors for personalized guidance.",
+      type: "human",
+      question: "What subjects do your human tutors teach?",
+      answer: "Our expert tutors currently teach Mathematics, Science, and Coding/Programming for Grades 5–10, aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
     },
     {
-      question: "How can EduVerseJr support homeschooling parents?",
-      answer:
-        "We provide comprehensive curriculum coverage, progress tracking, and flexible scheduling to support homeschooling families with structured learning paths.",
-    },
-    {
-      question: "What curriculum does EduVerseJr follow?",
-      answer:
-        "Aligned with US, UK, Canadian, Australian, Singapore, and UAE curricula.",
-    },
-    {
-      question: "How can I track my child's progress?",
-      answer:
-        "We partner with parents through open communication and regular progress updates, ensuring your child receives the best support in a safe, nurturing online environment.",
-    },
-    {
+      type: "human",
       question: "What is the frequency and duration of EduVerseJr tutoring classes?",
-      answer:
-        "Class frequency and duration vary based on your selected plan, ranging from 2 or more classes per week, each with a duration of 1hr (60min).",
+      answer: "Classes run for 60 minutes per session, with a recommended frequency of 2 or more classes per week for consistent progress.",
     },
     {
-      question:
-        "Can EduVerseJr's program be customized for my child's specific learning requirements?",
-      answer:
-        "Yes, our personalized learning paths are tailored to each child's unique pace, learning style, and specific needs.",
+      type: "human",
+      question: "What curriculum does EduVerseJr follow?",
+      answer: "Our human tutors are aligned with US Common Core, UK National Curriculum, Canadian Provincial Standards, Australian Curriculum (ACARA), Singapore MOE Syllabus, and UAE Ministry of Education standards.",
     },
     {
-      question:
-        "Can your teachers teach topics covered in my child's school curriculum?",
-      answer:
-        "Absolutely! Our tutors can focus on school curriculum topics or advanced content based on your preferences.",
+      type: "human",
+      question: "How can I track my child's progress?",
+      answer: "We maintain open communication with parents through regular progress updates, session reports, and direct access to your child's tutor for feedback.",
     },
     {
+      type: "human",
+      question: "Can your teachers cover topics from my child's school curriculum?",
+      answer: "Absolutely. Our tutors can focus on school curriculum topics, advanced content, exam preparation, or areas where your child needs extra support.",
+    },
+    {
+      type: "human",
       question: "Can my child join EduVerseJr anytime during the year?",
-      answer:
-        "Yes, you can enroll your child anytime during the year. Our flexible enrollment allows you to start whenever it's convenient.",
+      answer: "Yes — we offer flexible enrolment. Your child can start any time, and we'll match them with the right tutor and curriculum level from day one.",
     },
     {
-      question:
-        "What if I am not satisfied with EduVerseJr's classes after enrolling?",
-      answer:
-        "We offer a satisfaction guarantee. If you're not satisfied, we provide options to adjust your plan or discuss alternative solutions.",
+      type: "human",
+      question: "What if I am not satisfied after enrolling?",
+      answer: "We offer a satisfaction guarantee. If you're not happy with the classes, we'll work with you to adjust the plan, change the tutor, or find the right solution.",
     },
     {
-      question: "How do I enroll for EduVerseJr's classes?",
-      answer:
-        "Simply click the 'Start FREE Trial' button, fill in your details, and our team will guide you through the enrollment process.",
-    },
-    {
+      type: "human",
       question: "Does EduVerseJr offer Science classes?",
-      answer:
-        "Yes! EduVerseJr offers comprehensive online Science classes for Grades 5-10, covering Biology, Chemistry, Physics, and Earth & Space Science. Our Science curriculum is aligned with international standards including NGSS (US), UK National Curriculum (KS2-KS4), Australian Curriculum (ACARA), Singapore MOE Syllabus, Canadian Provincial Standards, and UAE Ministry of Education standards.",
-    },
-    {
-      question: "What Science topics are covered at EduVerseJr?",
-      answer:
-        "Our Science program covers all core areas: Biology (cells, genetics, ecology, human body systems), Chemistry (atoms, periodic table, chemical reactions, organic chemistry), Physics (forces, energy, electricity, waves), and Earth & Space Science. Content is tailored grade by grade from Grade 5 through Grade 10.",
-    },
-    {
-      question: "Is EduVerseJr's Science curriculum aligned with my child's school?",
-      answer:
-        "Absolutely. Our Science curriculum is carefully aligned with the educational standards of six countries — US (NGSS), UK (KS2-KS4), Canada (Provincial Standards), Australia (ACARA), Singapore (MOE), and UAE (Ministry of Education) — ensuring your child learns exactly what is required for their local school exams and assessments.",
+      answer: "Yes! Our Science programme covers Biology, Chemistry, Physics, and Earth & Space Science for Grades 5–10, aligned with international standards including NGSS (US), UK National Curriculum, ACARA (Australia), Singapore MOE, and UAE standards.",
     },
   ];
+
+  const revaFaqs = [
+    {
+      type: "reva",
+      question: "What is Reva and how is it different from a regular AI chatbot?",
+      answer: "Reva is EduVerseJr's AI-powered teacher — not just a chatbot. Reva understands your child's curriculum, tracks their progress session by session, identifies weak areas, teaches through conversation and a live whiteboard, and adapts to each student's pace. It's designed to teach, not just answer.",
+    },
+    {
+      type: "reva",
+      question: "What subjects can Reva teach?",
+      answer: "Reva currently teaches Mathematics (US curriculum, Grades 5–10). Science and Coding programmes are in development and will be available soon.",
+    },
+    {
+      type: "reva",
+      question: "Is Reva available 24/7?",
+      answer: "Yes — Reva is available any time of day or night. Whether your child needs help with homework at 10pm or wants to revise before a morning exam, Reva is ready instantly.",
+    },
+    {
+      type: "reva",
+      question: "How does Reva's interactive whiteboard work?",
+      answer: "When solving a problem, Reva uses a live whiteboard to show each step visually — drawing graphs, writing equations, and annotating diagrams — just like a human teacher would at a physical whiteboard.",
+    },
+    {
+      type: "reva",
+      question: "Can my child speak to Reva instead of typing?",
+      answer: "Yes! Reva supports voice interaction. Students can speak their questions aloud and Reva will listen, understand, and respond — making it feel more like a natural tutoring session.",
+    },
+    {
+      type: "reva",
+      question: "How does Reva track my child's progress?",
+      answer: "Reva automatically tracks performance across every topic and chapter, identifies weak areas, recommends targeted revision, and gives parents and students a clear view of where improvement is needed.",
+    },
+    {
+      type: "reva",
+      question: "Does Reva give quizzes and tests?",
+      answer: "Yes. Reva generates practice quizzes tailored to your child's level, grades them instantly, and explains every incorrect answer in detail — turning mistakes into learning moments.",
+    },
+    {
+      type: "reva",
+      question: "Is Reva free to use?",
+      answer: "Yes — you can start using Reva for free with no credit card required. Simply sign up at agenticaifirst.in to get started with AI-powered maths tutoring.",
+    },
+    {
+      type: "reva",
+      question: "What technology powers Reva?",
+      answer: "Reva is powered by Claude AI (by Anthropic) — one of the most advanced AI models available — combined with EduVerseJr's proprietary curriculum content and progress tracking system.",
+    },
+    {
+      type: "reva",
+      question: "Can Reva replace a human tutor?",
+      answer: "Reva is a powerful complement to human tutoring, not a replacement. For students who need structured live classes and personal accountability, our human tutors are still the best choice. Many families use both — Reva for daily practice and a human tutor for weekly deep-dive sessions.",
+    },
+  ];
+
+  const allFaqs = [...humanFaqs, ...revaFaqs];
+
+  const displayFaqs =
+    activeTab === "all" ? allFaqs :
+    activeTab === "human" ? humanFaqs :
+    revaFaqs;
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    "mainEntity": allFaqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+        "text": faq.answer,
+      },
+    })),
   };
 
   return (
-    <section className="py-10 md:py-14 bg-white">
+    <section id="faq" className="py-10 md:py-14 bg-white">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="section-heading">Frequently Asked Questions</h2>
+          <p className="text-gray-600 max-w-xl mx-auto">
+            Questions about our human tutors, Reva AI teacher, or both — we've got answers.
+          </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, idx) => (
-            <div key={idx} className="border border-gray-200 rounded-lg">
+        {/* Tab Filter */}
+        <div className="flex justify-center gap-3 mb-8 flex-wrap">
+          <button
+            onClick={() => { setActiveTab("all"); setOpenIndex(null); }}
+            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${activeTab === "all" ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+          >
+            All Questions
+          </button>
+          <button
+            onClick={() => { setActiveTab("human"); setOpenIndex(null); }}
+            className={`px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all ${activeTab === "human" ? "bg-blue-600 text-white" : "bg-blue-50 text-blue-700 hover:bg-blue-100"}`}
+          >
+            <Users className="w-4 h-4" /> Human Tutors
+          </button>
+          <button
+            onClick={() => { setActiveTab("reva"); setOpenIndex(null); }}
+            className={`px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all ${activeTab === "reva" ? "bg-purple-600 text-white" : "bg-purple-50 text-purple-700 hover:bg-purple-100"}`}
+          >
+            <Sparkles className="w-4 h-4" /> Reva AI
+          </button>
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-3">
+          {displayFaqs.map((faq, idx) => (
+            <div
+              key={idx}
+              className={`border rounded-lg overflow-hidden ${faq.type === "reva" ? "border-purple-200" : "border-gray-200"}`}
+            >
               <button
-                onClick={() =>
-                  setOpenIndex(openIndex === idx ? null : idx)
-                }
-                className="accordion-trigger w-full flex justify-between items-center"
+                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                className="w-full flex justify-between items-center px-5 py-4 text-left gap-4 hover:bg-gray-50 transition-colors"
               >
-                <span>{faq.question}</span>
+                <div className="flex items-center gap-2">
+                  {faq.type === "reva" && <Sparkles className="w-4 h-4 text-purple-500 flex-shrink-0" />}
+                  <span className="font-medium text-gray-900 text-sm">{faq.question}</span>
+                </div>
                 <ChevronDown
-                  size={20}
-                  className={`transition-transform ${
-                    openIndex === idx ? "rotate-180" : ""
-                  }`}
+                  size={18}
+                  className={`flex-shrink-0 text-gray-400 transition-transform ${openIndex === idx ? "rotate-180" : ""}`}
                 />
               </button>
-
               {openIndex === idx && (
-                <div className="px-4 pb-4 text-gray-600">
+                <div className="px-5 pb-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
                   {faq.answer}
                 </div>
               )}

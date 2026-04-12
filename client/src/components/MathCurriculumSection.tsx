@@ -107,13 +107,19 @@ export default function MathCurriculumSection() {
     <section className="py-10 md:py-14 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <span className="text-xl">💻</span>
-            Online Math Classes
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="text-xl">💻</span>
+              Online Math Classes
+            </div>
+            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <span>✨</span>
+              Reva AI — Mathematics Live Now
+            </div>
           </div>
-          <h2 className="section-heading">Math Curriculum (Grade 5-10)</h2>
+          <h2 className="section-heading">Mathematics Curriculum (Grade 5–10)</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            Comprehensive math education aligned with international standards
+            Comprehensive US Mathematics aligned with international standards — taught by our expert human tutors and by Reva, our AI teacher.
           </p>
 
           {/* Country Badges */}
