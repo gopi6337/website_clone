@@ -57,6 +57,9 @@ export default function Header() {
             <a href="#why-choose" className="nav-link">
               Why Choose Us
             </a>
+            <a href="#reva-ai" className="nav-link font-semibold text-purple-600">
+              Reva AI
+            </a>
             <a href="#testimonials" className="nav-link">
               Testimonials
             </a>
@@ -69,12 +72,12 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <Button variant="outline" className="rounded-full" onClick={() => window.location.hash = '#booking'}>
               Book a FREE Trial
             </Button>
-            <Button variant="ghost" className="rounded-full" onClick={() => window.location.href = '/login'}>
-              Login
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.open('http://agenticaifirst.in', '_blank')}>
+              Try Reva AI
             </Button>
           </div>
 
@@ -118,6 +121,9 @@ export default function Header() {
             <a href="#why-choose" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Why Choose Us
             </a>
+            <a href="#reva-ai" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
+              Reva AI Tutor
+            </a>
             <a href="#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
@@ -129,8 +135,8 @@ export default function Header() {
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.hash = '#booking'; }}>Book a FREE Trial</Button>
-              <Button variant="ghost" className="w-full rounded-full" onClick={() => window.location.href = '/login'}>
-                Login
+              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.open('http://agenticaifirst.in', '_blank'); }}>
+                Try Reva AI
               </Button>
             </div>
           </nav>

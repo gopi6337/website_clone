@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Sparkles } from "lucide-react";
 
 export default function LearningStyleSection() {
   const [activeTab, setActiveTab] = useState("tutoring");
@@ -12,16 +13,15 @@ export default function LearningStyleSection() {
             Explore How EduVerseJr Fits Your Child's Learning Style
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Whether your child thrives with direct guidance or prefers the
-            freedom to explore concepts independently, EduVerseJr offers the
-            perfect learning experience.
+            Whether your child thrives with direct guidance, self-paced exploration,
+            or AI-powered tutoring, EduVerseJr has the perfect learning experience.
           </p>
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           <button
-            onClick={() => { setActiveTab("tutoring"); window.location.hash = '#booking'; }}
+            onClick={() => setActiveTab("tutoring")}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
               activeTab === "tutoring"
                 ? "bg-blue-600 text-white"
@@ -31,7 +31,7 @@ export default function LearningStyleSection() {
             1 to 1 Tutoring
           </button>
           <button
-            onClick={() => { setActiveTab("selfpaced"); window.location.hash = '#booking'; }}
+            onClick={() => setActiveTab("selfpaced")}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
               activeTab === "selfpaced"
                 ? "bg-blue-600 text-white"
@@ -40,12 +40,23 @@ export default function LearningStyleSection() {
           >
             Self-Paced Learning
           </button>
+          <button
+            onClick={() => setActiveTab("ai")}
+            className={`px-8 py-3 rounded-full font-semibold transition-all flex items-center gap-2 ${
+              activeTab === "ai"
+                ? "bg-purple-600 text-white"
+                : "bg-white text-gray-900 border-2 border-purple-200"
+            }`}
+          >
+            <Sparkles className="w-4 h-4" />
+            Reva AI Tutor
+          </button>
         </div>
 
         {/* Content */}
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
           <div className="bg-white rounded-lg p-8 shadow-md">
-            {activeTab === "tutoring" ? (
+            {activeTab === "tutoring" && (
               <>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Live 1-to-1 Classes: Personalized instruction with expert
@@ -57,8 +68,12 @@ export default function LearningStyleSection() {
                   that your child receives focused attention, tailored to their
                   unique learning needs.
                 </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full" onClick={() => window.location.hash = '#booking'}>
+                  Book a FREE Trial
+                </Button>
               </>
-            ) : (
+            )}
+            {activeTab === "selfpaced" && (
               <>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Self-Paced Learning: Learn at your own rhythm.
@@ -66,11 +81,50 @@ export default function LearningStyleSection() {
                 <p className="text-gray-600 mb-6">
                   Experience the flexibility of self-paced learning where you can progress at your own pace, learn anytime, anywhere, and achieve your goals on your own terms.
                 </p>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full" onClick={() => window.location.hash = '#booking'}>
+                  Start Your FREE Trial
+                </Button>
               </>
             )}
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full" onClick={() => window.location.hash = '#booking'}>
-              Start Your FREE Trial
-            </Button>
+            {activeTab === "ai" && (
+              <>
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles className="w-6 h-6 text-purple-600" />
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Reva: AI Tutor, Always On.
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Reva is our AI-powered math tutor — available 24/7 to explain
+                  concepts, work through problems step-by-step, and adapt to your
+                  child's pace. No waiting for a scheduled class.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2 mb-6">
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></span>
+                    Instant answers with full explanations
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></span>
+                    Interactive whiteboard for visual learning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></span>
+                    Tracks weak areas and suggests revision
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></span>
+                    Maths now — Science & Coding coming soon
+                  </li>
+                </ul>
+                <Button
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full"
+                  onClick={() => window.open('http://agenticaifirst.in', '_blank')}
+                >
+                  Try Reva for Free
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Image */}

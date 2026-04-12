@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -16,16 +17,29 @@ export default function HeroSection() {
               <span className="text-yellow-300">FUN</span> Personalized Learning!
             </h1>
 
-            <p className="text-lg mb-8 text-white/90">
-              EduVerseJr offers live 1-to-1 online classes and self-paced learning.
-              Whether your child thrives with personal guidance or prefers to learn
-              independently, our platform adapts to their needs, helping them excel
-              at their own pace.
+            <p className="text-lg mb-4 text-white/90">
+              EduVerseJr offers live 1-to-1 online classes with expert human tutors
+              — and now <strong>Reva</strong>, our AI-powered math tutor available
+              24/7. Whether your child thrives with personal guidance or needs help
+              right now, we've got them covered.
             </p>
 
-            <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.location.hash = '#booking'}>
-              Parents, Start FREE Trial
-            </Button>
+            {/* AI Tutor Highlight */}
+            <div className="bg-white/15 border border-white/30 rounded-2xl px-5 py-3 mb-8 flex items-center gap-3">
+              <Sparkles className="w-5 h-5 text-yellow-300 flex-shrink-0" />
+              <span className="text-sm text-white/95">
+                <strong>NEW:</strong> Meet <strong>Reva</strong> — AI Math Tutor. Instant help, any time.
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.location.hash = '#booking'}>
+                Parents, Book FREE Trial
+              </Button>
+              <Button className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-8 py-6 rounded-full text-lg font-semibold" onClick={() => window.open('http://agenticaifirst.in', '_blank')}>
+                Try Reva AI
+              </Button>
+            </div>
           </div>
 
           {/* Right Content - Illustration */}
