@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import {
   Sparkles, Clock, Brain, Target, MessageSquare,
   FlaskConical, Code2, Lock, Mic, BarChart3,
-  BookOpen, Award, Zap, Globe
+  BookOpen, Award, Zap, Globe, GalleryHorizontal,
+  Dumbbell, TrendingDown, Upload
 } from "lucide-react";
 
 export default function RevaAISection() {
@@ -18,6 +19,11 @@ export default function RevaAISection() {
       description: "Step-by-step visual problem solving with a live whiteboard. See how problems are worked through, not just the answer.",
     },
     {
+      icon: <GalleryHorizontal className="w-6 h-6 text-purple-600" />,
+      title: "Teaching Slides",
+      description: "Reva generates structured lesson slides for any topic — visual, clear, and curriculum-aligned — perfect for concept revision.",
+    },
+    {
       icon: <Mic className="w-6 h-6 text-purple-600" />,
       title: "Voice Interaction",
       description: "Speak your questions out loud. Reva listens, understands, and responds — great for students who learn by talking.",
@@ -28,19 +34,34 @@ export default function RevaAISection() {
       description: "No waiting for a scheduled class. Get instant homework help, exam revision, or concept explanations any time of day.",
     },
     {
+      icon: <Dumbbell className="w-6 h-6 text-purple-600" />,
+      title: "Smart Practice",
+      description: "AI-generated practice problems tailored to your child's level and weak areas. The harder they practise, the smarter it gets.",
+    },
+    {
+      icon: <TrendingDown className="w-6 h-6 text-purple-600" />,
+      title: "Weakness Tracking",
+      description: "Automatically detects weak topics from every session and builds a targeted revision plan — no guesswork needed.",
+    },
+    {
+      icon: <Upload className="w-6 h-6 text-purple-600" />,
+      title: "Question Paper Upload",
+      description: "Upload a question paper, textbook page, or photo of homework. Reva reads it, explains it, and helps solve it instantly.",
+    },
+    {
+      icon: <Award className="w-6 h-6 text-purple-600" />,
+      title: "Quizzes & Assessments",
+      description: "Practice quizzes with instant AI grading and detailed feedback. Every wrong answer is an explanation, not just a red cross.",
+    },
+    {
       icon: <BarChart3 className="w-6 h-6 text-purple-600" />,
       title: "Progress Tracking",
       description: "Reva tracks performance across every topic and session, building a clear picture of your child's strengths and gaps.",
     },
     {
       icon: <Brain className="w-6 h-6 text-purple-600" />,
-      title: "Weakness Detection",
-      description: "Automatically identifies weak areas and surfaces targeted revision topics — so your child focuses where it matters most.",
-    },
-    {
-      icon: <Award className="w-6 h-6 text-purple-600" />,
-      title: "Quizzes & Assessments",
-      description: "Practice quizzes with instant AI grading and detailed feedback. Every wrong answer is an explanation, not just a red cross.",
+      title: "Personalised Learning Path",
+      description: "Reva adapts to each student's pace and curriculum. No two students get the same lesson — it's truly personalised.",
     },
     {
       icon: <BookOpen className="w-6 h-6 text-purple-600" />,
@@ -124,7 +145,7 @@ export default function RevaAISection() {
         </div>
 
         {/* Feature Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
           {coreFeatures.map((f, i) => (
             <div key={i} className="bg-white rounded-2xl p-5 shadow-sm border border-purple-100 hover:shadow-md transition-shadow">
               <div className="bg-purple-50 w-11 h-11 rounded-xl flex items-center justify-center mb-3">

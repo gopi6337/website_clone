@@ -1,382 +1,330 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Mic, BookOpen, BarChart3, RotateCcw } from "lucide-react";
+import { Sparkles, Mic, BookOpen, BarChart3, RotateCcw, GalleryHorizontal, Dumbbell, Upload } from "lucide-react";
 
-// Demo conversation steps
 const demoSteps = [
-  {
-    type: "student",
-    text: "I don't understand how to solve quadratic equations. Can you help?",
-    delay: 500,
-  },
-  {
-    type: "reva",
-    text: "Of course! Let's solve x² - 5x + 6 = 0 together. I'll show you step by step on the whiteboard.",
-    delay: 1200,
+  { type: "student", text: "I don't understand quadratic equations. Can you teach me?", delay: 500 },
+  { type: "reva", text: "Of course! Let me open a lesson on quadratic equations for you.", delay: 1200, feature: "slides" },
+  { type: "reva", text: "Now let's solve x² - 5x + 6 = 0 together on the whiteboard.", delay: 2000, feature: "whiteboard",
     whiteboard: [
       { line: "x² - 5x + 6 = 0", color: "#1e40af" },
-    ],
-  },
-  {
-    type: "reva",
-    text: "Step 1: We need two numbers that multiply to 6 and add to −5.",
-    delay: 2000,
-    whiteboard: [
-      { line: "x² - 5x + 6 = 0", color: "#1e40af" },
-      { line: "Find: a × b = 6 and a + b = −5", color: "#7c3aed" },
-    ],
-  },
-  {
-    type: "reva",
-    text: "Those numbers are −2 and −3. So we can factorise!",
-    delay: 1800,
-    whiteboard: [
-      { line: "x² - 5x + 6 = 0", color: "#1e40af" },
-      { line: "(x − 2)(x − 3) = 0", color: "#059669" },
-    ],
-  },
-  {
-    type: "reva",
-    text: "Step 2: Each bracket equals zero. So x = 2 or x = 3. ✓",
-    delay: 2000,
-    whiteboard: [
+      { line: "Find: a × b = 6,  a + b = −5", color: "#7c3aed" },
       { line: "(x − 2)(x − 3) = 0", color: "#059669" },
       { line: "x = 2  or  x = 3  ✓", color: "#dc2626" },
     ],
   },
-  {
-    type: "student",
-    text: "That makes sense! Can I try a quiz now?",
-    delay: 1200,
-  },
-  {
-    type: "reva",
-    text: "Great idea! You scored 8/10 on your last quiz. Let's focus on the 2 you missed.",
-    delay: 1500,
-    badge: "quiz",
-  },
+  { type: "student", text: "Got it! Can I practise some questions?", delay: 1200 },
+  { type: "reva", text: "Here's a Smart Practice set based on your weak areas in factorisation.", delay: 1500, feature: "practice" },
+  { type: "student", text: "I uploaded my homework paper, can you check it?", delay: 1200 },
+  { type: "reva", text: "I can see your question paper. Let me work through question 3 for you step by step.", delay: 1500, feature: "upload" },
+  { type: "reva", text: "Based on this session, I've updated your weakness tracker. Factorisation needs more work!", delay: 2000, feature: "quiz" },
 ];
 
-interface WhiteboardLine {
-  line: string;
-  color: string;
+interface WhiteboardLine { line: string; color: string; }
+interface DemoStep {
+  type: string; text: string; delay: number;
+  whiteboard?: WhiteboardLine[]; feature?: string;
 }
 
-interface DemoStep {
-  type: string;
-  text: string;
-  delay: number;
-  whiteboard?: WhiteboardLine[];
-  badge?: string;
-}
+const slideContent = [
+  { title: "What is a Quadratic Equation?", body: "ax² + bx + c = 0\nwhere a ≠ 0" },
+  { title: "Methods to Solve", body: "1. Factorisation\n2. Quadratic Formula\n3. Completing the Square" },
+  { title: "Factorisation Method", body: "x² - 5x + 6 = 0\n→ Find two numbers: × gives 6, + gives −5\n→ Answer: (x-2)(x-3) = 0" },
+];
 
 export default function RevaDemo() {
-  const [currentStep, setCurrentStep] = useState(-1);
   const [displayedSteps, setDisplayedSteps] = useState<DemoStep[]>([]);
   const [whiteboardLines, setWhiteboardLines] = useState<WhiteboardLine[]>([]);
-  const [isRunning, setIsRunning] = useState(false);
-  const [activeFeature, setActiveFeature] = useState("chat");
-  const [typingText, setTypingText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [typingText, setTypingText] = useState("");
+  const [activeFeature, setActiveFeature] = useState("chat");
+  const [slideIndex, setSlideIndex] = useState(0);
   const chatRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const stepRef = useRef(0);
 
   const typeText = (text: string, onDone: () => void) => {
     setIsTyping(true);
     setTypingText("");
     let i = 0;
-    const speed = 28;
     const interval = setInterval(() => {
-      if (i < text.length) {
-        setTypingText(text.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(interval);
-        setIsTyping(false);
-        onDone();
-      }
-    }, speed);
+      if (i < text.length) { setTypingText(text.slice(0, i + 1)); i++; }
+      else { clearInterval(interval); setIsTyping(false); onDone(); }
+    }, 25);
     return interval;
   };
 
-  const runStep = (stepIndex: number) => {
-    if (stepIndex >= demoSteps.length) {
-      setIsRunning(false);
-      return;
-    }
-    const step = demoSteps[stepIndex];
+  const runSteps = (steps: DemoStep[], index: number) => {
+    if (index >= steps.length) return;
+    const step = steps[index];
     timerRef.current = setTimeout(() => {
       if (step.type === "reva") {
-        setIsTyping(true);
-        setTypingText("");
-        const interval = typeText(step.text, () => {
-          const finalStep = { ...step };
-          setDisplayedSteps(prev => [...prev, finalStep]);
+        typeText(step.text, () => {
+          setDisplayedSteps(prev => [...prev, step]);
           setTypingText("");
-          if (step.whiteboard) {
-            setWhiteboardLines(step.whiteboard);
-            setActiveFeature("whiteboard");
-          }
-          if (step.badge === "quiz") setActiveFeature("quiz");
-          stepRef.current = stepIndex + 1;
-          runStep(stepIndex + 1);
+          if (step.feature) setActiveFeature(step.feature);
+          if (step.whiteboard) setWhiteboardLines(step.whiteboard);
+          runSteps(steps, index + 1);
         });
-        return () => clearInterval(interval);
       } else {
         setDisplayedSteps(prev => [...prev, step]);
-        stepRef.current = stepIndex + 1;
-        runStep(stepIndex + 1);
+        runSteps(steps, index + 1);
       }
     }, step.delay);
   };
 
   const startDemo = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
-    setCurrentStep(0);
-    setDisplayedSteps([]);
-    setWhiteboardLines([]);
-    setTypingText("");
-    setIsTyping(false);
-    setIsRunning(true);
-    setActiveFeature("chat");
-    stepRef.current = 0;
-    runStep(0);
+    setDisplayedSteps([]); setWhiteboardLines([]);
+    setTypingText(""); setIsTyping(false);
+    setActiveFeature("chat"); setSlideIndex(0);
+    runSteps(demoSteps, 0);
   };
 
-  useEffect(() => {
-    startDemo();
-    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
-  }, []);
-
-  useEffect(() => {
-    if (chatRef.current) {
-      chatRef.current.scrollTop = chatRef.current.scrollHeight;
-    }
-  }, [displayedSteps, typingText]);
+  useEffect(() => { startDemo(); return () => { if (timerRef.current) clearTimeout(timerRef.current); }; }, []);
+  useEffect(() => { if (chatRef.current) chatRef.current.scrollTop = chatRef.current.scrollHeight; }, [displayedSteps, typingText]);
 
   const features = [
-    { id: "chat", icon: <Sparkles className="w-4 h-4" />, label: "AI Chat" },
-    { id: "whiteboard", icon: <BookOpen className="w-4 h-4" />, label: "Whiteboard" },
-    { id: "voice", icon: <Mic className="w-4 h-4" />, label: "Voice" },
-    { id: "quiz", icon: <BarChart3 className="w-4 h-4" />, label: "Quiz" },
+    { id: "chat", icon: <Sparkles className="w-3.5 h-3.5" />, label: "Chat" },
+    { id: "whiteboard", icon: <BookOpen className="w-3.5 h-3.5" />, label: "Whiteboard" },
+    { id: "slides", icon: <GalleryHorizontal className="w-3.5 h-3.5" />, label: "Slides" },
+    { id: "voice", icon: <Mic className="w-3.5 h-3.5" />, label: "Voice" },
+    { id: "practice", icon: <Dumbbell className="w-3.5 h-3.5" />, label: "Practice" },
+    { id: "upload", icon: <Upload className="w-3.5 h-3.5" />, label: "Upload" },
+    { id: "quiz", icon: <BarChart3 className="w-3.5 h-3.5" />, label: "Progress" },
   ];
 
   return (
     <section className="py-10 md:py-16 bg-white">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Sparkles className="w-4 h-4" />
             See Reva in Action
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Watch Reva Teach a Real Lesson
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Watch Reva Teach a Real Lesson</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            This is exactly how Reva tutors your child — live AI conversation, interactive
-            whiteboard, voice interaction, and personalised quizzes.
+            Chat · Whiteboard · Teaching Slides · Voice · Smart Practice · Upload & Solve · Progress Tracking
           </p>
         </div>
 
-        {/* Demo Container */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-50 rounded-3xl border border-gray-200 overflow-hidden shadow-lg">
 
-            {/* Feature Tab Bar */}
-            <div className="bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-2 flex-wrap">
-              <div className="flex items-center gap-1 mr-2">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+            {/* Feature Tabs */}
+            <div className="bg-white border-b border-gray-200 px-4 py-3">
+              <div className="flex items-center gap-1.5 mb-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                <span className="text-xs text-gray-400 ml-1">Reva AI — agenticaifirst.in</span>
+                <button onClick={startDemo} className="ml-auto flex items-center gap-1 text-xs text-gray-400 hover:text-purple-600 transition-colors">
+                  <RotateCcw className="w-3 h-3" /> Replay
+                </button>
               </div>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-1.5 flex-wrap">
                 {features.map(f => (
-                  <button
-                    key={f.id}
-                    onClick={() => setActiveFeature(f.id)}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                      activeFeature === f.id
-                        ? "bg-purple-600 text-white"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
-                  >
+                  <button key={f.id} onClick={() => setActiveFeature(f.id)}
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium transition-all ${
+                      activeFeature === f.id ? "bg-purple-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    }`}>
                     {f.icon} {f.label}
                   </button>
                 ))}
               </div>
-              <div className="ml-auto">
-                <button
-                  onClick={startDemo}
-                  className="flex items-center gap-1 text-xs text-gray-500 hover:text-purple-600 transition-colors"
-                >
-                  <RotateCcw className="w-3 h-3" /> Replay
-                </button>
-              </div>
             </div>
 
             {/* Main Panel */}
-            <div className="grid md:grid-cols-2 min-h-[420px]">
+            <div className="grid md:grid-cols-2" style={{ minHeight: "420px" }}>
 
-              {/* Chat Panel */}
+              {/* Chat */}
               <div className="border-r border-gray-200 flex flex-col">
-                <div className="px-4 py-2 bg-white border-b border-gray-100 text-xs font-semibold text-gray-500 uppercase tracking-wide">
-                  Reva AI Chat
-                </div>
-                <div
-                  ref={chatRef}
-                  className="flex-1 overflow-y-auto p-4 space-y-3"
-                  style={{ maxHeight: "380px" }}
-                >
+                <div className="px-4 py-2 bg-white border-b border-gray-100 text-xs font-semibold text-gray-500 uppercase tracking-wide">Reva AI Chat</div>
+                <div ref={chatRef} className="flex-1 overflow-y-auto p-3 space-y-2.5" style={{ maxHeight: "360px" }}>
                   {displayedSteps.map((step, i) => (
                     <div key={i} className={`flex ${step.type === "student" ? "justify-end" : "justify-start"}`}>
                       {step.type === "reva" && (
-                        <div className="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
-                          <Sparkles className="w-3.5 h-3.5 text-white" />
+                        <div className="w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
+                          <Sparkles className="w-3 h-3 text-white" />
                         </div>
                       )}
-                      <div
-                        className={`max-w-[80%] px-3 py-2 rounded-2xl text-sm leading-relaxed ${
-                          step.type === "student"
-                            ? "bg-blue-600 text-white rounded-br-sm"
-                            : "bg-white border border-gray-200 text-gray-800 rounded-bl-sm shadow-sm"
-                        }`}
-                      >
+                      <div className={`max-w-[82%] px-3 py-2 rounded-2xl text-xs leading-relaxed ${
+                        step.type === "student"
+                          ? "bg-blue-600 text-white rounded-br-sm"
+                          : "bg-white border border-gray-200 text-gray-800 rounded-bl-sm shadow-sm"
+                      }`}>
                         {step.text}
-                        {step.badge === "quiz" && (
-                          <div className="mt-2 bg-green-50 border border-green-200 rounded-lg px-3 py-2 text-green-700 text-xs font-medium">
-                            📊 Last quiz: 8/10 · Weak area: Factorisation
-                          </div>
-                        )}
                       </div>
                     </div>
                   ))}
-
-                  {/* Typing indicator */}
                   {isTyping && (
                     <div className="flex justify-start">
-                      <div className="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
-                        <Sparkles className="w-3.5 h-3.5 text-white" />
+                      <div className="w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">
+                        <Sparkles className="w-3 h-3 text-white" />
                       </div>
-                      <div className="max-w-[80%] px-3 py-2 rounded-2xl rounded-bl-sm bg-white border border-gray-200 text-gray-800 text-sm shadow-sm">
-                        {typingText}
-                        <span className="inline-block w-0.5 h-4 bg-purple-500 ml-0.5 animate-pulse align-middle" />
+                      <div className="max-w-[82%] px-3 py-2 rounded-2xl rounded-bl-sm bg-white border border-gray-200 text-xs shadow-sm text-gray-800">
+                        {typingText}<span className="inline-block w-0.5 h-3.5 bg-purple-500 ml-0.5 animate-pulse align-middle" />
                       </div>
                     </div>
                   )}
                 </div>
-
-                {/* Input bar */}
                 <div className="p-3 border-t border-gray-100 bg-white">
-                  <div className="flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2">
+                  <div className="flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1.5">
                     <span className="text-xs text-gray-400 flex-1">Ask Reva anything...</span>
-                    <Mic className="w-4 h-4 text-purple-500" />
+                    <Mic className="w-3.5 h-3.5 text-purple-500" />
                   </div>
                 </div>
               </div>
 
-              {/* Right Panel — Whiteboard / Voice / Quiz */}
+              {/* Right Panel */}
               <div className="flex flex-col">
                 <div className="px-4 py-2 bg-white border-b border-gray-100 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   {activeFeature === "whiteboard" && "Interactive Whiteboard"}
+                  {activeFeature === "slides" && "Teaching Slides"}
                   {activeFeature === "voice" && "Voice Mode"}
-                  {activeFeature === "chat" && "How It Works"}
-                  {activeFeature === "quiz" && "Progress & Quiz"}
+                  {activeFeature === "practice" && "Smart Practice"}
+                  {activeFeature === "upload" && "Question Paper Upload"}
+                  {activeFeature === "quiz" && "Weakness & Progress"}
+                  {activeFeature === "chat" && "All Features"}
                 </div>
 
-                <div className="flex-1 p-5 flex flex-col justify-center">
+                <div className="flex-1 p-4 flex flex-col justify-center">
 
                   {/* Whiteboard */}
                   {activeFeature === "whiteboard" && (
-                    <div className="bg-white rounded-2xl border-2 border-gray-200 p-5 min-h-[200px] font-mono">
+                    <div className="bg-white rounded-2xl border-2 border-gray-200 p-4 min-h-[180px] font-mono">
                       <div className="text-xs text-gray-400 mb-3 flex items-center gap-1">
-                        <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                        Reva is drawing...
+                        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                        Reva is writing...
                       </div>
-                      <div className="space-y-3">
+                      <div className="space-y-2.5">
                         {whiteboardLines.map((wl, i) => (
-                          <div
-                            key={i}
-                            className="text-base md:text-lg font-bold animate-fade-in"
-                            style={{ color: wl.color, animationDelay: `${i * 0.3}s` }}
-                          >
-                            {wl.line}
-                          </div>
+                          <div key={i} className="text-sm md:text-base font-bold" style={{ color: wl.color }}>{wl.line}</div>
                         ))}
-                        {whiteboardLines.length === 0 && (
-                          <div className="text-gray-300 text-sm italic">Whiteboard will activate during the lesson...</div>
-                        )}
+                        {whiteboardLines.length === 0 && <div className="text-gray-300 text-xs italic">Whiteboard activates during lesson...</div>}
                       </div>
+                    </div>
+                  )}
+
+                  {/* Slides */}
+                  {activeFeature === "slides" && (
+                    <div className="space-y-3">
+                      <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-5 text-white min-h-[140px]">
+                        <div className="text-xs text-white/70 mb-2">Slide {slideIndex + 1} of {slideContent.length}</div>
+                        <h3 className="font-bold text-sm mb-2">{slideContent[slideIndex].title}</h3>
+                        <pre className="text-xs text-white/90 font-sans leading-relaxed whitespace-pre-wrap">{slideContent[slideIndex].body}</pre>
+                      </div>
+                      <div className="flex justify-between gap-2">
+                        <button onClick={() => setSlideIndex(Math.max(0, slideIndex - 1))} className="flex-1 py-1.5 text-xs bg-gray-100 rounded-lg hover:bg-gray-200 disabled:opacity-40" disabled={slideIndex === 0}>← Prev</button>
+                        <button onClick={() => setSlideIndex(Math.min(slideContent.length - 1, slideIndex + 1))} className="flex-1 py-1.5 text-xs bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 disabled:opacity-40" disabled={slideIndex === slideContent.length - 1}>Next →</button>
+                      </div>
+                      <p className="text-xs text-gray-400 text-center">AI-generated slides — click to navigate</p>
                     </div>
                   )}
 
                   {/* Voice */}
                   {activeFeature === "voice" && (
-                    <div className="flex flex-col items-center justify-center gap-4 py-6">
+                    <div className="flex flex-col items-center justify-center gap-3 py-4">
                       <div className="relative">
-                        <div className="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center">
-                          <Mic className="w-8 h-8 text-purple-600" />
+                        <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center">
+                          <Mic className="w-7 h-7 text-purple-600" />
                         </div>
                         <div className="absolute inset-0 rounded-full border-4 border-purple-300 animate-ping opacity-40"></div>
                       </div>
                       <div className="text-center">
-                        <p className="font-semibold text-gray-800">Speak your question</p>
-                        <p className="text-sm text-gray-500 mt-1">Reva is listening...</p>
+                        <p className="font-semibold text-gray-800 text-sm">Speak your question</p>
+                        <p className="text-xs text-gray-500 mt-1">Reva is listening...</p>
                       </div>
-                      <div className="flex gap-1 items-end h-8">
+                      <div className="flex gap-1 items-end h-6">
                         {[3,5,8,4,7,5,3,6,4,8].map((h, i) => (
-                          <div
-                            key={i}
-                            className="w-1.5 bg-purple-400 rounded-full animate-pulse"
-                            style={{ height: `${h * 3}px`, animationDelay: `${i * 0.1}s` }}
-                          />
+                          <div key={i} className="w-1.5 bg-purple-400 rounded-full animate-pulse" style={{ height: `${h * 2.5}px`, animationDelay: `${i * 0.1}s` }} />
                         ))}
                       </div>
                       <p className="text-xs text-gray-400">Works on mobile &amp; desktop</p>
                     </div>
                   )}
 
-                  {/* Quiz */}
-                  {activeFeature === "quiz" && (
-                    <div className="space-y-4">
-                      <div className="bg-green-50 rounded-xl p-4 border border-green-200">
-                        <p className="text-xs font-semibold text-green-700 mb-2">📊 Progress Report</p>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-gray-600">Algebra</span>
-                          <span className="font-bold text-green-700">85%</span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
-                          <div className="bg-green-500 h-2 rounded-full" style={{ width: "85%" }}></div>
-                        </div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-gray-600">Factorisation</span>
-                          <span className="font-bold text-yellow-600">62%</span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2">
-                          <div className="bg-yellow-400 h-2 rounded-full" style={{ width: "62%" }}></div>
+                  {/* Smart Practice */}
+                  {activeFeature === "practice" && (
+                    <div className="space-y-3">
+                      <div className="bg-orange-50 border border-orange-200 rounded-xl p-3">
+                        <p className="text-xs font-bold text-orange-700 mb-2">🧠 Smart Practice — Factorisation</p>
+                        <p className="text-sm text-gray-800 font-medium">Q1: Factorise x² + 7x + 12</p>
+                        <div className="mt-2 space-y-1">
+                          {["(x+3)(x+4)", "(x+2)(x+6)", "(x+1)(x+12)", "Cannot factorise"].map((opt, i) => (
+                            <div key={i} className={`text-xs px-3 py-1.5 rounded-lg border cursor-pointer hover:bg-orange-100 ${i === 0 ? "border-green-400 bg-green-50 text-green-700" : "border-gray-200 bg-white text-gray-700"}`}>
+                              {i === 0 ? "✓ " : ""}{opt}
+                            </div>
+                          ))}
                         </div>
                       </div>
-                      <div className="bg-purple-50 rounded-xl p-4 border border-purple-200">
-                        <p className="text-xs font-semibold text-purple-700 mb-2">🎯 Reva recommends:</p>
-                        <p className="text-sm text-gray-700">Practice 5 more factorisation problems to reach 80%</p>
+                      <div className="text-xs text-gray-500 text-center">AI picks questions targeting your weak spots</div>
+                    </div>
+                  )}
+
+                  {/* Upload */}
+                  {activeFeature === "upload" && (
+                    <div className="space-y-3">
+                      <div className="border-2 border-dashed border-purple-300 rounded-2xl p-5 text-center bg-purple-50">
+                        <Upload className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                        <p className="text-sm font-medium text-gray-700">Question paper uploaded</p>
+                        <p className="text-xs text-gray-500 mt-1">homework.pdf · 3 pages</p>
+                      </div>
+                      <div className="bg-white border border-gray-200 rounded-xl p-3">
+                        <p className="text-xs font-bold text-purple-700 mb-1">Reva found 5 questions:</p>
+                        <div className="space-y-1">
+                          {["Q1: Solve 2x² - 3x - 2 = 0", "Q2: Factorise 4x² - 9", "Q3: Sketch y = x² - 4x + 3"].map((q, i) => (
+                            <p key={i} className="text-xs text-gray-600 py-1 border-b border-gray-50">{q}</p>
+                          ))}
+                          <p className="text-xs text-gray-400 pt-1">+ 2 more questions detected</p>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-400 text-center">Upload PDFs, photos, or images</p>
+                    </div>
+                  )}
+
+                  {/* Progress / Weakness */}
+                  {activeFeature === "quiz" && (
+                    <div className="space-y-3">
+                      <div className="bg-white rounded-xl border border-gray-200 p-3">
+                        <p className="text-xs font-bold text-gray-700 mb-3">📊 Topic Progress</p>
+                        {[
+                          { topic: "Linear Equations", pct: 92, color: "bg-green-500" },
+                          { topic: "Quadratic Equations", pct: 74, color: "bg-blue-500" },
+                          { topic: "Factorisation", pct: 58, color: "bg-yellow-400" },
+                          { topic: "Trigonometry", pct: 45, color: "bg-red-400" },
+                        ].map((t, i) => (
+                          <div key={i} className="mb-2">
+                            <div className="flex justify-between text-xs mb-0.5">
+                              <span className="text-gray-600">{t.topic}</span>
+                              <span className="font-bold">{t.pct}%</span>
+                            </div>
+                            <div className="w-full bg-gray-100 rounded-full h-1.5">
+                              <div className={`${t.color} h-1.5 rounded-full transition-all`} style={{ width: `${t.pct}%` }}></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="bg-red-50 border border-red-200 rounded-xl p-3 text-xs text-red-700">
+                        ⚠️ <strong>Weakness detected:</strong> Factorisation &amp; Trigonometry need more practice
                       </div>
                     </div>
                   )}
 
-                  {/* Chat / How it works */}
+                  {/* All features overview */}
                   {activeFeature === "chat" && (
-                    <div className="space-y-3 text-sm text-gray-600">
+                    <div className="grid grid-cols-2 gap-2">
                       {[
-                        { icon: "💬", text: "Ask any maths question in plain English" },
-                        { icon: "✏️", text: "Reva draws on the whiteboard step-by-step" },
-                        { icon: "🎤", text: "Speak your question with voice mode" },
-                        { icon: "📝", text: "Take quizzes, get instant feedback" },
-                        { icon: "📊", text: "Track your progress across every topic" },
+                        { icon: "💬", text: "AI Chat" },
+                        { icon: "✏️", text: "Whiteboard" },
+                        { icon: "📑", text: "Slides" },
+                        { icon: "🎤", text: "Voice" },
+                        { icon: "🧠", text: "Smart Practice" },
+                        { icon: "📤", text: "Upload Paper" },
+                        { icon: "📉", text: "Weakness Track" },
+                        { icon: "📊", text: "Progress" },
                       ].map((item, i) => (
-                        <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-3 border border-gray-100">
-                          <span className="text-xl">{item.icon}</span>
-                          <span>{item.text}</span>
+                        <div key={i} className="flex items-center gap-2 bg-white rounded-xl p-2.5 border border-gray-100 text-xs text-gray-700">
+                          <span className="text-base">{item.icon}</span> {item.text}
                         </div>
                       ))}
                     </div>
@@ -386,14 +334,13 @@ export default function RevaDemo() {
             </div>
           </div>
 
-          {/* CTA below demo */}
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">Ready to experience it for real?</p>
             <Button
               className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-6 rounded-full text-lg font-bold"
               onClick={() => window.open('http://agenticaifirst.in', '_blank')}
             >
-              Try Reva Free — No Sign-up Needed
+              Try Reva Free — Start Now
             </Button>
           </div>
         </div>
