@@ -10,7 +10,7 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
-  base: '/website/', // Served at /website/ on agenticaifirst.in for preview
+  base: '/', // Served at root for eduversejr.com
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
