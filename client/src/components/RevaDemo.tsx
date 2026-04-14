@@ -1,11 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Mic, BookOpen, BarChart3, RotateCcw, GalleryHorizontal, Dumbbell, Upload } from "lucide-react";
+import { Sparkles, Mic, BookOpen, BarChart3, RotateCcw, GalleryHorizontal, Dumbbell, Upload, Volume2, VolumeX } from "lucide-react";
 
 const demoSteps = [
-  { type: "student", text: "I don't understand quadratic equations. Can you teach me?", delay: 500 },
-  { type: "reva", text: "Of course! Let me open a lesson on quadratic equations for you.", delay: 1200, feature: "slides" },
+  { type: "student", text: "I don't understand quadratic equations. Can you teach me?", delay: 500,
+    narration: "A student asks Reva to explain quadratic equations." },
+  { type: "reva", text: "Of course! Let me open a lesson on quadratic equations for you.", delay: 1200, feature: "slides",
+    narration: "Reva instantly opens a personalised teaching lesson — no waiting, no scheduling." },
   { type: "reva", text: "Now let's solve x² - 5x + 6 = 0 together on the whiteboard.", delay: 2000, feature: "whiteboard",
+    narration: "Reva solves the equation step by step on the interactive whiteboard — just like a real teacher.",
     whiteboard: [
       { line: "x² - 5x + 6 = 0", color: "#1e40af" },
       { line: "Find: a × b = 6,  a + b = −5", color: "#7c3aed" },
@@ -13,16 +16,21 @@ const demoSteps = [
       { line: "x = 2  or  x = 3  ✓", color: "#dc2626" },
     ],
   },
-  { type: "student", text: "Got it! Can I practise some questions?", delay: 1200 },
-  { type: "reva", text: "Here's a Smart Practice set based on your weak areas in factorisation.", delay: 1500, feature: "practice" },
-  { type: "student", text: "I uploaded my homework paper, can you check it?", delay: 1200 },
-  { type: "reva", text: "I can see your question paper. Let me work through question 3 for you step by step.", delay: 1500, feature: "upload" },
-  { type: "reva", text: "Based on this session, I've updated your weakness tracker. Factorisation needs more work!", delay: 2000, feature: "quiz" },
+  { type: "student", text: "Got it! Can I practise some questions?", delay: 1200,
+    narration: "The student is ready to practice." },
+  { type: "reva", text: "Here's a Smart Practice set based on your weak areas in factorisation.", delay: 1500, feature: "practice",
+    narration: "Reva activates Smart Practice — automatically targeting the student's weakest topics." },
+  { type: "student", text: "I uploaded my homework paper, can you check it?", delay: 1200,
+    narration: "The student uploads their homework question paper." },
+  { type: "reva", text: "I can see your question paper. Let me work through question 3 for you step by step.", delay: 1500, feature: "upload",
+    narration: "Reva reads the paper and explains every question — photos, PDFs, all supported." },
+  { type: "reva", text: "Based on this session, I've updated your weakness tracker. Factorisation needs more work!", delay: 2000, feature: "quiz",
+    narration: "After every session, Reva automatically updates the student's progress and flags weak areas." },
 ];
 
 interface WhiteboardLine { line: string; color: string; }
 interface DemoStep {
-  type: string; text: string; delay: number;
+  type: string; text: string; delay: number; narration?: string;
   whiteboard?: WhiteboardLine[]; feature?: string;
 }
 
@@ -32,6 +40,8 @@ const slideContent = [
   { title: "Factorisation Method", body: "x² - 5x + 6 = 0\n→ Find two numbers: × gives 6, + gives −5\n→ Answer: (x-2)(x-3) = 0" },
 ];
 
+const hasSpeechSynthesis = typeof window !== "undefined" && "speechSynthesis" in window;
+
 export default function RevaDemo() {
   const [displayedSteps, setDisplayedSteps] = useState<DemoStep[]>([]);
   const [whiteboardLines, setWhiteboardLines] = useState<WhiteboardLine[]>([]);
@@ -39,8 +49,35 @@ export default function RevaDemo() {
   const [typingText, setTypingText] = useState("");
   const [activeFeature, setActiveFeature] = useState("chat");
   const [slideIndex, setSlideIndex] = useState(0);
+  const [narrationOn, setNarrationOn] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const narrationRef = useRef(false);
+
+  const speak = useCallback((text: string) => {
+    if (!hasSpeechSynthesis || !narrationRef.current) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.95;
+    utter.pitch = 1.05;
+    utter.volume = 1;
+    // Prefer a natural-sounding voice
+    const voices = window.speechSynthesis.getVoices();
+    const preferred = voices.find(v =>
+      v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Karen") || v.name.includes("Natural")
+    );
+    if (preferred) utter.voice = preferred;
+    utter.onstart = () => setIsSpeaking(true);
+    utter.onend = () => setIsSpeaking(false);
+    utter.onerror = () => setIsSpeaking(false);
+    window.speechSynthesis.speak(utter);
+  }, []);
+
+  const stopSpeech = useCallback(() => {
+    if (hasSpeechSynthesis) window.speechSynthesis.cancel();
+    setIsSpeaking(false);
+  }, []);
 
   const typeText = (text: string, onDone: () => void) => {
     setIsTyping(true);
@@ -57,6 +94,7 @@ export default function RevaDemo() {
     if (index >= steps.length) return;
     const step = steps[index];
     timerRef.current = setTimeout(() => {
+      if (step.narration) speak(step.narration);
       if (step.type === "reva") {
         typeText(step.text, () => {
           setDisplayedSteps(prev => [...prev, step]);
@@ -72,16 +110,54 @@ export default function RevaDemo() {
     }, step.delay);
   };
 
-  const startDemo = () => {
+  const startDemo = useCallback((withNarration?: boolean) => {
     if (timerRef.current) clearTimeout(timerRef.current);
+    stopSpeech();
     setDisplayedSteps([]); setWhiteboardLines([]);
     setTypingText(""); setIsTyping(false);
     setActiveFeature("chat"); setSlideIndex(0);
+
+    if (withNarration !== undefined) {
+      narrationRef.current = withNarration;
+      setNarrationOn(withNarration);
+    }
+
+    if (narrationRef.current) {
+      // Brief intro narration before demo starts
+      if (hasSpeechSynthesis) {
+        const intro = new SpeechSynthesisUtterance("Meet Reva — your AI maths tutor, available 24 hours a day, 7 days a week.");
+        intro.rate = 0.95;
+        intro.pitch = 1.05;
+        const voices = window.speechSynthesis.getVoices();
+        const preferred = voices.find(v => v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Karen"));
+        if (preferred) intro.voice = preferred;
+        intro.onend = () => runSteps(demoSteps, 0);
+        intro.onerror = () => runSteps(demoSteps, 0);
+        setIsSpeaking(true);
+        window.speechSynthesis.speak(intro);
+        return;
+      }
+    }
     runSteps(demoSteps, 0);
+  }, [speak, stopSpeech]);
+
+  const toggleNarration = () => {
+    const next = !narrationOn;
+    startDemo(next);
   };
 
-  useEffect(() => { startDemo(); return () => { if (timerRef.current) clearTimeout(timerRef.current); }; }, []);
-  useEffect(() => { if (chatRef.current) chatRef.current.scrollTop = chatRef.current.scrollHeight; }, [displayedSteps, typingText]);
+  useEffect(() => {
+    narrationRef.current = false;
+    startDemo();
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      if (hasSpeechSynthesis) window.speechSynthesis.cancel();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (chatRef.current) chatRef.current.scrollTop = chatRef.current.scrollHeight;
+  }, [displayedSteps, typingText]);
 
   const features = [
     { id: "chat", icon: <Sparkles className="w-3.5 h-3.5" />, label: "Chat" },
@@ -117,9 +193,28 @@ export default function RevaDemo() {
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
                 <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                 <span className="text-xs text-gray-400 ml-1">Reva AI — agenticaifirst.in</span>
-                <button onClick={startDemo} className="ml-auto flex items-center gap-1 text-xs text-gray-400 hover:text-purple-600 transition-colors">
-                  <RotateCcw className="w-3 h-3" /> Replay
-                </button>
+                <div className="ml-auto flex items-center gap-2">
+                  {hasSpeechSynthesis && (
+                    <button
+                      onClick={toggleNarration}
+                      title={narrationOn ? "Mute narration" : "Enable voice narration"}
+                      className={`flex items-center gap-1 text-xs px-2 py-1 rounded-lg border transition-all ${
+                        narrationOn
+                          ? "bg-purple-100 border-purple-300 text-purple-700"
+                          : "bg-gray-50 border-gray-200 text-gray-500 hover:border-purple-300 hover:text-purple-600"
+                      }`}
+                    >
+                      {narrationOn ? (
+                        <><Volume2 className="w-3 h-3" />{isSpeaking ? <span className="animate-pulse">Speaking…</span> : "Audio On"}</>
+                      ) : (
+                        <><VolumeX className="w-3 h-3" />Audio Off</>
+                      )}
+                    </button>
+                  )}
+                  <button onClick={() => startDemo()} className="flex items-center gap-1 text-xs text-gray-400 hover:text-purple-600 transition-colors">
+                    <RotateCcw className="w-3 h-3" /> Replay
+                  </button>
+                </div>
               </div>
               <div className="flex gap-1.5 flex-wrap">
                 {features.map(f => (
@@ -334,7 +429,20 @@ export default function RevaDemo() {
             </div>
           </div>
 
-          <div className="text-center mt-8">
+          {/* Narration hint */}
+          {hasSpeechSynthesis && !narrationOn && (
+            <div className="text-center mt-4">
+              <button
+                onClick={toggleNarration}
+                className="inline-flex items-center gap-2 text-sm text-purple-600 hover:text-purple-800 border border-purple-200 hover:border-purple-400 px-4 py-2 rounded-full transition-all"
+              >
+                <Volume2 className="w-4 h-4" />
+                Enable voice narration to hear the demo
+              </button>
+            </div>
+          )}
+
+          <div className="text-center mt-6">
             <p className="text-gray-600 mb-4">Ready to experience it for real?</p>
             <Button
               className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-6 rounded-full text-lg font-bold"
