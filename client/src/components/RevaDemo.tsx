@@ -192,7 +192,7 @@ export default function RevaDemo() {
                 <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
                 <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                <span className="text-xs text-gray-400 ml-1">Reva AI — agenticaifirst.in</span>
+                <span className="text-xs text-gray-400 ml-1">Reva AI — revaai.eduversejr.com</span>
                 <div className="ml-auto flex items-center gap-2">
                   {hasSpeechSynthesis && (
                     <button
@@ -446,7 +446,7 @@ export default function RevaDemo() {
             <p className="text-gray-600 mb-4">Ready to experience it for real?</p>
             <Button
               className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-6 rounded-full text-lg font-bold"
-              onClick={() => window.open('http://agenticaifirst.in', '_blank')}
+              onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}
             >
               Try Reva Free — Start Now
             </Button>

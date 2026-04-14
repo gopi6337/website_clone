@@ -179,7 +179,7 @@ export default function RevaAISection() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-10 py-6 rounded-full text-lg font-bold"
-              onClick={() => window.open('http://agenticaifirst.in', '_blank')}
+              onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}
             >
               Start Free with Reva
             </Button>

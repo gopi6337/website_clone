@@ -87,7 +87,7 @@ export default function Home() {
 
           <div className="text-center flex flex-wrap justify-center gap-4">
             <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-5 rounded-full font-bold"
-              onClick={() => window.open('http://agenticaifirst.in', '_blank')}>
+              onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}>
               Try Reva Free
             </Button>
             <Link href="/reva">

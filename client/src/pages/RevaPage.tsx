@@ -36,7 +36,7 @@ export default function RevaPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-8 py-6 rounded-full text-lg font-bold"
-              onClick={() => window.open('http://agenticaifirst.in', '_blank')}>
+              onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}>
               Try Reva Free — No Sign-up Needed
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-purple-700 px-8 py-6 rounded-full text-lg"

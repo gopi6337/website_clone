@@ -79,7 +79,7 @@ export default function Header() {
             <Button variant="outline" className="rounded-full" onClick={() => window.location.href = '/#booking'}>
               Book a FREE Trial
             </Button>
-            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.open('http://agenticaifirst.in', '_blank')}>
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}>
               Try Reva AI
             </Button>
           </div>
@@ -119,7 +119,7 @@ export default function Header() {
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.href = '/#booking'; }}>Book a FREE Trial</Button>
-              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.open('http://agenticaifirst.in', '_blank'); }}>
+              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.open('https://revaai.eduversejr.com', '_blank'); }}>
                 Try Reva AI
               </Button>
             </div>

@@ -102,7 +102,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "Is Reva free to use?",
-      answer: "Yes — you can start using Reva for free with no credit card required. Simply sign up at agenticaifirst.in to get started with AI-powered maths tutoring.",
+      answer: "Yes — you can start using Reva for free with no credit card required. Simply sign up at revaai.eduversejr.com to get started with AI-powered maths tutoring.",
     },
     {
       type: "reva",
