@@ -127,9 +127,7 @@ function RevaNav() {
           </Link>
           <span className="text-white/20 hidden sm:block">|</span>
           <div className="hidden sm:flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
-              <Sparkles className="w-3 h-3 text-white" />
-            </div>
+            <img src="/reva-logo.jpg" alt="Reva AI" className="w-7 h-7 rounded-lg object-contain" />
             <span className="text-white font-bold text-base tracking-tight">Reva AI Teacher</span>
           </div>
         </div>
