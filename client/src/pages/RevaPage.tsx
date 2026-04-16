@@ -209,18 +209,79 @@ function FAQ() {
   );
 }
 
+/* ─── Structured data (SEO / AEO) ───────────────────────── */
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "EduVerseJr", "item": "https://eduversejr.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Reva AI Teacher", "item": "https://eduversejr.com/reva" },
+      ],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Reva AI Teacher",
+      "alternateName": ["Reva AI", "Reva AI Tutor"],
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "url": "https://revaai.eduversejr.com",
+      "description": "Reva is an AI teacher for Maths, Science and Coding — available 24/7 for Grades 5–12. Features include AI chat, interactive whiteboard, voice mode, teaching slides, smart practice, weakness tracking and question paper upload.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free tier available — no credit card required",
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "EduVerseJr",
+        "url": "https://eduversejr.com",
+      },
+      "featureList": [
+        "AI Chat Tutor",
+        "Interactive Whiteboard",
+        "Voice Mode",
+        "Teaching Slides",
+        "Smart Practice",
+        "Weakness Tracking",
+        "Question Paper Upload",
+        "Progress Dashboard",
+        "Curriculum-Aligned Content",
+      ],
+      "educationalLevel": "Grades 5–12",
+      "inLanguage": "en",
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((f) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a },
+      })),
+    },
+  ],
+};
+
 /* ─── Main page ─────────────────────────────────────────── */
 export default function RevaPage() {
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>Reva AI Teacher — EduVerseJr | Maths, Science & Coding · 24/7</title>
-        <meta name="description" content="Meet Reva, EduVerseJr's AI tutor for Maths, Science and Coding. Chat, voice, whiteboard, smart practice, weakness tracking and question paper upload — free to start." />
+        <meta name="description" content="Meet Reva, your child's AI teacher for Maths, Science and Coding. Chat, voice, interactive whiteboard, smart practice, weakness tracking and question paper upload — free to start. Grades 5–12." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
+        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI tutor, online AI tutor, AI teacher for kids, maths AI teacher grades 5-12, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
-        <meta property="og:description" content="AI-powered tutor for Maths, Science and Coding — available 24/7. Chat, voice, whiteboard, slides, smart practice, weakness tracking and more." />
+        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths, Science and Coding. Chat, voice, whiteboard, smart practice and more. Free to start." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Reva AI Teacher — EduVerseJr" />
+        <meta name="twitter:description" content="AI teacher for Maths, Science & Coding. 24/7, free to start." />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <RevaNav />
