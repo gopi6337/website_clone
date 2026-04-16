@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { useState } from "react";
+import RevaDemo from "@/components/RevaDemo";
 import {
   Sparkles, MessageSquare, Mic, Target, GalleryHorizontal,
   Dumbbell, TrendingDown, Upload, Award, BarChart3, Brain,
@@ -136,6 +137,7 @@ function RevaNav() {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-6 text-sm text-white/60">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
+          <a href="#demo" className="hover:text-white transition-colors">Demo</a>
           <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
           <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
         </div>
@@ -392,6 +394,21 @@ export default function RevaPage() {
             <BentoCard feature={features[9]} span="col-span-1" />
             <BentoCard feature={features[10]} span="col-span-1" />
             <BentoCard feature={features[11]} span="col-span-1" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── LIVE DEMO ────────────────────────────────────── */}
+      <section id="demo" className="py-4 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-3">Live Demo</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Watch Reva teach a real lesson</h2>
+            <p className="text-white/50 max-w-xl mx-auto">Chat · Whiteboard · Slides · Voice · Smart Practice · Upload · Progress — all in one session.</p>
+          </div>
+          {/* Demo runs on its own white background (shows real app UI) */}
+          <div className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-900/30 ring-1 ring-white/10">
+            <RevaDemo />
           </div>
         </div>
       </section>
