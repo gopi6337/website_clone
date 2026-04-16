@@ -12,7 +12,7 @@ import {
 const features = [
   {
     icon: MessageSquare, color: "text-purple-400", bg: "bg-purple-500/10",
-    title: "AI Chat Tutor",
+    title: "AI Chat Teacher",
     description: "Ask anything in plain English. Reva explains like a patient human teacher — step by step, no judgment.",
     size: "lg",
   },
@@ -223,7 +223,7 @@ const structuredData = {
     {
       "@type": "SoftwareApplication",
       "name": "Reva AI Teacher",
-      "alternateName": ["Reva AI", "Reva AI Tutor"],
+      "alternateName": ["Reva AI", "Reva AI Teacher"],
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Web, iOS, Android",
       "url": "https://revaai.eduversejr.com",
@@ -240,7 +240,7 @@ const structuredData = {
         "url": "https://eduversejr.com",
       },
       "featureList": [
-        "AI Chat Tutor",
+        "AI Chat Teacher",
         "Interactive Whiteboard",
         "Voice Mode",
         "Teaching Slides",
@@ -272,7 +272,7 @@ export default function RevaPage() {
         <title>Reva AI Teacher — EduVerseJr | Maths, Science & Coding · 24/7</title>
         <meta name="description" content="Meet Reva, your child's AI teacher for Maths, Science and Coding. Chat, voice, interactive whiteboard, smart practice, weakness tracking and question paper upload — free to start. Grades 5–12." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
-        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI tutor, online AI tutor, AI teacher for kids, maths AI teacher grades 5-12, EduVerseJr Reva" />
+        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
         <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths, Science and Coding. Chat, voice, whiteboard, smart practice and more. Free to start." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
@@ -310,14 +310,14 @@ export default function RevaPage() {
                 backgroundSize: "200%",
               }}
             >
-              AI tutor
+              AI Teacher
             </span>
             <br />
             that never stops.
           </h1>
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Reva is your child's personal AI tutor — teaching Maths now, with Science and Coding coming soon.
+            Reva is your child's personal AI teacher — teaching Maths now, with Science and Coding coming soon.
             Not just a chatbot. A real AI teacher that teaches, practises, and adapts for Grades 5–12.
           </p>
 
@@ -362,7 +362,7 @@ export default function RevaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-purple-400 text-sm font-semibold uppercase tracking-widest mb-3">What Reva AI Teacher Can Do</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Everything a great tutor does — and more</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Everything a great teacher does — and more</h2>
             <p className="text-white/50 max-w-xl mx-auto">Every feature works together. Reva AI Teacher doesn't just answer questions — she teaches, tracks, and adapts across subjects.</p>
           </div>
 
@@ -424,7 +424,7 @@ export default function RevaPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-white/40 text-sm uppercase tracking-widest mb-2">Reva AI Teacher — Subjects</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">One AI tutor for all core subjects</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">One AI teacher for all core subjects</h2>
             <p className="text-white/40 text-sm mt-2">Maths is live now. Science and Coding are on the way.</p>
           </div>
           <div className="grid grid-cols-3 gap-4">
