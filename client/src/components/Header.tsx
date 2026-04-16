@@ -106,7 +106,7 @@ export default function Header() {
               Human Tutors
             </Link>
             <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
-              Reva AI Tutor
+              Reva AI Teacher
             </Link>
             <a href="/#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
