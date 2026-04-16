@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -6,6 +6,17 @@ import { Link } from "wouter";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const coursesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (coursesRef.current && !coursesRef.current.contains(e.target as Node)) {
+        setIsCoursesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -35,7 +46,7 @@ export default function Header() {
             <a href="/#about" className="nav-link">
               About
             </a>
-            <div className="relative">
+            <div className="relative" ref={coursesRef}>
               <button
                 onClick={() => setIsCoursesOpen(!isCoursesOpen)}
                 className="nav-link flex items-center gap-1"
