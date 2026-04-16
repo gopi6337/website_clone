@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RevaDemo from "@/components/RevaDemo";
 import {
   Sparkles, MessageSquare, Mic, Target, GalleryHorizontal,
@@ -266,6 +266,7 @@ const structuredData = {
 
 /* ─── Main page ─────────────────────────────────────────── */
 export default function RevaPage() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
