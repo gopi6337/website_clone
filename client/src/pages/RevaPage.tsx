@@ -79,7 +79,7 @@ const features = [
   {
     icon: BookOpen, color: "text-sky-400", bg: "bg-sky-500/10",
     title: "Curriculum-Aligned",
-    description: "Mapped to US Common Core, UK, Australia, Singapore, Canada, and UAE curricula.",
+    description: "Mapped to US, UK, Australia, Singapore, Canada and UAE curricula — across Maths, Science and Coding.",
     size: "sm",
   },
 ];
@@ -104,8 +104,8 @@ const steps = [
 
 const faqs = [
   { q: "Is Reva really free?", a: "Yes — Reva has a free tier with 10 AI replies per day, no credit card required. Paid plans unlock unlimited chat, voice, whiteboard, and file uploads." },
-  { q: "What grades does Reva cover?", a: "Reva currently covers Mathematics for Grades 5–12 (US curriculum). Science and Coding are coming soon." },
-  { q: "Can Reva help with homework?", a: "Absolutely. Upload a photo or PDF of any homework — Reva reads it, explains it, and walks through solutions step by step." },
+  { q: "What subjects and grades does Reva cover?", a: "Reva AI Tutor currently covers Mathematics for Grades 5–12 (US curriculum). Science and Coding subjects are coming soon — all under the same Reva AI Tutor platform." },
+  { q: "Can Reva help with homework?", a: "Absolutely. Upload a photo or PDF of any Maths homework — Reva AI Tutor reads it, explains it, and walks through solutions step by step. Science and Coding homework support coming soon." },
   { q: "Is Reva safe for kids?", a: "Yes. Reva is focused solely on academic subjects. All sessions are logged and accessible to parents." },
   { q: "Does it work on mobile?", a: "Yes — Reva is fully responsive. Voice mode, whiteboard, and uploads all work on phones and tablets." },
   { q: "What AI powers Reva?", a: "Reva is powered by Claude (Anthropic) — one of the world's leading AI models, known for its accuracy and safe, educational responses." },
@@ -129,7 +129,7 @@ function RevaNav() {
             <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
               <Sparkles className="w-3 h-3 text-white" />
             </div>
-            <span className="text-white font-bold text-base tracking-tight">Reva AI</span>
+            <span className="text-white font-bold text-base tracking-tight">Reva AI Tutor</span>
           </div>
         </div>
 
@@ -214,11 +214,11 @@ export default function RevaPage() {
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
-        <title>Reva AI Maths Tutor — EduVerseJr | 24/7 AI-Powered Learning</title>
-        <meta name="description" content="Meet Reva, EduVerseJr's AI maths tutor. Chat, voice, whiteboard, smart practice, weakness tracking and question paper upload — free to start." />
+        <title>Reva AI Tutor — EduVerseJr | Maths, Science & Coding · 24/7</title>
+        <meta name="description" content="Meet Reva, EduVerseJr's AI tutor for Maths, Science and Coding. Chat, voice, whiteboard, smart practice, weakness tracking and question paper upload — free to start." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
-        <meta property="og:title" content="Reva AI Maths Tutor — EduVerseJr" />
-        <meta property="og:description" content="AI-powered maths tutor available 24/7. Chat, voice, whiteboard, slides, smart practice, weakness tracking and more." />
+        <meta property="og:title" content="Reva AI Tutor — EduVerseJr | Maths, Science & Coding" />
+        <meta property="og:description" content="AI-powered tutor for Maths, Science and Coding — available 24/7. Chat, voice, whiteboard, slides, smart practice, weakness tracking and more." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
       </Helmet>
@@ -236,7 +236,7 @@ export default function RevaPage() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full mb-8">
             <Sparkles className="w-3.5 h-3.5" />
-            Powered by Claude AI · Available 24/7 · Free to Start
+            Maths · Science · Coding &nbsp;·&nbsp; Powered by Claude AI · Free to Start
           </div>
 
           {/* Headline */}
@@ -249,15 +249,15 @@ export default function RevaPage() {
                 backgroundSize: "200%",
               }}
             >
-              AI maths teacher
+              AI tutor
             </span>
             <br />
             that never stops.
           </h1>
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Reva teaches, practises, tracks weaknesses, and adapts — all in one session.
-            Not just a chatbot. A real AI teacher for Grades 5–12.
+            Reva is your child's personal AI tutor — teaching Maths now, with Science and Coding coming soon.
+            Not just a chatbot. A real AI teacher that teaches, practises, and adapts for Grades 5–12.
           </p>
 
           {/* CTAs */}
@@ -283,7 +283,7 @@ export default function RevaPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
             {[
               { value: "12", label: "AI Features" },
-              { value: "87", label: "Topics Covered" },
+              { value: "3", label: "Subjects" },
               { value: "24/7", label: "Always Available" },
               { value: "Free", label: "To Start" },
             ].map((s) => (
@@ -300,9 +300,9 @@ export default function RevaPage() {
       <section id="features" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-purple-400 text-sm font-semibold uppercase tracking-widest mb-3">What Reva Can Do</p>
+            <p className="text-purple-400 text-sm font-semibold uppercase tracking-widest mb-3">What Reva AI Tutor Can Do</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Everything a great tutor does — and more</h2>
-            <p className="text-white/50 max-w-xl mx-auto">Every feature works together. Reva doesn't just answer questions — she teaches, tracks, and adapts.</p>
+            <p className="text-white/50 max-w-xl mx-auto">Every feature works together. Reva AI Tutor doesn't just answer questions — she teaches, tracks, and adapts across subjects.</p>
           </div>
 
           {/* Bento grid */}
@@ -362,8 +362,9 @@ export default function RevaPage() {
       <section className="py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-white/40 text-sm uppercase tracking-widest mb-2">Subject Coverage</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Start with Maths. More coming.</h2>
+            <p className="text-white/40 text-sm uppercase tracking-widest mb-2">Reva AI Tutor — Subjects</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">One AI tutor for all core subjects</h2>
+            <p className="text-white/40 text-sm mt-2">Maths is live now. Science and Coding are on the way.</p>
           </div>
           <div className="grid grid-cols-3 gap-4">
             {[
@@ -427,11 +428,11 @@ export default function RevaPage() {
                 <Sparkles className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-                Let your child try Reva — free
+                Let your child try Reva AI Tutor — free
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
                 Sign up in seconds. No credit card. No downloads.
-                Just an AI teacher that never runs out of patience.
+                Reva AI Teacher — available any time, for any subject.
               </p>
               <a
                 href="https://revaai.eduversejr.com"
