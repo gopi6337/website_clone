@@ -20,21 +20,21 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer">
+            <div className="flex items-center gap-2 cursor-pointer">
               <img
                 src="/logo.jpg"
                 alt="EduVerseJr Logo"
-                className="h-16 w-16 md:h-20 md:w-20 object-contain"
+                className="h-12 w-12 md:h-14 md:w-14 object-contain"
               />
               <div className="flex flex-col">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
                   EduVerseJr
                 </div>
-                <div className="text-xs md:text-sm text-gray-600 italic">
+                <div className="text-xs text-gray-600 italic hidden md:block">
                   Explore Your Learning Universe
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-5">
             <a href="/#about" className="nav-link">
               About
             </a>
