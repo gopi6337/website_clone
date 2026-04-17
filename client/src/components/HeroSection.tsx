@@ -84,7 +84,8 @@ export default function HeroSection() {
             <img
               src="/edu_pic1.jpg"
               alt="Child learning with EduVerseJr"
-              className="w-full h-full object-contain rounded-3xl"
+              className="w-full h-full object-cover rounded-3xl"
+              style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 15%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)' }}
             />
           </div>
 
