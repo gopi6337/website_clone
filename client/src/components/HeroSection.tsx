@@ -45,7 +45,7 @@ export default function HeroSection() {
               </ul>
               <Button
                 className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-full font-bold"
-                onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}
+                onClick={() => window.location.href = '/reva'}
               >
                 Try Reva for Free
               </Button>

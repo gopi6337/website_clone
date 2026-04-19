@@ -71,9 +71,9 @@ export default function Header() {
             <Link href="/tutors" className="nav-link">
               Human Tutors
             </Link>
-            <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="nav-link font-semibold text-purple-600">
+            <Link href="/reva" className="nav-link font-semibold text-purple-600">
               Reva AI
-            </a>
+            </Link>
             <a href="/#testimonials" className="nav-link">
               Testimonials
             </a>
@@ -90,7 +90,7 @@ export default function Header() {
             <Button variant="outline" className="rounded-full" onClick={() => window.location.href = '/#booking'}>
               Book a FREE Trial
             </Button>
-            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}>
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.location.href = '/reva'}>
               Try Reva AI
             </Button>
           </div>
@@ -116,9 +116,9 @@ export default function Header() {
             <Link href="/tutors" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Human Tutors
             </Link>
-            <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
               Reva AI Teacher
-            </a>
+            </Link>
             <a href="/#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
@@ -130,7 +130,7 @@ export default function Header() {
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.href = '/#booking'; }}>Book a FREE Trial</Button>
-              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.open('https://revaai.eduversejr.com', '_blank'); }}>
+              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.location.href = '/reva'; }}>
                 Try Reva AI
               </Button>
             </div>
