@@ -24,7 +24,7 @@ export default function HeroSection() {
               Two Ways to Learn. <span className="text-yellow-300 inline-block">One Platform.</span>
             </h1>
             <p className="text-white/90 mb-6 text-sm md:text-base">
-              EduVerseJr brings together Reva, our AI-powered teacher, and expert human tutors — so your child always has the right support.
+              EduVerseJr brings together Reva, our AI-powered teacher, and expert human teachers — so your child always has the right support.
             </p>
 
             {/* Reva AI — FIRST */}
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 <div className="bg-blue-500 rounded-full p-2 flex-shrink-0">
                   <Users className="w-4 h-4 text-white" />
                 </div>
-                <h2 className="text-base font-bold">Human-Led Tutoring</h2>
+                <h2 className="text-base font-bold">Human-Led Teaching</h2>
               </div>
               <ul className="text-sm text-white/90 space-y-1 mb-4">
                 <li>• Live 1-to-1 online classes</li>

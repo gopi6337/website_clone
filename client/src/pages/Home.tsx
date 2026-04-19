@@ -26,18 +26,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>EduVerseJr — Reva AI Teacher + Expert Human Tutors | Maths, Science & Coding</title>
-        <meta name="description" content="EduVerseJr combines Reva, your child's AI teacher available 24/7, with expert human tutors for live 1-to-1 classes. Maths, Science and Coding for Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
+        <title>EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science & Coding</title>
+        <meta name="description" content="EduVerseJr combines Reva, your child's AI teacher available 24/7, with expert human teachers for live 1-to-1 classes. Maths, Science and Coding for Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
         <link rel="canonical" href="https://eduversejr.com/" />
-        <meta property="og:title" content="EduVerseJr — Reva AI Teacher + Expert Human Tutors" />
-        <meta property="og:description" content="Reva AI Teacher (24/7) + expert human tutors for Maths, Science and Coding. Grades 5–12, 6 countries." />
+        <meta property="og:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
+        <meta property="og:description" content="Reva AI Teacher (24/7) + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
         <meta property="og:url" content="https://eduversejr.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
-        <meta property="og:image:alt" content="EduVerseJr - AI + Human Tutoring Platform" />
+        <meta property="og:image:alt" content="EduVerseJr - AI + Human Teaching Platform" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="EduVerseJr — Reva AI Teacher + Expert Human Tutors" />
-        <meta name="twitter:description" content="Reva AI Teacher + expert human tutors for Maths, Science and Coding. Grades 5–12, 6 countries." />
+        <meta name="twitter:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
+        <meta name="twitter:description" content="Reva AI Teacher + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
         <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
       </Helmet>
 
@@ -115,14 +115,14 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Courses</h2>
             <p className="text-gray-600 max-w-xl mx-auto">
-              Three subjects, six country curricula, Grades 5–10. Available with both human tutors and Reva AI.
+              Three subjects, six country curricula, Grades 5–10. Available with both human teachers and Reva AI.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto mb-8">
             {[
               { icon: <Brain className="w-8 h-8 text-blue-600" />, subject: "Mathematics", badge: "🤖 Reva AI Live", desc: "US Mathematics · Grades 5–10 · Aligned with 6 curricula", color: "border-blue-200 bg-blue-50" },
-              { icon: <FlaskConical className="w-8 h-8 text-green-600" />, subject: "Science", badge: "👨‍🏫 Human Tutors", desc: "Biology, Chemistry, Physics, Earth & Space · Grades 5–10", color: "border-green-200 bg-green-50" },
-              { icon: <Code2 className="w-8 h-8 text-orange-600" />, subject: "Coding", badge: "👨‍🏫 Human Tutors", desc: "Python, JavaScript, HTML/CSS, Web & App Dev · Grades 5–10", color: "border-orange-200 bg-orange-50" },
+              { icon: <FlaskConical className="w-8 h-8 text-green-600" />, subject: "Science", badge: "👨‍🏫 Human Teachers", desc: "Biology, Chemistry, Physics, Earth & Space · Grades 5–10", color: "border-green-200 bg-green-50" },
+              { icon: <Code2 className="w-8 h-8 text-orange-600" />, subject: "Coding", badge: "👨‍🏫 Human Teachers", desc: "Python, JavaScript, HTML/CSS, Web & App Dev · Grades 5–10", color: "border-orange-200 bg-orange-50" },
             ].map((c, i) => (
               <div key={i} className={`rounded-2xl p-5 border ${c.color}`}>
                 <div className="mb-3">{c.icon}</div>
@@ -148,13 +148,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
             <div>
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                <Users className="w-4 h-4" /> Expert Human Tutors
+                <Users className="w-4 h-4" /> Expert Human Teachers
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 Prefer a Live Human Teacher?
               </h2>
               <p className="text-gray-600 mb-4">
-                Our certified tutors offer live 1-to-1 online classes in Maths, Science and Coding. 60-minute sessions, flexible scheduling, free trial available.
+                Our certified teachers offer live 1-to-1 online classes in Maths, Science and Coding. 60-minute sessions, flexible scheduling, free trial available.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-6">
                 {["Expert certified teachers", "Personalised 1-to-1 sessions", "Grades 5–10, all subjects", "US, UK, Canada, Australia, Singapore, UAE"].map((item, i) => (
@@ -176,7 +176,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-3xl overflow-hidden h-72">
-              <img src="/edu_pic1.jpg" alt="Human tutor session" className="w-full h-full object-cover" />
+              <img src="/edu_pic1.jpg" alt="Human teacher session" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function LearningStyleSection() {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Whether your child thrives with direct guidance, self-paced exploration,
-            or AI-powered tutoring, EduVerseJr has the perfect learning experience.
+            or AI-powered teaching, EduVerseJr has the perfect learning experience.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function LearningStyleSection() {
                 : "bg-white text-gray-900 border-2 border-gray-200"
             }`}
           >
-            1 to 1 Tutoring
+            1 to 1 Teaching
           </button>
           <button
             onClick={() => setActiveTab("selfpaced")}
@@ -49,7 +49,7 @@ export default function LearningStyleSection() {
             }`}
           >
             <Sparkles className="w-4 h-4" />
-            Reva AI Tutor
+            Reva AI Teacher
           </button>
         </div>
 
@@ -60,11 +60,11 @@ export default function LearningStyleSection() {
               <>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Live 1-to-1 Classes: Personalized instruction with expert
-                  tutors.
+                  teachers.
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Get the best of both worlds with live, personalized
-                  instruction from expert tutors. Our 1-to-1 classes ensure
+                  instruction from expert teachers. Our 1-to-1 classes ensure
                   that your child receives focused attention, tailored to their
                   unique learning needs.
                 </p>
@@ -91,11 +91,11 @@ export default function LearningStyleSection() {
                 <div className="flex items-center gap-2 mb-4">
                   <Sparkles className="w-6 h-6 text-purple-600" />
                   <h3 className="text-2xl font-bold text-gray-900">
-                    Reva: AI Tutor, Always On.
+                    Reva: AI Teacher, Always On.
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Reva is our AI-powered math tutor — available 24/7 to explain
+                  Reva is our AI-powered math teacher — available 24/7 to explain
                   concepts, work through problems step-by-step, and adapt to your
                   child's pace. No waiting for a scheduled class.
                 </p>

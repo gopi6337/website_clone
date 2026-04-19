@@ -33,7 +33,7 @@ export default function HowItWorksSection() {
           <p className="text-lg text-gray-600 mb-8">
             At EduVerseJr, our method is grounded in evidence. A recent study by
             the Annenberg Institute at Brown University found that students who
-            engaged in personalized, self-paced learning with 1-to-1 tutoring
+            engaged in personalized, self-paced learning with 1-to-1 teaching
             showed substantial improvements in academic performance.
           </p>
 

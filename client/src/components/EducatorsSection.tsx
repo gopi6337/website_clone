@@ -23,7 +23,7 @@ export default function EducatorsSection() {
         <div className="text-center mb-16">
           <h2 className="section-heading">Meet Our Certified Educators</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            At EduVerseJr, our tutors are more than just teachers—they're mentors
+            At EduVerseJr, our teachers are more than just instructors—they're mentors
             who inspire and guide each student to reach their full potential.
           </p>
         </div>

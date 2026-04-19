@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "An excellent tutoring environment with supportive teachers. They helped clear doubts that were once difficult to grasp and my daughter has a very good rapport with her teacher.",
+        "An excellent teaching environment with supportive teachers. They helped clear doubts that were once difficult to grasp and my daughter has a very good rapport with her teacher.",
       author: "Vikram Sha",
       role: "Parent, US",
     },
@@ -31,13 +31,13 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "Great online classes! The tutor explains concepts and logic in a way that even math feels easy. My grades in math have improved and I'm enjoying learning coding at my own pace.",
+        "Great online classes! The teacher explains concepts and logic in a way that even math feels easy. My grades in math have improved and I'm enjoying learning coding at my own pace.",
       author: "Ananya",
       role: "Student, Class 9, US",
     },
     {
       quote:
-        "I've been tutored from EduVerseJr for many years and my experience with them has been excellent. The tutor explains everything clearly and provides personalised support. The lessons are well structured and engaging. Highly recommended.",
+        "I've been learning at EduVerseJr for many years and my experience with them has been excellent. The teacher explains everything clearly and provides personalised support. The lessons are well structured and engaging. Highly recommended.",
       author: "Saira Saggar",
       role: "Student, Class 10, Australia",
     },

@@ -119,7 +119,7 @@ export default function MathCurriculumSection() {
           </div>
           <h2 className="section-heading">Mathematics Curriculum (Grade 5–10)</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            Comprehensive US Mathematics aligned with international standards — taught by our expert human tutors and by Reva, our AI teacher.
+            Comprehensive US Mathematics aligned with international standards — taught by our expert human teachers and by Reva, our AI teacher.
           </p>
 
           {/* Country Badges */}

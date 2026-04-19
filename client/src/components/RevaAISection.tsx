@@ -10,7 +10,7 @@ export default function RevaAISection() {
   const coreFeatures = [
     {
       icon: <MessageSquare className="w-6 h-6 text-purple-600" />,
-      title: "AI Chat Tutor",
+      title: "AI Chat Teacher",
       description: "Natural conversation-based learning. Ask any question in plain English — Reva explains like a patient human teacher.",
     },
     {
@@ -188,7 +188,7 @@ export default function RevaAISection() {
               className="border-white text-white hover:bg-white hover:text-purple-700 px-10 py-6 rounded-full text-lg font-semibold"
               onClick={() => window.location.hash = '#booking'}
             >
-              Book a Human Tutor Instead
+              Book a Human Teacher Instead
             </Button>
           </div>
         </div>

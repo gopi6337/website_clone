@@ -125,7 +125,7 @@ export default function RevaDemo() {
     if (narrationRef.current) {
       // Brief intro narration before demo starts
       if (hasSpeechSynthesis) {
-        const intro = new SpeechSynthesisUtterance("Meet Reva — your AI maths tutor, available 24 hours a day, 7 days a week.");
+        const intro = new SpeechSynthesisUtterance("Meet Reva — your AI maths teacher, available 24 hours a day, 7 days a week.");
         intro.rate = 0.95;
         intro.pitch = 1.05;
         const voices = window.speechSynthesis.getVoices();

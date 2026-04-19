@@ -56,7 +56,7 @@ export default function AboutUsSection() {
       "Online Math Education for Grades 5-10",
       "Online Science Education for Grades 5-10",
       "Coding Education for Children Grades 5-10",
-      "One-on-One Tutoring",
+      "One-on-One Teaching",
       "US Common Core Mathematics",
       "Next Generation Science Standards (NGSS)",
       "UK National Curriculum",

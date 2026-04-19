@@ -23,7 +23,7 @@ export default function CoursesPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Courses — EduVerseJr | Maths, Science & Coding for Grades 5–10</title>
-        <meta name="description" content="EduVerseJr offers Maths, Science and Coding courses for Grades 5–10 aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Expert human tutors and Reva AI available." />
+        <meta name="description" content="EduVerseJr offers Maths, Science and Coding courses for Grades 5–10 aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Expert human teachers and Reva AI available." />
         <link rel="canonical" href="https://eduversejr.com/courses" />
         <meta property="og:title" content="Courses — EduVerseJr | Maths, Science & Coding" />
         <meta property="og:description" content="Curriculum-aligned Maths, Science and Coding for Grades 5–10 across 6 countries." />
@@ -39,7 +39,7 @@ export default function CoursesPage() {
             Our Courses
           </h1>
           <p className="text-white/90 text-base max-w-xl mx-auto mb-6">
-            All three subjects available with expert human tutors. Reva AI is live for
+            All three subjects available with expert human teachers. Reva AI is live for
             Mathematics — Science and Coding AI coming soon.
           </p>
 

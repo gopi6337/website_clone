@@ -121,10 +121,10 @@ export default function CurriculumViewer() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{curriculum.name} - Online Math Tutor Grade 5-10 | EduVerseJr</title>
+        <title>{curriculum.name} - Online Math Teacher Grade 5-10 | EduVerseJr</title>
         <meta
           name="description"
-          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Algebra, Geometry, Statistics and more aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Math tutoring for Grade 5-10.`}
+          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Algebra, Geometry, Statistics and more aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Math teaching for Grade 5-10.`}
         />
         <link rel="canonical" href={`https://eduversejr.com/curriculum/${country}`} />
 
@@ -145,7 +145,7 @@ export default function CurriculumViewer() {
           "@context": "https://schema.org",
           "@type": "Course",
           "name": curriculum.name,
-          "description": `Online Math tutoring for Grade 5-10 aligned with ${country.replace(/-/g, ' ')} curriculum. Covers Algebra, Geometry, Statistics, Trigonometry and more.`,
+          "description": `Online Math teaching for Grade 5-10 aligned with ${country.replace(/-/g, ' ')} curriculum. Covers Algebra, Geometry, Statistics, Trigonometry and more.`,
           "provider": {
             "@type": "Organization",
             "name": "EduVerseJr",

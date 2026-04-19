@@ -105,10 +105,10 @@ export default function ScienceCurriculumViewer() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{curriculum.name} - Online Science Tutor Grade 5-10 | EduVerseJr</title>
+        <title>{curriculum.name} - Online Science Teacher Grade 5-10 | EduVerseJr</title>
         <meta
           name="description"
-          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Biology, Chemistry and Physics topics aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Science tutoring for Grade 5-10.`}
+          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Biology, Chemistry and Physics topics aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Science teaching for Grade 5-10.`}
         />
         <link rel="canonical" href={`https://eduversejr.com/science-curriculum/${country}`} />
 
@@ -127,7 +127,7 @@ export default function ScienceCurriculumViewer() {
           "@context": "https://schema.org",
           "@type": "Course",
           "name": curriculum.name,
-          "description": `Online Science tutoring for Grade 5-10 aligned with ${country.replace(/-/g, ' ')} curriculum. Covers Biology, Chemistry, Physics and Earth Science.`,
+          "description": `Online Science teaching for Grade 5-10 aligned with ${country.replace(/-/g, ' ')} curriculum. Covers Biology, Chemistry, Physics and Earth Science.`,
           "provider": {
             "@type": "Organization",
             "name": "EduVerseJr",

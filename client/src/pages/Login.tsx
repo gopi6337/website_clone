@@ -9,8 +9,8 @@ type Role = "tutor" | "parent" | null;
 const roleConfig = {
   tutor: {
     emoji: "👩‍🏫",
-    label: "Tutor",
-    welcome: "Welcome, Tutor!",
+    label: "Teacher",
+    welcome: "Welcome, Teacher!",
     subtitle: "Sign in to manage your classes and students.",
     borderActive: "border-blue-500 bg-blue-50",
     borderInactive: "border-blue-100 hover:border-blue-400 hover:bg-blue-50",

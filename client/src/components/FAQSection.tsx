@@ -19,42 +19,42 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "human",
       question: "Can I try EduVerseJr before committing to a package?",
-      answer: "Yes! We offer a FREE trial class so you can experience our teaching methodology and meet your child's tutor before making any commitment.",
+      answer: "Yes! We offer a FREE trial class so you can experience our teaching methodology and meet your child's teacher before making any commitment.",
     },
     {
       type: "human",
-      question: "What subjects do your human tutors teach?",
-      answer: "Our expert tutors currently teach Mathematics, Science, and Coding/Programming for Grades 5–10, aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
+      question: "What subjects do your human teachers teach?",
+      answer: "Our expert teachers currently teach Mathematics, Science, and Coding/Programming for Grades 5–10, aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
     },
     {
       type: "human",
-      question: "What is the frequency and duration of EduVerseJr tutoring classes?",
+      question: "What is the frequency and duration of EduVerseJr teaching classes?",
       answer: "Classes run for 60 minutes per session, with a recommended frequency of 2 or more classes per week for consistent progress.",
     },
     {
       type: "human",
       question: "What curriculum does EduVerseJr follow?",
-      answer: "Our human tutors are aligned with US Common Core, UK National Curriculum, Canadian Provincial Standards, Australian Curriculum (ACARA), Singapore MOE Syllabus, and UAE Ministry of Education standards.",
+      answer: "Our human teachers are aligned with US Common Core, UK National Curriculum, Canadian Provincial Standards, Australian Curriculum (ACARA), Singapore MOE Syllabus, and UAE Ministry of Education standards.",
     },
     {
       type: "human",
       question: "How can I track my child's progress?",
-      answer: "We maintain open communication with parents through regular progress updates, session reports, and direct access to your child's tutor for feedback.",
+      answer: "We maintain open communication with parents through regular progress updates, session reports, and direct access to your child's teacher for feedback.",
     },
     {
       type: "human",
       question: "Can your teachers cover topics from my child's school curriculum?",
-      answer: "Absolutely. Our tutors can focus on school curriculum topics, advanced content, exam preparation, or areas where your child needs extra support.",
+      answer: "Absolutely. Our teachers can focus on school curriculum topics, advanced content, exam preparation, or areas where your child needs extra support.",
     },
     {
       type: "human",
       question: "Can my child join EduVerseJr anytime during the year?",
-      answer: "Yes — we offer flexible enrolment. Your child can start any time, and we'll match them with the right tutor and curriculum level from day one.",
+      answer: "Yes — we offer flexible enrolment. Your child can start any time, and we'll match them with the right teacher and curriculum level from day one.",
     },
     {
       type: "human",
       question: "What if I am not satisfied after enrolling?",
-      answer: "We offer a satisfaction guarantee. If you're not happy with the classes, we'll work with you to adjust the plan, change the tutor, or find the right solution.",
+      answer: "We offer a satisfaction guarantee. If you're not happy with the classes, we'll work with you to adjust the plan, change the teacher, or find the right solution.",
     },
     {
       type: "human",
@@ -87,7 +87,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "Can my child speak to Reva instead of typing?",
-      answer: "Yes! Reva supports voice interaction. Students can speak their questions aloud and Reva will listen, understand, and respond — making it feel more like a natural tutoring session.",
+      answer: "Yes! Reva supports voice interaction. Students can speak their questions aloud and Reva will listen, understand, and respond — making it feel more like a natural teaching session.",
     },
     {
       type: "reva",
@@ -102,7 +102,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "Is Reva free to use?",
-      answer: "Yes — you can start using Reva for free with no credit card required. Simply sign up at revaai.eduversejr.com to get started with AI-powered maths tutoring.",
+      answer: "Yes — you can start using Reva for free with no credit card required. Simply sign up at revaai.eduversejr.com to get started with AI-powered maths teaching.",
     },
     {
       type: "reva",
@@ -111,8 +111,8 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     },
     {
       type: "reva",
-      question: "Can Reva replace a human tutor?",
-      answer: "Reva is a powerful complement to human tutoring, not a replacement. For students who need structured live classes and personal accountability, our human tutors are still the best choice. Many families use both — Reva for daily practice and a human tutor for weekly deep-dive sessions.",
+      question: "Can Reva replace a human teacher?",
+      answer: "Reva is a powerful complement to human teaching, not a replacement. For students who need structured live classes and personal accountability, our human teachers are still the best choice. Many families use both — Reva for daily practice and a human teacher for weekly deep-dive sessions.",
     },
   ];
 
@@ -147,7 +147,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
         <div className="text-center mb-10">
           <h2 className="section-heading">Frequently Asked Questions</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            Questions about our human tutors, Reva AI teacher, or both — we've got answers.
+            Questions about our human teachers, Reva AI teacher, or both — we've got answers.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
             onClick={() => { setActiveTab("human"); setOpenIndex(null); }}
             className={`px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all ${activeTab === "human" ? "bg-blue-600 text-white" : "bg-blue-50 text-blue-700 hover:bg-blue-100"}`}
           >
-            <Users className="w-4 h-4" /> Human Tutors
+            <Users className="w-4 h-4" /> Human Teachers
           </button>
           <button
             onClick={() => { setActiveTab("reva"); setOpenIndex(null); }}

@@ -22,8 +22,8 @@ export default function WhyChooseSection() {
     },
     {
       icon: <Users className="w-8 h-8 text-blue-600" />,
-      title: "Expert Tutors",
-      description: "Access to highly trained tutors for personalized 1-on-1 guidance.",
+      title: "Expert Teachers",
+      description: "Access to highly trained teachers for personalized 1-on-1 guidance.",
     },
     {
       icon: <Target className="w-8 h-8 text-blue-600" />,
@@ -47,7 +47,7 @@ export default function WhyChooseSection() {
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Unlock your child's potential in math and coding with personalized learning,
-            expert tutors, and engaging tools for mastery
+            expert teachers, and engaging tools for mastery
           </p>
         </div>
 
