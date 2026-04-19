@@ -87,8 +87,8 @@ export default function Header() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button variant="outline" className="rounded-full text-xs px-3 py-2 whitespace-nowrap" onClick={() => window.location.href = '/#booking'}>
-              Book a Free Trial Human Teacher
+            <Button variant="outline" className="rounded-full text-xs px-3 py-2 leading-tight text-center" onClick={() => window.location.href = '/#booking'}>
+              Book a Free Trial<br />Human Teacher
             </Button>
             <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-xs px-3 py-2 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
               Try Reva AI Teacher
