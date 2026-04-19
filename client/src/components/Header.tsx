@@ -71,9 +71,9 @@ export default function Header() {
             <Link href="/tutors" className="nav-link">
               Human Tutors
             </Link>
-            <Link href="/reva" className="nav-link font-semibold text-purple-600">
+            <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="nav-link font-semibold text-purple-600">
               Reva AI
-            </Link>
+            </a>
             <a href="/#testimonials" className="nav-link">
               Testimonials
             </a>
@@ -116,9 +116,9 @@ export default function Header() {
             <Link href="/tutors" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Human Tutors
             </Link>
-            <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
+            <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
               Reva AI Teacher
-            </Link>
+            </a>
             <a href="/#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
