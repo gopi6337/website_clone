@@ -34,7 +34,7 @@ export default function Header() {
                 <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
                   EduVerseJr
                 </div>
-                <div className="text-xs text-gray-600 italic hidden md:block">
+                <div className="text-xs text-gray-600 italic hidden lg:block">
                   Explore Your Learning Universe
                 </div>
               </div>
@@ -42,14 +42,14 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-5">
-            <a href="/#about" className="nav-link">
+          <nav className="hidden md:flex items-center space-x-3 text-sm">
+            <a href="/#about" className="nav-link whitespace-nowrap">
               About
             </a>
             <div className="relative" ref={coursesRef}>
               <button
                 onClick={() => setIsCoursesOpen(!isCoursesOpen)}
-                className="nav-link flex items-center gap-1"
+                className="nav-link flex items-center gap-1 whitespace-nowrap"
               >
                 Courses
                 <ChevronDown size={16} className={`transition-transform ${isCoursesOpen ? 'rotate-180' : ''}`} />
@@ -68,29 +68,29 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <Link href="/tutors" className="nav-link">
+            <Link href="/tutors" className="nav-link whitespace-nowrap">
               Human Teachers
             </Link>
-            <Link href="/reva" className="nav-link font-semibold text-purple-600">
+            <Link href="/reva" className="nav-link font-semibold text-purple-600 whitespace-nowrap">
               Reva AI Teacher
             </Link>
-            <a href="/#testimonials" className="nav-link">
+            <a href="/#testimonials" className="nav-link whitespace-nowrap">
               Testimonials
             </a>
             <a href="/#faq" className="nav-link">
               FAQ
             </a>
-            <a href="/#booking" className="nav-link">
+            <a href="/#booking" className="nav-link whitespace-nowrap">
               Contact Us
             </a>
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
-            <Button variant="outline" className="rounded-full" onClick={() => window.location.href = '/#booking'}>
+          <div className="hidden md:flex items-center space-x-2">
+            <Button variant="outline" className="rounded-full text-xs px-3 py-2 whitespace-nowrap" onClick={() => window.location.href = '/#booking'}>
               Book a Free Trial Human Teacher
             </Button>
-            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.location.href = '/reva'}>
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-xs px-3 py-2 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
               Try Reva AI Teacher
             </Button>
           </div>
