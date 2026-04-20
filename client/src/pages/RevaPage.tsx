@@ -273,7 +273,7 @@ export default function RevaPage() {
         <title>Reva AI Teacher — EduVerseJr | Maths, Science & Coding · 24/7</title>
         <meta name="description" content="Meet Reva, your child's AI teacher for Maths, Science and Coding. Chat, voice, interactive whiteboard, smart practice, weakness tracking and question paper upload — free to start. Grades 5–12." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
-        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, EduVerseJr Reva" />
+        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI science teacher, AI coding teacher, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, science teacher online, coding teacher for kids, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
         <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths, Science and Coding. Chat, voice, whiteboard, smart practice and more. Free to start." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
