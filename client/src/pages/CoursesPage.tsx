@@ -31,6 +31,14 @@ export default function CoursesPage() {
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "EduVerseJr", "item": "https://eduversejr.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Courses", "item": "https://eduversejr.com/courses" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "ItemList",
           "name": "EduVerseJr Courses — Maths, Science & Coding",
           "description": "Curriculum-aligned courses for Grades 5–12 taught by expert human teachers and Reva AI Teacher, covering US, UK, Canada, Australia, Singapore and UAE curricula.",

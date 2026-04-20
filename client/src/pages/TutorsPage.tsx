@@ -34,6 +34,14 @@ export default function TutorsPage() {
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "EduVerseJr", "item": "https://eduversejr.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Human Teachers", "item": "https://eduversejr.com/tutors" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "Service",
           "name": "Expert Human Teachers — Live 1-to-1 Online Classes",
           "description": "EduVerseJr's expert human teachers offer personalised 1-to-1 online classes in Maths, Science and Coding for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula.",
