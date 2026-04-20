@@ -28,10 +28,40 @@ export default function TutorsPage() {
         <title>Human Teachers — EduVerseJr | Live 1-to-1 Online Classes</title>
         <meta name="description" content="EduVerseJr's expert human teachers offer live 1-to-1 online classes in Maths, Science and Coding for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Book a free trial today." />
         <link rel="canonical" href="https://eduversejr.com/tutors" />
-        <meta property="og:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Classes" />
-        <meta property="og:description" content="Expert online teachers for Maths, Science and Coding. Live 1-to-1 classes for Grades 5–10 across 6 countries." />
+        <meta property="og:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
+        <meta property="og:description" content="Expert online teachers for Maths, Science and Coding. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
         <meta property="og:url" content="https://eduversejr.com/tutors" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Expert Human Teachers — Live 1-to-1 Online Classes",
+          "description": "EduVerseJr's expert human teachers offer personalised 1-to-1 online classes in Maths, Science and Coding for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula.",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "EduVerseJr",
+            "url": "https://eduversejr.com"
+          },
+          "serviceType": "Online Private Teaching",
+          "areaServed": ["United States", "United Kingdom", "Canada", "Australia", "Singapore", "UAE"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Subjects",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mathematics Teaching — Grades 5–10", "description": "Algebra, Geometry, Trigonometry, Statistics and more. Aligned with 6 international curricula." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Science Teaching — Grades 5–10", "description": "Biology, Chemistry, Physics, Earth & Space Science." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coding & Programming — Grades 5–10", "description": "Python, JavaScript, HTML/CSS, web and app development." } }
+            ]
+          },
+          "offers": {
+            "@type": "Offer",
+            "name": "Free Trial Class",
+            "description": "Book a FREE 1-to-1 trial class with an expert teacher — no commitment required.",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "url": "https://eduversejr.com/tutors"
+        })}</script>
       </Helmet>
       <Header />
 

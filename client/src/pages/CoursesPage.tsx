@@ -22,13 +22,65 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Courses — EduVerseJr | Maths, Science & Coding for Grades 5–10</title>
-        <meta name="description" content="EduVerseJr offers Maths, Science and Coding courses for Grades 5–10 aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Expert human teachers and Reva AI available." />
+        <title>Courses — EduVerseJr | Maths, Science & Coding for Grades 5–12</title>
+        <meta name="description" content="EduVerseJr offers Maths, Science and Coding courses for Grades 5–12 aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Taught by expert human teachers and Reva AI Teacher." />
         <link rel="canonical" href="https://eduversejr.com/courses" />
-        <meta property="og:title" content="Courses — EduVerseJr | Maths, Science & Coding" />
-        <meta property="og:description" content="Curriculum-aligned Maths, Science and Coding for Grades 5–10 across 6 countries." />
+        <meta property="og:title" content="Courses — EduVerseJr | Maths, Science & Coding for Grades 5–12" />
+        <meta property="og:description" content="Curriculum-aligned Maths, Science and Coding for Grades 5–12 across 6 countries. Human teachers + Reva AI Teacher." />
         <meta property="og:url" content="https://eduversejr.com/courses" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "EduVerseJr Courses — Maths, Science & Coding",
+          "description": "Curriculum-aligned courses for Grades 5–12 taught by expert human teachers and Reva AI Teacher, covering US, UK, Canada, Australia, Singapore and UAE curricula.",
+          "url": "https://eduversejr.com/courses",
+          "numberOfItems": 3,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Course",
+                "name": "Mathematics — Grades 5–12",
+                "description": "Comprehensive Maths programme covering Algebra, Geometry, Trigonometry and Statistics. Aligned with US Common Core, UK, Canada, Australia, Singapore and UAE curricula. Taught by expert human teachers and Reva AI Teacher.",
+                "provider": { "@type": "EducationalOrganization", "name": "EduVerseJr", "url": "https://eduversejr.com" },
+                "educationalLevel": "Grades 5–12",
+                "teaches": "Algebra, Geometry, Trigonometry, Statistics, Mathematical Reasoning",
+                "courseMode": "Online",
+                "url": "https://eduversejr.com/courses"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Course",
+                "name": "Science — Grades 5–10",
+                "description": "Science programme covering Biology, Chemistry, Physics, and Earth & Space Science for Grades 5–10. Aligned with NGSS (US), UK National Curriculum, ACARA, Singapore MOE and UAE standards.",
+                "provider": { "@type": "EducationalOrganization", "name": "EduVerseJr", "url": "https://eduversejr.com" },
+                "educationalLevel": "Grades 5–10",
+                "teaches": "Biology, Chemistry, Physics, Earth Science",
+                "courseMode": "Online",
+                "url": "https://eduversejr.com/courses"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Course",
+                "name": "Coding & Programming — Grades 5–10",
+                "description": "Coding programme covering Python, JavaScript, HTML/CSS, block-based coding and web/app development for Grades 5–10.",
+                "provider": { "@type": "EducationalOrganization", "name": "EduVerseJr", "url": "https://eduversejr.com" },
+                "educationalLevel": "Grades 5–10",
+                "teaches": "Python, JavaScript, HTML, CSS, Web Development, Block-Based Coding",
+                "courseMode": "Online",
+                "url": "https://eduversejr.com/courses"
+              }
+            }
+          ]
+        })}</script>
       </Helmet>
       <Header />
 
