@@ -46,9 +46,19 @@ curriculumPages.forEach(page => {
   console.log(`✓ Created science-curriculum/${page}.html`);
 });
 
+// Generate top-level SPA pages as static HTML for crawlers (GEO/SEO)
+const topLevelPages = ['about', 'reva', 'courses', 'tutors'];
+topLevelPages.forEach(page => {
+  const dir = path.join(__dirname, 'dist', 'public', page);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const filePath = path.join(dir, 'index.html');
+  fs.writeFileSync(filePath, indexHtml, 'utf-8');
+  console.log(`✓ Created ${page}/index.html`);
+});
+
 // Also copy to 404.html
 const notFoundPath = path.join(__dirname, 'dist', 'public', '404.html');
 fs.writeFileSync(notFoundPath, indexHtml, 'utf-8');
 console.log(`✓ Created 404.html`);
 
-console.log(`\n✅ Generated ${curriculumPages.length + 1} SPA pages successfully!`);
+console.log(`\n✅ Generated ${curriculumPages.length + topLevelPages.length + 1} SPA pages successfully!`);
