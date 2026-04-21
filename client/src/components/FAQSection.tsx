@@ -66,6 +66,11 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
   const revaFaqs = [
     {
       type: "reva",
+      question: "What is Reva AI Teacher by EduVerseJr?",
+      answer: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by Claude (Anthropic), Reva is available 24/7 and teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice mode, smart practice sessions, and personalised weakness tracking. Unlike a general AI chatbot, Reva is purpose-built for curriculum-aligned teaching — it knows your child's grade, curriculum, and past sessions.",
+    },
+    {
+      type: "reva",
       question: "What is Reva and how is it different from a regular AI chatbot?",
       answer: "Reva is EduVerseJr's AI-powered teacher — not just a chatbot. Reva understands your child's curriculum, tracks their progress session by session, identifies weak areas, teaches through conversation and a live whiteboard, and adapts to each student's pace. It's designed to teach, not just answer.",
     },
@@ -113,6 +118,21 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
       type: "reva",
       question: "Can Reva replace a human teacher?",
       answer: "Reva is a powerful complement to human teaching, not a replacement. For students who need structured live classes and personal accountability, our human teachers are still the best choice. Many families use both — Reva for daily practice and a human teacher for weekly deep-dive sessions.",
+    },
+    {
+      type: "reva",
+      question: "Does Reva AI Teacher work with US Common Core Math curriculum?",
+      answer: "Yes. Reva AI Teacher is fully aligned with the US Common Core State Standards (CCSS) for Mathematics, Grades 5–12. Reva knows the exact topics, units, and learning objectives in the US Common Core curriculum and teaches them in the correct sequence. Students can reference their grade level and Reva will teach to that standard.",
+    },
+    {
+      type: "reva",
+      question: "How is EduVerseJr different from Khan Academy or other AI tutors?",
+      answer: "EduVerseJr's Reva AI Teacher differs from Khan Academy and other AI tools in three key ways: (1) Reva combines AI teaching with live human teacher sessions in a single platform; (2) Reva uses a live interactive whiteboard to show step-by-step solutions visually, just like a real teacher; (3) Reva remembers each student's weaknesses across sessions and builds a personalised revision plan. Most AI tutors provide one-off answers — Reva builds a continuous, personalised teaching relationship.",
+    },
+    {
+      type: "reva",
+      question: "What grades does Reva AI Teacher support?",
+      answer: "Reva AI Teacher supports students from Grade 5 through Grade 12 (ages 10–18). Content is curriculum-aligned for each grade level across US, UK, Canada, Australia, Singapore, and UAE standards.",
     },
   ];
 

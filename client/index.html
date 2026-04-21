@@ -50,12 +50,16 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
+      "@type": ["Organization", "EducationalOrganization"],
+      "@id": "https://eduversejr.com",
       "name": "EduVerseJr",
-      "alternateName": "EduVerse Junior",
+      "alternateName": ["EduVerse Junior", "EduVerseJr.com"],
       "url": "https://eduversejr.com",
-      "logo": "https://eduversejr.com/logo.jpg",
-      "description": "EduVerseJr offers Reva, an AI teacher available 24/7, plus expert human teachers for live 1-to-1 classes in Maths, Science and Coding. For Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://eduversejr.com/logo.jpg"
+      },
+      "description": "EduVerseJr is an online educational platform offering Reva AI Teacher (available 24/7, powered by Claude by Anthropic) plus expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding. Serving students in Grades 5–12 across the United States, United Kingdom, Canada, Australia, Singapore and the United Arab Emirates.",
       "foundingDate": "2024",
       "slogan": "AI Teacher + Human Teacher, Always There",
       "knowsAbout": [
@@ -100,6 +104,7 @@
         "availableLanguage": "English"
       },
       "sameAs": [],
+      "mainEntityOfPage": "https://eduversejr.com/about",
       "offers": [
         {
           "@type": "Course",
