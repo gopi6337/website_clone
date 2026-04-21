@@ -26,12 +26,17 @@ export default function TutorsPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Human Teachers — EduVerseJr | Live 1-to-1 Online Classes</title>
-        <meta name="description" content="EduVerseJr's expert human teachers offer live 1-to-1 online classes in Maths, Science and Coding for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Book a free trial today." />
+        <meta name="description" content="Expert human teachers for live 1-to-1 online Maths, Science and Coding. Grades 5–10, US, UK, Australia, Singapore, Canada and UAE curricula. Book a free trial." />
         <link rel="canonical" href="https://eduversejr.com/tutors" />
         <meta property="og:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
         <meta property="og:description" content="Expert online teachers for Maths, Science and Coding. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
         <meta property="og:url" content="https://eduversejr.com/tutors" />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
+        <meta name="twitter:description" content="Expert 1-to-1 online teaching for Maths, Science and Coding. Grades 5–10 across US, UK, Australia, Singapore, Canada and UAE." />
+        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

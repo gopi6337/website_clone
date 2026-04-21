@@ -176,12 +176,17 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>About EduVerseJr — AI Teacher + Expert Human Teachers | Online EdTech Platform</title>
-        <meta name="description" content="EduVerseJr is an online educational platform combining Reva AI Teacher (24/7, powered by Claude) with expert human teachers for live 1-to-1 classes in Maths, Science and Coding. Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
+        <meta name="description" content="EduVerseJr combines Reva AI Teacher (24/7) with expert human teachers for Maths, Science and Coding. Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
         <link rel="canonical" href="https://eduversejr.com/about" />
         <meta property="og:title" content="About EduVerseJr — AI Teacher + Human Teachers" />
         <meta property="og:description" content="EduVerseJr combines Reva AI Teacher (24/7) with expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
         <meta property="og:url" content="https://eduversejr.com/about" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About EduVerseJr — AI Teacher + Human Teachers" />
+        <meta name="twitter:description" content="Reva AI Teacher (24/7) + expert human teachers for Maths, Science and Coding. Grades 5–12 across US, UK, Australia, Singapore, Canada and UAE." />
+        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify(aboutSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(softwareSchema)}</script>
         <script type="application/ld+json">{JSON.stringify({

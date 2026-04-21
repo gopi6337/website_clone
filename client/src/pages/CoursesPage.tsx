@@ -23,12 +23,17 @@ export default function CoursesPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Courses — EduVerseJr | Maths, Science & Coding for Grades 5–12</title>
-        <meta name="description" content="EduVerseJr offers Maths, Science and Coding courses for Grades 5–12 aligned with US, UK, Canada, Australia, Singapore and UAE curricula. Taught by expert human teachers and Reva AI Teacher." />
+        <meta name="description" content="Maths, Science and Coding courses for Grades 5–12 aligned with US, UK, Australia, Singapore, Canada and UAE curricula. Expert human teachers + Reva AI Teacher." />
         <link rel="canonical" href="https://eduversejr.com/courses" />
         <meta property="og:title" content="Courses — EduVerseJr | Maths, Science & Coding for Grades 5–12" />
         <meta property="og:description" content="Curriculum-aligned Maths, Science and Coding for Grades 5–12 across 6 countries. Human teachers + Reva AI Teacher." />
         <meta property="og:url" content="https://eduversejr.com/courses" />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Courses — EduVerseJr | Maths, Science & Coding for Grades 5–12" />
+        <meta name="twitter:description" content="Maths, Science and Coding for Grades 5–12 across US, UK, Australia, Singapore, Canada and UAE. Human teachers + Reva AI." />
+        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

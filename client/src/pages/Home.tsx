@@ -27,7 +27,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science & Coding</title>
-        <meta name="description" content="EduVerseJr combines Reva, your child's AI teacher available 24/7, with expert human teachers for live 1-to-1 classes. Maths, Science and Coding for Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
+        <meta name="description" content="EduVerseJr combines Reva AI Teacher (24/7) with expert human teachers for Maths, Science and Coding. Grades 5–12 across US, UK, Canada, Australia and UAE." />
         <link rel="canonical" href="https://eduversejr.com/" />
         <meta property="og:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
         <meta property="og:description" content="Reva AI Teacher (24/7) + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
