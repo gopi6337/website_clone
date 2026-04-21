@@ -128,10 +128,10 @@ function RevaNav() {
               ← EduVerseJr
             </span>
           </Link>
-          <span className="text-white/20 hidden sm:block">|</span>
-          <div className="hidden sm:flex items-center gap-2">
+          <span className="text-white/20">|</span>
+          <div className="flex items-center gap-2">
             <img src="/reva-logo.jpg" alt="Reva AI" className="w-7 h-7 rounded-lg object-contain" />
-            <span className="text-white font-bold text-base tracking-tight">Reva AI Teacher</span>
+            <span className="text-white font-bold text-sm sm:text-base tracking-tight">Reva AI Teacher</span>
           </div>
         </div>
 

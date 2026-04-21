@@ -59,14 +59,16 @@ export default function RevaDemo() {
     if (!hasSpeechSynthesis || !narrationRef.current) return;
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-US';
     utter.rate = 0.95;
     utter.pitch = 1.05;
     utter.volume = 1;
-    // Prefer a natural-sounding voice
+    // Prefer a natural-sounding English voice
     const voices = window.speechSynthesis.getVoices();
     const preferred = voices.find(v =>
-      v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Karen") || v.name.includes("Natural")
-    );
+      (v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Karen") || v.name.includes("Natural")) &&
+      (v.lang.startsWith("en"))
+    ) || voices.find(v => v.lang.startsWith("en"));
     if (preferred) utter.voice = preferred;
     utter.onstart = () => setIsSpeaking(true);
     utter.onend = () => setIsSpeaking(false);
@@ -126,10 +128,13 @@ export default function RevaDemo() {
       // Brief intro narration before demo starts
       if (hasSpeechSynthesis) {
         const intro = new SpeechSynthesisUtterance("Meet Reva — your AI maths teacher, available 24 hours a day, 7 days a week.");
+        intro.lang = 'en-US';
         intro.rate = 0.95;
         intro.pitch = 1.05;
         const voices = window.speechSynthesis.getVoices();
-        const preferred = voices.find(v => v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Karen"));
+        const preferred = voices.find(v =>
+          (v.name.includes("Google") || v.name.includes("Samantha") || v.name.includes("Karen")) && v.lang.startsWith("en")
+        ) || voices.find(v => v.lang.startsWith("en"));
         if (preferred) intro.voice = preferred;
         intro.onend = () => runSteps(demoSteps, 0);
         intro.onerror = () => runSteps(demoSteps, 0);
