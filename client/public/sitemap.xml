@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://eduversejr.com/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Reva AI Page -->
   <url>
     <loc>https://eduversejr.com/reva</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -23,7 +23,7 @@
   <!-- Courses Page -->
   <url>
     <loc>https://eduversejr.com/courses</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -31,7 +31,7 @@
   <!-- Human Teachers Page -->
   <url>
     <loc>https://eduversejr.com/tutors</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -39,7 +39,7 @@
   <!-- About Page -->
   <url>
     <loc>https://eduversejr.com/about</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
