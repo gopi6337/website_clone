@@ -46,14 +46,14 @@ curriculumPages.forEach(page => {
   console.log(`✓ Created science-curriculum/${page}.html`);
 });
 
-// Generate top-level SPA pages as static HTML for crawlers (GEO/SEO)
+// Generate top-level SPA pages as flat static HTML for crawlers (GEO/SEO)
+// NOTE: Flat files (page.html) instead of directories (page/index.html) to avoid
+// Vercel's 301 redirect from /page → /page/ which causes "Redirect error" in GSC.
 const topLevelPages = ['about', 'reva', 'courses', 'tutors'];
 topLevelPages.forEach(page => {
-  const dir = path.join(__dirname, 'dist', 'public', page);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  const filePath = path.join(dir, 'index.html');
-  fs.writeFileSync(filePath, indexHtml, 'utf-8');
-  console.log(`✓ Created ${page}/index.html`);
+  const flatHtmlPath = path.join(__dirname, 'dist', 'public', `${page}.html`);
+  fs.writeFileSync(flatHtmlPath, indexHtml, 'utf-8');
+  console.log(`✓ Created ${page}.html`);
 });
 
 // Also copy to 404.html
