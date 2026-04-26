@@ -2,6 +2,9 @@
   "buildCommand": "npm install -g pnpm && pnpm install && pnpm exec vite build && node generate-spa-pages.js",
   "outputDirectory": "dist/public",
   "framework": null,
+  "redirects": [
+    { "source": "/:path+/", "destination": "/:path+", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
