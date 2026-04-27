@@ -100,7 +100,7 @@ export default function RevaAISection() {
   const highlights = [
     { icon: <Zap className="w-5 h-5 text-yellow-500" />, text: "Instant answers — no waiting" },
     { icon: <Globe className="w-5 h-5 text-blue-500" />, text: "Works on mobile & desktop" },
-    { icon: <Sparkles className="w-5 h-5 text-purple-500" />, text: "Powered by Claude AI (Anthropic)" },
+    { icon: <Sparkles className="w-5 h-5 text-purple-500" />, text: "Powered by AI" },
     { icon: <Award className="w-5 h-5 text-green-500" />, text: "Free to start — no credit card" },
   ];
 

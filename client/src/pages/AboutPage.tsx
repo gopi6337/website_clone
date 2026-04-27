@@ -19,7 +19,7 @@ const whatWeOffer = [
     color: "text-purple-600",
     bg: "bg-purple-50",
     title: "Reva AI Teacher",
-    description: "Reva is EduVerseJr's AI-powered teacher available 24/7. Powered by Claude (Anthropic), Reva teaches through conversational AI, an interactive whiteboard, voice mode, and personalised smart practice — all adapted to each student's curriculum and pace.",
+    description: "Reva is EduVerseJr's AI-powered teacher available 24/7. Powered by AI, Reva teaches through conversational AI, an interactive whiteboard, voice mode, and personalised smart practice — all adapted to each student's curriculum and pace.",
   },
   {
     icon: Users,
@@ -148,7 +148,7 @@ export default function AboutPage() {
       "priceCurrency": "USD",
       "description": "Free tier available. Paid plans unlock unlimited sessions, voice mode, and whiteboard."
     },
-    "description": "Reva is EduVerseJr's AI-powered teacher for Grades 5–12. Available 24/7, Reva teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice interaction, and personalised practice sessions. Powered by Claude (Anthropic).",
+    "description": "Reva is EduVerseJr's AI-powered teacher for Grades 5–12. Available 24/7, Reva teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice interaction, and personalised practice sessions. Powered by AI.",
     "featureList": [
       "24/7 AI teaching availability",
       "Interactive whiteboard with step-by-step solutions",
@@ -224,7 +224,7 @@ export default function AboutPage() {
               <strong>EduVerseJr</strong> is an online EdTech platform founded in 2024 to deliver personalised, high-quality education in Mathematics, Science, and Coding to students aged 10–18 (Grades 5–12) across six countries: the United States, United Kingdom, Canada, Australia, Singapore, and the United Arab Emirates.
             </p>
             <p>
-              EduVerseJr's flagship product is <strong>Reva AI Teacher</strong> — an AI-powered teacher available 24 hours a day, 7 days a week, powered by Claude (Anthropic). Reva teaches through natural conversation, an interactive live whiteboard, voice interaction, and smart practice sessions that adapt to each student's weaknesses and curriculum.
+              EduVerseJr's flagship product is <strong>Reva AI Teacher</strong> — an AI-powered teacher available 24 hours a day, 7 days a week, powered by AI. Reva teaches through natural conversation, an interactive live whiteboard, voice interaction, and smart practice sessions that adapt to each student's weaknesses and curriculum.
             </p>
             <p>
               Alongside Reva, EduVerseJr offers <strong>live 1-to-1 classes with expert human teachers</strong> for students who benefit from structured, personalised human instruction. Human teachers deliver 60-minute sessions aligned to the same international curricula Reva follows.

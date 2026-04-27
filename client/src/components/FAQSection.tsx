@@ -67,7 +67,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "What is Reva AI Teacher by EduVerseJr?",
-      answer: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by Claude (Anthropic), Reva is available 24/7 and teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice mode, smart practice sessions, and personalised weakness tracking. Unlike a general AI chatbot, Reva is purpose-built for curriculum-aligned teaching — it knows your child's grade, curriculum, and past sessions.",
+      answer: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice mode, smart practice sessions, and personalised weakness tracking. Unlike a general AI chatbot, Reva is purpose-built for curriculum-aligned teaching — it knows your child's grade, curriculum, and past sessions.",
     },
     {
       type: "reva",
@@ -112,7 +112,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "What technology powers Reva?",
-      answer: "Reva is powered by Claude AI (by Anthropic) — one of the most advanced AI models available — combined with EduVerseJr's proprietary curriculum content and progress tracking system.",
+      answer: "Reva is powered by advanced AI — one of the most advanced AI models available — combined with EduVerseJr's proprietary curriculum content and progress tracking system.",
     },
     {
       type: "reva",

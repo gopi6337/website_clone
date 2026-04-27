@@ -104,7 +104,7 @@ const steps = [
 ];
 
 const faqs = [
-  { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by Claude (Anthropic), Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
+  { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
   { q: "Is Reva really free?", a: "Yes — Reva has a free tier with 10 AI replies per day, no credit card required. Paid plans unlock unlimited chat, voice, whiteboard, and file uploads." },
   { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12. Science and Coding subjects are coming soon — all under the same Reva AI Teacher platform." },
   { q: "Does Reva work with US Common Core, UK, or Australian curriculum?", a: "Yes. Reva AI Teacher is aligned to US Common Core State Standards, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian Provincial Standards, and UAE Ministry of Education standards. Reva teaches to the exact curriculum your child follows at school." },
@@ -112,7 +112,7 @@ const faqs = [
   { q: "How is Reva different from Khan Academy or other AI tutors?", a: "Reva is purpose-built for teaching, not just answering. It uses a live interactive whiteboard to show step-by-step visual solutions, remembers your child's weaknesses across sessions, supports voice interaction, and works alongside human teachers on the same platform. Most AI tutors provide one-off answers — Reva builds a continuous, personalised learning relationship." },
   { q: "Is Reva safe for kids?", a: "Yes. Reva is focused solely on academic subjects. All sessions are logged and accessible to parents." },
   { q: "Does it work on mobile?", a: "Yes — Reva is fully responsive. Voice mode, whiteboard, and uploads all work on phones and tablets." },
-  { q: "What AI powers Reva?", a: "Reva is powered by Claude (Anthropic) — one of the world's leading AI models, known for its accuracy and safe, educational responses." },
+  { q: "What AI powers Reva?", a: "Reva is powered by advanced AI — one of the world's leading AI models, known for its accuracy and safe, educational responses." },
 ];
 
 /* ─── Minimal custom nav ─────────────────────────────────── */
@@ -231,7 +231,7 @@ const structuredData = {
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Web Browser",
       "url": "https://revaai.eduversejr.com",
-      "description": "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12, available 24/7. Powered by Claude (Anthropic), Reva teaches Mathematics, Science, and Coding through conversational AI, an interactive live whiteboard, voice interaction, personalised smart practice, and weakness tracking. Aligned to US Common Core, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian, and UAE curricula.",
+      "description": "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12, available 24/7. Powered by AI, Reva teaches Mathematics, Science, and Coding through conversational AI, an interactive live whiteboard, voice interaction, personalised smart practice, and weakness tracking. Aligned to US Common Core, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian, and UAE curricula.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -314,7 +314,7 @@ export default function RevaPage() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full mb-8">
             <Sparkles className="w-3.5 h-3.5" />
-            Maths · Science · Coding &nbsp;·&nbsp; Powered by Claude AI · Free to Start
+            Maths · Science · Coding &nbsp;·&nbsp; Powered by AI · Free to Start
           </div>
 
           {/* Headline */}
@@ -490,7 +490,7 @@ export default function RevaPage() {
           {[
             { icon: Zap, text: "Instant responses — no waiting" },
             { icon: Globe, text: "Works on mobile & desktop" },
-            { icon: Sparkles, text: "Powered by Claude AI" },
+            { icon: Sparkles, text: "Powered by AI" },
             { icon: CheckCircle, text: "Free to start — no credit card" },
           ].map((p, i) => (
             <div key={i} className="flex items-center gap-2 border border-white/10 bg-white/5 text-white/70 text-sm px-4 py-2 rounded-full">
