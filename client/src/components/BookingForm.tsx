@@ -41,11 +41,9 @@ const bookingSchema = z.object({
 
 type BookingFormData = z.infer<typeof bookingSchema>;
 
-interface BookingFormProps {
-  formspreeEndpoint?: string;
-}
+const API_BASE = "https://agenticaifirst.in/api";
 
-export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOINT" }: BookingFormProps) {
+export default function BookingForm() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -74,22 +72,27 @@ export default function BookingForm({ formspreeEndpoint = "YOUR_FORMSPREE_ENDPOI
     setErrorMessage("");
 
     try {
-      const response = await fetch(`https://formspree.io/f/${formspreeEndpoint}`, {
+      const response = await fetch(`${API_BASE}/trial-booking`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...data,
-          phoneNumber: `${data.countryCode} ${data.phoneNumber}`,
-          _subject: `New Trial Class Booking - ${data.subjectInterest}`,
+          full_name: data.parentName,
+          email: data.parentEmail,
+          grade: data.childGrade,
+          subject: data.subjectInterest,
+          preferred_time: "",
+          notes: [
+            `Phone: ${data.countryCode} ${data.phoneNumber}`,
+            data.message ? `Message: ${data.message}` : "",
+          ].filter(Boolean).join("\n"),
         }),
       });
 
       if (response.ok) {
         setSubmitStatus("success");
         reset();
-        // Reset success message after 5 seconds
         setTimeout(() => setSubmitStatus("idle"), 5000);
       } else {
         throw new Error("Failed to submit form");
