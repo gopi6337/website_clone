@@ -41,7 +41,7 @@ const bookingSchema = z.object({
 
 type BookingFormData = z.infer<typeof bookingSchema>;
 
-const API_BASE = "https://agenticaifirst.in/api";
+const API_BASE = "https://agenticaifirst.in/api/v1";
 
 export default function BookingForm() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
