@@ -69,9 +69,18 @@ export default function FooterSection() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p className="mb-4">© 2026 EduVerseJr. All rights reserved.</p>
-          <p className="mb-4">
-            By using this site you agree to our Terms Of Use & Privacy Policy
+          <p className="mb-3">© 2026 EduVerseJr. All rights reserved.</p>
+          <p className="mb-3 text-sm">
+            All content is original material created by Reva AI and reviewed by human educators.
+            Not copied from any textbook or publisher. For personal educational use only.
+          </p>
+          <p className="text-sm">
+            By using this site you agree to our{" "}
+            <a href="#" className="hover:text-white transition-colors underline">Terms of Use</a>
+            {" "}&amp;{" "}
+            <a href="#" className="hover:text-white transition-colors underline">Privacy Policy</a>
+            {" "}·{" "}
+            <a href="/disclaimer" className="hover:text-white transition-colors underline">Content &amp; Copyright Disclaimer</a>
           </p>
         </div>
       </div>
