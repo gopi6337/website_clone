@@ -76,9 +76,9 @@ export default function FooterSection() {
           </p>
           <p className="text-sm">
             By using this site you agree to our{" "}
-            <a href="#" className="hover:text-white transition-colors underline">Terms of Use</a>
+            <a href="/terms-of-use" className="hover:text-white transition-colors underline">Terms of Use</a>
             {" "}&amp;{" "}
-            <a href="#" className="hover:text-white transition-colors underline">Privacy Policy</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors underline">Privacy Policy</a>
             {" "}·{" "}
             <a href="/disclaimer" className="hover:text-white transition-colors underline">Content &amp; Copyright Disclaimer</a>
           </p>

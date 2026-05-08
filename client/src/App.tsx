@@ -13,6 +13,8 @@ import CurriculumViewer from "./pages/CurriculumViewer";
 import ScienceCurriculumViewer from "./pages/ScienceCurriculumViewer";
 import Login from "./pages/Login";
 import DisclaimerPage from "./pages/DisclaimerPage";
+import TermsOfUsePage from "./pages/TermsOfUsePage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 function Router() {
@@ -30,6 +32,8 @@ function Router() {
         <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
         <Route path={"/login"} component={Login} />
         <Route path={"/disclaimer"} component={DisclaimerPage} />
+        <Route path={"/terms-of-use"} component={TermsOfUsePage} />
+        <Route path={"/privacy-policy"} component={PrivacyPolicyPage} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
