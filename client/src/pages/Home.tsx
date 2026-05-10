@@ -10,7 +10,7 @@ import BookingSection from "@/components/BookingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Brain, FlaskConical, Code2, ArrowRight, Users } from "lucide-react";
+import { Sparkles, Brain, FlaskConical, Code2, ArrowRight, Users, GraduationCap, Clock } from "lucide-react";
 
 export default function Home() {
   useEffect(() => {
@@ -145,6 +145,50 @@ export default function Home() {
               onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}>
               Try Reva Free
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* SAT / PSAT Coming Soon */}
+      <section className="py-10 md:py-14 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center gap-8 bg-white rounded-3xl border border-amber-200 shadow-sm p-8">
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <Clock className="w-4 h-4" /> Coming Soon
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                SAT &amp; PSAT Math Preparation
+              </h2>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Reva AI Teacher will soon offer full <strong>Digital SAT &amp; PSAT Math simulation</strong> — adaptive two-module exams, 200–800 score prediction, domain weakness heatmap, and Reva's personalised explanations for every wrong answer.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                {[
+                  "Full timed 2-module adaptive exam (mirrors real Digital SAT)",
+                  "Predicted score 200–800 with domain breakdown",
+                  "Reva explains every wrong answer — whiteboard + voice",
+                  "PSAT prep for Grades 8–10 · SAT prep for Grades 11–12",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col items-center gap-4 min-w-[160px]">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-lg">
+                <GraduationCap className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-center">
+                <span className="block text-2xl font-bold text-gray-900">SAT</span>
+                <span className="block text-sm text-gray-500">+ PSAT Prep</span>
+              </div>
+              <span className="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1.5 rounded-full border border-amber-300">
+                🚀 Launching Soon
+              </span>
+            </div>
           </div>
         </div>
       </section>

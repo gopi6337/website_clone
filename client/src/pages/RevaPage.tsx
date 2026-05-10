@@ -6,7 +6,8 @@ import {
   Sparkles, MessageSquare, Mic, Target, GalleryHorizontal,
   Dumbbell, TrendingDown, Upload, Award, BarChart3, Brain,
   BookOpen, Clock, ArrowRight, CheckCircle, Zap, Globe,
-  FlaskConical, Code2, Lock, ChevronDown, ChevronUp, Menu, X
+  FlaskConical, Code2, Lock, ChevronDown, ChevronUp, Menu, X,
+  GraduationCap
 } from "lucide-react";
 
 /* ─── Feature data ─────────────────────────────────────── */
@@ -106,7 +107,8 @@ const steps = [
 const faqs = [
   { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
   { q: "Is Reva really free?", a: "Yes — Reva has a free tier with 10 AI replies per day, no credit card required. Paid plans unlock unlimited chat, voice, whiteboard, and file uploads." },
-  { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12. Science and Coding subjects are coming soon — all under the same Reva AI Teacher platform." },
+  { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12. SAT & PSAT Math preparation, Science and Coding are coming soon — all under the same Reva AI Teacher platform." },
+  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes — SAT & PSAT Math preparation is coming soon to Reva AI Teacher. Students will get full adaptive Digital SAT simulations (2 modules, 70 minutes), a predicted score from 200–800, a domain weakness heatmap, and Reva's personalised explanations for every wrong answer via whiteboard and voice. PSAT prep is for Grades 8–10; SAT prep is for Grades 11–12." },
   { q: "Does Reva work with US Common Core, UK, or Australian curriculum?", a: "Yes. Reva AI Teacher is aligned to US Common Core State Standards, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian Provincial Standards, and UAE Ministry of Education standards. Reva teaches to the exact curriculum your child follows at school." },
   { q: "Can Reva help with homework?", a: "Absolutely. Upload a photo or PDF of any Maths homework — Reva AI Teacher reads it, explains it, and walks through solutions step by step." },
   { q: "How is Reva different from Khan Academy or other AI tutors?", a: "Reva is purpose-built for teaching, not just answering. It uses a live interactive whiteboard to show step-by-step visual solutions, remembers your child's weaknesses across sessions, supports voice interaction, and works alongside human teachers on the same platform. Most AI tutors provide one-off answers — Reva builds a continuous, personalised learning relationship." },
@@ -480,6 +482,42 @@ export default function RevaPage() {
                 }
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SAT / PSAT COMING SOON ────────────────────────── */}
+      <section className="py-14 px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative border border-amber-500/30 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-3xl p-8 overflow-hidden">
+            {/* Coming Soon badge */}
+            <span className="absolute top-4 right-4 bg-amber-400 text-black text-xs font-bold px-3 py-1.5 rounded-full">
+              🚀 Coming Soon
+            </span>
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/20">
+                <GraduationCap className="w-8 h-8 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-white mb-1">SAT &amp; PSAT Math Preparation</h3>
+                <p className="text-white/60 text-sm leading-relaxed mb-4">
+                  Reva is expanding into full <strong className="text-white/80">Digital SAT &amp; PSAT exam prep</strong>. Adaptive two-module simulation, 200–800 score prediction, and Reva's personalised coaching on every wrong answer.
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    "Adaptive 2-module exam (real Digital SAT format)",
+                    "200–800 score prediction with domain breakdown",
+                    "Reva explains wrong answers — whiteboard + voice",
+                    "PSAT (Gr 8–10) · SAT (Gr 11–12)",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs text-white/60">
+                      <span className="text-amber-400 font-bold shrink-0 mt-0.5">✓</span>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
