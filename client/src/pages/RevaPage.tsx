@@ -7,7 +7,7 @@ import {
   Dumbbell, TrendingDown, Upload, Award, BarChart3, Brain,
   BookOpen, Clock, ArrowRight, CheckCircle, Zap, Globe,
   FlaskConical, Code2, Lock, ChevronDown, ChevronUp, Menu, X,
-  GraduationCap
+  GraduationCap, Rocket
 } from "lucide-react";
 
 /* ─── Feature data ─────────────────────────────────────── */
@@ -83,6 +83,19 @@ const features = [
     title: "Curriculum-Aligned",
     description: "Mapped to US, UK, Australia, Singapore, Canada and UAE curricula — across Maths, Science and Coding.",
     size: "sm",
+  },
+  {
+    icon: Globe, color: "text-emerald-400", bg: "bg-emerald-500/10",
+    title: "Real World Applications",
+    description: "Every topic ends with a real-world example — shows students exactly where maths appears in everyday life.",
+    size: "sm",
+  },
+  {
+    icon: GraduationCap, color: "text-amber-400", bg: "bg-amber-500/10",
+    title: "SAT & PSAT Prep",
+    description: "Coming soon — full Digital SAT simulation, adaptive 2-module exams, 200–800 score prediction, and Reva's personalised coaching on every wrong answer.",
+    size: "md",
+    comingSoon: true,
   },
 ];
 
@@ -314,9 +327,15 @@ export default function RevaPage() {
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full mb-8">
-            <Sparkles className="w-3.5 h-3.5" />
-            Maths · Science · Coding &nbsp;·&nbsp; Powered by AI · Free to Start
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full">
+              <Sparkles className="w-3.5 h-3.5" />
+              Maths · Science · Coding &nbsp;·&nbsp; Powered by AI · Free to Start
+            </div>
+            <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-medium px-4 py-2 rounded-full">
+              <GraduationCap className="w-3.5 h-3.5" />
+              SAT &amp; PSAT Prep — Coming Soon
+            </div>
           </div>
 
           {/* Headline */}
@@ -362,7 +381,7 @@ export default function RevaPage() {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
             {[
-              { value: "12", label: "AI Features" },
+              { value: "14", label: "AI Features" },
               { value: "3", label: "Subjects" },
               { value: "24/7", label: "Always Available" },
               { value: "Free", label: "To Start" },
@@ -411,6 +430,10 @@ export default function RevaPage() {
             <BentoCard feature={features[9]} span="col-span-1" />
             <BentoCard feature={features[10]} span="col-span-1" />
             <BentoCard feature={features[11]} span="col-span-1" />
+
+            {/* Row 4 — Real World + SAT & PSAT */}
+            <BentoCard feature={features[12]} span="col-span-1" />
+            <BentoCard feature={features[13]} span="col-span-3" />
           </div>
         </div>
       </section>
@@ -482,42 +505,6 @@ export default function RevaPage() {
                 }
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SAT / PSAT COMING SOON ────────────────────────── */}
-      <section className="py-14 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="relative border border-amber-500/30 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-3xl p-8 overflow-hidden">
-            {/* Coming Soon badge */}
-            <span className="absolute top-4 right-4 bg-amber-400 text-black text-xs font-bold px-3 py-1.5 rounded-full">
-              🚀 Coming Soon
-            </span>
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/20">
-                <GraduationCap className="w-8 h-8 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-1">SAT &amp; PSAT Math Preparation</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-4">
-                  Reva is expanding into full <strong className="text-white/80">Digital SAT &amp; PSAT exam prep</strong>. Adaptive two-module simulation, 200–800 score prediction, and Reva's personalised coaching on every wrong answer.
-                </p>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    "Adaptive 2-module exam (real Digital SAT format)",
-                    "200–800 score prediction with domain breakdown",
-                    "Reva explains wrong answers — whiteboard + voice",
-                    "PSAT (Gr 8–10) · SAT (Gr 11–12)",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-white/60">
-                      <span className="text-amber-400 font-bold shrink-0 mt-0.5">✓</span>
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -606,10 +593,16 @@ function BentoCard({
   compact?: boolean;
 }) {
   const Icon = feature.icon;
+  const isSoon = (feature as any).comingSoon;
   return (
     <div
-      className={`${span} group border border-white/10 rounded-2xl ${compact ? "p-4" : "p-6"} bg-white/3 hover:bg-white/6 hover:border-white/20 transition-all cursor-default`}
+      className={`${span} group relative border rounded-2xl ${compact ? "p-4" : "p-6"} transition-all cursor-default ${isSoon ? "border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/10 hover:border-amber-500/50" : "border-white/10 bg-white/3 hover:bg-white/6 hover:border-white/20"}`}
     >
+      {isSoon && (
+        <span className="absolute top-3 right-3 flex items-center gap-1 bg-amber-400 text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full">
+          <Rocket className="w-2.5 h-2.5" /> Soon
+        </span>
+      )}
       <div className={`${feature.bg} w-10 h-10 rounded-xl flex items-center justify-center mb-3`}>
         <Icon className={`${feature.color} ${compact ? "w-4 h-4" : "w-5 h-5"}`} />
       </div>
