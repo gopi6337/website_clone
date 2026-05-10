@@ -34,7 +34,7 @@ export default function Header() {
                 <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
                   EduVerseJr
                 </div>
-                <div className="text-xs text-gray-600 italic hidden lg:block">
+                <div className="text-xs text-gray-600 italic">
                   Explore Your Learning Universe
                 </div>
               </div>
