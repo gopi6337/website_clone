@@ -10,7 +10,7 @@ import BookingSection from "@/components/BookingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Brain, FlaskConical, Code2, ArrowRight, Users, GraduationCap } from "lucide-react";
+import { Sparkles, Brain, FlaskConical, Code2, ArrowRight, Users } from "lucide-react";
 
 export default function Home() {
   useEffect(() => {
@@ -133,22 +133,6 @@ export default function Home() {
                 <p className="text-sm text-gray-600 leading-relaxed">{h.desc}</p>
               </div>
             ))}
-          </div>
-
-          {/* SAT / PSAT Coming Soon — inside Reva section */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="flex items-center gap-4 bg-white border border-amber-200 rounded-2xl px-5 py-4 shadow-sm">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shrink-0">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <span className="font-bold text-gray-900 text-sm">SAT &amp; PSAT Math Preparation</span>
-                  <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-300 shrink-0">🚀 Coming Soon</span>
-                </div>
-                <p className="text-xs text-gray-500">Adaptive exam simulation · Score 200–800 · Reva explains every wrong answer</p>
-              </div>
-            </div>
           </div>
 
           <div className="text-center flex flex-wrap justify-center gap-4">
