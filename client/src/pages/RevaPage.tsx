@@ -404,36 +404,33 @@ export default function RevaPage() {
             <p className="text-white/50 max-w-xl mx-auto">Every feature works together. Reva AI Teacher doesn't just answer questions — she teaches, tracks, and adapts across subjects.</p>
           </div>
 
-          {/* Bento grid — 1 col mobile, 4 col desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-            {/* Large feature 1 — spans 2 cols on desktop */}
-            <BentoCard feature={features[0]} span="md:col-span-2" />
-            {/* Medium */}
-            <BentoCard feature={features[1]} span="md:col-span-1" />
-            {/* Small stack */}
-            <div className="md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-3">
+          {/* Mobile: simple 2-col card grid */}
+          <div className="grid grid-cols-2 gap-3 md:hidden">
+            {features.map((f, i) => (
+              <BentoCard key={i} feature={f} span={i === 0 || i === 6 ? "col-span-2" : ""} compact={i !== 0 && i !== 6 && i !== 13} />
+            ))}
+          </div>
+
+          {/* Desktop: bento grid */}
+          <div className="hidden md:grid md:grid-cols-4 gap-3">
+            <BentoCard feature={features[0]} span="col-span-2" />
+            <BentoCard feature={features[1]} span="col-span-1" />
+            <div className="col-span-1 flex flex-col gap-3">
               <BentoCard feature={features[2]} span="" compact />
               <BentoCard feature={features[3]} span="" compact />
             </div>
-
-            {/* Row 2 */}
-            <BentoCard feature={features[4]} span="md:col-span-1" />
-            <BentoCard feature={features[5]} span="md:col-span-1" />
-            {/* Large feature 2 — spans 2 cols on desktop */}
-            <BentoCard feature={features[6]} span="md:col-span-2" />
-
-            {/* Row 3 */}
-            <div className="md:col-span-1 grid grid-cols-2 md:grid-cols-1 gap-3">
+            <BentoCard feature={features[4]} span="col-span-1" />
+            <BentoCard feature={features[5]} span="col-span-1" />
+            <BentoCard feature={features[6]} span="col-span-2" />
+            <div className="col-span-1 flex flex-col gap-3">
               <BentoCard feature={features[7]} span="" compact />
               <BentoCard feature={features[8]} span="" compact />
             </div>
-            <BentoCard feature={features[9]} span="md:col-span-1" />
-            <BentoCard feature={features[10]} span="md:col-span-1" />
-            <BentoCard feature={features[11]} span="md:col-span-1" />
-
-            {/* Row 4 — Real World + SAT & PSAT */}
-            <BentoCard feature={features[12]} span="md:col-span-1" />
-            <BentoCard feature={features[13]} span="md:col-span-3" />
+            <BentoCard feature={features[9]} span="col-span-1" />
+            <BentoCard feature={features[10]} span="col-span-1" />
+            <BentoCard feature={features[11]} span="col-span-1" />
+            <BentoCard feature={features[12]} span="col-span-1" />
+            <BentoCard feature={features[13]} span="col-span-3" />
           </div>
         </div>
       </section>
