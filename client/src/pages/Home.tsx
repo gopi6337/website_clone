@@ -199,14 +199,14 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Courses</h2>
             <p className="text-gray-600 max-w-xl mx-auto">
-              Three subjects, six country curricula, Grades 5–10. Available with both human teachers and Reva AI.
+              Three subjects, six country curricula, Grades 5–12. Available with both human teachers and Reva AI.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto mb-8">
             {[
-              { icon: <Brain className="w-8 h-8 text-blue-600" />, subject: "Mathematics", badge: "🤖 Reva AI Live", desc: "US Mathematics · Grades 5–10 · Aligned with 6 curricula", color: "border-blue-200 bg-blue-50" },
-              { icon: <FlaskConical className="w-8 h-8 text-green-600" />, subject: "Science", badge: "👨‍🏫 Human Teachers", desc: "Biology, Chemistry, Physics, Earth & Space · Grades 5–10", color: "border-green-200 bg-green-50" },
-              { icon: <Code2 className="w-8 h-8 text-orange-600" />, subject: "Coding", badge: "👨‍🏫 Human Teachers", desc: "Python, JavaScript, HTML/CSS, Web & App Dev · Grades 5–10", color: "border-orange-200 bg-orange-50" },
+              { icon: <Brain className="w-8 h-8 text-blue-600" />, subject: "Mathematics", badge: "🤖 Reva AI Live", desc: "US Mathematics · Grades 5–12 · Aligned with 6 curricula", color: "border-blue-200 bg-blue-50" },
+              { icon: <FlaskConical className="w-8 h-8 text-green-600" />, subject: "Science", badge: "👨‍🏫 Human Teachers", desc: "Biology, Chemistry, Physics, Earth & Space · Grades 5–12", color: "border-green-200 bg-green-50" },
+              { icon: <Code2 className="w-8 h-8 text-orange-600" />, subject: "Coding", badge: "👨‍🏫 Human Teachers", desc: "Python, JavaScript, HTML/CSS, Web & App Dev · Grades 5–12", color: "border-orange-200 bg-orange-50" },
             ].map((c, i) => (
               <div key={i} className={`rounded-2xl p-5 border ${c.color}`}>
                 <div className="mb-3">{c.icon}</div>
@@ -241,7 +241,7 @@ export default function Home() {
                 Our certified teachers offer live 1-to-1 online classes in Maths, Science and Coding. 60-minute sessions, flexible scheduling, free trial available.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                {["Expert certified teachers", "Personalised 1-to-1 sessions", "Grades 5–10, all subjects", "US, UK, Canada, Australia, Singapore, UAE"].map((item, i) => (
+                {["Expert certified teachers", "Personalised 1-to-1 sessions", "Grades 5–12, all subjects", "US, UK, Canada, Australia, Singapore, UAE"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></span> {item}
                   </li>

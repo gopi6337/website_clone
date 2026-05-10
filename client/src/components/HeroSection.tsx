@@ -15,7 +15,7 @@ export default function HeroSection() {
                 Maths · Science · Coding
               </div>
               <div className="inline-block bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-xs font-bold">
-                Grades 5–10
+                Grades 5–12
               </div>
             </div>
 
