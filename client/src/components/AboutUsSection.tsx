@@ -3,21 +3,20 @@ import { Helmet } from "react-helmet-async";
 
 export default function AboutUsSection() {
   const keyFacts = [
-    { label: "Age Range", value: "Grades 5-10 (Ages 10-16)" },
+    { label: "Human Teachers", value: "Grades 5–10 (Ages 10–16)" },
+    { label: "Reva AI Teacher", value: "Grades 5–12 (Ages 10–18)" },
     { label: "Countries Served", value: "6 countries (US, UK, Canada, Australia, Singapore, UAE)" },
-    { label: "Learning Mode", value: "100% Online, Live 1-on-1 Classes" },
+    { label: "Learning Mode", value: "100% Online — Live 1-on-1 + Reva AI 24/7" },
     { label: "Class Duration", value: "60 minutes per session" },
     { label: "Class Frequency", value: "2+ classes per week" },
-    { label: "Subjects Offered", value: "Mathematics, Science & Coding/Programming" },
-
+    { label: "Subjects Offered", value: "Mathematics, Science, Coding, SAT & SSAT Prep" },
     { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Maths, Australian, Canadian, UAE" },
-    { label: "Trial Offer", value: "FREE trial class available" },
   ];
 
   const teamFeatures = [
     {
       icon: <Users className="w-6 h-6 text-blue-600" />,
-      text: "Extensive experience with grades 5-10 students",
+      text: "Experienced teachers, post-graduate qualified",
     },
     {
       icon: <Award className="w-6 h-6 text-blue-600" />,
@@ -25,11 +24,11 @@ export default function AboutUsSection() {
     },
     {
       icon: <Heart className="w-6 h-6 text-blue-600" />,
-      text: "Deep mastery in math and coding",
+      text: "Deep mastery in Maths, Science and Coding",
     },
     {
       icon: <Globe className="w-6 h-6 text-blue-600" />,
-      text: "International curriculum expertise (US, UK, Singapore, Australia, Dubai)",
+      text: "International curriculum expertise (US, UK, Canada, Australia, Singapore, UAE)",
     },
   ];
 
@@ -37,7 +36,7 @@ export default function AboutUsSection() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "EduVerseJr",
-    "description": "Online personalized Math, Science and Coding education for children Grades 5-10 across 6 countries",
+    "description": "Online personalized Maths, Science and Coding education across 6 countries — Human Teachers for Grades 5–10 (incl. SAT & SSAT prep) and Reva AI Teacher for Grades 5–12.",
     "url": "https://eduversejr.com",
     "serviceArea": [
       "United States",
@@ -49,13 +48,16 @@ export default function AboutUsSection() {
     ],
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
-      "value": "Expert instructors"
+      "value": "Experienced instructors"
     },
     "slogan": "Explore Your Learning Universe",
     "knowsAbout": [
-      "Online Math Education for Grades 5-10",
+      "Online Maths Education for Grades 5-10",
       "Online Science Education for Grades 5-10",
       "Coding Education for Children Grades 5-10",
+      "SAT Preparation",
+      "SSAT Preparation",
+      "Reva AI Teacher for Maths Grades 5-12",
       "One-on-One Teaching",
       "US Common Core Mathematics",
       "Next Generation Science Standards (NGSS)",
@@ -124,9 +126,11 @@ export default function AboutUsSection() {
               Our Mission
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed text-center">
-              At EduVerseJr, we empower students in grades 5 to 10 with the critical
-              Math, Science and Coding skills necessary to thrive in the 21st century.
-              Through exceptional one-to-one online instruction, we cultivate a
+              At EduVerseJr, we empower students with the critical Maths, Science
+              and Coding skills necessary to thrive in the 21st century. Our experienced
+              human teachers deliver live 1-to-1 classes for Grades 5–10 — including
+              dedicated SAT &amp; SSAT preparation — while our Reva AI Teacher provides
+              24/7 personalised teaching for Grades 5–12. Together, we cultivate a
               love for learning, build confidence, and foster problem-solving
               abilities that serve students throughout their academic journey.
             </p>

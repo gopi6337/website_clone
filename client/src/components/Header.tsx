@@ -68,7 +68,7 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <Link href="/tutors" className="nav-link whitespace-nowrap">
+            <Link href="/teachers" className="nav-link whitespace-nowrap">
               Human Teachers
             </Link>
             <Link href="/reva" className="nav-link font-semibold text-purple-600 whitespace-nowrap">
@@ -113,7 +113,7 @@ export default function Header() {
             <Link href="/courses" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Courses
             </Link>
-            <Link href="/tutors" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/teachers" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Human Teachers
             </Link>
             <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>

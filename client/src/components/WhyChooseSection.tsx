@@ -43,11 +43,11 @@ export default function WhyChooseSection() {
         <div className="text-center mb-16">
           <h2 className="section-heading">Why Choose EduVerseJr?</h2>
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            0% Worries About Your Child's Math and Coding Journey
+            0% Worries About Your Child's Maths, Science and Coding Journey
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Unlock your child's potential in math and coding with personalized learning,
-            expert teachers, and engaging tools for mastery
+            Unlock your child's potential in Maths, Science and Coding with personalised
+            learning, experienced teachers, and Reva AI — available any time your child needs help.
           </p>
         </div>
 

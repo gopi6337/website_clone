@@ -103,7 +103,7 @@ This guide provides a clear overview of what your child will learn in US mathema
 
 ✓ **Real-World Applications** - Connects math concepts to everyday situations
 
-✓ **Expert Tutors** - Certified educators with deep subject knowledge
+✓ **Experienced Teachers** - Certified educators with deep subject knowledge
 
 ✓ **Regular Assessments** - Track progress and identify areas for improvement
 

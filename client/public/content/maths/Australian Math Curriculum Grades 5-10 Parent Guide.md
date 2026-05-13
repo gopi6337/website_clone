@@ -139,7 +139,7 @@ This guide provides a clear overview of what your child will learn in Australian
 
 ✓ **NAPLAN Ready** - Prepares students for national assessments
 
-✓ **Expert Tutors** - Experienced Australian educators with deep curriculum knowledge
+✓ **Experienced Teachers** - Experienced Australian educators with deep curriculum knowledge
 
 ✓ **Senior Pathway Preparation** - Prepares for Mathematical Methods, Specialist Maths, or General Maths
 

@@ -1,14 +1,15 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router as WouterRouter } from "wouter";
+import { Route, Switch, Router as WouterRouter, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import RevaPage from "./pages/RevaPage";
 import CoursesPage from "./pages/CoursesPage";
-import TutorsPage from "./pages/TutorsPage";
+import TeachersPage from "./pages/TeachersPage";
 import CurriculumViewer from "./pages/CurriculumViewer";
 import ScienceCurriculumViewer from "./pages/ScienceCurriculumViewer";
 import Login from "./pages/Login";
@@ -16,6 +17,16 @@ import DisclaimerPage from "./pages/DisclaimerPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import WhatsAppButton from "./components/WhatsAppButton";
+
+// Permanent client-side redirect for legacy /tutors URLs.
+// Keeps old SEO links and bookmarks working without 404s.
+function TutorsRedirect() {
+  const [, setLocation] = useLocation();
+  useEffect(() => {
+    setLocation("/teachers", { replace: true });
+  }, [setLocation]);
+  return null;
+}
 
 function Router() {
   // Use Vite's BASE_URL so routing works whether served at / or /website/
@@ -27,7 +38,9 @@ function Router() {
         <Route path={"/about"} component={AboutPage} />
         <Route path={"/reva"} component={RevaPage} />
         <Route path={"/courses"} component={CoursesPage} />
-        <Route path={"/tutors"} component={TutorsPage} />
+        <Route path={"/teachers"} component={TeachersPage} />
+        {/* Legacy /tutors → /teachers redirect (SEO + bookmarks) */}
+        <Route path={"/tutors"} component={TutorsRedirect} />
         <Route path={"/curriculum/:country"} component={CurriculumViewer} />
         <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
         <Route path={"/login"} component={Login} />

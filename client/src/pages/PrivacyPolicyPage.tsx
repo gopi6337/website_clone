@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
             <p className="mb-2"><strong>Account information:</strong> Name, email address, country, grade level, and school name provided during registration.</p>
             <p className="mb-2"><strong>Usage data:</strong> Topics studied, session history, practice scores, and learning progress to personalise your experience.</p>
             <p className="mb-2"><strong>Device &amp; technical data:</strong> IP address, browser type, and device information for security and performance purposes.</p>
-            <p><strong>Communications:</strong> Messages or queries you send to Reva AI during tutoring sessions.</p>
+            <p><strong>Communications:</strong> Messages or queries you send to Reva AI during teaching sessions.</p>
           </section>
 
           <section>

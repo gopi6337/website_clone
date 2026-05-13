@@ -4,10 +4,10 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 
-type Role = "tutor" | "parent" | null;
+type Role = "teacher" | "parent" | null;
 
 const roleConfig = {
-  tutor: {
+  teacher: {
     emoji: "👩‍🏫",
     label: "Teacher",
     welcome: "Welcome, Teacher!",
@@ -63,7 +63,7 @@ export default function Login() {
           {/* Role selector — always visible on top */}
           <p className="text-sm font-medium text-gray-500 text-center mb-4">Select your role to continue</p>
           <div className="grid grid-cols-2 gap-3 mb-6">
-            {(["tutor", "parent"] as Role[]).map((r) => {
+            {(["teacher", "parent"] as Role[]).map((r) => {
               const cfg = roleConfig[r!];
               const isActive = role === r;
               return (

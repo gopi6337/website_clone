@@ -123,7 +123,7 @@ This guide provides a clear overview of what your child will learn in Canadian m
 
 ✓ **Real-World Applications** - Connects math concepts to everyday Canadian contexts
 
-✓ **Expert Tutors** - Certified Canadian educators with deep subject knowledge
+✓ **Experienced Teachers** - Certified Canadian educators with deep subject knowledge
 
 ✓ **Regular Assessments** - Track progress and identify areas for improvement
 

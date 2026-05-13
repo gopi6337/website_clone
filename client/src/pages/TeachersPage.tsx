@@ -6,11 +6,11 @@ import BookingSection from "@/components/BookingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import { Button } from "@/components/ui/button";
-import { Users, Globe, Award, Clock, CheckCircle } from "lucide-react";
+import { Users, Globe, Award, Clock, GraduationCap } from "lucide-react";
 
-export default function TutorsPage() {
+export default function TeachersPage() {
   const features = [
-    { icon: <Users className="w-6 h-6 text-blue-600" />, title: "Expert Certified Teachers", desc: "All teachers are degree-qualified, background-checked, and trained in online teaching." },
+    { icon: <Users className="w-6 h-6 text-blue-600" />, title: "Expert Experienced Teachers", desc: "Post-graduate qualified, background-verified, and trained in online teaching." },
     { icon: <Globe className="w-6 h-6 text-blue-600" />, title: "6 Country Curricula", desc: "US, UK, Canada, Australia, Singapore, UAE — your child's local curriculum covered." },
     { icon: <Clock className="w-6 h-6 text-blue-600" />, title: "Flexible Scheduling", desc: "Book classes at times that suit your family. Sessions are 60 minutes, 2+ per week." },
     { icon: <Award className="w-6 h-6 text-blue-600" />, title: "Personalised 1-to-1", desc: "Every class is focused entirely on your child — no group sessions, no distractions." },
@@ -20,36 +20,38 @@ export default function TutorsPage() {
     { name: "Mathematics", grades: "Grades 5–10", detail: "Algebra, Geometry, Trigonometry, Statistics and more" },
     { name: "Science", grades: "Grades 5–10", detail: "Biology, Chemistry, Physics, Earth & Space Science" },
     { name: "Coding", grades: "Grades 5–10", detail: "Python, JavaScript, HTML/CSS, Block-based, Web/App development" },
+    { name: "SAT Prep", grades: "High School", detail: "Full Digital SAT prep — Reading, Writing & Math, taught by experienced teachers" },
+    { name: "SSAT Prep", grades: "US Private Schools", detail: "Verbal, Quantitative, Reading, and Essay prep for US private-school admissions" },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Human Teachers — EduVerseJr | Live 1-to-1 Online Classes</title>
-        <meta name="description" content="Expert human teachers for live 1-to-1 online Maths, Science and Coding. Grades 5–10, US, UK, Australia, Singapore, Canada and UAE curricula. Book a free trial." />
-        <link rel="canonical" href="https://eduversejr.com/tutors" />
+        <title>Human Teachers — EduVerseJr | Live 1-to-1 Online Classes (Maths · Science · Coding · SAT · SSAT)</title>
+        <meta name="description" content="Experienced human teachers for live 1-to-1 online Maths, Science, Coding, SAT and SSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE. Book a free trial." />
+        <link rel="canonical" href="https://eduversejr.com/teachers" />
         <meta property="og:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
-        <meta property="og:description" content="Expert online teachers for Maths, Science and Coding. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
-        <meta property="og:url" content="https://eduversejr.com/tutors" />
+        <meta property="og:description" content="Experienced online teachers for Maths, Science, Coding, SAT & SSAT prep. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
+        <meta property="og:url" content="https://eduversejr.com/teachers" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
-        <meta name="twitter:description" content="Expert 1-to-1 online teaching for Maths, Science and Coding. Grades 5–10 across US, UK, Australia, Singapore, Canada and UAE." />
+        <meta name="twitter:description" content="Expert 1-to-1 online teaching for Maths, Science, Coding, SAT & SSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE." />
         <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "EduVerseJr", "item": "https://eduversejr.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Human Teachers", "item": "https://eduversejr.com/tutors" }
+            { "@type": "ListItem", "position": 2, "name": "Human Teachers", "item": "https://eduversejr.com/teachers" }
           ]
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
           "name": "Expert Human Teachers — Live 1-to-1 Online Classes",
-          "description": "EduVerseJr's expert human teachers offer personalised 1-to-1 online classes in Maths, Science and Coding for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula.",
+          "description": "EduVerseJr's experienced human teachers offer personalised 1-to-1 online classes in Maths, Science, Coding, and dedicated SAT & SSAT preparation for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula.",
           "provider": {
             "@type": "EducationalOrganization",
             "name": "EduVerseJr",
@@ -63,17 +65,19 @@ export default function TutorsPage() {
             "itemListElement": [
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mathematics Teaching — Grades 5–10", "description": "Algebra, Geometry, Trigonometry, Statistics and more. Aligned with 6 international curricula." } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Science Teaching — Grades 5–10", "description": "Biology, Chemistry, Physics, Earth & Space Science." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coding & Programming — Grades 5–10", "description": "Python, JavaScript, HTML/CSS, web and app development." } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coding & Programming — Grades 5–10", "description": "Python, JavaScript, HTML/CSS, web and app development." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SAT Preparation", "description": "Full Digital SAT preparation — Reading, Writing and Math — taught by experienced teachers." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SSAT Preparation", "description": "Verbal, Quantitative, Reading and Essay preparation for US private-school admissions." } }
             ]
           },
           "offers": {
             "@type": "Offer",
             "name": "Free Trial Class",
-            "description": "Book a FREE 1-to-1 trial class with an expert teacher — no commitment required.",
+            "description": "Book a FREE 1-to-1 trial class with an experienced teacher — no commitment required.",
             "price": "0",
             "priceCurrency": "USD"
           },
-          "url": "https://eduversejr.com/tutors"
+          "url": "https://eduversejr.com/teachers"
         })}</script>
       </Helmet>
       <Header />
@@ -82,19 +86,25 @@ export default function TutorsPage() {
       <section className="hero-gradient py-10 md:py-14 mx-4 md:mx-8 my-8 rounded-3xl text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <Users className="w-4 h-4" /> Live · 1-to-1 · Expert Teachers
+            <Users className="w-4 h-4" /> Live · 1-to-1 · Experienced Teachers
           </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Learn with an Expert Human Teacher
+            Learn with an Experienced Human Teacher
           </h1>
-          <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-            Live, personalised 1-to-1 online classes with certified teachers in Mathematics,
-            Science and Coding — tailored to your child's school curriculum and pace.
+          <p className="text-white/90 text-lg max-w-2xl mx-auto mb-6">
+            Live, personalised 1-to-1 online classes with experienced teachers in Mathematics,
+            Science, Coding, and dedicated SAT &amp; SSAT preparation — tailored to your child's
+            school curriculum and pace.
           </p>
-          <Button className="bg-white text-blue-700 hover:bg-blue-50 px-10 py-6 rounded-full text-lg font-bold"
-            onClick={() => window.location.hash = '#booking'}>
-            Book a FREE Trial Class
-          </Button>
+          <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-300/50 text-amber-100 px-4 py-2 rounded-full text-sm font-semibold mb-8">
+            <GraduationCap className="w-4 h-4" /> SAT &amp; SSAT prep — taught by our teachers
+          </div>
+          <div>
+            <Button className="bg-white text-blue-700 hover:bg-blue-50 px-10 py-6 rounded-full text-lg font-bold"
+              onClick={() => window.location.hash = '#booking'}>
+              Book a FREE Trial Class
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -118,7 +128,7 @@ export default function TutorsPage() {
           {/* Subjects */}
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Subjects We Teach</h2>
-            <div className="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {subjects.map((s, i) => (
                 <div key={i} className="bg-white rounded-2xl p-5 border border-gray-200 text-left">
                   <h3 className="font-bold text-gray-900 mb-1">{s.name}</h3>

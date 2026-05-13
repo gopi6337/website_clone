@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 
 export default function LearningStyleSection() {
-  const [activeTab, setActiveTab] = useState("tutoring");
+  const [activeTab, setActiveTab] = useState("teaching");
 
   return (
     <section className="py-10 md:py-14 bg-gray-50">
@@ -21,9 +21,9 @@ export default function LearningStyleSection() {
         {/* Tab Buttons */}
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           <button
-            onClick={() => setActiveTab("tutoring")}
+            onClick={() => setActiveTab("teaching")}
             className={`px-8 py-3 rounded-full font-semibold transition-all ${
-              activeTab === "tutoring"
+              activeTab === "teaching"
                 ? "bg-blue-600 text-white"
                 : "bg-white text-gray-900 border-2 border-gray-200"
             }`}
@@ -56,7 +56,7 @@ export default function LearningStyleSection() {
         {/* Content */}
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
           <div className="bg-white rounded-lg p-8 shadow-md">
-            {activeTab === "tutoring" && (
+            {activeTab === "teaching" && (
               <>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Live 1-to-1 Classes: Personalized instruction with expert

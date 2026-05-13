@@ -155,7 +155,7 @@ This guide provides a clear overview of what your child will learn in UK mathema
 
 ✓ **Individualized Learning** - Adapts to your child's pace and ability level
 
-✓ **Expert Tutors** - Experienced UK teachers familiar with SATs and GCSE requirements
+✓ **Experienced Teachers** - Experienced UK teachers familiar with SATs and GCSE requirements
 
 ✓ **A-Level Preparation** - Strong foundations for Further Mathematics and STEM A-Levels
 

@@ -12,10 +12,7 @@ export default function HeroSection() {
             {/* Badge */}
             <div className="flex flex-wrap gap-2 mb-6">
               <div className="inline-block bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-xs font-bold">
-                Maths · Science · Coding
-              </div>
-              <div className="inline-block bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-xs font-bold">
-                Grades 5–12
+                Maths · Science · Coding · SAT · SSAT
               </div>
             </div>
 
@@ -29,11 +26,12 @@ export default function HeroSection() {
 
             {/* Reva AI — FIRST */}
             <div className="bg-white/15 border border-yellow-300/60 rounded-2xl p-5 mb-4">
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-3 flex-wrap">
                 <img src="/reva-logo.jpg" alt="Reva AI" className="w-9 h-9 rounded-full object-contain bg-white flex-shrink-0" />
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   <h2 className="text-base font-bold">Reva AI Teacher</h2>
                   <span className="text-xs bg-yellow-400 text-gray-900 px-2 py-0.5 rounded-full font-bold">NEW</span>
+                  <span className="text-xs bg-white/25 text-white px-2 py-0.5 rounded-full font-bold border border-white/30">Grades 5–12</span>
                 </div>
               </div>
               <ul className="text-sm text-white/90 space-y-1 mb-3">
@@ -56,19 +54,20 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            {/* Human Tutors — SECOND */}
+            {/* Human Teachers — SECOND */}
             <div className="bg-white/15 border border-white/30 rounded-2xl p-5">
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-3 flex-wrap">
                 <div className="bg-blue-500 rounded-full p-2 flex-shrink-0">
                   <Users className="w-4 h-4 text-white" />
                 </div>
-                <h2 className="text-base font-bold">Human-Led Teaching</h2>
+                <h2 className="text-base font-bold">Expert Human Teachers</h2>
+                <span className="text-xs bg-white/25 text-white px-2 py-0.5 rounded-full font-bold border border-white/30">Grades 5–10</span>
               </div>
               <ul className="text-sm text-white/90 space-y-1 mb-4">
                 <li>• Live 1-to-1 online classes</li>
-                <li>• Expert certified teachers</li>
-                <li>• Mathematics, Science &amp; Coding</li>
-                <li>• Flexible scheduling</li>
+                <li>• Experienced teachers, real rapport</li>
+                <li>• Maths · Science · Coding · SAT · SSAT</li>
+                <li>• Flexible scheduling, same teacher every session</li>
               </ul>
               <Button
                 className="w-full bg-white text-blue-700 hover:bg-blue-50 rounded-full font-semibold"

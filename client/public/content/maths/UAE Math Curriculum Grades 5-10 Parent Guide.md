@@ -137,7 +137,7 @@ This guide provides a clear overview of what your child will learn in UAE mathem
 
 ✓ **Individualized Learning** - Adapts to your child's pace and learning style
 
-✓ **Expert Tutors** - Certified educators familiar with UAE curriculum
+✓ **Experienced Teachers** - Certified educators familiar with UAE curriculum
 
 ✓ **Financial Literacy** - Develops practical money management skills relevant to UAE
 

@@ -14,7 +14,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "human",
       question: "What age group is EduVerseJr designed for?",
-      answer: "EduVerseJr is designed for children from Grade 5 to Grade 10 (ages 10–16), with programmes tailored to different learning levels and school curricula.",
+      answer: "EduVerseJr's human teachers cover Grades 5–10 (ages 10–16) — including SAT and SSAT preparation for high-school students. Reva AI Teacher extends to Grades 5–12 (ages 10–18). Programmes are tailored to each child's level, curriculum and goals.",
     },
     {
       type: "human",
@@ -24,7 +24,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "human",
       question: "What subjects do your human teachers teach?",
-      answer: "Our expert teachers currently teach Mathematics, Science, and Coding/Programming for Grades 5–10, aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
+      answer: "Our experienced teachers teach Mathematics, Science, and Coding/Programming for Grades 5–10, plus dedicated SAT and SSAT preparation. All programmes are aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
     },
     {
       type: "human",
@@ -126,8 +126,8 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     },
     {
       type: "reva",
-      question: "How is EduVerseJr different from Khan Academy or other AI tutors?",
-      answer: "EduVerseJr's Reva AI Teacher differs from Khan Academy and other AI tools in three key ways: (1) Reva combines AI teaching with live human teacher sessions in a single platform; (2) Reva uses a live interactive whiteboard to show step-by-step solutions visually, just like a real teacher; (3) Reva remembers each student's weaknesses across sessions and builds a personalised revision plan. Most AI tutors provide one-off answers — Reva builds a continuous, personalised teaching relationship.",
+      question: "How is EduVerseJr different from Khan Academy or other AI teachers?",
+      answer: "EduVerseJr's Reva AI Teacher differs from Khan Academy and other AI tools in three key ways: (1) Reva combines AI teaching with live human teacher sessions in a single platform; (2) Reva uses a live interactive whiteboard to show step-by-step solutions visually, just like a real teacher; (3) Reva remembers each student's weaknesses across sessions and builds a personalised revision plan. Most AI teachers provide one-off answers — Reva builds a continuous, personalised teaching relationship.",
     },
     {
       type: "reva",

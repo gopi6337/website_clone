@@ -28,9 +28,9 @@ export default function TermsOfUsePage() {
           <section>
             <h2 className="text-xl font-semibold text-gray-800 mb-3">2. Description of Service</h2>
             <p>
-              EduVerseJr provides AI-powered educational content and tutoring services through Reva AI,
+              EduVerseJr provides AI-powered educational content and teaching services through Reva AI,
               combined with human educator review. Our platform offers personalised maths lessons,
-              practice questions, and interactive tutoring sessions aligned to multiple national curricula.
+              practice questions, and interactive teaching sessions aligned to multiple national curricula.
             </p>
           </section>
 

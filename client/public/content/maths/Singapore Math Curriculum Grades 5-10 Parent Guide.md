@@ -130,7 +130,7 @@ This guide provides a clear overview of what your child will learn in Singapore 
 
 ✓ **PSLE & O-Level Ready** - Prepares students for major examinations
 
-✓ **Expert Tutors** - Experienced educators trained in Singapore math pedagogy
+✓ **Experienced Teachers** - Experienced educators trained in Singapore math pedagogy
 
 ✓ **International Recognition** - Prepares students for global academic success
 

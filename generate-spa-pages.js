@@ -152,7 +152,7 @@ curriculumPages.forEach(page => {
 // Generate top-level SPA pages as flat static HTML for crawlers (GEO/SEO)
 // NOTE: Flat files (page.html) instead of directories (page/index.html) to avoid
 // Vercel's 301 redirect from /page → /page/ which causes "Redirect error" in GSC.
-const topLevelPages = ['about', 'reva', 'courses', 'tutors'];
+const topLevelPages = ['about', 'reva', 'courses', 'teachers', 'tutors'];
 topLevelPages.forEach(page => {
   const flatHtmlPath = path.join(__dirname, 'dist', 'public', `${page}.html`);
   fs.writeFileSync(flatHtmlPath, indexHtml, 'utf-8');
