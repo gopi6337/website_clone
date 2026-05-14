@@ -90,6 +90,8 @@ export default function TermsOfUsePage() {
               <li>Share your account credentials, or allow anyone outside your immediate family to use your account.</li>
               <li>Use the Service to harass, defame, harm or violate the rights of any other person.</li>
               <li>Use the Service in any way that violates applicable laws, regulations or third-party rights.</li>
+              <li>Submit, type, draw, upload or transmit any profanity, sexual content, hate speech, violent content, drug references, or any other content unsuitable for a school learning environment — whether through chat messages, the whiteboard, voice input, or uploaded images and PDFs.</li>
+              <li>Attempt to engage Reva AI in discussions unrelated to your assigned curriculum subject (mathematics, science or coding).</li>
             </ul>
           </section>
 
@@ -198,6 +200,19 @@ export default function TermsOfUsePage() {
               We may suspend or terminate your account at any time, with or without notice, for
               violation of these Terms, fraudulent activity, abuse of teachers or other students,
               or for any conduct we determine to be harmful to the Service or other users.
+            </p>
+            <p className="mt-2">
+              <strong>Content moderation — three-strike policy.</strong> The Service automatically
+              screens all student input (chat messages, whiteboard writing, voice transcripts and
+              uploaded images or PDFs) for inappropriate content. If your input is flagged:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mt-2">
+              <li><strong>First strike:</strong> the message is rejected and you receive a warning.</li>
+              <li><strong>Second strike:</strong> your current learning session is ended immediately.</li>
+              <li><strong>Third strike:</strong> your account is flagged and access to the Service is suspended pending review. For students under 18, we will contact the parent or guardian on record.</li>
+            </ul>
+            <p className="mt-2">
+              Repeated or severe violations may result in permanent account termination without refund. We log all flagged events for safety review.
             </p>
             <p className="mt-2">
               You may close your account at any time by emailing <a href="mailto:support@eduversejr.com" className="text-blue-600 hover:underline">support@eduversejr.com</a>.
