@@ -3,8 +3,8 @@
   "outputDirectory": "dist/public",
   "framework": null,
   "redirects": [
-    { "source": "/curriculum/uae-(dubai)", "destination": "/curriculum/uae", "permanent": true },
-    { "source": "/science-curriculum/uae-(dubai)", "destination": "/science-curriculum/uae", "permanent": true },
+    { "source": "/curriculum/uae-\\(dubai\\)", "destination": "/curriculum/uae", "permanent": true },
+    { "source": "/science-curriculum/uae-\\(dubai\\)", "destination": "/science-curriculum/uae", "permanent": true },
     { "source": "/:path+/", "destination": "/:path+", "permanent": true }
   ],
   "rewrites": [
