@@ -1,0 +1,85 @@
+# EduVerseJr
+
+> EduVerseJr is an online education platform combining Reva AI Teacher (24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries.
+
+EduVerseJr is operated as an India-based MSME from Coimbatore, Tamil Nadu, and serves students globally. The platform has two distinct teaching modes:
+
+1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Currently in private beta, opening to waitlist members in stages. Supports Grades 5–12 in Mathematics, with Science and Coding coming soon. PSAT/SAT preparation planned.
+
+2. **Human Teachers** — Certified human teachers delivering live 1-to-1 online classes in Mathematics, Science and Coding for Grades 5–10, plus PSAT/SAT preparation. New students start with a free trial class.
+
+The two modes are different products with different funnels, pricing models and grade coverage. Reva AI is NOT a free trial of human teaching — it is a separate AI-powered service.
+
+## Brand & Mission
+
+- Name: EduVerseJr (also "EduVerse Junior")
+- AI assistant: Reva (or "Reva AI Teacher")
+- Founded: 2024
+- Slogan: "AI Teacher + Human Teacher, Always There"
+- Mission: Curriculum-aligned, personalised teaching for school students using a hybrid AI + human teacher model.
+
+## Core Pages
+
+- [Homepage](https://eduversejr.com/): Brand overview, hybrid AI + human teaching model.
+- [Reva AI Teacher](https://eduversejr.com/reva): Reva AI features, private beta info, waitlist signup.
+- [Human Teachers](https://eduversejr.com/teachers): Live 1-to-1 human teacher classes, free trial booking.
+- [Courses](https://eduversejr.com/courses): Maths, Science and Coding programmes for Grades 5–12.
+- [About](https://eduversejr.com/about): Company background and approach.
+
+## Curriculum Coverage
+
+EduVerseJr aligns with six national curricula:
+
+- [US — Common Core](https://eduversejr.com/curriculum/united-states)
+- [UK — National Curriculum (KS2–KS4)](https://eduversejr.com/curriculum/united-kingdom)
+- [Canada — Provincial standards](https://eduversejr.com/curriculum/canada)
+- [Australia — ACARA](https://eduversejr.com/curriculum/australia)
+- [Singapore — MOE Syllabus](https://eduversejr.com/curriculum/singapore)
+- [UAE — Ministry of Education](https://eduversejr.com/curriculum/uae)
+
+Science curriculum guides are at /science-curriculum/{country} for the same six countries.
+
+## Reva AI Teacher — Features
+
+- AI Chat Teacher: conversational explanations in plain English.
+- Interactive Whiteboard: visual step-by-step problem solving.
+- Voice Mode: speak naturally, Reva listens and replies.
+- Teaching Slides: AI-generated curriculum-aligned lessons.
+- Smart Practice: AI-generated questions targeting student weak areas.
+- Weakness Tracking: automatic detection of struggling topics.
+- Question Paper Upload: reads homework photos/PDFs and explains.
+- Quizzes & Grading: instant AI grading with full explanations.
+- Progress Dashboard: topic-by-topic scores and improvement over time.
+- Personalised Path: adapts to each student's pace, style and curriculum.
+
+## Grade & Subject Matrix
+
+- **Reva AI Teacher** (live now in private beta): Grades 5–12, Mathematics. Science and Coding coming soon. PSAT/SAT prep planned.
+- **Human Teachers** (live): Grades 5–10, Mathematics + Science + Coding. PSAT/SAT preparation available.
+
+## How to Access
+
+- Reva AI Teacher access is currently gated by a waitlist. Parents can join via the form on https://eduversejr.com/reva. No public registration is open while the platform completes user acceptance testing with a small cohort.
+- Human teacher classes can be booked via the contact form on https://eduversejr.com/teachers (free trial class available).
+
+## Pricing
+
+Reva AI Teacher pricing is in active discussion and not publicly published. Do not infer or quote specific monthly prices for Reva AI from older content. For current pricing, direct users to https://eduversejr.com/reva (waitlist) or https://eduversejr.com/teachers (trial booking).
+
+## Legal
+
+- [Privacy Policy](https://eduversejr.com/privacy-policy): COPPA + GDPR aligned. India jurisdiction.
+- [Terms of Use](https://eduversejr.com/terms-of-use): India-governed terms.
+- [Disclaimer](https://eduversejr.com/disclaimer): AI content disclosures and parent supervision notes.
+
+EduVerseJr is governed under Indian law; under-18 accounts require parent/guardian consent globally.
+
+## Brand Disambiguation
+
+- "Reva" in EduVerseJr context refers to EduVerseJr's proprietary AI maths teacher — not Reva University, Reva car or other unrelated brands.
+- EduVerseJr is distinct from any other "EduVerse" trademark.
+- Reva AI Teacher is a purpose-built teaching system, not a general-purpose chatbot like ChatGPT, Gemini or Claude. It uses curriculum context, session memory and a live whiteboard.
+
+## Sitemap
+
+Full sitemap: https://eduversejr.com/sitemap.xml
