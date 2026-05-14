@@ -14,7 +14,7 @@ export default function FooterSection() {
               <li><a href="/curriculum/australia" className="hover:text-white transition-colors">Australian Math Curriculum</a></li>
               <li><a href="/curriculum/singapore" className="hover:text-white transition-colors">Singapore Math Curriculum</a></li>
               <li><a href="/curriculum/canada" className="hover:text-white transition-colors">Canadian Math Curriculum</a></li>
-              <li><a href="/curriculum/uae-(dubai)" className="hover:text-white transition-colors">UAE Math Curriculum</a></li>
+              <li><a href="/curriculum/uae" className="hover:text-white transition-colors">UAE Math Curriculum</a></li>
             </ul>
           </div>
 
@@ -27,7 +27,7 @@ export default function FooterSection() {
               <li><a href="/science-curriculum/australia" className="hover:text-white transition-colors">Australian Science Curriculum</a></li>
               <li><a href="/science-curriculum/singapore" className="hover:text-white transition-colors">Singapore Science Curriculum</a></li>
               <li><a href="/science-curriculum/canada" className="hover:text-white transition-colors">Canadian Science Curriculum</a></li>
-              <li><a href="/science-curriculum/uae-(dubai)" className="hover:text-white transition-colors">UAE Science Curriculum</a></li>
+              <li><a href="/science-curriculum/uae" className="hover:text-white transition-colors">UAE Science Curriculum</a></li>
             </ul>
           </div>
 

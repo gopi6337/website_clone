@@ -37,6 +37,7 @@ export default function ScienceCurriculumSection() {
     {
       countryCode: "us",
       name: "United States",
+      slug: "united-states",
       standards: "Next Generation Science Standards (NGSS)",
       details: [
         "Aligned with Next Generation Science Standards (NGSS)",
@@ -48,6 +49,7 @@ export default function ScienceCurriculumSection() {
     {
       countryCode: "gb",
       name: "United Kingdom",
+      slug: "united-kingdom",
       standards: "UK National Curriculum (KS2–KS4)",
       details: [
         "Follows UK National Curriculum guidelines",
@@ -59,6 +61,7 @@ export default function ScienceCurriculumSection() {
     {
       countryCode: "ca",
       name: "Canada",
+      slug: "canada",
       standards: "Provincial Curriculum Standards",
       details: [
         "Aligned with provincial science curriculum standards",
@@ -70,6 +73,7 @@ export default function ScienceCurriculumSection() {
     {
       countryCode: "au",
       name: "Australia",
+      slug: "australia",
       standards: "Australian Curriculum (ACARA)",
       details: [
         "Meets Australian Curriculum (ACARA) requirements",
@@ -81,6 +85,7 @@ export default function ScienceCurriculumSection() {
     {
       countryCode: "sg",
       name: "Singapore",
+      slug: "singapore",
       standards: "MOE Singapore Syllabus",
       details: [
         "Based on MOE Singapore Science syllabus",
@@ -92,6 +97,7 @@ export default function ScienceCurriculumSection() {
     {
       countryCode: "ae",
       name: "UAE (Dubai)",
+      slug: "uae",
       standards: "UAE Ministry of Education",
       details: [
         "Aligned with UAE Ministry of Education standards",
@@ -179,7 +185,7 @@ export default function ScienceCurriculumSection() {
 
                 {/* Grade Wise Curriculum Button */}
                 <Link
-                  href={`/science-curriculum/${country.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/science-curriculum/${country.slug}`}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors mt-auto"
                 >
                   Grade Wise Curriculum

@@ -41,7 +41,7 @@ const curriculumMeta = {
     ogTitle: 'Singapore Maths Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade Singapore MOE Maths curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
   },
-  'uae-(dubai)': {
+  'uae': {
     title: 'UAE Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
     description: 'Explore EduVerseJr\'s UAE Math Curriculum guide for Grades 5–10. Covers MOE UAE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UAE and Dubai students.',
     ogTitle: 'UAE Math Curriculum Grades 5–10 — EduVerseJr',

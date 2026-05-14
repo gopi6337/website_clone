@@ -26,6 +26,12 @@ const curriculumMap: { [key: string]: { name: string; mdFile: string } } = {
     name: "Singapore Math Curriculum (Grade 5-10)",
     mdFile: "/content/maths/Singapore Math Curriculum Grades 5-10 Parent Guide.md"
   },
+  "uae": {
+    name: "UAE Math Curriculum (Grade 5-10)",
+    mdFile: "/content/maths/UAE Math Curriculum Grades 5-10 Parent Guide.md"
+  },
+  // Legacy alias — old "uae-(dubai)" URL is 301-redirected by Vercel; this stays
+  // as a safety net for any cached SPA load that already has the old slug.
   "uae-(dubai)": {
     name: "UAE Math Curriculum (Grade 5-10)",
     mdFile: "/content/maths/UAE Math Curriculum Grades 5-10 Parent Guide.md"

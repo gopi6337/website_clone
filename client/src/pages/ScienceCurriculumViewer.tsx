@@ -26,6 +26,11 @@ const scienceCurriculumMap: { [key: string]: { name: string; mdFile: string } } 
     name: "Singapore Science Curriculum (Grade 5-10)",
     mdFile: "/content/science/Singapore Science Curriculum Grades 5-10.md"
   },
+  "uae": {
+    name: "UAE Science Curriculum (Grade 5-10)",
+    mdFile: "/content/science/UAE Science Curriculum Grades 5-10.md"
+  },
+  // Legacy alias — old "uae-(dubai)" URL is 301-redirected by Vercel; kept as safety net.
   "uae-(dubai)": {
     name: "UAE Science Curriculum (Grade 5-10)",
     mdFile: "/content/science/UAE Science Curriculum Grades 5-10.md"

@@ -38,6 +38,7 @@ export default function MathCurriculumSection() {
     {
       countryCode: "us",
       name: "United States",
+      slug: "united-states",
       standards: "Common Core State Standards (CCSS)",
       details: [
         "Aligned with Common Core State Standards (CCSS)",
@@ -49,6 +50,7 @@ export default function MathCurriculumSection() {
     {
       countryCode: "gb",
       name: "United Kingdom",
+      slug: "united-kingdom",
       standards: "UK National Curriculum",
       details: [
         "Follows UK National Curriculum guidelines",
@@ -60,6 +62,7 @@ export default function MathCurriculumSection() {
     {
       countryCode: "ca",
       name: "Canada",
+      slug: "canada",
       standards: "Provincial Curriculum Standards",
       details: [
         "Aligned with provincial curriculum standards",
@@ -71,6 +74,7 @@ export default function MathCurriculumSection() {
     {
       countryCode: "au",
       name: "Australia",
+      slug: "australia",
       standards: "Australian Curriculum",
       details: [
         "Meets Australian Curriculum requirements",
@@ -82,6 +86,7 @@ export default function MathCurriculumSection() {
     {
       countryCode: "sg",
       name: "Singapore",
+      slug: "singapore",
       standards: "Singapore Maths Methodology",
       details: [
         "Based on Singapore Maths methodology",
@@ -93,6 +98,7 @@ export default function MathCurriculumSection() {
     {
       countryCode: "ae",
       name: "UAE (Dubai)",
+      slug: "uae",
       standards: "UAE Ministry of Education",
       details: [
         "Aligned with UAE Ministry of Education standards",
@@ -186,7 +192,7 @@ export default function MathCurriculumSection() {
 
                 {/* Grade Wise Curriculum Button */}
                 <Link
-                  href={`/curriculum/${country.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/curriculum/${country.slug}`}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors mt-auto"
                 >
                   Grade Wise Curriculum
