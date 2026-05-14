@@ -453,7 +453,7 @@ export default function RevaPage() {
           </div>
           {/* Demo runs on its own white background (shows real app UI) */}
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-900/30 ring-1 ring-white/10">
-            <RevaDemo />
+            <RevaDemo onWaitlistClick={() => setWaitlistOpen(true)} />
           </div>
         </div>
       </section>

@@ -42,7 +42,11 @@ const slideContent = [
 
 const hasSpeechSynthesis = typeof window !== "undefined" && "speechSynthesis" in window;
 
-export default function RevaDemo() {
+interface RevaDemoProps {
+  onWaitlistClick?: () => void;
+}
+
+export default function RevaDemo({ onWaitlistClick }: RevaDemoProps = {}) {
   const [displayedSteps, setDisplayedSteps] = useState<DemoStep[]>([]);
   const [whiteboardLines, setWhiteboardLines] = useState<WhiteboardLine[]>([]);
   const [isTyping, setIsTyping] = useState(false);
@@ -448,12 +452,12 @@ export default function RevaDemo() {
           )}
 
           <div className="text-center mt-6">
-            <p className="text-gray-600 mb-4">Ready to experience it for real?</p>
+            <p className="text-gray-600 mb-4">Reva is in private beta. Join the waitlist to get early access.</p>
             <Button
               className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-6 rounded-full text-lg font-bold"
-              onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}
+              onClick={() => onWaitlistClick?.()}
             >
-              Try Reva Free — Start Now
+              Join the Waitlist
             </Button>
           </div>
         </div>
