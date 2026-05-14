@@ -2,6 +2,7 @@
   "buildCommand": "npm install -g pnpm && pnpm install && pnpm exec vite build && node generate-spa-pages.js",
   "outputDirectory": "dist/public",
   "framework": null,
+  "cleanUrls": true,
   "redirects": [
     { "source": "/curriculum/uae-\\(dubai\\)", "destination": "/curriculum/uae", "permanent": true },
     { "source": "/science-curriculum/uae-\\(dubai\\)", "destination": "/science-curriculum/uae", "permanent": true },
