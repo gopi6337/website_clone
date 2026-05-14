@@ -100,7 +100,7 @@ export default function TeachersPage() {
             <GraduationCap className="w-4 h-4" /> SAT &amp; SSAT prep — taught by our teachers
           </div>
           <div>
-            <Button className="bg-white text-blue-700 hover:bg-blue-50 px-10 py-6 rounded-full text-lg font-bold"
+            <Button className="bg-emerald-500 hover:bg-emerald-400 text-white px-10 py-6 rounded-full text-lg font-bold shadow-lg shadow-emerald-500/40"
               onClick={() => window.location.hash = '#booking'}>
               Book a FREE Trial Class
             </Button>

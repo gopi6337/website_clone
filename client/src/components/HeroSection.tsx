@@ -70,7 +70,7 @@ export default function HeroSection() {
                 <li>• Flexible scheduling, same teacher every session</li>
               </ul>
               <Button
-                className="w-full bg-white text-blue-700 hover:bg-blue-50 rounded-full font-semibold"
+                className="w-full bg-emerald-500 hover:bg-emerald-400 text-white rounded-full font-bold shadow-lg shadow-emerald-500/30"
                 onClick={() => window.location.hash = '#booking'}
               >
                 Book a FREE Trial
