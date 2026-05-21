@@ -876,7 +876,54 @@ Object.entries(scienceCurriculumMeta).forEach(([page, meta]) => {
   console.log(`✓ Created science-curriculum/${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
 });
 
-// 404 fallback
+// Homepage — overwrite /dist/public/index.html with prerender SEO body
+// (title and meta are already correct in base index.html, we only inject body)
+const homepageBody = renderSeoBlock({
+  h1: 'EduVerseJr — Reva AI Teacher + Expert Human Teachers for Grades 5–12',
+  intro: [
+    'EduVerseJr is a hybrid online learning platform built around two complementary teachers: Reva, our 24/7 AI maths teacher, and our team of expert human teachers running live 1-to-1 online classes. We serve students in Grades 5 through 12 across the United States, United Kingdom, Canada, Australia, Singapore and the United Arab Emirates — with curriculum-aligned content for each country.',
+    'Reva handles the daily questions — homework, practice, revision, concept explanation — at any hour, on any topic in Mathematics. Our human teachers run scheduled live sessions for deeper coaching in Maths, Science and Coding, including PSAT and SAT preparation. Parents get progress reports after every session and visibility into Reva usage between sessions.',
+  ],
+  sections: [
+    {
+      h2: 'Meet Reva — your child\'s 24/7 AI maths teacher',
+      p: 'Reva explains concepts step-by-step on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows. Five core modes — Learn, Whiteboard, Practice, Revision, and Ask Reva — cover the full daily learning loop. Currently in private beta with a free tier planned at public launch (10 messages/day, Chapter 1 of each course).',
+    },
+    {
+      h2: 'Expert human teachers — live 1-to-1 classes',
+      p: 'Subject-certified teachers run online video classes in Mathematics (Grades 5–10), Science (Grades 5–10) and Coding (Grades 5–10), plus PSAT/SAT Math preparation for Grades 9–12. Free trial class for new students. Curriculum aligned with six countries — choose yours during signup.',
+    },
+    {
+      h2: 'Curriculum coverage',
+      p: 'United States (Common Core), United Kingdom (National Curriculum / GCSE), Canada (provincial — Ontario, BC, Alberta and equivalents), Australia (ACARA), Singapore (MOE — Express, Normal Academic, Normal Technical), and the United Arab Emirates (MOE UAE, plus British and American school variants in Dubai and Abu Dhabi).',
+    },
+    {
+      h2: 'Safe for children',
+      p: 'EduVerseJr is COPPA-compliant for US users and GDPR-aware for UK/EU users. Under-18 accounts require parent supervision. All Reva conversations pass through a content moderation pipeline with parent-visible violation alerts. Governing law: India.',
+    },
+  ],
+  faqs: [
+    { q: 'What grades do you cover?', a: 'Reva AI Teacher: Grades 5–12 plus PSAT/SAT Math prep. Live human teachers: Grades 5–10 plus PSAT/SAT.' },
+    { q: 'Which subjects?', a: 'Mathematics, Science, and Coding. Subject availability depends on grade — see our Courses page for the full matrix.' },
+    { q: 'Is Reva the same as ChatGPT?', a: 'No. Reva is restricted to curriculum-aligned maths content, runs through a content review pipeline, remembers your child\'s past topics across sessions, and is built specifically for school-age learners.' },
+    { q: 'How do I book a free trial?', a: 'Visit our Teachers page, fill in the form with your child\'s grade and country, and we will email back within 24 hours to schedule.' },
+    { q: 'What does it cost?', a: 'Reva AI is in private beta; a free tier is planned at launch with paid tiers for unlimited use. Human teacher pricing is shown at checkout and varies by country and class frequency.' },
+  ],
+  links: [
+    { href: '/reva', label: 'Meet Reva — 24/7 AI maths teacher' },
+    { href: '/teachers', label: 'Book a free trial with an expert human teacher' },
+    { href: '/courses', label: 'See all Maths, Science & Coding courses' },
+    { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
+    { href: '/curriculum/united-kingdom', label: 'UK Maths curriculum guide' },
+    { href: '/curriculum/singapore', label: 'Singapore Maths curriculum guide' },
+    { href: '/about', label: 'About EduVerseJr' },
+  ],
+});
+const homepageHtml = injectBodyContent(indexHtml, homepageBody);
+fs.writeFileSync(indexHtmlPath, homepageHtml, 'utf-8');
+console.log(`✓ Updated index.html (homepage SEO body injected)`);
+
+// 404 fallback — use the base indexHtml (without body injection)
 const notFoundPath = path.join(publicDir, '404.html');
 fs.writeFileSync(notFoundPath, indexHtml, 'utf-8');
 console.log(`✓ Created 404.html`);
