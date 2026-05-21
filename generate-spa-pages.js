@@ -362,42 +362,210 @@ const topLevelMeta = {
 // ─────────────────────────────────────────────────────────────────────
 // Math curriculum pages — one entry per country slug
 // ─────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────
+// Country-specific curriculum content helper. Produces a consistent
+// structure across all 6 math (and 6 science) country pages — H1, intro,
+// grade-by-grade topic list, FAQ and cross-links — driven by per-country
+// content data.
+// ─────────────────────────────────────────────────────────────────────
+function renderCurriculumBlock({ country, standard, slugMath, grades, examPrep, faqs, isScience = false }) {
+  const subjectLabel = isScience ? 'Science' : 'Maths';
+  const subjectLower = isScience ? 'science' : 'maths';
+  const slugBase = isScience ? '/science-curriculum/' : '/curriculum/';
+  const otherSection = isScience ? '/curriculum/' : '/science-curriculum/';
+  const otherSubject = isScience ? 'Maths' : 'Science';
+  return renderSeoBlock({
+    h1: `${country} ${subjectLabel} Curriculum Grades 5–10 — Grade-by-Grade Guide for Parents`,
+    intro: [
+      `EduVerseJr's ${country} ${subjectLabel} curriculum guide is built for parents who want to know exactly what their child should be learning each year. Every topic on this page is aligned with ${standard} — the official ${country.toLowerCase().includes('united') || country.toLowerCase().includes('australia') ? 'national' : country.toLowerCase().includes('canad') ? 'provincial' : 'national'} standard followed in ${country} schools. We have mapped Grade 5 through Grade 10 ${subjectLower} topic by topic, so you can see what your child has covered, what is coming next, and where you might want extra 1-to-1 help.`,
+      `Every student on our platform also gets Reva AI Teacher — a 24/7 AI ${subjectLower} tutor that explains any topic on this page step-by-step, with worked examples and practice questions. For deeper coaching, our expert human teachers run live 1-to-1 online classes for ${country} students with built-in timezone scheduling.`,
+    ],
+    sections: [
+      ...grades.map((g) => ({
+        h2: `Grade ${g.grade} ${subjectLabel} — ${country}`,
+        p: g.topics,
+      })),
+      ...(examPrep ? [{ h2: examPrep.h2, p: examPrep.p }] : []),
+    ],
+    faqs,
+    links: [
+      { href: '/reva', label: `Try Reva — your child's 24/7 AI ${subjectLower} teacher` },
+      { href: '/teachers', label: 'Book a free trial class with an expert human teacher' },
+      { href: `${otherSection}${slugMath}`, label: `${country} ${otherSubject} curriculum guide` },
+      { href: '/courses', label: 'See all courses (Maths, Science, Coding)' },
+      { href: '/about', label: 'About EduVerseJr' },
+    ],
+  });
+}
+
 const curriculumMeta = {
   'united-states': {
     title: 'US Math Curriculum Grades 5–10 | EduVerseJr Online Math Teacher',
     description: 'Explore EduVerseJr\'s US Math Curriculum guide for Grades 5–10. Covers Common Core Algebra, Geometry, Statistics and more. Expert 1-on-1 online Math teaching aligned with US standards.',
     ogTitle: 'US Math Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade US Common Core Math curriculum guide for parents. Algebra, Geometry, Statistics and more for Grades 5–10 by EduVerseJr.',
+    bodyContent: renderCurriculumBlock({
+      country: 'United States',
+      standard: 'the Common Core State Standards for Mathematics (CCSS-M)',
+      slugMath: 'united-states',
+      grades: [
+        { grade: 5, topics: 'Place value of decimals; multi-digit multiplication and division; adding, subtracting, multiplying and dividing fractions; volume of rectangular prisms; coordinate plane (Quadrant I); converting between units of measurement; line plots; understanding patterns and the coordinate plane.' },
+        { grade: 6, topics: 'Ratios and unit rates; dividing fractions by fractions; understanding negative numbers and absolute value; arithmetic with positive and negative numbers; expressions and one-variable equations; introduction to statistics — mean, median, range; surface area and volume.' },
+        { grade: 7, topics: 'Proportional relationships; operations with rational numbers (including negatives); simplifying linear expressions; two-step equations and inequalities; scale drawings; circumference and area of circles; probability of simple and compound events; sampling and populations.' },
+        { grade: 8, topics: 'Linear equations in one and two variables; systems of two linear equations; introduction to functions; transformations and congruence; similarity; Pythagorean theorem; volume of cones, cylinders and spheres; bivariate data and scatter plots; introduction to irrational numbers.' },
+        { grade: 9, topics: 'Algebra I — linear and exponential functions; quadratic functions; factoring; systems of equations and inequalities; absolute value; introduction to polynomial operations; descriptive statistics; analyzing categorical data.' },
+        { grade: 10, topics: 'Geometry — congruence and similarity proofs; right-triangle trigonometry (sin, cos, tan); circle theorems; coordinate geometry; transformations; volume and surface area of 3D figures; geometric probability. Some students start Algebra II concurrently.' },
+      ],
+      examPrep: {
+        h2: 'PSAT & SAT Math preparation',
+        p: 'For Grade 9 onwards, EduVerseJr offers dedicated PSAT (8/9, 10) and SAT Math preparation aligned with the digital SAT format. Includes heart of algebra, problem-solving and data analysis, passport to advanced math, and additional topics in math (geometry/trigonometry).',
+      },
+      faqs: [
+        { q: 'Is this aligned with Common Core?', a: 'Yes. Every topic is mapped to Common Core State Standards for Mathematics (CCSS-M). State-specific variants (e.g. California, Texas TEKS) are also supported on request.' },
+        { q: 'Does this match what my child does at school?', a: 'In most US public and private schools that follow Common Core, yes. If your school uses a different scope (e.g. accelerated math, integrated math, IB) we can adjust the lesson order during signup.' },
+        { q: 'When do students start Algebra I?', a: 'Most US students take Algebra I in Grade 8 or 9. Accelerated students may take it earlier. Our human teachers can help bridge gaps if your child is moving in early.' },
+      ],
+    }),
   },
   'united-kingdom': {
     title: 'UK Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
     description: 'Explore EduVerseJr\'s UK Maths Curriculum guide for Grades 5–10. Covers GCSE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UK students.',
     ogTitle: 'UK Maths Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade UK Maths curriculum guide for parents. GCSE-aligned Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    bodyContent: renderCurriculumBlock({
+      country: 'United Kingdom',
+      standard: 'the National Curriculum for England (Key Stage 2, Key Stage 3 and GCSE)',
+      slugMath: 'united-kingdom',
+      grades: [
+        { grade: 5, topics: 'Year 6 / KS2 maths: place value to 10 million; long multiplication and division; fractions, decimals and percentages; ratio and proportion; algebra introductions; perimeter, area and volume; basic statistics including the mean.' },
+        { grade: 6, topics: 'Year 7 / KS3 Year 1: extending number skills to negatives; introducing letters as variables; solving linear equations; angles, parallel lines and triangle properties; bar charts, pie charts and probability basics.' },
+        { grade: 7, topics: 'Year 8 / KS3 Year 2: prime factorisation and HCF/LCM; expanding and factorising linear expressions; ratio and proportion; transformations and tessellations; statistics — frequency tables, scatter graphs.' },
+        { grade: 8, topics: 'Year 9 / KS3 Year 3: solving simultaneous equations; powers and surds; circle theorems introduction; Pythagoras\' theorem; trigonometry in right-angled triangles; probability trees; introduction to GCSE topics.' },
+        { grade: 9, topics: 'Year 10 / GCSE Year 1: quadratics — factorising and completing the square; sequences (arithmetic and geometric); algebraic fractions; volumes and surface areas; sine and cosine rules; vectors; cumulative frequency.' },
+        { grade: 10, topics: 'Year 11 / GCSE Year 2: GCSE revision and exam technique; iterative methods; functions and inverse functions; conditional probability; circle theorems (full); proof by counterexample; preparation for higher GCSE papers.' },
+      ],
+      examPrep: {
+        h2: 'GCSE Maths preparation',
+        p: 'For Year 10 and Year 11 students, EduVerseJr offers focused GCSE Maths preparation aligned with AQA, Edexcel and OCR exam boards. Includes past-paper practice, exam timing strategy and full coverage of Higher Tier topics. Foundation Tier prep also available.',
+      },
+      faqs: [
+        { q: 'Is this aligned with GCSE?', a: 'Yes. Years 10 and 11 follow the GCSE specification. We support AQA, Edexcel and OCR exam boards. Tell us your school\'s board during signup.' },
+        { q: 'Do you teach Welsh and Scottish curricula?', a: 'Our default is the English National Curriculum. We can adjust for Welsh (Curriculum for Wales) and Scottish (Curriculum for Excellence / National 5) on request.' },
+        { q: 'When do students start GCSE topics?', a: 'GCSE content typically begins in Year 9 or 10 depending on the school. Our human teachers can also help with KS3 preparation and Year 11 catch-up.' },
+      ],
+    }),
   },
   'canada': {
     title: 'Canadian Math Curriculum Grades 5–10 | EduVerseJr Online Math Teacher',
     description: 'Explore EduVerseJr\'s Canadian Math Curriculum guide for Grades 5–10. Covers provincial Algebra, Geometry, Data Management and more. Expert 1-on-1 online Math teaching for Canadian students.',
     ogTitle: 'Canadian Math Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade Canadian Math curriculum guide for parents. Provincial Algebra, Geometry, Data Management for Grades 5–10 by EduVerseJr.',
+    bodyContent: renderCurriculumBlock({
+      country: 'Canada',
+      standard: 'Canadian provincial curricula (Ontario, BC, Alberta and equivalents)',
+      slugMath: 'canada',
+      grades: [
+        { grade: 5, topics: 'Whole numbers and decimals to thousandths; equivalent fractions; addition and subtraction of fractions with like and unlike denominators; perimeter and area; data management — bar graphs, pictographs, mean; introduction to coordinate grids.' },
+        { grade: 6, topics: 'Integers introduction; ratios and rates; percent of a whole; multiplication and division of decimals; area of triangles and parallelograms; surface area of rectangular prisms; understanding histograms and bias in data collection.' },
+        { grade: 7, topics: 'Operations with all integers; powers, exponents and laws of exponents (intro); linear relations; circumference and area of circles; constructing 3D models; experimental and theoretical probability.' },
+        { grade: 8, topics: 'Square roots and Pythagorean theorem; solving multi-step linear equations; introduction to functions and slope; surface area and volume of cylinders, cones and spheres; analysing scatter plots and trend lines.' },
+        { grade: 9, topics: 'Polynomials — expanding, factoring; linear relations and equations of lines; analytic geometry; congruence and similarity; trigonometric ratios in right triangles; statistical investigation.' },
+        { grade: 10, topics: 'Quadratic functions — graphing, factoring, completing the square, quadratic formula; trigonometry in non-right triangles (sine and cosine laws — academic stream); financial mathematics — simple and compound interest, annuities.' },
+      ],
+      examPrep: {
+        h2: 'Provincial assessments & SAT for Canadian students',
+        p: 'EduVerseJr supports preparation for the Ontario EQAO Grade 9 math assessment, BC provincial numeracy assessment, and other provincial exit assessments. Canadian students aiming at US universities can also enrol in our PSAT/SAT Math preparation.',
+      },
+      faqs: [
+        { q: 'Which province do you align to by default?', a: 'Ontario by default, but we adapt to BC, Alberta, Quebec (with French support on request), Manitoba and other provincial curricula during signup.' },
+        { q: 'Do you cover Academic vs Applied (Grade 9–10)?', a: 'Yes. We default to Academic stream content but can also support Applied / Locally Developed streams for Ontario Grade 9–10.' },
+        { q: 'Are your teachers Canadian-certified?', a: 'Some teachers are Canadian-certified; all teachers are subject-certified internationally. Tell us if you require a Canadian-certified teacher and we will match you.' },
+      ],
+    }),
   },
   'australia': {
     title: 'Australian Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
     description: 'Explore EduVerseJr\'s Australian Maths Curriculum guide for Grades 5–10. Covers ACARA-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Australian students.',
     ogTitle: 'Australian Maths Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade Australian ACARA Maths curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    bodyContent: renderCurriculumBlock({
+      country: 'Australia',
+      standard: 'the ACARA Australian Curriculum: Mathematics',
+      slugMath: 'australia',
+      grades: [
+        { grade: 5, topics: 'Year 5 ACARA: multiplication and division strategies; fractions on a number line; decimal place value to thousandths; angle estimation; transformations on a coordinate plane; collecting and displaying categorical data.' },
+        { grade: 6, topics: 'Year 6 ACARA: prime and composite numbers; integers — addition and subtraction; ratio and rate introduction; understanding percentages; nets and 3D objects; mean as an average; chance experiments.' },
+        { grade: 7, topics: 'Year 7 ACARA: index notation and order of operations; algebraic expressions; equivalent fractions and percentages; angles in triangles and quadrilaterals; volume of rectangular prisms; data displays — stem-and-leaf plots.' },
+        { grade: 8, topics: 'Year 8 ACARA: solving linear equations; rates and proportional reasoning; congruence in geometric figures; volume of prisms; surface area; probability with two events; analysing data with mean and median.' },
+        { grade: 9, topics: 'Year 9 ACARA: expanding and factorising linear and quadratic expressions; similarity and Pythagoras\' theorem; right-angled trigonometry (sin, cos, tan); financial maths — simple interest; bivariate scatter plots.' },
+        { grade: 10, topics: 'Year 10 ACARA: solving quadratics; the unit circle and trigonometric functions (10A); polynomial division (10A); volume and surface area of pyramids, cones and spheres; statistical analysis with box plots and quartiles; compound interest.' },
+      ],
+      examPrep: {
+        h2: 'NAPLAN & senior maths transitions',
+        p: 'EduVerseJr supports NAPLAN Year 5, 7 and 9 numeracy preparation. For students moving into senior years, we offer transition courses for Mathematics Standard, Mathematics Methods and Specialist Mathematics (or state equivalents). Australian students preparing for US universities can also take our SAT Math course.',
+      },
+      faqs: [
+        { q: 'Which state curriculum do you follow?', a: 'ACARA national by default. We adapt to NSW, Victorian (VCAA), Queensland, WA, SA and other state curricula on request during signup.' },
+        { q: 'Do you cover 10A?', a: 'Yes. Year 10 Advanced (10A) topics — including non-linear relationships, the unit circle, polynomial division — are included in our Year 10 plan when appropriate for your child.' },
+        { q: 'Can you help with NAPLAN?', a: 'Yes. Our human teachers offer focused NAPLAN numeracy practice for Year 5, 7 and 9 students.' },
+      ],
+    }),
   },
   'singapore': {
     title: 'Singapore Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
     description: 'Explore EduVerseJr\'s Singapore Maths Curriculum guide for Grades 5–10. Covers MOE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Singapore students.',
     ogTitle: 'Singapore Maths Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade Singapore MOE Maths curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    bodyContent: renderCurriculumBlock({
+      country: 'Singapore',
+      standard: 'the Singapore Ministry of Education (MOE) Mathematics syllabus',
+      slugMath: 'singapore',
+      grades: [
+        { grade: 5, topics: 'Primary 5: whole numbers up to 10 million; multiplication and division by 2-digit numbers; fractions — four operations including improper and mixed; decimals — four operations; percentage; ratio; angles; triangles and quadrilaterals; average; pie charts.' },
+        { grade: 6, topics: 'Primary 6: algebra introduction (letters for numbers, simple equations); fractions and ratios in word problems (bar model approach); percent change; speed; circles — radius, diameter, circumference, area; pie chart interpretation; PSLE preparation.' },
+        { grade: 7, topics: 'Secondary 1 (Express): primes and indices; approximation and estimation; basic algebra — expansion and factorisation; linear equations and inequalities; coordinates and linear graphs; ratio, rate, speed; basic geometry.' },
+        { grade: 8, topics: 'Secondary 2 (Express): expansion and factorisation (quadratics); algebraic fractions; solving simultaneous linear equations; congruence and similarity; Pythagoras\' theorem; trigonometry of right-angled triangles; introduction to mensuration.' },
+        { grade: 9, topics: 'Secondary 3 (Express, O-Level prep): quadratic equations and functions; indices and standard form; coordinate geometry; further trigonometry; arc length and sector area; vectors in two dimensions; basic statistics; probability.' },
+        { grade: 10, topics: 'Secondary 4 (Express, O-Level): O-Level syllabus completion — sets, matrices (if applicable), more vectors, more probability, more statistics; full revision and intensive O-Level paper practice for Elementary and Additional Mathematics.' },
+      ],
+      examPrep: {
+        h2: 'PSLE & O-Level Maths preparation',
+        p: 'EduVerseJr offers focused preparation for the Primary School Leaving Examination (PSLE) for Primary 6 students, and for the Singapore-Cambridge GCE O-Level Mathematics (4048) and Additional Mathematics (4049) examinations for Secondary 4 students. Includes intensive paper practice and bar-model technique reinforcement.',
+      },
+      faqs: [
+        { q: 'Do you teach the bar model method?', a: 'Yes. The Singapore bar model approach is taught from Primary 5 upwards in our lessons, mirroring how it is used in MOE classrooms.' },
+        { q: 'Do you cover Additional Mathematics (A-Math)?', a: 'Yes. A-Math (4049 syllabus) is offered alongside Elementary Math (E-Math, 4048) for Secondary 3 and 4 students.' },
+        { q: 'Is this aligned with Express, Normal Academic or Normal Technical?', a: 'Default is Express. We adapt to Normal Academic and Normal Technical streams during signup based on your child\'s school placement.' },
+      ],
+    }),
   },
   'uae': {
     title: 'UAE Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
     description: 'Explore EduVerseJr\'s UAE Math Curriculum guide for Grades 5–10. Covers MOE UAE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UAE and Dubai students.',
     ogTitle: 'UAE Math Curriculum Grades 5–10 — EduVerseJr',
     ogDesc: 'Grade-by-grade UAE MOE Math curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    bodyContent: renderCurriculumBlock({
+      country: 'United Arab Emirates',
+      standard: 'the UAE Ministry of Education (MOE) Mathematics framework — also serving Dubai (KHDA) and Abu Dhabi (ADEK) schools',
+      slugMath: 'uae',
+      grades: [
+        { grade: 5, topics: 'Grade 5 (UAE MOE): place value to millions; decimal operations to thousandths; equivalent fractions and mixed numbers; volume of rectangular prisms; coordinate plane; units of measurement (metric and imperial); data displays and probability basics.' },
+        { grade: 6, topics: 'Grade 6: ratios and rates; multi-digit division; fractions division; integers introduction; algebraic expressions; one-step equations; area and surface area; statistical questions and distributions; measures of variability.' },
+        { grade: 7, topics: 'Grade 7: proportional relationships; rational numbers and the number line; two-step equations and inequalities; scale drawings; circumference and area of circles; angle pair relationships; probability of simple and compound events.' },
+        { grade: 8, topics: 'Grade 8: linear equations and functions; systems of equations; congruence and similarity transformations; Pythagoras\' theorem; volume of cones, cylinders and spheres; bivariate data and lines of best fit; real numbers vs irrational.' },
+        { grade: 9, topics: 'Grade 9: Algebra I content — linear and exponential functions; quadratics — factoring and the quadratic formula; sequences and series introduction; polynomial operations; descriptive statistics; right-triangle trigonometry.' },
+        { grade: 10, topics: 'Grade 10: Geometry — congruence and similarity proofs; circle theorems; coordinate geometry; transformations; right-triangle trigonometry deepened; 3D solids — volume and surface area; introduction to statistics and probability for further study.' },
+      ],
+      examPrep: {
+        h2: 'EmSAT, MAP & international school exam prep',
+        p: 'For Grade 10–12 UAE students, EduVerseJr offers EmSAT Mathematics preparation, MAP Growth math testing prep (common in Dubai private schools), and SAT/PSAT Math for students aiming at US universities. We also support British and American curriculum students attending private schools in Dubai and Abu Dhabi.',
+      },
+      faqs: [
+        { q: 'Do you support British curriculum schools in Dubai?', a: 'Yes. Many Dubai private schools follow English National Curriculum / GCSE. We support both UAE MOE and British curriculum students — choose your school type during signup.' },
+        { q: 'Are lessons available in Arabic?', a: 'Lessons are taught in English by default. Arabic explanations can be provided on request for specific concepts.' },
+        { q: 'What about EmSAT?', a: 'We offer dedicated EmSAT Mathematics preparation for Grade 11 and 12 students aiming at UAE university admission.' },
+      ],
+    }),
   },
 };
 
