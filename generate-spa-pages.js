@@ -10,6 +10,36 @@ const indexHtmlPath = path.join(__dirname, 'dist', 'public', 'index.html');
 const indexHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
 
 // ─────────────────────────────────────────────────────────────────────
+// SEO body-content template — builds a visible <section> block that is
+// injected INSIDE <div id="root"> in the static HTML. Googlebot reads it
+// from raw HTML (no JS execution needed). When React mounts via
+// createRoot().render(), this content is replaced by the actual app UI,
+// so real users only see it for the brief pre-hydration paint.
+// ─────────────────────────────────────────────────────────────────────
+function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
+  const sectionsHtml = sections
+    .map((s) => `<section><h2>${s.h2}</h2><p>${s.p}</p></section>`)
+    .join('\n      ');
+  const faqsHtml = faqs.length
+    ? `<section aria-labelledby="faq-heading"><h2 id="faq-heading">Frequently Asked Questions</h2>${faqs
+        .map((f) => `<div><h3>${f.q}</h3><p>${f.a}</p></div>`)
+        .join('')}</section>`
+    : '';
+  const linksHtml = links.length
+    ? `<nav aria-label="Related pages"><h2>Explore more</h2><ul>${links
+        .map((l) => `<li><a href="${l.href}">${l.label}</a></li>`)
+        .join('')}</ul></nav>`
+    : '';
+  return `<div id="seo-prerender" style="max-width:900px;margin:0 auto;padding:24px;font-family:system-ui,-apple-system,sans-serif;color:#1f2937;line-height:1.65">
+      <h1 style="font-size:28px;margin:0 0 16px">${h1}</h1>
+      ${intro.map((p) => `<p>${p}</p>`).join('\n      ')}
+      ${sectionsHtml}
+      ${faqsHtml}
+      ${linksHtml}
+    </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────
 // Top-level pages — one entry per app route (relative to site root)
 // ─────────────────────────────────────────────────────────────────────
 const topLevelMeta = {
@@ -18,6 +48,41 @@ const topLevelMeta = {
     description: 'Meet Reva, your child\'s 24/7 AI maths teacher. Chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 + PSAT/SAT. Currently in private beta — join the waitlist.',
     ogTitle: 'Reva AI Teacher — 24/7 AI Maths Tutor | EduVerseJr',
     ogDesc: 'AI maths teacher for Grades 5–12. Chat, voice, interactive whiteboard, smart practice, progress tracking. Private beta — join the waitlist.',
+    bodyContent: renderSeoBlock({
+      h1: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12',
+      intro: [
+        'Reva is EduVerseJr\'s AI maths teacher, available around the clock for students in Grades 5–12 as well as PSAT and SAT preparation. Built specifically for school-age learners, Reva explains concepts step-by-step, shows working on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows.',
+        'Unlike a generic chatbot, Reva is grounded in textbook-aligned content for the United States (Common Core), United Kingdom (GCSE / National Curriculum), Canada, Australia (ACARA), Singapore (MOE) and the United Arab Emirates (MOE UAE). Students can ask questions in plain English, sketch their attempts on the whiteboard, or upload a photo of a maths problem and Reva will work through it with them.',
+      ],
+      sections: [
+        {
+          h2: 'What can Reva do?',
+          p: 'Reva supports five core modes: Learn (proactive teaching with 5-card lessons), Whiteboard (sketch + visual explanations with AI voice), Practice (graded problems with hints), Revision (sessionless slide-flipper to review any topic) and Ask Reva (free-text or voice Q&A). All modes work across maths topics from arithmetic and fractions through to algebra, geometry, trigonometry, calculus foundations and SAT-style word problems.',
+        },
+        {
+          h2: 'How is Reva different from ChatGPT?',
+          p: 'Reva is restricted to age-appropriate, curriculum-aligned maths content. It does not free-roam across general internet topics. Every Learn lesson is reviewed against the student\'s country textbook before being shown. Parents receive content moderation alerts. Reva also remembers the student\'s past topics, struggles and recent practice across sessions — a generic chatbot cannot.',
+        },
+        {
+          h2: 'Pricing & access',
+          p: 'Reva AI is currently in private beta. A free tier (10 messages/day, Chapter 1 of each course) is planned at public launch, along with paid tiers that unlock unlimited messages, full chapters, whiteboard interactive mode and voice practice. Join the waitlist on this page to be notified.',
+        },
+      ],
+      faqs: [
+        { q: 'What grades does Reva AI support?', a: 'Grades 5 through 12, plus PSAT and SAT preparation. Science and Coding subjects are on the roadmap.' },
+        { q: 'Which curricula does Reva follow?', a: 'US Common Core, UK GCSE / National Curriculum, Canadian provincial curricula, Australian ACARA, Singapore MOE and UAE MOE.' },
+        { q: 'Is Reva safe for children?', a: 'Yes. Reva runs through a content moderation pipeline, has parent-visible violation alerts, and is restricted to maths topics. Under-18 students must use a parent-supervised account.' },
+        { q: 'Does Reva replace a human teacher?', a: 'No. Reva is an always-on AI maths tutor for daily practice, homework help and revision. For exam-prep coaching, doubt-solving over video, and personalised pedagogy, EduVerseJr also offers live 1-to-1 expert human teachers.' },
+        { q: 'How much does it cost?', a: 'Reva is in private beta — no public pricing yet. The plan is a free tier (10 messages/day, limited chapters) plus paid tiers for unlimited use and premium features.' },
+      ],
+      links: [
+        { href: '/teachers', label: 'Book a free trial class with an expert human teacher' },
+        { href: '/courses', label: 'See all Maths, Science & Coding courses' },
+        { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
+        { href: '/curriculum/united-kingdom', label: 'UK Maths curriculum guide' },
+        { href: '/about', label: 'About EduVerseJr' },
+      ],
+    }),
   },
   'about': {
     title: 'About EduVerseJr — Reva AI + Expert Human Teachers',
@@ -218,6 +283,20 @@ function injectMeta(html, meta, canonicalUrl) {
 }
 
 // ─────────────────────────────────────────────────────────────────────
+// Body-content injection — replaces the empty <div id="root"></div>
+// with <div id="root">{bodyContent}</div>. React's createRoot().render()
+// wipes children on mount, so this prerender content is replaced by the
+// actual app UI for real users — but Googlebot reads it from raw HTML.
+// ─────────────────────────────────────────────────────────────────────
+function injectBodyContent(html, bodyContent) {
+  if (!bodyContent) return html;
+  return html.replace(
+    /<div\s+id="root">\s*<\/div>/,
+    `<div id="root">${bodyContent}</div>`
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────
 // Generate flat HTML files
 // ─────────────────────────────────────────────────────────────────────
 const publicDir = path.join(__dirname, 'dist', 'public');
@@ -225,10 +304,11 @@ const publicDir = path.join(__dirname, 'dist', 'public');
 // Top-level pages → /dist/public/<page>.html
 Object.entries(topLevelMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/${page}`;
-  const pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, meta.bodyContent);
   const flatHtmlPath = path.join(publicDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, pageHtml, 'utf-8');
-  console.log(`✓ Created ${page}.html (unique meta)`);
+  console.log(`✓ Created ${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
 });
 
 // Math curriculum pages → /dist/public/curriculum/<country>.html
@@ -238,10 +318,11 @@ if (!fs.existsSync(curriculumDir)) {
 }
 Object.entries(curriculumMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/curriculum/${page}`;
-  const pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, meta.bodyContent);
   const flatHtmlPath = path.join(curriculumDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, pageHtml, 'utf-8');
-  console.log(`✓ Created curriculum/${page}.html (unique meta)`);
+  console.log(`✓ Created curriculum/${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
 });
 
 // Science curriculum pages → /dist/public/science-curriculum/<country>.html
@@ -251,10 +332,11 @@ if (!fs.existsSync(scienceCurriculumDir)) {
 }
 Object.entries(scienceCurriculumMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/science-curriculum/${page}`;
-  const pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, meta.bodyContent);
   const flatHtmlPath = path.join(scienceCurriculumDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, pageHtml, 'utf-8');
-  console.log(`✓ Created science-curriculum/${page}.html (unique meta)`);
+  console.log(`✓ Created science-curriculum/${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
 });
 
 // 404 fallback
