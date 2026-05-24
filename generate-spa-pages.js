@@ -821,15 +821,30 @@ function injectMeta(html, meta, canonicalUrl) {
 
 // ─────────────────────────────────────────────────────────────────────
 // Body-content injection — replaces the empty <div id="root"></div>
-// with <div id="root">{bodyContent}</div>. React's createRoot().render()
-// wipes children on mount, so this prerender content is replaced by the
-// actual app UI for real users — but Googlebot reads it from raw HTML.
+// with <div id="root">{splash + bodyContent}</div>. React's createRoot()
+// wipes children on mount, so both the splash and the prerender content
+// are replaced by the actual app UI for real users.
+//
+// 2026-05-24: added the branded splash overlay because users were seeing
+// the raw SEO prerender text flash for ~1–2s on slow connections before
+// React hydrated. The splash is position:fixed on top — crawlers don't
+// render CSS so they still see the prerender text in the raw HTML below.
+// The splash auto-hides if React hasn't booted within 8s (fail-safe so a
+// JS error doesn't leave users stuck on a spinner forever).
 // ─────────────────────────────────────────────────────────────────────
+const SPLASH_HTML = `<div id="boot-splash" style="position:fixed;inset:0;background:#ffffff;z-index:2147483647;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;transition:opacity .25s ease">
+      <img src="/logo.jpg" alt="EduVerseJr" style="width:72px;height:72px;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.08)" />
+      <div style="margin-top:18px;font-size:15px;font-weight:600;color:#1f2937;letter-spacing:.2px">EduVerseJr</div>
+      <div style="margin-top:18px;width:28px;height:28px;border:3px solid #e5e7eb;border-top-color:#4f46e5;border-radius:50%;animation:eduspin 1s linear infinite"></div>
+      <style>@keyframes eduspin{to{transform:rotate(360deg)}}</style>
+    </div>
+    <script>(function(){setTimeout(function(){var s=document.getElementById('boot-splash');if(s){s.style.opacity='0';setTimeout(function(){s.parentNode&&s.parentNode.removeChild(s)},300)}},8000)})();</script>`;
+
 function injectBodyContent(html, bodyContent) {
   if (!bodyContent) return html;
   return html.replace(
     /<div\s+id="root">\s*<\/div>/,
-    `<div id="root">${bodyContent}</div>`
+    `<div id="root">${SPLASH_HTML}${bodyContent}</div>`
   );
 }
 
