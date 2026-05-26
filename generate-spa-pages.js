@@ -93,9 +93,17 @@ const topLevelMeta = {
       h1: 'About EduVerseJr — AI Teacher + Human Teacher, Always There',
       intro: [
         'EduVerseJr is a hybrid education platform built around a simple idea: every child should have unlimited access to a patient, curriculum-aligned teacher — at any hour, in any timezone. We deliver that through two complementary products. Reva AI Teacher is available 24/7 for daily homework help, practice, revision and concept explanation. Expert human teachers run live 1-to-1 online classes for deeper coaching, exam preparation and pedagogical guidance.',
-        'EduVerseJr is operated by an India-registered MSME based in Coimbatore, Tamil Nadu. We serve students worldwide and our content is aligned with six national curricula: US Common Core, UK National Curriculum / GCSE, Canadian provincial standards, Australian ACARA, Singapore MOE and UAE MOE. Subjects currently cover Mathematics, Science and Coding for Grades 5 through 12, including PSAT and SAT preparation.',
+        'EduVerseJr was founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with over 10 years of experience teaching Mathematics and Coding to international students online. EduVerseJr is operated by an India-registered MSME based at D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022, Tamil Nadu, India. We serve students worldwide and our content is aligned with six national curricula: US Common Core, UK National Curriculum / GCSE, Canadian provincial standards, Australian ACARA, Singapore MOE and UAE MOE. Subjects currently cover Mathematics, Science and Coding for Grades 5 through 12, including PSAT and SAT preparation.',
       ],
       sections: [
+        {
+          h2: 'Founder & CEO',
+          p: 'EduVerseJr is founded and led by Revathi Gopinath (MSc, BEd) — Founder & CEO. Revathi has over 10 years of experience teaching Mathematics and Coding to international students online, having taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI. Contact: revathi.ceo@eduversejr.com.',
+        },
+        {
+          h2: 'Company information',
+          p: 'EduVerseJr is a registered India MSME based in Coimbatore, Tamil Nadu, India. Registered office: D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022. Phone: +91 422 4924192. Customer support: support@eduversejr.com. Business inquiries: info@eduversejr.com. Governing law: India.',
+        },
         {
           h2: 'Our mission',
           p: 'To make high-quality 1-to-1 teaching affordable and accessible by combining the best of AI (always available, instant, personalised practice) with the best of human teachers (deep subject expertise, motivation, and pedagogical judgement). Reva handles the daily grind; humans handle the breakthroughs.',
@@ -110,7 +118,9 @@ const topLevelMeta = {
         },
       ],
       faqs: [
-        { q: 'Where is EduVerseJr based?', a: 'EduVerseJr is an India-registered MSME based in Coimbatore, Tamil Nadu. Governing law for all services is India. We serve students globally.' },
+        { q: 'Who founded EduVerseJr?', a: 'EduVerseJr was founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with over 10 years of online teaching experience in Mathematics and Coding for international students.' },
+        { q: 'Where is EduVerseJr based?', a: 'EduVerseJr is an India-registered MSME based at D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022, Tamil Nadu, India. Phone: +91 422 4924192. Governing law for all services is India. We serve students globally.' },
+        { q: 'How do I contact EduVerseJr?', a: 'Customer support: support@eduversejr.com. Business and partnership inquiries: info@eduversejr.com. Founder & CEO Revathi Gopinath: revathi.ceo@eduversejr.com. Phone: +91 422 4924192.' },
         { q: 'Do you replace school teachers?', a: 'No. EduVerseJr supplements school learning — Reva for daily help, our human teachers for focused 1-to-1 coaching. We align with the same curriculum your child follows at school.' },
         { q: 'What grades and subjects do you cover?', a: 'Grades 5–12 for Reva AI Teacher (with PSAT/SAT prep). Grades 5–10 + PSAT/SAT for our live human teachers. Subjects: Mathematics, Science, Coding.' },
       ],
@@ -898,6 +908,7 @@ const homepageBody = renderSeoBlock({
   intro: [
     'EduVerseJr is a hybrid online learning platform built around two complementary teachers: Reva, our 24/7 AI maths teacher, and our team of expert human teachers running live 1-to-1 online classes. We serve students in Grades 5 through 12 across the United States, United Kingdom, Canada, Australia, Singapore and the United Arab Emirates — with curriculum-aligned content for each country.',
     'Reva handles the daily questions — homework, practice, revision, concept explanation — at any hour, on any topic in Mathematics. Our human teachers run scheduled live sessions for deeper coaching in Maths, Science and Coding, including PSAT and SAT preparation. Parents get progress reports after every session and visibility into Reva usage between sessions.',
+    'EduVerseJr was founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with 10+ years of online teaching experience. The company is a registered India MSME headquartered in Coimbatore, Tamil Nadu, India. Customer support: support@eduversejr.com · Phone: +91 422 4924192.',
   ],
   sections: [
     {

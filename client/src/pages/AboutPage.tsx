@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
-import { CheckCircle, Globe, Brain, Users, BookOpen, Sparkles, Target, Clock } from "lucide-react";
+import { CheckCircle, Globe, Brain, Users, BookOpen, Sparkles, Target, Clock, MapPin, Phone, Mail, GraduationCap } from "lucide-react";
 
 const stats = [
   { value: "6", label: "Countries Served", detail: "US, UK, Canada, Australia, Singapore, UAE" },
@@ -66,8 +66,40 @@ export default function AboutPage() {
       "url": "https://eduversejr.com/logo.jpg"
     },
     "description": "EduVerseJr is an online educational platform offering AI-powered teaching through Reva AI Teacher and live 1-to-1 human teacher classes in Mathematics, Science, and Coding for students in Grades 5–12 across the United States, United Kingdom, Canada, Australia, Singapore, and the United Arab Emirates.",
-    "foundingDate": "2024",
+    "foundingDate": "2026",
     "slogan": "AI Teacher + Human Teacher, Always There",
+    "founder": {
+      "@type": "Person",
+      "name": "Revathi Gopinath",
+      "jobTitle": "Founder & CEO",
+      "description": "Founder & CEO of EduVerseJr. MSc, BEd. 10+ years teaching Mathematics and Coding to international students online.",
+      "email": "revathi.ceo@eduversejr.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641022",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-422-4924192",
+    "email": "support@eduversejr.com",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@eduversejr.com",
+        "telephone": "+91-422-4924192",
+        "availableLanguage": ["English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "info@eduversejr.com",
+        "availableLanguage": ["English"]
+      }
+    ],
     "areaServed": [
       { "@type": "Country", "name": "United States" },
       { "@type": "Country", "name": "United Kingdom" },
@@ -221,7 +253,7 @@ export default function AboutPage() {
           </h2>
           <div className="prose prose-lg max-w-none text-gray-700 space-y-5">
             <p>
-              <strong>EduVerseJr</strong> is an online EdTech platform founded in 2024 to deliver personalised, high-quality education in Mathematics, Science, and Coding to students aged 10–18 (Grades 5–12) across six countries: the United States, United Kingdom, Canada, Australia, Singapore, and the United Arab Emirates.
+              <strong>EduVerseJr</strong> is an online EdTech platform founded in 2026 to deliver personalised, high-quality education in Mathematics, Science, and Coding to students aged 10–18 (Grades 5–12) across six countries: the United States, United Kingdom, Canada, Australia, Singapore, and the United Arab Emirates.
             </p>
             <p>
               EduVerseJr's flagship product is <strong>Reva AI Teacher</strong> — an AI-powered teacher available 24 hours a day, 7 days a week, powered by AI. Reva teaches through natural conversation, an interactive live whiteboard, voice interaction, and smart practice sessions that adapt to each student's weaknesses and curriculum.
@@ -303,6 +335,70 @@ export default function AboutPage() {
           <p className="text-lg text-gray-700 leading-relaxed">
             EduVerseJr's mission is to make excellent, personalised education accessible to every student in Grades 5–12, regardless of where they live. By combining the consistency and availability of AI with the warmth and depth of expert human teachers, EduVerseJr gives every student the support they need to build confidence, master their curriculum, and develop a genuine love for learning.
           </p>
+        </div>
+      </section>
+
+      {/* Founder & Company */}
+      <section className="py-14 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">
+            Founder & Company
+          </h2>
+          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+            EduVerseJr is a registered India MSME, founded and led by an experienced classroom teacher.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Founder card */}
+            <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-purple-50 mb-4">
+                <GraduationCap className="w-7 h-7 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Revathi Gopinath</h3>
+              <p className="text-sm text-purple-700 font-semibold mb-3">Founder & CEO · MSc, BEd</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Revathi has over 10 years of experience teaching Mathematics and Coding to international students online. She has taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI — making personalised, curriculum-aligned learning accessible to students worldwide.
+              </p>
+              <div className="flex items-center gap-2 text-sm text-gray-700">
+                <Mail className="w-4 h-4 text-purple-600" />
+                <a href="mailto:revathi.ceo@eduversejr.com" className="hover:text-purple-700 transition-colors">
+                  revathi.ceo@eduversejr.com
+                </a>
+              </div>
+            </div>
+
+            {/* Company card */}
+            <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-blue-50 mb-4">
+                <BookOpen className="w-7 h-7 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">EduVerseJr</h3>
+              <p className="text-sm text-blue-700 font-semibold mb-3">Registered Office · India MSME · Founded 2026</p>
+              <div className="space-y-3 text-sm text-gray-700">
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div>D. No. 78, Gem Enclave</div>
+                    <div>Maniyakarampalayam, Idikarai</div>
+                    <div>Annoor Taluk, Coimbatore – 641022</div>
+                    <div>Tamil Nadu, India</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <a href="tel:+914224924192" className="hover:text-blue-700 transition-colors">+91 422 4924192</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <a href="mailto:support@eduversejr.com" className="hover:text-blue-700 transition-colors">support@eduversejr.com</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <a href="mailto:info@eduversejr.com" className="hover:text-blue-700 transition-colors">info@eduversejr.com</a>
+                  <span className="text-xs text-gray-500">(business)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -55,15 +55,32 @@ export default function FooterSection() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company + Contact */}
           <div>
             <h4 className="font-bold mb-4">Company</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Online Program</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">About EduVerseJr</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">In the News</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li><a href="/about" className="hover:text-white transition-colors">About EduVerseJr</a></li>
+              <li><a href="/teachers" className="hover:text-white transition-colors">Our Teachers</a></li>
+              <li><a href="/reva" className="hover:text-white transition-colors">Reva AI Teacher</a></li>
+              <li><a href="/courses" className="hover:text-white transition-colors">Courses</a></li>
             </ul>
+
+            <h4 className="font-bold mt-6 mb-3">Contact</h4>
+            <address className="text-gray-300 text-sm leading-relaxed not-italic space-y-1">
+              <p>EduVerseJr</p>
+              <p>D. No. 78, Gem Enclave</p>
+              <p>Coimbatore – 641022</p>
+              <p>Tamil Nadu, India</p>
+              <p className="pt-2">
+                <a href="tel:+914224924192" className="hover:text-white transition-colors">+91 422 4924192</a>
+              </p>
+              <p>
+                <a href="mailto:support@eduversejr.com" className="hover:text-white transition-colors">support@eduversejr.com</a>
+              </p>
+              <p>
+                <a href="mailto:info@eduversejr.com" className="hover:text-white transition-colors">info@eduversejr.com</a>
+              </p>
+            </address>
           </div>
         </div>
 

@@ -81,6 +81,11 @@ export default function HeroSection() {
             <p className="text-white/70 text-xs mt-4 text-center">
               Curriculum aligned · US · UK · Canada · Australia · Singapore · UAE
             </p>
+
+            {/* Founder trust line */}
+            <p className="text-white/60 text-xs mt-2 text-center">
+              Founded in 2026 by Revathi Gopinath (MSc, BEd) · Coimbatore, India
+            </p>
           </div>
 
           {/* Right — child learning photo */}
