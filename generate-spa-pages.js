@@ -102,7 +102,7 @@ const topLevelMeta = {
         },
         {
           h2: 'Company information',
-          p: 'EduVerseJr is a registered India MSME based in Coimbatore, Tamil Nadu, India. Registered office: D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022. Phone: +91 422 4924192. Customer support: support@eduversejr.com. Business inquiries: info@eduversejr.com. Governing law: India.',
+          p: 'EduVerseJr is a registered India MSME based in Coimbatore, Tamil Nadu, India, founded in 2026 and entirely self-funded by its founder (no external investors or venture capital). Registered office: D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022. Phone: +91 422 4924192. Customer support: support@eduversejr.com. Business inquiries: info@eduversejr.com. Governing law: India.',
         },
         {
           h2: 'Our mission',
@@ -908,7 +908,7 @@ const homepageBody = renderSeoBlock({
   intro: [
     'EduVerseJr is a hybrid online learning platform built around two complementary teachers: Reva, our 24/7 AI maths teacher, and our team of expert human teachers running live 1-to-1 online classes. We serve students in Grades 5 through 12 across the United States, United Kingdom, Canada, Australia, Singapore and the United Arab Emirates — with curriculum-aligned content for each country.',
     'Reva handles the daily questions — homework, practice, revision, concept explanation — at any hour, on any topic in Mathematics. Our human teachers run scheduled live sessions for deeper coaching in Maths, Science and Coding, including PSAT and SAT preparation. Parents get progress reports after every session and visibility into Reva usage between sessions.',
-    'EduVerseJr was founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with 10+ years of online teaching experience. The company is a registered India MSME headquartered in Coimbatore, Tamil Nadu, India. Customer support: support@eduversejr.com · Phone: +91 422 4924192.',
+    'EduVerseJr was founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with 10+ years of online teaching experience. The company is a self-funded India MSME headquartered in Coimbatore, Tamil Nadu, India — built and operated entirely by its founder, with no external investors. Customer support: support@eduversejr.com · Phone: +91 422 4924192.',
   ],
   sections: [
     {
