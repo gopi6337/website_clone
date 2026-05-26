@@ -372,7 +372,7 @@ export default function AboutPage() {
                 <BookOpen className="w-7 h-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">EduVerseJr</h3>
-              <p className="text-sm text-blue-700 font-semibold mb-3">Registered Office · India MSME · Founded 2026 · Self-funded</p>
+              <p className="text-sm text-blue-700 font-semibold mb-3">Registered Office · India MSME · Founded 2026</p>
               <div className="space-y-3 text-sm text-gray-700">
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
