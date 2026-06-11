@@ -309,6 +309,67 @@ function printSummary() {
   }
 }
 
+/**
+ * Route coverage — every `<Route path="X">` declared in App.tsx must have a
+ * corresponding prerendered file in dist/public, otherwise the Vercel CDN
+ * may 404 (as it did for 12 days last quarter). Added 2026-06-11 per
+ * Fable 5 M4 finding.
+ */
+function checkRouteCoverage() {
+  console.log('🗺️  Checking route coverage...\n');
+  const appTsxPath = path.join(__dirname, 'client', 'src', 'App.tsx');
+  const distPublicDir = path.join(__dirname, 'dist', 'public');
+
+  if (!fs.existsSync(appTsxPath)) {
+    console.log('⚠️  App.tsx not found — skipping route coverage check.\n');
+    return;
+  }
+  if (!fs.existsSync(distPublicDir)) {
+    console.log('⚠️  dist/public not found — run the build first to verify route coverage.\n');
+    return;
+  }
+
+  const appSrc = fs.readFileSync(appTsxPath, 'utf-8');
+  const routeRegex = /<Route\s+path=\{?["'`]([^"'`}]+)["'`]\}?/g;
+  const routes = [];
+  let m;
+  while ((m = routeRegex.exec(appSrc)) !== null) {
+    routes.push(m[1]);
+  }
+
+  let coverageFailures = 0;
+  routes.forEach((route) => {
+    totalChecks++;
+    if (route.includes(':')) {
+      console.log(`ℹ️  Skipping dynamic route ${route} (covered by per-instance prerender)`);
+      passedChecks++;
+      return;
+    }
+    const trimmed = route.replace(/^\//, '').replace(/\/$/, '');
+    const candidates = trimmed === ''
+      ? [path.join(distPublicDir, 'index.html')]
+      : [
+          path.join(distPublicDir, `${trimmed}.html`),
+          path.join(distPublicDir, trimmed, 'index.html'),
+        ];
+    if (candidates.some((p) => fs.existsSync(p))) {
+      console.log(`✅ Route ${route} → prerendered file found`);
+      passedChecks++;
+    } else {
+      console.log(`❌ Route ${route} → NO prerendered file (Vercel CDN will 404)`);
+      failedChecks++;
+      coverageFailures++;
+      errors.push(`Route ${route} has no prerendered file in dist/public`);
+    }
+  });
+
+  if (coverageFailures === 0) {
+    console.log('✅ All declared routes have prerendered files.\n');
+  } else {
+    console.log(`❌ ${coverageFailures} route(s) missing prerendered files. Add them to generate-spa-pages.js.\n`);
+  }
+}
+
 // Run all checks
 console.log('Starting pre-deployment checks...\n');
 
@@ -321,6 +382,7 @@ checkReactHelmet();
 checkDependencies();
 checkDocumentation();
 checkBuildFiles();
+checkRouteCoverage();
 
 printSummary();
 

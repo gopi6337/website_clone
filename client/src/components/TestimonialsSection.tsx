@@ -33,19 +33,19 @@ export default function TestimonialsSection() {
       quote:
         "Great online classes! The teacher explains concepts and logic in a way that even math feels easy. My grades in math have improved and I'm enjoying learning coding at my own pace.",
       author: "Ananya",
-      role: "Student, Class 9, US",
+      role: "Student, Grade 9",
     },
     {
       quote:
-        "I've been learning at EduVerseJr for many years and my experience with them has been excellent. The teacher explains everything clearly and provides personalised support. The lessons are well structured and engaging. Highly recommended.",
+        "My experience with EduVerseJr has been excellent. The teacher explains everything clearly and provides personalised support. The lessons are well structured and engaging. Highly recommended.",
       author: "Saira Saggar",
-      role: "Student, Class 10, Australia",
+      role: "Student, Grade 10",
     },
     {
       quote:
-        "Miss teaches really well and she makes sure the student is always understanding the concept. She will always only finish a subject or question once she makes sure a student has fully understood it. Ma'am is also very flexible on class timings and can also change a class time if required. Overall, Revathi Ma'am is an amazing teacher and she always helps me understand the topic in math clearly",
+        "Miss teaches really well and she makes sure the student is always understanding the concept. She will only finish a topic or question once she's sure the student has fully understood it. She is also flexible on class timings. Overall, Revathi is an amazing teacher and helps me understand math topics clearly.",
       author: "Aadit Bahri",
-      role: "Student, Class 8, Australia",
+      role: "Student, Grade 8",
     },
   ];
 

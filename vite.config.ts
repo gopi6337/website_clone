@@ -6,10 +6,14 @@ import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
-
-export default defineConfig({
-  plugins,
+// Fable 5 H2 (2026-06-11): strip the Manus preview runtime + jsx-loc plugin
+// from production builds. They inline ~367 KB of dead JS (a full second copy
+// of React) into every prerendered HTML page, guarded by an off flag, with
+// nothing using it at runtime. Keep them in dev so Manus preview still works.
+export default defineConfig(({ mode }) => ({
+  plugins: mode === 'development'
+    ? [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()]
+    : [react(), tailwindcss()],
   base: '/', // Served at root for eduversejr.com
   resolve: {
     alias: {
@@ -42,4 +46,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));

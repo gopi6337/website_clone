@@ -35,10 +35,10 @@ export default function FooterSection() {
           <div>
             <h4 className="font-bold mb-4">Coding Programs</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Block Based Coding</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">App Development, Game Development, Web Development</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">HTML, CSS, JS</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Python, AI and Machine Learning</a></li>
+              <li><a href="/courses" className="hover:text-white transition-colors">Block Based Coding</a></li>
+              <li><a href="/courses" className="hover:text-white transition-colors">App, Game &amp; Web Development</a></li>
+              <li><a href="/courses" className="hover:text-white transition-colors">HTML, CSS, JS</a></li>
+              <li><a href="/courses" className="hover:text-white transition-colors">Python, AI &amp; Machine Learning</a></li>
             </ul>
           </div>
 
@@ -46,12 +46,12 @@ export default function FooterSection() {
           <div>
             <h4 className="font-bold mb-4">Countries We Serve</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">United States</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">United Kingdom</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Canada</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Australia</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Singapore</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">UAE</a></li>
+              <li><a href="/curriculum/united-states" className="hover:text-white transition-colors">United States</a></li>
+              <li><a href="/curriculum/united-kingdom" className="hover:text-white transition-colors">United Kingdom</a></li>
+              <li><a href="/curriculum/canada" className="hover:text-white transition-colors">Canada</a></li>
+              <li><a href="/curriculum/australia" className="hover:text-white transition-colors">Australia</a></li>
+              <li><a href="/curriculum/singapore" className="hover:text-white transition-colors">Singapore</a></li>
+              <li><a href="/curriculum/uae" className="hover:text-white transition-colors">UAE</a></li>
             </ul>
           </div>
 
@@ -63,6 +63,7 @@ export default function FooterSection() {
               <li><a href="/teachers" className="hover:text-white transition-colors">Our Teachers</a></li>
               <li><a href="/reva" className="hover:text-white transition-colors">Reva AI Teacher</a></li>
               <li><a href="/courses" className="hover:text-white transition-colors">Courses</a></li>
+              <li><a href="https://revaai.eduversejr.com/login" className="hover:text-white transition-colors">Sign in to Reva AI</a></li>
             </ul>
 
             <h4 className="font-bold mt-6 mb-3">Contact</h4>

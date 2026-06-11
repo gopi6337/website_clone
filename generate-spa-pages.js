@@ -949,10 +949,28 @@ const homepageHtml = injectBodyContent(indexHtml, homepageBody);
 fs.writeFileSync(indexHtmlPath, homepageHtml, 'utf-8');
 console.log(`✓ Updated index.html (homepage SEO body injected)`);
 
-// 404 fallback — use the base indexHtml (without body injection)
+// 404 fallback — real page-not-found with noindex + branded body.
+// Was previously a copy of the homepage with `index, follow` (Fable 5 finding L5, 2026-06-11).
+const notFoundBody = `
+<section class="seo-content" style="max-width:640px;margin:80px auto;padding:24px;text-align:center;font-family:system-ui,sans-serif;">
+  <h1 style="font-size:48px;margin:0 0 8px;color:#0f172a;">404</h1>
+  <h2 style="font-size:20px;margin:0 0 16px;color:#334155;">We couldn't find that page</h2>
+  <p style="color:#64748b;line-height:1.6;">The link may be outdated, or the page may have moved. Head back to the homepage and we'll get you where you need to go.</p>
+  <p style="margin-top:24px;">
+    <a href="/" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;">Back to EduVerseJr Home</a>
+  </p>
+  <p style="margin-top:16px;font-size:14px;">
+    Looking for the learning app? <a href="https://revaai.eduversejr.com" style="color:#2563eb;text-decoration:underline;">Open Reva AI</a>.
+  </p>
+</section>
+`.trim();
+const notFoundHtml = indexHtml
+  .replace(/<meta name="robots" content="[^"]*"\s*\/?>/i, '<meta name="robots" content="noindex, nofollow" />')
+  .replace(/<title>[^<]*<\/title>/i, '<title>Page Not Found — EduVerseJr</title>')
+  .replace('<div id="root"></div>', `<div id="root">${notFoundBody}</div>`);
 const notFoundPath = path.join(publicDir, '404.html');
-fs.writeFileSync(notFoundPath, indexHtml, 'utf-8');
-console.log(`✓ Created 404.html`);
+fs.writeFileSync(notFoundPath, notFoundHtml, 'utf-8');
+console.log(`✓ Created 404.html (noindex + branded body)`);
 
 const total =
   Object.keys(topLevelMeta).length +

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+      content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <link rel="apple-touch-icon" href="/logo.jpg" />
     <title>EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science &amp; Coding</title>
@@ -26,9 +26,11 @@
     <meta property="og:url" content="https://eduversejr.com/" />
     <meta property="og:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science &amp; Coding" />
     <meta property="og:description" content="EduVerseJr combines Reva AI Teacher (24/7) with expert human teachers for Maths, Science and Coding. Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
+    <!-- og:image — explicit width/height removed 2026-06-11 (Fable 5 L3):
+         logo.jpg is 740×509, not the previously declared 1200×630. Producing
+         a real 1200×630 social card is queued; for now we let crawlers detect
+         the actual size rather than ship false dimensions. -->
     <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="EduVerseJr" />
     <meta property="og:locale" content="en_US" />
 
@@ -60,7 +62,7 @@
         "url": "https://eduversejr.com/logo.jpg"
       },
       "description": "EduVerseJr is an online educational platform offering Reva AI Teacher (available 24/7, powered by AI) plus expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding. Serving students in Grades 5–12 across the United States, United Kingdom, Canada, Australia, Singapore and the United Arab Emirates.",
-      "foundingDate": "2024",
+      "foundingDate": "2026",
       "slogan": "AI Teacher + Human Teacher, Always There",
       "knowsAbout": [
         "Mathematics Education",
@@ -108,139 +110,50 @@
       "offers": [
         {
           "@type": "Course",
-          "name": "Coding for Kids Program",
-          "description": "Comprehensive coding education for children aged 6-15, covering Python, JavaScript, HTML/CSS, and block-based coding.",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "EduVerseJr"
-          },
+          "name": "Mathematics — Grades 5 to 12",
+          "description": "Personalised 1-on-1 Mathematics teaching for Grades 5–12, aligned with international curricula (US Common Core, UK National Curriculum, Canadian Provincial, ACARA, Singapore MOE, UAE MoE). Includes SAT Math prep for Grades 11–12.",
+          "provider": { "@type": "EducationalOrganization", "name": "EduVerseJr" },
           "educationalProgramMode": "Online",
-          "hasCourseInstance": [
-            {
-              "@type": "CourseInstance",
-              "courseMode": "Online",
-              "courseWorkload": "PT2H",
-              "instructor": {
-                "@type": "Person",
-                "name": "EduVerseJr Expert Instructors",
-                "description": "Certified coding instructors with expertise in teaching children"
-              }
-            }
-          ],
-          "occupationalCredentialAwarded": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Certificate of Completion"
-          },
-          "coursePrerequisites": "None - suitable for beginners",
-          "educationalLevel": "Beginner to Advanced",
-          "teaches": "Programming fundamentals, Python, JavaScript, HTML, CSS, Web Development, Block-based coding",
-          "timeRequired": "P1Y",
-          "typicalAgeRange": "6-15 years",
-          "numberOfCredits": "Flexible based on pace",
-          "availableLanguage": "English",
-          "inLanguage": "en",
-          "courseCode": "CODE-101",
-          "syllabusSections": [
-            {
-              "@type": "Syllabus",
-              "name": "Block-Based Coding",
-              "description": "Introduction to coding concepts using visual programming"
-            },
-            {
-              "@type": "Syllabus",
-              "name": "Python Programming",
-              "description": "Learn Python from basics to advanced concepts"
-            },
-            {
-              "@type": "Syllabus",
-              "name": "Web Development",
-              "description": "HTML, CSS, and JavaScript for building websites"
-            }
-          ]
+          "educationalLevel": "Grade 5 to Grade 12",
+          "teaches": "Algebra, Geometry, Trigonometry, Statistics, Pre-Calculus, AP Statistics, SAT Math, Problem-solving",
+          "typicalAgeRange": "10-18 years",
+          "availableLanguage": "English"
         },
         {
           "@type": "Course",
-          "name": "Math Learning Program",
-          "description": "Personalized mathematics education aligned with international curriculum standards including US Common Core, UK National Curriculum, Canadian, Australian, Singapore Maths, and UAE standards.",
-          "provider": {
-            "@type": "EducationalOrganization",
-            "name": "EduVerseJr"
-          },
+          "name": "Science — Grades 5 to 10",
+          "description": "Personalised 1-on-1 Science teaching for Grades 5–10 aligned with international curricula.",
+          "provider": { "@type": "EducationalOrganization", "name": "EduVerseJr" },
           "educationalProgramMode": "Online",
-          "hasCourseInstance": [
-            {
-              "@type": "CourseInstance",
-              "courseMode": "Online",
-              "courseWorkload": "PT2H",
-              "instructor": {
-                "@type": "Person",
-                "name": "EduVerseJr Math Specialists",
-                "description": "Certified mathematics educators specializing in elementary and middle school math"
-              }
-            }
-          ],
-          "occupationalCredentialAwarded": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Certificate of Completion"
-          },
-          "coursePrerequisites": "Basic arithmetic knowledge",
           "educationalLevel": "Grade 5 to Grade 10",
-          "teaches": "Algebra, Geometry, Trigonometry, Statistics, Problem-solving, Mathematical reasoning",
-          "timeRequired": "P1Y",
           "typicalAgeRange": "10-16 years",
-          "numberOfCredits": "Aligned with school curriculum",
-          "availableLanguage": "English",
-          "inLanguage": "en",
-          "courseCode": "MATH-101",
-          "educationalAlignment": [
-            {
-              "@type": "AlignmentObject",
-              "alignmentType": "educationalLevel",
-              "educationalFramework": "US Common Core State Standards",
-              "targetName": "Grades 5-10 Mathematics"
-            },
-            {
-              "@type": "AlignmentObject",
-              "alignmentType": "educationalLevel",
-              "educationalFramework": "UK National Curriculum",
-              "targetName": "Key Stage 3-4 Mathematics"
-            },
-            {
-              "@type": "AlignmentObject",
-              "alignmentType": "educationalLevel",
-              "educationalFramework": "Singapore Maths",
-              "targetName": "Primary 5 to Secondary 4"
-            }
-          ],
-          "syllabusSections": [
-            {
-              "@type": "Syllabus",
-              "name": "Foundations",
-              "description": "Number sense, operations, and algebraic thinking"
-            },
-            {
-              "@type": "Syllabus",
-              "name": "Geometry & Measurement",
-              "description": "Shapes, spatial reasoning, and measurement concepts"
-            },
-            {
-              "@type": "Syllabus",
-              "name": "Advanced Topics",
-              "description": "Algebra, trigonometry, and statistical analysis"
-            }
-          ]
+          "availableLanguage": "English"
+        },
+        {
+          "@type": "Course",
+          "name": "Coding — Grades 5 to 10",
+          "description": "Personalised 1-on-1 coding instruction for Grades 5–10. Languages and tools introduced age-appropriately.",
+          "provider": { "@type": "EducationalOrganization", "name": "EduVerseJr" },
+          "educationalProgramMode": "Online",
+          "educationalLevel": "Grade 5 to Grade 10",
+          "teaches": "Block-based coding, Python, JavaScript, HTML, CSS",
+          "typicalAgeRange": "10-16 years",
+          "availableLanguage": "English"
         }
       ]
     }
     </script>
 
+    <!-- WebSite schema kept minimal; SearchAction removed 2026-06-11 (Fable 5 M3 — no on-site search exists).
+         BreadcrumbList of #fragments removed (per Google guidance breadcrumbs need real URLs).
+         HowTo schema removed (Google dropped HowTo rich results in 2023). -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "EduVerseJr",
       "url": "https://eduversejr.com",
-      "description": "Personalized coding and math learning platform for kids aged 6-15",
+      "description": "Reva AI Teacher (24/7) plus expert human teachers for 1-on-1 Maths (Grades 5–12, incl. SAT Math), Science and Coding (Grades 5–10).",
       "publisher": {
         "@type": "EducationalOrganization",
         "name": "EduVerseJr",
@@ -248,97 +161,7 @@
           "@type": "ImageObject",
           "url": "https://eduversejr.com/logo.jpg"
         }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://eduversejr.com/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
       }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://eduversejr.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About",
-          "item": "https://eduversejr.com/#about"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Curriculum",
-          "item": "https://eduversejr.com/#curriculum"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Book Trial Class",
-          "item": "https://eduversejr.com/#booking"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "FAQ",
-          "item": "https://eduversejr.com/#faq"
-        }
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "How to Start Learning with EduVerseJr",
-      "description": "Simple steps to begin your child's educational journey with personalized coding and math programs",
-      "totalTime": "PT10M",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Book a Free Trial",
-          "text": "Click the 'Book FREE Trial' button and fill in your details including child's grade and subject interest.",
-          "url": "https://eduversejr.com/#booking",
-          "position": 1
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Consultation Call",
-          "text": "Our team will contact you within 24 hours to understand your child's learning needs and schedule a trial class.",
-          "position": 2
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Attend Free Trial Class",
-          "text": "Your child attends a personalized 1-on-1 trial class with an expert instructor to experience our teaching methodology.",
-          "position": 3
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Choose Your Plan",
-          "text": "Based on the trial experience, select a learning plan that fits your child's needs and schedule.",
-          "position": 4
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Start Learning",
-          "text": "Begin regular classes with personalized curriculum, progress tracking, and expert support throughout the learning journey.",
-          "position": 5
-        }
-      ]
     }
     </script>
 
@@ -450,8 +273,8 @@
     }
     </script>
 
-    <!-- Flag Icons CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+    <!-- Flag Icons CSS removed 2026-06-11 (Fable 5 L4): render-blocking third-party
+         stylesheet, no SRI, and grep finds zero `fi-*` class usage in client/src. -->
 
     <!-- Add Google Fonts here, example:
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -459,24 +282,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     -->
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — Fable 5 H6 hardening 2026-06-11:
+         disable Google Signals, ads personalisation, and ad-storage so this
+         matches our Privacy Policy's "no third-party advertising cookies" claim. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXM05K7NCN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-XXM05K7NCN');
+      // Default-deny advertising; analytics-only.
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'granted'
+      });
+
+      gtag('config', 'G-XXM05K7NCN', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false,
+        'anonymize_ip': true
+      });
     </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
 
 </html>

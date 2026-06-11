@@ -14,7 +14,7 @@ The two modes are different products with different funnels, pricing models and 
 
 - Name: EduVerseJr (also "EduVerse Junior")
 - AI assistant: Reva (or "Reva AI Teacher")
-- Founded: 2024
+- Founded: 2026
 - Slogan: "AI Teacher + Human Teacher, Always There"
 - Mission: Curriculum-aligned, personalised teaching for school students using a hybrid AI + human teacher model.
 

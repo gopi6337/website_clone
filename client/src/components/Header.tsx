@@ -83,6 +83,12 @@ export default function Header() {
             <a href="/#booking" className="nav-link whitespace-nowrap">
               Contact Us
             </a>
+            <a
+              href="https://revaai.eduversejr.com/login"
+              className="nav-link whitespace-nowrap text-gray-600 hover:text-blue-600"
+            >
+              Sign in
+            </a>
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -127,6 +133,13 @@ export default function Header() {
             </a>
             <a href="/#booking" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Contact Us
+            </a>
+            <a
+              href="https://revaai.eduversejr.com/login"
+              className="block nav-link text-gray-600"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Sign in to Reva AI
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.href = '/#booking'; }}>Book a Free Trial Human Teacher</Button>

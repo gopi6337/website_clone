@@ -13,7 +13,10 @@ const waitlistSchema = z.object({
 
 type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
-const API_BASE = "https://agenticaifirst.in/api/v1";
+// 2026-06-11 (Fable 5 H5): repointed from legacy agenticaifirst.in to the
+// real app host. CORS for eduversejr.com is already configured on this
+// backend's ALLOWED_ORIGINS; preflight returns 200 with correct headers.
+const API_BASE = "https://revaai.eduversejr.com/api/v1";
 
 const GRADES = [
   "Grade 5", "Grade 6", "Grade 7", "Grade 8",

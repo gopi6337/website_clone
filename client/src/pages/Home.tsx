@@ -42,45 +42,17 @@ export default function Home() {
         <meta name="twitter:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
         <meta name="twitter:description" content="Reva AI Teacher + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
         <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
+        {/*
+          Self-serving review schema removed 2026-06-11 (Fable 5 finding M2).
+          Google has ignored review markup on first-party orgs since 2019;
+          visible testimonials live on the page itself.
+        */}
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           "name": "EduVerseJr",
           "url": "https://eduversejr.com",
-          "logo": "https://eduversejr.com/logo.jpg",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "7",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Vikram Sha" },
-              "reviewBody": "An excellent teaching environment with supportive teachers. They helped clear doubts that were once difficult to grasp and my daughter has a very good rapport with her teacher.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Kevin Green" },
-              "reviewBody": "EduVerseJr is a great platform to learn math. My daughter enjoys the math sessions and the teacher is amazing. She is patient and explains concepts well. Very supportive and there is a visible improvement in her performance in school.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Priya Ahuja" },
-              "reviewBody": "Yug has been taking coding classes with EduVerseJr and he enjoys it. He is always keen to join classes and loves coding. The teacher has built a warm, trusting relationship with him.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Saira Saggar" },
-              "reviewBody": "My experience with EduVerseJr has been excellent. The teacher explains everything clearly and provides personalised support. The lessons are well structured and engaging. Highly recommended.",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-            }
-          ]
+          "logo": "https://eduversejr.com/logo.jpg"
         })}</script>
       </Helmet>
 

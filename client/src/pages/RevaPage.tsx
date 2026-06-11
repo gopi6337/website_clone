@@ -93,8 +93,8 @@ const features = [
   },
   {
     icon: GraduationCap, color: "text-amber-400", bg: "bg-amber-500/10",
-    title: "SAT & PSAT Prep",
-    description: "Coming soon — full Digital SAT simulation, adaptive 2-module exams, 200–800 score prediction, and Reva's personalised coaching on every wrong answer.",
+    title: "SAT Prep — Math",
+    description: "In private pilot — full Digital SAT Math simulation (44 items across two 35-minute modules), an estimated 200–800 score with per-skill breakdown, and a question-by-question report. Reading & Writing and PSAT coming next.",
     size: "md",
     comingSoon: true,
   },
@@ -121,8 +121,8 @@ const steps = [
 const faqs = [
   { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
   { q: "Is Reva really free?", a: "Reva AI is currently in private beta with a small cohort of students. We're finalising pricing and access tiers based on beta feedback before opening to everyone. Join the waitlist to be notified when access opens — and we'll share the pricing and free-tier details with you first." },
-  { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12. SAT & PSAT Math preparation, Science and Coding are coming soon — all under the same Reva AI Teacher platform." },
-  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes — SAT & PSAT Math preparation is coming soon to Reva AI Teacher. Students will get full adaptive Digital SAT simulations (2 modules, 70 minutes), a predicted score from 200–800, a domain weakness heatmap, and Reva's personalised explanations for every wrong answer via whiteboard and voice. PSAT prep is for Grades 8–10; SAT prep is for Grades 11–12." },
+  { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12 plus SAT Math prep (Grades 11–12) in private pilot. Reading & Writing for SAT, PSAT, Science and Coding are coming next — all under the same Reva AI Teacher platform." },
+  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes. SAT Math prep is live in private pilot for Grades 11–12: a full Digital SAT Math simulation (44 items across two 35-minute modules), an estimated 200–800 score, a per-skill breakdown, and Reva's personalised explanations on every wrong answer via whiteboard and voice. SAT Reading & Writing and PSAT prep (Grades 8–10) are coming next — join the waitlist to hear when they open." },
   { q: "Does Reva work with US Common Core, UK, or Australian curriculum?", a: "Yes. Reva AI Teacher is aligned to US Common Core State Standards, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian Provincial Standards, and UAE Ministry of Education standards. Reva teaches to the exact curriculum your child follows at school." },
   { q: "Can Reva help with homework?", a: "Absolutely. Upload a photo or PDF of any Maths homework — Reva AI Teacher reads it, explains it, and walks through solutions step by step." },
   { q: "How is Reva different from Khan Academy or other AI teachers?", a: "Reva is purpose-built for teaching, not just answering. It uses a live interactive whiteboard to show step-by-step visual solutions, remembers your child's weaknesses across sessions, supports voice interaction, and works alongside human teachers on the same platform. Most AI teachers provide one-off answers — Reva builds a continuous, personalised learning relationship." },
@@ -300,17 +300,17 @@ export default function RevaPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>Reva AI Teacher — EduVerseJr | Maths, Science & Coding · 24/7</title>
-        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12), with Science, Coding, PSAT and SAT prep coming soon. Chat, voice, whiteboard, smart practice and weakness tracking. Currently in private beta — join the waitlist." />
+        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12) plus SAT Math prep in private pilot (Grades 11–12). Science, Coding, PSAT and SAT Reading & Writing coming next. Chat, voice, whiteboard, smart practice and weakness tracking. Currently in private beta — join the waitlist." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
         <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI science teacher, AI coding teacher, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, science teacher online, coding teacher for kids, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
-        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12). Science, Coding and SAT prep coming soon. Currently in private beta — join the waitlist." />
+        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12). SAT Math prep is now in private pilot (Grades 11–12). Science, Coding and PSAT coming next. Join the waitlist." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Reva AI Teacher — EduVerseJr" />
-        <meta name="twitter:description" content="AI teacher for Maths (Grades 5–12). Science, Coding & SAT prep coming soon. Currently in private beta." />
+        <meta name="twitter:description" content="AI teacher for Maths (Grades 5–12). SAT Math prep in private pilot (Grades 11–12). Science, Coding & PSAT coming next." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -335,7 +335,7 @@ export default function RevaPage() {
             </div>
             <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-medium px-4 py-2 rounded-full">
               <GraduationCap className="w-3.5 h-3.5" />
-              SAT &amp; PSAT Prep — Coming Soon
+              SAT Math Prep — Private Pilot
             </div>
           </div>
 
@@ -357,7 +357,7 @@ export default function RevaPage() {
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
             Reva is your child's personal AI teacher — currently in private beta. Teaching Maths for Grades 5–12 now,
-            with Science, Coding, PSAT and SAT prep coming soon.
+            with SAT Math prep in private pilot. Science, Coding, PSAT and SAT Reading &amp; Writing coming next.
           </p>
 
           {/* CTAs */}

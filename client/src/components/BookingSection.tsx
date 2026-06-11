@@ -48,7 +48,7 @@ export default function BookingSection() {
 
         {/* Booking Form */}
         <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto border-2 border-blue-100">
-          <BookingForm formspreeEndpoint={import.meta.env.VITE_FORMSPREE_ENDPOINT} />
+          <BookingForm />
         </div>
       </div>
     </section>

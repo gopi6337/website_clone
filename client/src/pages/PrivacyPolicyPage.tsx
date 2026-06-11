@@ -165,13 +165,20 @@ export default function PrivacyPolicyPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-gray-800 mb-3">11. Cookies &amp; Similar Technologies</h2>
-            <p>We use only essential and functional cookies — no third-party advertising cookies.</p>
+            <p>We use essential, functional, and a small set of analytics cookies. We do <strong>not</strong> use third-party advertising cookies and we do <strong>not</strong> sell personal information.</p>
             <ul className="list-disc pl-6 space-y-2 mt-2">
               <li><strong>Session cookies:</strong> Keep you signed in during a session.</li>
               <li><strong>Preference cookies:</strong> Remember your country, language and UI choices.</li>
               <li><strong>Security cookies:</strong> Protect against cross-site request forgery and abuse.</li>
+              <li>
+                <strong>Analytics (Google Analytics 4):</strong> We use Google Analytics 4
+                (measurement ID <code>G-XXM05K7NCN</code>) to understand which pages parents
+                find useful so we can improve the site. Google Signals and advertising
+                personalisation are <strong>disabled</strong>; IP addresses are anonymised by
+                the GA4 default; we do not link analytics to advertising networks.
+              </li>
             </ul>
-            <p className="mt-2">You can disable cookies in your browser settings, but core features (sign-in, sessions) may stop working.</p>
+            <p className="mt-2">You can disable cookies in your browser settings, but core features (sign-in, sessions) may stop working. To opt out of Google Analytics specifically, install the <a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</p>
           </section>
 
           <section>
