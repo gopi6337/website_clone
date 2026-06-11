@@ -15,6 +15,53 @@ import FooterSection from "@/components/FooterSection";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Brain, FlaskConical, Code2, ArrowRight } from "lucide-react";
 
+type PricingTier = {
+  name: string;
+  icon: string;
+  tagline: string;
+  monthly: number;
+  quarterly: number;
+  qSave: number;
+  yearly: number;
+  ySave: number;
+  yPct: number;
+  accent: "purple" | "blue" | "green";
+};
+type PricingGroup = {
+  group: string;
+  subtitle: string;
+  featured?: boolean;
+  comingSoon?: boolean;
+  tiers?: PricingTier[];
+};
+
+const pricingData: PricingGroup[] = [
+  {
+    group: "Grades 5-7",
+    subtitle: "Math foundations",
+    tiers: [
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",      monthly: 9,   quarterly: 25,  qSave: 2,  yearly: 79,    ySave: 29,  yPct: 27, accent: "purple" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",       monthly: 79,  quarterly: 199, qSave: 38, yearly: 699,   ySave: 249, yPct: 26, accent: "blue" },
+      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 160, quarterly: 430, qSave: 50, yearly: 1499,  ySave: 421, yPct: 22, accent: "green" },
+    ],
+  },
+  {
+    group: "Grades 8-10",
+    subtitle: "Pre-Algebra → Geometry · PSAT included",
+    featured: true,
+    tiers: [
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor + PSAT",  monthly: 15,  quarterly: 39,  qSave: 6,  yearly: 119,  ySave: 61,  yPct: 34, accent: "purple" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month + PSAT",  monthly: 109, quarterly: 289, qSave: 38, yearly: 999,  ySave: 309, yPct: 24, accent: "blue" },
+      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month + PSAT prep",       monthly: 200, quarterly: 549, qSave: 51, yearly: 1899, ySave: 501, yPct: 21, accent: "green" },
+    ],
+  },
+  {
+    group: "Grades 11-12 + SAT",
+    subtitle: "Coming soon",
+    comingSoon: true,
+  },
+];
+
 export default function Home() {
   useEffect(() => {
     if (window.location.hash) {
@@ -162,6 +209,99 @@ export default function Home() {
 
       {/* Human Teachers — full section (replaces previous 2-col teaser) */}
       <HumanTeachersSection />
+
+      {/* Pricing — G1 + G2 locked · G3 SAT coming soon */}
+      <section id="pricing" className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              💎 Private Beta · Limited Cohort
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Pricing</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Choose the right plan for your child's grade. PSAT prep included in Grades 8-10 plans. SAT prep coming with Grades 11-12 plans. Join the waitlist to be notified when access opens.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {pricingData.map((group, gi) => (
+              <div key={gi} className={`bg-white rounded-3xl border-2 ${group.featured ? 'border-purple-300 shadow-lg shadow-purple-100' : 'border-gray-200 shadow-sm'} p-6 relative`}>
+                {group.featured && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Most Popular
+                  </div>
+                )}
+                <div className="text-center mb-5 pb-5 border-b border-gray-100">
+                  <h3 className="text-2xl font-bold text-gray-900">{group.group}</h3>
+                  <p className="text-sm text-gray-500 mt-1">{group.subtitle}</p>
+                </div>
+
+                {group.comingSoon ? (
+                  <div className="text-center py-12">
+                    <div className="text-5xl mb-4">🚀</div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">SAT Prep Tier</h4>
+                    <p className="text-sm text-gray-600 mb-5">
+                      We're finalising the Grades 11-12 SAT-prep plans. Drop your email to be notified first.
+                    </p>
+                    <a href="#booking" className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
+                      Notify Me →
+                    </a>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {group.tiers!.map((tier, ti) => {
+                      const accentBg = tier.accent === "purple" ? "bg-purple-50 border-purple-200"
+                        : tier.accent === "blue" ? "bg-blue-50 border-blue-200"
+                        : "bg-green-50 border-green-200";
+                      const accentText = tier.accent === "purple" ? "text-purple-700"
+                        : tier.accent === "blue" ? "text-blue-700"
+                        : "text-green-700";
+                      return (
+                        <div key={ti} className={`rounded-2xl border ${accentBg} p-4`}>
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="text-2xl">{tier.icon}</span>
+                            <div>
+                              <h4 className={`font-bold ${accentText}`}>{tier.name}</h4>
+                              <p className="text-xs text-gray-600">{tier.tagline}</p>
+                            </div>
+                          </div>
+                          <div className="space-y-1.5 text-sm">
+                            <div className="flex justify-between items-baseline">
+                              <span className="text-gray-700">Monthly</span>
+                              <span className="font-bold text-gray-900">${tier.monthly}</span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                              <span className="text-gray-700">Quarterly</span>
+                              <span className="text-right">
+                                <span className="font-bold text-gray-900">${tier.quarterly}</span>
+                                <span className="block text-[10px] text-green-700">save ${tier.qSave}</span>
+                              </span>
+                            </div>
+                            <div className="flex justify-between items-baseline">
+                              <span className="text-gray-700">Yearly</span>
+                              <span className="text-right">
+                                <span className="font-bold text-gray-900">${tier.yearly.toLocaleString()}</span>
+                                <span className="block text-[10px] text-green-700">save ${tier.ySave} · {tier.yPct}% off</span>
+                              </span>
+                            </div>
+                          </div>
+                          <a href="#booking" className="block text-center mt-4 py-2 bg-white border border-gray-300 rounded-full text-xs font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
+                            Join Waitlist
+                          </a>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-xs text-gray-500 mt-8 max-w-2xl mx-auto">
+            All prices in USD. Family plans, PSAT 8/9 entry tier, and inaugural launch offer details will follow when EduVerseJr exits private beta.
+          </p>
+        </div>
+      </section>
 
       <div id="testimonials">
         <TestimonialsSection />

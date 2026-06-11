@@ -74,6 +74,9 @@ export default function Header() {
             <Link href="/reva" className="nav-link font-semibold text-purple-600 whitespace-nowrap">
               Reva AI Teacher
             </Link>
+            <a href="/#pricing" className="nav-link whitespace-nowrap">
+              Pricing
+            </a>
             <a href="/#testimonials" className="nav-link whitespace-nowrap">
               Testimonials
             </a>
@@ -125,6 +128,9 @@ export default function Header() {
             <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
               Reva AI Teacher
             </Link>
+            <a href="/#pricing" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Pricing
+            </a>
             <a href="/#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
