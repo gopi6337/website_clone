@@ -296,6 +296,10 @@ const structuredData = {
 export default function RevaPage() {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   useEffect(() => { window.scrollTo(0, 0); }, []);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("waitlist") === "1") setWaitlistOpen(true);
+  }, []);
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>

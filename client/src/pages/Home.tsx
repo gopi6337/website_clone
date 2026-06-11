@@ -243,7 +243,7 @@ export default function Home() {
                     <p className="text-sm text-gray-600 mb-5">
                       We're finalising the Grades 11-12 SAT-prep plans. Drop your email to be notified first.
                     </p>
-                    <a href="#booking" className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
+                    <a href="/reva?waitlist=1" className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
                       Notify Me →
                     </a>
                   </div>
@@ -285,7 +285,7 @@ export default function Home() {
                               </span>
                             </div>
                           </div>
-                          <a href="#booking" className="block text-center mt-4 py-2 bg-white border border-gray-300 rounded-full text-xs font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
+                          <a href="/reva?waitlist=1" className="block text-center mt-4 py-2 bg-white border border-gray-300 rounded-full text-xs font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
                             Join Waitlist
                           </a>
                         </div>
