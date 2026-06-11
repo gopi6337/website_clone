@@ -40,19 +40,19 @@ const pricingData: PricingGroup[] = [
     group: "Grades 5-7",
     subtitle: "Math foundations",
     tiers: [
-      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",      monthly: 9,   quarterly: 25,  qSave: 2,  yearly: 79,    ySave: 29,  yPct: 27, accent: "purple" },
-      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",       monthly: 79,  quarterly: 199, qSave: 38, yearly: 699,   ySave: 249, yPct: 26, accent: "blue" },
       { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 160, quarterly: 430, qSave: 50, yearly: 1499,  ySave: 421, yPct: 22, accent: "green" },
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",      monthly: 15,  quarterly: 39,  qSave: 6,  yearly: 119,   ySave: 61,  yPct: 34, accent: "purple" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",       monthly: 79,  quarterly: 199, qSave: 38, yearly: 699,   ySave: 249, yPct: 26, accent: "blue" },
     ],
   },
   {
     group: "Grades 8-10",
-    subtitle: "Pre-Algebra → Geometry · PSAT included",
+    subtitle: "Algebra & Geometry",
     featured: true,
     tiers: [
-      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor + PSAT",  monthly: 15,  quarterly: 39,  qSave: 6,  yearly: 119,  ySave: 61,  yPct: 34, accent: "purple" },
-      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month + PSAT",  monthly: 109, quarterly: 289, qSave: 38, yearly: 999,  ySave: 309, yPct: 24, accent: "blue" },
       { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month + PSAT prep",       monthly: 200, quarterly: 549, qSave: 51, yearly: 1899, ySave: 501, yPct: 21, accent: "green" },
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor + PSAT",  monthly: 30,  quarterly: 79,  qSave: 11, yearly: 239,  ySave: 121, yPct: 34, accent: "purple" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month + PSAT",  monthly: 109, quarterly: 289, qSave: 38, yearly: 999,  ySave: 309, yPct: 24, accent: "blue" },
     ],
   },
   {
@@ -285,12 +285,12 @@ export default function Home() {
                               </span>
                             </div>
                           </div>
-                          <a href="/reva?waitlist=1" className="block text-center mt-4 py-2 bg-white border border-gray-300 rounded-full text-xs font-semibold text-gray-800 hover:bg-gray-50 transition-colors">
-                            Join Waitlist
-                          </a>
                         </div>
                       );
                     })}
+                    <a href="/reva?waitlist=1" className="block text-center mt-2 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
+                      Join the Waitlist →
+                    </a>
                   </div>
                 )}
               </div>
