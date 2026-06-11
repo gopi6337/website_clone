@@ -579,7 +579,7 @@ export default function RevaPage() {
               <span className="text-white/50 hover:text-white/80 cursor-pointer transition-colors">EduVerseJr.com</span>
             </Link>
           </p>
-          <p>© {new Date().getFullYear()} EduVerseJr · Vetrix Digital Technologies Pvt Ltd</p>
+          <p>© {new Date().getFullYear()} EduVerseJr. All rights reserved.</p>
         </div>
       </footer>
     </div>
