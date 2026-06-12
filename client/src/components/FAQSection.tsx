@@ -147,7 +147,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "When does PSAT prep launch?",
-      answer: "PSAT 8/9 standalone plans open in July 2026. PSAT/NMSQT (bundled with SAT) opens in August 2026 alongside the National Merit Scholarship state cutoff calculator. Join the waitlist at eduversejr.com/psat to be notified the moment your child's tier opens.",
+      answer: "PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are both coming soon. Join the waitlist at eduversejr.com/psat to be notified the moment your child's tier opens — no specific date is being promised in advance.",
     },
   ];
 

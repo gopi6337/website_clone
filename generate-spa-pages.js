@@ -86,9 +86,9 @@ const topLevelMeta = {
   },
   'psat': {
     title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
-    description: 'Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill weakness map, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming July–August 2026.',
+    description: 'Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill weakness map, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist.',
     ogTitle: 'PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT',
-    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming 2026.',
+    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist.',
     bodyContent: renderSeoBlock({
       h1: 'PSAT Prep by Reva AI — PSAT 8/9 & PSAT/NMSQT for Grades 8–11',
       intro: [
@@ -113,21 +113,21 @@ const topLevelMeta = {
           p: 'Full digital simulation (two 35-minute R&W modules + two 35-minute Math modules, adaptive); Reva AI tutor on every question with live whiteboard explanations; per-skill weakness map (Algebra, Advanced Math, Information & Ideas, Standard English Conventions); score predictor with ±30 point accuracy after 2 practice tests; clear upgrade path to full SAT prep; original AI-generated items modelled on College Board\'s published specification (no Bluebook scrapes, public-domain passages only).',
         },
         {
-          h2: 'Pricing & timeline',
-          p: 'PSAT 8/9 standalone plans launch in July 2026 at $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT (bundled with SAT Prep) launches in August 2026 alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade.',
+          h2: 'Pricing & access',
+          p: 'PSAT 8/9 standalone plans are $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT is bundled with every SAT Prep plan alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade. Both products are coming soon — no specific launch date is being promised in advance; join the waitlist for notification.',
         },
       ],
       faqs: [
         { q: 'What\'s the difference between PSAT 8/9 and PSAT/NMSQT?', a: 'PSAT 8/9 is the introductory test for Grades 8–9; it familiarises students with the digital SAT format before high school. PSAT/NMSQT is the Grade 10–11 test that also qualifies students for the National Merit Scholarship. Both are digital, adaptive, and structured exactly like the SAT (two modules each for Reading & Writing and Math).' },
         { q: 'Is PSAT prep included with my Reva subscription?', a: 'PSAT 8/9 prep is included for students on the Grade 8 or Grade 9 annual plan. PSAT/NMSQT prep is bundled with every SAT Prep plan (Grades 10–11). Standalone PSAT 8/9 is $49/year for parents who want a low-commitment intro.' },
-        { q: 'When does PSAT prep launch?', a: 'PSAT 8/9 standalone plans open in July 2026. PSAT/NMSQT (bundled with SAT) opens in August 2026 alongside the National Merit Scholarship state cutoff calculator.' },
+        { q: 'When does PSAT prep launch?', a: 'PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are both coming soon. Join the waitlist to be notified the moment your child\'s tier opens — no specific date is being promised in advance.' },
         { q: 'What is the National Merit Scholarship cutoff calculator?', a: 'National Merit cutoffs differ by state, ranging from approximately 208 (Wyoming, West Virginia) to 222 (California, New Jersey). Our calculator takes your state, target percentile, and current practice scores and tells you exactly how many more points you need for Commended, Semifinalist, or Finalist status in YOUR state.' },
         { q: 'Does Reva use real College Board PSAT questions?', a: 'No — Reva uses original AI-generated practice items modelled on the official PSAT specification, plus a curated set of public-domain reading passages. We do not scrape Bluebook or use any copyrighted College Board content. Our items follow the same difficulty bands and skill taxonomy that College Board publishes.' },
         { q: 'Can my child upgrade from PSAT 8/9 to a full G8–G10 plan?', a: 'Yes. If you start with the $49/yr PSAT 8/9 plan and upgrade to the full G8 or G9 annual plan within the first 90 days, the PSAT 8/9 fee is credited toward your upgrade. After 90 days the plan continues as standalone PSAT prep.' },
       ],
       links: [
         { href: '/reva', label: 'Meet Reva — the AI tutor behind PSAT prep' },
-        { href: '/teachers', label: 'Live human PSAT coaching (coming Sept–Oct 2026)' },
+        { href: '/teachers', label: 'Live human PSAT coaching (coming soon)' },
         { href: '/#pricing', label: 'See full EduVerseJr pricing' },
         { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
       ],

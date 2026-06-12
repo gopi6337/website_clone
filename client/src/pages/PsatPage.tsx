@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "When does PSAT prep open?",
-    a: "PSAT 8/9 standalone plans open in July 2026. PSAT/NMSQT (bundled with SAT) opens in August 2026 alongside the National Merit calculator. Join the waitlist below to be notified the moment your child's tier opens.",
+    a: "PSAT 8/9 and PSAT/NMSQT prep are both coming soon. Join the waitlist below and we'll notify you the moment your child's tier opens — no specific date is being promised in advance.",
   },
   {
     q: "Does Reva use real College Board PSAT questions?",
@@ -198,7 +198,7 @@ const structuredData = {
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/PreOrder",
-        "description": "PSAT 8/9 standalone $49/yr · PSAT/NMSQT bundled with SAT Prep plan. Coming July–August 2026.",
+        "description": "PSAT 8/9 standalone $49/yr · PSAT/NMSQT bundled with SAT Prep plan. Coming soon — join the waitlist.",
       },
     },
     {
@@ -220,17 +220,17 @@ export default function PsatPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT</title>
-        <meta name="description" content="Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill score report, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming 2026." />
+        <meta name="description" content="Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill score report, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist." />
         <link rel="canonical" href="https://eduversejr.com/psat" />
         <meta name="keywords" content="PSAT prep, PSAT 8/9 prep, PSAT NMSQT prep, National Merit Scholarship prep, digital PSAT, PSAT practice test, PSAT score predictor, National Merit cutoff by state, Reva AI PSAT, EduVerseJr PSAT" />
         <meta property="og:title" content="PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT" />
-        <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming 2026." />
+        <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist." />
         <meta property="og:url" content="https://eduversejr.com/psat" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PSAT Prep — Reva AI by EduVerseJr" />
-        <meta name="twitter:description" content="PSAT 8/9 + PSAT/NMSQT prep with state-specific National Merit cutoffs. Coming 2026." />
+        <meta name="twitter:description" content="PSAT 8/9 + PSAT/NMSQT prep with state-specific National Merit cutoffs. Coming soon — join the waitlist." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -247,7 +247,7 @@ export default function PsatPage() {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-medium px-4 py-2 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              PSAT 8/9 · July 2026 &nbsp;·&nbsp; PSAT/NMSQT · August 2026
+              PSAT 8/9 · Coming Soon &nbsp;·&nbsp; PSAT/NMSQT · Coming Soon
             </div>
           </div>
 
@@ -377,7 +377,7 @@ export default function PsatPage() {
               Reva's calculator takes your state, current practice scores, and target percentile (Commended · Semifinalist · Finalist) and tells you exactly how many points you need to add.
               State data is refreshed annually from College Board public releases.
             </p>
-            <p className="text-white/40 text-xs mt-3">Indicative cutoffs above. Full calculator opens with PSAT/NMSQT in August 2026.</p>
+            <p className="text-white/40 text-xs mt-3">Indicative cutoffs above. Full calculator opens with PSAT/NMSQT — coming soon.</p>
           </div>
         </div>
       </section>
@@ -430,7 +430,7 @@ export default function PsatPage() {
                 Be first when PSAT opens
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-                PSAT 8/9 launches in July 2026. PSAT/NMSQT and the National Merit calculator follow in August. Join the waitlist — we'll notify you the moment your child's grade band opens.
+                Both PSAT 8/9 and PSAT/NMSQT (with the National Merit calculator) are coming soon. Join the waitlist — we'll notify you the moment your child's grade band opens.
               </p>
               <button
                 type="button"
