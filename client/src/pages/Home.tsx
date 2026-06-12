@@ -26,6 +26,7 @@ type PricingTier = {
   ySave: number;
   yPct: number;
   accent: "purple" | "blue" | "green";
+  needsHumanOnboard?: boolean;
 };
 type PricingGroup = {
   group: string;
@@ -56,9 +57,22 @@ const pricingData: PricingGroup[] = [
     ],
   },
   {
-    group: "Grades 11-12 + SAT",
-    subtitle: "Coming soon",
-    comingSoon: true,
+    group: "Grades 11-12",
+    subtitle: "Pre-Calc & Advanced Math",
+    tiers: [
+      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 280, quarterly: 769, qSave: 71, yearly: 2699, ySave: 661, yPct: 20, accent: "green",  needsHumanOnboard: true },
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",     monthly: 50,  quarterly: 129, qSave: 21, yearly: 399,  ySave: 201, yPct: 34, accent: "purple" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",      monthly: 150, quarterly: 399, qSave: 51, yearly: 1399, ySave: 401, yPct: 22, accent: "blue",   needsHumanOnboard: true },
+    ],
+  },
+  {
+    group: "SAT Prep",
+    subtitle: "Any grade · Digital SAT practice",
+    tiers: [
+      { name: "Reva + SAT + Human", icon: "👩‍🏫", tagline: "Human SAT coach + AI + SAT mode", monthly: 345, quarterly: 929, qSave: 106, yearly: 3299, ySave: 841, yPct: 21, accent: "green",  needsHumanOnboard: true },
+      { name: "Reva + SAT Prep",    icon: "🤖", tagline: "Full Reva G5-12 + SAT mode",       monthly: 65,  quarterly: 169, qSave: 26,  yearly: 499,  ySave: 281, yPct: 36, accent: "purple" },
+      { name: "SAT Prep Only",      icon: "🎯", tagline: "Reva SAT mode, no main app",       monthly: 25,  quarterly: 65,  qSave: 10,  yearly: 199,  ySave: 101, yPct: 34, accent: "blue" },
+    ],
   },
 ];
 
@@ -210,7 +224,7 @@ export default function Home() {
       {/* Human Teachers — full section (replaces previous 2-col teaser) */}
       <HumanTeachersSection />
 
-      {/* Pricing — G1 + G2 locked · G3 SAT coming soon */}
+      {/* Pricing — G1 + G2 + G3 locked · SAT Prep card added */}
       <section id="pricing" className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-10">
@@ -219,11 +233,11 @@ export default function Home() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Pricing</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Choose the right plan for your child's grade. PSAT prep included in Grades 8-10 plans. SAT prep coming with Grades 11-12 plans. Join the waitlist to be notified when access opens.
+              Choose the right plan for your child. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle — any grade. Join the waitlist to be notified when access opens.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {pricingData.map((group, gi) => (
               <div key={gi} className={`bg-white rounded-3xl border-2 ${group.featured ? 'border-purple-300 shadow-lg shadow-purple-100' : 'border-gray-200 shadow-sm'} p-6 relative`}>
                 {group.featured && (
@@ -285,6 +299,11 @@ export default function Home() {
                               </span>
                             </div>
                           </div>
+                          {tier.needsHumanOnboard && (
+                            <p className="mt-3 text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-2 py-1.5 text-center">
+                              🤝 Limited slots — teacher matched within 1 week
+                            </p>
+                          )}
                         </div>
                       );
                     })}
