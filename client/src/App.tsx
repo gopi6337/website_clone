@@ -8,6 +8,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import RevaPage from "./pages/RevaPage";
+import PsatPage from "./pages/PsatPage";
 import CoursesPage from "./pages/CoursesPage";
 import TeachersPage from "./pages/TeachersPage";
 import CurriculumViewer from "./pages/CurriculumViewer";
@@ -37,6 +38,7 @@ function Router() {
         <Route path={"/"} component={Home} />
         <Route path={"/about"} component={AboutPage} />
         <Route path={"/reva"} component={RevaPage} />
+        <Route path={"/psat"} component={PsatPage} />
         <Route path={"/courses"} component={CoursesPage} />
         <Route path={"/teachers"} component={TeachersPage} />
         {/* Legacy /tutors → /teachers redirect (SEO + bookmarks) */}

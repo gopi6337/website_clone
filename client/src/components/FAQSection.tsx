@@ -134,6 +134,21 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
       question: "What grades does Reva AI Teacher support?",
       answer: "Reva AI Teacher supports students from Grade 5 through Grade 12 (ages 10–18). Content is curriculum-aligned for each grade level across US, UK, Canada, Australia, Singapore, and UAE standards.",
     },
+    {
+      type: "reva",
+      question: "What's the difference between PSAT 8/9 and PSAT/NMSQT?",
+      answer: "PSAT 8/9 is the low-stakes introductory test for Grades 8–9 — it familiarises students with the digital SAT format before high school. PSAT/NMSQT is the Grade 10–11 test that also qualifies students for the National Merit Scholarship. Both are digital, adaptive, and structured exactly like the SAT (two modules each for Reading & Writing and Math). See eduversejr.com/psat for full details.",
+    },
+    {
+      type: "reva",
+      question: "Is PSAT prep included with my Reva subscription?",
+      answer: "PSAT 8/9 prep is included for students on the Grade 8 or Grade 9 annual plan. PSAT/NMSQT prep is bundled with every SAT Prep plan (Grades 10–11). Standalone PSAT 8/9 is also available at $49/year for parents who want a low-commitment intro before a full G8–G9 subscription.",
+    },
+    {
+      type: "reva",
+      question: "When does PSAT prep launch?",
+      answer: "PSAT 8/9 standalone plans open in July 2026. PSAT/NMSQT (bundled with SAT) opens in August 2026 alongside the National Merit Scholarship state cutoff calculator. Join the waitlist at eduversejr.com/psat to be notified the moment your child's tier opens.",
+    },
   ];
 
   const allFaqs = [...humanFaqs, ...revaFaqs];

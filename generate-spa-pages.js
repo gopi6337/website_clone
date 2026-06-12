@@ -84,6 +84,55 @@ const topLevelMeta = {
       ],
     }),
   },
+  'psat': {
+    title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
+    description: 'Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill weakness map, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming July–August 2026.',
+    ogTitle: 'PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT',
+    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming 2026.',
+    bodyContent: renderSeoBlock({
+      h1: 'PSAT Prep by Reva AI — PSAT 8/9 & PSAT/NMSQT for Grades 8–11',
+      intro: [
+        'EduVerseJr\'s Reva AI now extends to PSAT preparation. We offer two products: PSAT 8/9 for Grades 8–9 (the low-stakes intro to the digital SAT format) and PSAT/NMSQT for Grades 10–11 (the scholarship-qualifying test). Both are built on the same Reva AI tutor engine that powers our SAT Math preparation.',
+        'What sets us apart: a state-by-state National Merit Scholarship cutoff calculator. National Merit Selectivity Index cutoffs vary by approximately 14 points across U.S. states — a 219 in West Virginia qualifies for Semifinalist while the same score falls short in California or New Jersey. Most prep platforms quote a single national number; Reva tells you exactly what you need for YOUR state.',
+      ],
+      sections: [
+        {
+          h2: 'PSAT 8/9 — Grades 8–9 ($49/year standalone, or included with G8/G9 annual plan)',
+          p: 'PSAT 8/9 is the low-stakes introductory test that familiarises students with the digital SAT format before high school. Reva includes two full digital PSAT 8/9 practice tests (44 Reading & Writing items + 44 Math items across two adaptive modules each), per-skill score reports, and Reva AI explanations on every wrong answer via interactive whiteboard.',
+        },
+        {
+          h2: 'PSAT/NMSQT — Grades 10–11 (bundled with every SAT Prep plan)',
+          p: 'PSAT/NMSQT is the test that qualifies students for the National Merit Scholarship. Reva PSAT/NMSQT prep includes the full digital simulation, a Selectivity Index score predictor tuned to your state, and the National Merit cutoff calculator (Commended / Semifinalist / Finalist thresholds). PSAT/NMSQT skills map directly to SAT skills — students who continue to SAT prep keep all their weakness data and tutor history.',
+        },
+        {
+          h2: 'National Merit Scholarship cutoff calculator',
+          p: 'Our state-by-state National Merit calculator takes your state of residence, current practice score, and target percentile (Commended / Semifinalist / Finalist) and tells you exactly how many points you need to add. Cutoffs are refreshed annually from College Board public releases. This is the unique wedge — no AI prep platform currently offers state-specific National Merit guidance.',
+        },
+        {
+          h2: 'What\'s included in every PSAT plan',
+          p: 'Full digital simulation (two 35-minute R&W modules + two 35-minute Math modules, adaptive); Reva AI tutor on every question with live whiteboard explanations; per-skill weakness map (Algebra, Advanced Math, Information & Ideas, Standard English Conventions); score predictor with ±30 point accuracy after 2 practice tests; clear upgrade path to full SAT prep; original AI-generated items modelled on College Board\'s published specification (no Bluebook scrapes, public-domain passages only).',
+        },
+        {
+          h2: 'Pricing & timeline',
+          p: 'PSAT 8/9 standalone plans launch in July 2026 at $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT (bundled with SAT Prep) launches in August 2026 alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade.',
+        },
+      ],
+      faqs: [
+        { q: 'What\'s the difference between PSAT 8/9 and PSAT/NMSQT?', a: 'PSAT 8/9 is the introductory test for Grades 8–9; it familiarises students with the digital SAT format before high school. PSAT/NMSQT is the Grade 10–11 test that also qualifies students for the National Merit Scholarship. Both are digital, adaptive, and structured exactly like the SAT (two modules each for Reading & Writing and Math).' },
+        { q: 'Is PSAT prep included with my Reva subscription?', a: 'PSAT 8/9 prep is included for students on the Grade 8 or Grade 9 annual plan. PSAT/NMSQT prep is bundled with every SAT Prep plan (Grades 10–11). Standalone PSAT 8/9 is $49/year for parents who want a low-commitment intro.' },
+        { q: 'When does PSAT prep launch?', a: 'PSAT 8/9 standalone plans open in July 2026. PSAT/NMSQT (bundled with SAT) opens in August 2026 alongside the National Merit Scholarship state cutoff calculator.' },
+        { q: 'What is the National Merit Scholarship cutoff calculator?', a: 'National Merit cutoffs differ by state, ranging from approximately 208 (Wyoming, West Virginia) to 222 (California, New Jersey). Our calculator takes your state, target percentile, and current practice scores and tells you exactly how many more points you need for Commended, Semifinalist, or Finalist status in YOUR state.' },
+        { q: 'Does Reva use real College Board PSAT questions?', a: 'No — Reva uses original AI-generated practice items modelled on the official PSAT specification, plus a curated set of public-domain reading passages. We do not scrape Bluebook or use any copyrighted College Board content. Our items follow the same difficulty bands and skill taxonomy that College Board publishes.' },
+        { q: 'Can my child upgrade from PSAT 8/9 to a full G8–G10 plan?', a: 'Yes. If you start with the $49/yr PSAT 8/9 plan and upgrade to the full G8 or G9 annual plan within the first 90 days, the PSAT 8/9 fee is credited toward your upgrade. After 90 days the plan continues as standalone PSAT prep.' },
+      ],
+      links: [
+        { href: '/reva', label: 'Meet Reva — the AI tutor behind PSAT prep' },
+        { href: '/teachers', label: 'Live human PSAT coaching (coming Sept–Oct 2026)' },
+        { href: '/#pricing', label: 'See full EduVerseJr pricing' },
+        { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
+      ],
+    }),
+  },
   'about': {
     title: 'About EduVerseJr — Reva AI + Expert Human Teachers',
     description: 'EduVerseJr is a hybrid learning platform combining Reva AI Teacher (24/7) with expert human teachers for live 1-to-1 Maths, Science and Coding classes for Grades 5–12.',

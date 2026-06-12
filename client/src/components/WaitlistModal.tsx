@@ -28,13 +28,14 @@ const COUNTRIES = [
   "Australia", "Singapore", "UAE", "Other",
 ];
 
-export type WaitlistInterest = "reva" | "hybrid" | "sat" | "sat-only";
+export type WaitlistInterest = "reva" | "hybrid" | "sat" | "sat-only" | "psat";
 
 const INTEREST_LABELS: Record<WaitlistInterest, string> = {
   "reva": "Reva AI",
   "hybrid": "Hybrid (Reva AI + Human Teacher)",
   "sat": "Reva AI + SAT Prep",
   "sat-only": "SAT Prep Only",
+  "psat": "PSAT Prep (Coming Soon)",
 };
 
 interface WaitlistModalProps {
