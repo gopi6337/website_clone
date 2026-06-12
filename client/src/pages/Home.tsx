@@ -27,7 +27,8 @@ type PricingTier = {
   yPct: number;
   accent: "purple" | "blue" | "green";
   needsHumanOnboard?: boolean;
-  cta: "trial" | "waitlist-reva" | "waitlist-hybrid" | "waitlist-sat" | "waitlist-sat-only";
+  cta: "trial" | "waitlist-reva" | "waitlist-hybrid" | "waitlist-sat" | "waitlist-sat-only" | "waitlist-psat";
+  yearlyOnly?: boolean;  // hides monthly/quarterly toggles for SKUs that only sell yearly (e.g. PSAT 8/9)
 };
 type PricingGroup = {
   group: string;
@@ -75,6 +76,13 @@ const pricingData: PricingGroup[] = [
       { name: "SAT Prep Only",      icon: "🎯", tagline: "Reva SAT mode, no main app",       monthly: 25,  quarterly: 65,  qSave: 10,  yearly: 199,  ySave: 101, yPct: 34, accent: "blue",   cta: "waitlist-sat-only" },
     ],
   },
+  {
+    group: "PSAT 8/9 Standalone",
+    subtitle: "Grades 8–9 · Coming Soon · 90-day credit toward G8/G9 annual",
+    tiers: [
+      { name: "PSAT 8/9 Prep",      icon: "🏆", tagline: "Reva AI scoped to PSAT skills · 2 practice tests", monthly: 0, quarterly: 0, qSave: 0, yearly: 49, ySave: 0, yPct: 0, accent: "blue", cta: "waitlist-psat", yearlyOnly: true },
+    ],
+  },
 ];
 
 const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = {
@@ -83,6 +91,7 @@ const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = 
   "waitlist-hybrid":   { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=hybrid" },
   "waitlist-sat":      { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=sat" },
   "waitlist-sat-only": { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=sat-only" },
+  "waitlist-psat":     { label: "Join the PSAT Waitlist →", href: "/psat?waitlist=1&interest=psat" },
 };
 
 export default function Home() {
@@ -289,22 +298,28 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="space-y-1.5 text-sm">
+                            {!tier.yearlyOnly && (
+                              <>
+                                <div className="flex justify-between items-baseline">
+                                  <span className="text-gray-700">Monthly</span>
+                                  <span className="font-bold text-gray-900">${tier.monthly}</span>
+                                </div>
+                                <div className="flex justify-between items-baseline">
+                                  <span className="text-gray-700">Quarterly</span>
+                                  <span className="text-right">
+                                    <span className="font-bold text-gray-900">${tier.quarterly}</span>
+                                    <span className="block text-[10px] text-green-700">save ${tier.qSave}</span>
+                                  </span>
+                                </div>
+                              </>
+                            )}
                             <div className="flex justify-between items-baseline">
-                              <span className="text-gray-700">Monthly</span>
-                              <span className="font-bold text-gray-900">${tier.monthly}</span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                              <span className="text-gray-700">Quarterly</span>
-                              <span className="text-right">
-                                <span className="font-bold text-gray-900">${tier.quarterly}</span>
-                                <span className="block text-[10px] text-green-700">save ${tier.qSave}</span>
-                              </span>
-                            </div>
-                            <div className="flex justify-between items-baseline">
-                              <span className="text-gray-700">Yearly</span>
+                              <span className="text-gray-700">{tier.yearlyOnly ? "Yearly (only)" : "Yearly"}</span>
                               <span className="text-right">
                                 <span className="font-bold text-gray-900">${tier.yearly.toLocaleString()}</span>
-                                <span className="block text-[10px] text-green-700">save ${tier.ySave} · {tier.yPct}% off</span>
+                                {tier.ySave > 0 && (
+                                  <span className="block text-[10px] text-green-700">save ${tier.ySave} · {tier.yPct}% off</span>
+                                )}
                               </span>
                             </div>
                           </div>
@@ -333,7 +348,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-xs text-gray-500 mt-8 max-w-2xl mx-auto">
-            All prices in USD. Family plans, PSAT 8/9 entry tier, and inaugural launch offer details will follow when EduVerseJr exits private beta.
+            All prices in USD. Family plans and inaugural launch offer details will follow when EduVerseJr exits private beta. PSAT 8/9 standalone includes a 90-day upgrade credit toward G8/G9 annual plans.
           </p>
         </div>
       </section>
