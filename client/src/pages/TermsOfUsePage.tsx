@@ -35,7 +35,7 @@ export default function TermsOfUsePage() {
             <h2 className="text-xl font-semibold text-gray-800 mb-3">2. Description of the Service</h2>
             <p>EduVerseJr provides two distinct teaching services:</p>
             <ul className="list-disc pl-6 space-y-2 mt-2">
-              <li><strong>Human Teacher Sessions</strong> — live 1-on-1 instruction in Maths, Science, Coding, SAT preparation and SSAT preparation for students in <strong>Grades 5–10</strong>, delivered by qualified human teachers via video call.</li>
+              <li><strong>Human Teacher Sessions</strong> — live 1-on-1 instruction in Maths, Science, Coding, SAT preparation and PSAT preparation for students in <strong>Grades 5–10</strong>, delivered by qualified human teachers via video call.</li>
               <li><strong>Reva AI Teacher</strong> — an AI-powered Maths teacher available 24/7 for students in <strong>Grades 5–12</strong>, with interactive whiteboard, voice and chat. Science and Coding for Reva AI are planned for a future release.</li>
             </ul>
             <p className="mt-2">

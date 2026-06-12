@@ -14,7 +14,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "human",
       question: "What age group is EduVerseJr designed for?",
-      answer: "EduVerseJr's human teachers cover Grades 5–10 (ages 10–16) — including SAT and SSAT preparation for high-school students. Reva AI Teacher extends to Grades 5–12 (ages 10–18). Programmes are tailored to each child's level, curriculum and goals.",
+      answer: "EduVerseJr's human teachers cover Grades 5–10 (ages 10–16) — including SAT and PSAT preparation for high-school students. Reva AI Teacher extends to Grades 5–12 (ages 10–18). Programmes are tailored to each child's level, curriculum and goals.",
     },
     {
       type: "human",
@@ -24,7 +24,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "human",
       question: "What subjects do your human teachers teach?",
-      answer: "Our experienced teachers teach Mathematics, Science, and Coding/Programming for Grades 5–10, plus dedicated SAT and SSAT preparation. All programmes are aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
+      answer: "Our experienced teachers teach Mathematics, Science, and Coding/Programming for Grades 5–10, plus dedicated SAT and PSAT preparation. All programmes are aligned with international curricula across US, UK, Canada, Australia, Singapore, and UAE.",
     },
     {
       type: "human",

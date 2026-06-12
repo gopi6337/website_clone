@@ -13,7 +13,7 @@ export default function DisclaimerPage() {
 
           <p className="text-gray-700 leading-relaxed">
             EduVerseJr is an independent education platform offering (a) live 1-on-1 instruction by
-            qualified human teachers in Maths, Science, Coding, SAT preparation and SSAT preparation
+            qualified human teachers in Maths, Science, Coding, SAT preparation and PSAT preparation
             for Grades 5–10, and (b) <strong>Reva AI</strong>, an AI-powered Maths teacher for
             Grades 5–12. All learning content is created through a combination of Reva AI and
             qualified human educator review. Content is original and is not copied, reproduced or
@@ -23,7 +23,7 @@ export default function DisclaimerPage() {
           <section>
             <h2 className="text-xl font-semibold text-gray-800 mb-3">1. Original Content</h2>
             <p className="text-gray-700 leading-relaxed">
-              All slides, explanations, worked examples, practice questions, SAT/SSAT prep material
+              All slides, explanations, worked examples, practice questions, SAT/PSAT prep material
               and assessments are independently created by Reva AI and reviewed by human educators.
               No content is extracted or reproduced from any commercial textbook, past examination
               paper or proprietary test-prep material.
@@ -68,15 +68,14 @@ export default function DisclaimerPage() {
           <section>
             <h2 className="text-xl font-semibold text-gray-800 mb-3">4. Trademarks &amp; Test-Prep Notice</h2>
             <p className="text-gray-700 leading-relaxed">
-              <strong>SAT®</strong> is a registered trademark of the College Board.
-              {" "}<strong>SSAT®</strong> is a registered trademark of the Secondary School Admission
-              Test Board (SSATB). All other trademarks, service marks and trade names referenced on
-              this site are the property of their respective owners.
+              <strong>SAT®</strong> and <strong>PSAT/NMSQT®</strong> are registered trademarks of the
+              College Board. All other trademarks, service marks and trade names referenced on this
+              site are the property of their respective owners.
             </p>
             <p className="text-gray-700 leading-relaxed mt-2">
               EduVerseJr is <strong>not affiliated with, endorsed by, sponsored by, or in any way
-              officially connected with</strong> the College Board, SSATB, or any other testing
-              organisation. Our SAT and SSAT preparation programmes are independent test-prep
+              officially connected with</strong> the College Board or any other testing
+              organisation. Our SAT and PSAT preparation programmes are independent test-prep
               services and do not use copyrighted past papers or proprietary materials of any
               testing body.
             </p>

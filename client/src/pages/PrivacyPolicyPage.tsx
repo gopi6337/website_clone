@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
 
           <p>
             Our Service includes (a) <strong>Human Teacher Sessions</strong> — live 1-on-1 instruction
-            in Maths, Science, Coding, SAT preparation and SSAT preparation for students in Grades 5–10,
+            in Maths, Science, Coding, SAT preparation and PSAT preparation for students in Grades 5–10,
             and (b) <strong>Reva AI Teacher</strong> — an AI-powered Maths teacher for students in
             Grades 5–12. This Policy applies to both.
           </p>

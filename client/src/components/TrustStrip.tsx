@@ -8,7 +8,7 @@ export default function TrustStrip() {
   const items = [
     { icon: <GraduationCap className="w-4 h-4" />, text: "Experienced Teachers" },
     { icon: <Globe2 className="w-4 h-4" />, text: "Students from 6 Countries" },
-    { icon: <BookOpen className="w-4 h-4" />, text: "Maths · Science · Coding · SAT · SSAT" },
+    { icon: <BookOpen className="w-4 h-4" />, text: "Maths · Science · Coding · SAT · PSAT" },
   ];
 
   return (

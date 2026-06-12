@@ -21,23 +21,23 @@ export default function TeachersPage() {
     { name: "Science", grades: "Grades 5–10", detail: "Biology, Chemistry, Physics, Earth & Space Science" },
     { name: "Coding", grades: "Grades 5–10", detail: "Python, JavaScript, HTML/CSS, Block-based, Web/App development" },
     { name: "SAT Prep", grades: "High School", detail: "Full Digital SAT prep — Reading, Writing & Math, taught by experienced teachers" },
-    { name: "SSAT Prep", grades: "US Private Schools", detail: "Verbal, Quantitative, Reading, and Essay prep for US private-school admissions" },
+    { name: "PSAT Prep", grades: "Grades 8–10", detail: "Reading, Writing, and Math prep for the College Board PSAT 8/9 and PSAT/NMSQT" },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Human Teachers — EduVerseJr | Live 1-to-1 Online Classes (Maths · Science · Coding · SAT · SSAT)</title>
-        <meta name="description" content="Experienced human teachers for live 1-to-1 online Maths, Science, Coding, SAT and SSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE. Book a free trial." />
+        <title>Human Teachers — EduVerseJr | Live 1-to-1 Online Classes (Maths · Science · Coding · SAT · PSAT)</title>
+        <meta name="description" content="Experienced human teachers for live 1-to-1 online Maths, Science, Coding, SAT and PSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE. Book a free trial." />
         <link rel="canonical" href="https://eduversejr.com/teachers" />
         <meta property="og:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
-        <meta property="og:description" content="Experienced online teachers for Maths, Science, Coding, SAT & SSAT prep. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
+        <meta property="og:description" content="Experienced online teachers for Maths, Science, Coding, SAT & PSAT prep. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
         <meta property="og:url" content="https://eduversejr.com/teachers" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
-        <meta name="twitter:description" content="Expert 1-to-1 online teaching for Maths, Science, Coding, SAT & SSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE." />
+        <meta name="twitter:description" content="Expert 1-to-1 online teaching for Maths, Science, Coding, SAT & PSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE." />
         <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -51,7 +51,7 @@ export default function TeachersPage() {
           "@context": "https://schema.org",
           "@type": "Service",
           "name": "Expert Human Teachers — Live 1-to-1 Online Classes",
-          "description": "EduVerseJr's experienced human teachers offer personalised 1-to-1 online classes in Maths, Science, Coding, and dedicated SAT & SSAT preparation for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula.",
+          "description": "EduVerseJr's experienced human teachers offer personalised 1-to-1 online classes in Maths, Science, Coding, and dedicated SAT & PSAT preparation for Grades 5–10. Aligned with US, UK, Canada, Australia, Singapore and UAE curricula.",
           "provider": {
             "@type": "EducationalOrganization",
             "name": "EduVerseJr",
@@ -67,7 +67,7 @@ export default function TeachersPage() {
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Science Teaching — Grades 5–10", "description": "Biology, Chemistry, Physics, Earth & Space Science." } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coding & Programming — Grades 5–10", "description": "Python, JavaScript, HTML/CSS, web and app development." } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SAT Preparation", "description": "Full Digital SAT preparation — Reading, Writing and Math — taught by experienced teachers." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SSAT Preparation", "description": "Verbal, Quantitative, Reading and Essay preparation for US private-school admissions." } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PSAT Preparation", "description": "Reading, Writing and Math preparation for the College Board PSAT 8/9 and PSAT/NMSQT." } }
             ]
           },
           "offers": {
@@ -93,11 +93,11 @@ export default function TeachersPage() {
           </h1>
           <p className="text-white/90 text-lg max-w-2xl mx-auto mb-6">
             Live, personalised 1-to-1 online classes with experienced teachers in Mathematics,
-            Science, Coding, and dedicated SAT &amp; SSAT preparation — tailored to your child's
+            Science, Coding, and dedicated SAT &amp; PSAT preparation — tailored to your child's
             school curriculum and pace.
           </p>
           <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-300/50 text-amber-100 px-4 py-2 rounded-full text-sm font-semibold mb-8">
-            <GraduationCap className="w-4 h-4" /> SAT &amp; SSAT prep — taught by our teachers
+            <GraduationCap className="w-4 h-4" /> SAT &amp; PSAT prep — taught by our teachers
           </div>
           <div>
             <Button className="bg-emerald-500 hover:bg-emerald-400 text-white px-10 py-6 rounded-full text-lg font-bold shadow-lg shadow-emerald-500/40"

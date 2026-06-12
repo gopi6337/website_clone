@@ -12,7 +12,7 @@ export default function HeroSection() {
             {/* Badge */}
             <div className="flex flex-wrap gap-2 mb-6">
               <div className="inline-block bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-xs font-bold">
-                Maths · Science · Coding · SAT · SSAT
+                Maths · Science · Coding · SAT · PSAT
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export default function HeroSection() {
               <ul className="text-sm text-white/90 space-y-1 mb-4">
                 <li>• Live 1-to-1 online classes</li>
                 <li>• Experienced teachers, real rapport</li>
-                <li>• Maths · Science · Coding · SAT · SSAT</li>
+                <li>• Maths · Science · Coding · SAT · PSAT</li>
                 <li>• Flexible scheduling, same teacher every session</li>
               </ul>
               <Button

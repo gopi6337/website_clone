@@ -9,7 +9,7 @@ export default function AboutUsSection() {
     { label: "Learning Mode", value: "100% Online — Live 1-on-1 + Reva AI 24/7" },
     { label: "Class Duration", value: "60 minutes per session" },
     { label: "Class Frequency", value: "2+ classes per week" },
-    { label: "Subjects Offered", value: "Mathematics, Science, Coding, SAT & SSAT Prep" },
+    { label: "Subjects Offered", value: "Mathematics, Science, Coding, SAT & PSAT Prep" },
     { label: "Curriculum Alignment", value: "US Common Core, UK National, Singapore Maths, Australian, Canadian, UAE" },
   ];
 
@@ -36,7 +36,7 @@ export default function AboutUsSection() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "EduVerseJr",
-    "description": "Online personalized Maths, Science and Coding education across 6 countries — Human Teachers for Grades 5–10 (incl. SAT & SSAT prep) and Reva AI Teacher for Grades 5–12.",
+    "description": "Online personalized Maths, Science and Coding education across 6 countries — Human Teachers for Grades 5–10 (incl. SAT & PSAT prep) and Reva AI Teacher for Grades 5–12.",
     "url": "https://eduversejr.com",
     "serviceArea": [
       "United States",
@@ -56,7 +56,7 @@ export default function AboutUsSection() {
       "Online Science Education for Grades 5-10",
       "Coding Education for Children Grades 5-10",
       "SAT Preparation",
-      "SSAT Preparation",
+      "PSAT Preparation",
       "Reva AI Teacher for Maths Grades 5-12",
       "One-on-One Teaching",
       "US Common Core Mathematics",
@@ -129,7 +129,7 @@ export default function AboutUsSection() {
               At EduVerseJr, we empower students with the critical Maths, Science
               and Coding skills necessary to thrive in the 21st century. Our experienced
               human teachers deliver live 1-to-1 classes for Grades 5–10 — including
-              dedicated SAT &amp; SSAT preparation — while our Reva AI Teacher provides
+              dedicated SAT &amp; PSAT preparation — while our Reva AI Teacher provides
               24/7 personalised teaching for Grades 5–12. Together, we cultivate a
               love for learning, build confidence, and foster problem-solving
               abilities that serve students throughout their academic journey.

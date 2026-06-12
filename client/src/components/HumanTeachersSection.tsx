@@ -19,7 +19,7 @@ import {
  * Content blocks (in order):
  *  1. Section heading + intro
  *  2. Our Teaching Team — text-based credentials (no photos, no teacher count)
- *  3. Subjects row (Maths · Science · Coding · SAT · SSAT)
+ *  3. Subjects row (Maths · Science · Coding · SAT · PSAT)
  *  4. Why parents stay — 6 reasons
  *  5. Country flag strip (6 countries)
  *  6. CTAs — Book Free Trial + Learn More
@@ -37,7 +37,7 @@ export default function HumanTeachersSection() {
     { label: "Science", color: "from-emerald-500 to-emerald-600" },
     { label: "Coding", color: "from-orange-500 to-orange-600" },
     { label: "SAT", color: "from-purple-500 to-purple-600" },
-    { label: "SSAT", color: "from-pink-500 to-pink-600" },
+    { label: "PSAT", color: "from-pink-500 to-pink-600" },
   ];
 
   const whyStay = [
@@ -71,7 +71,7 @@ export default function HumanTeachersSection() {
           </h2>
           <p className="text-gray-600 text-lg">
             Live, personalised 1-to-1 online classes in Mathematics, Science, Coding —
-            and full SAT &amp; SSAT preparation. Aligned to your child's school curriculum
+            and full SAT &amp; PSAT preparation. Aligned to your child's school curriculum
             across 6 countries.
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function HumanTeachersSection() {
             </div>
             <p className="text-center text-sm text-gray-500 mt-3">
               Grades 5–10 for Maths · Science · Coding ·&nbsp;
-              <span className="text-purple-700 font-semibold">SAT &amp; SSAT prep for high-school students</span>
+              <span className="text-purple-700 font-semibold">SAT &amp; PSAT prep for high-school students</span>
             </p>
           </div>
 

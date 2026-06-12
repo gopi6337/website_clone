@@ -5,7 +5,7 @@ import { Link } from "wouter";
 /**
  * ComparisonBlock — "Which is right for your child?" side-by-side card.
  * Both teaching modes presented as equally strong choices.
- *  - Left: EduVerseJr Human Teachers (Grades 5–10, live, SAT/SSAT included)
+ *  - Left: EduVerseJr Human Teachers (Grades 5–10, live, SAT/PSAT included)
  *  - Right: Reva AI Teacher (Grades 5–12, 24/7 AI)
  */
 export default function ComparisonBlock() {
@@ -15,7 +15,7 @@ export default function ComparisonBlock() {
     grades: "Grades 5–10",
     rows: [
       "Live 1-to-1 sessions, 60 mins, 2+ per week",
-      "Maths · Science · Coding · SAT · SSAT",
+      "Maths · Science · Coding · SAT · PSAT",
       "Aligned to 6 country curricula",
       "Same teacher every session",
       "Direct WhatsApp & parent updates",
