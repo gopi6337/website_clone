@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import RevaDemo from "@/components/RevaDemo";
-import WaitlistModal from "@/components/WaitlistModal";
+import WaitlistModal, { type WaitlistInterest } from "@/components/WaitlistModal";
 import {
   Sparkles, MessageSquare, Mic, Target, GalleryHorizontal,
   Dumbbell, TrendingDown, Upload, Award, BarChart3, Brain,
@@ -293,12 +293,19 @@ const structuredData = {
 };
 
 /* ─── Main page ─────────────────────────────────────────── */
+const VALID_INTERESTS: ReadonlyArray<WaitlistInterest> = ["reva", "hybrid", "sat", "sat-only"];
+
 export default function RevaPage() {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const [waitlistInterest, setWaitlistInterest] = useState<WaitlistInterest | undefined>();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get("waitlist") === "1") setWaitlistOpen(true);
+    const raw = params.get("interest");
+    if (raw && (VALID_INTERESTS as ReadonlyArray<string>).includes(raw)) {
+      setWaitlistInterest(raw as WaitlistInterest);
+    }
   }, []);
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
@@ -321,7 +328,7 @@ export default function RevaPage() {
       <RevaNav onWaitlistClick={() => setWaitlistOpen(true)} />
 
       {/* Waitlist modal */}
-      <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
+      <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} interest={waitlistInterest} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden min-h-[90vh] flex flex-col items-center justify-center px-4 py-24">

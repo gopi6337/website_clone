@@ -28,12 +28,22 @@ const COUNTRIES = [
   "Australia", "Singapore", "UAE", "Other",
 ];
 
+export type WaitlistInterest = "reva" | "hybrid" | "sat" | "sat-only";
+
+const INTEREST_LABELS: Record<WaitlistInterest, string> = {
+  "reva": "Reva AI",
+  "hybrid": "Hybrid (Reva AI + Human Teacher)",
+  "sat": "Reva AI + SAT Prep",
+  "sat-only": "SAT Prep Only",
+};
+
 interface WaitlistModalProps {
   open: boolean;
   onClose: () => void;
+  interest?: WaitlistInterest;
 }
 
-export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
+export default function WaitlistModal({ open, onClose, interest }: WaitlistModalProps) {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -95,7 +105,8 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
           parent_email: data.parentEmail,
           child_grade: data.childGrade,
           country: data.country || null,
-          source: "reva_landing",
+          source: interest ? `reva_landing_${interest}` : "reva_landing",
+          interested_in: interest || null,
         }),
       });
 
@@ -158,9 +169,15 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
               <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">Private Beta</span>
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Join the Reva AI waitlist</h3>
-            <p className="text-white/50 text-sm mb-6">
+            <p className="text-white/50 text-sm mb-4">
               We'll email you when access opens for your child's grade. No spam, no obligation.
             </p>
+            {interest && (
+              <div className="mb-6 inline-flex items-center gap-2 bg-purple-600/15 border border-purple-500/30 rounded-full px-3 py-1.5">
+                <span className="text-purple-300 text-[10px] font-semibold uppercase tracking-wider">Interested in</span>
+                <span className="text-white/90 text-xs font-medium">{INTEREST_LABELS[interest]}</span>
+              </div>
+            )}
 
             {/* Parent name */}
             <div className="mb-4">

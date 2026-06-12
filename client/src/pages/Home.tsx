@@ -27,6 +27,7 @@ type PricingTier = {
   yPct: number;
   accent: "purple" | "blue" | "green";
   needsHumanOnboard?: boolean;
+  cta: "trial" | "waitlist-reva" | "waitlist-hybrid" | "waitlist-sat" | "waitlist-sat-only";
 };
 type PricingGroup = {
   group: string;
@@ -41,9 +42,9 @@ const pricingData: PricingGroup[] = [
     group: "Grades 5-7",
     subtitle: "Math foundations",
     tiers: [
-      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 160, quarterly: 430, qSave: 50, yearly: 1499,  ySave: 421, yPct: 22, accent: "green" },
-      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",      monthly: 15,  quarterly: 39,  qSave: 6,  yearly: 119,   ySave: 61,  yPct: 34, accent: "purple" },
-      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",       monthly: 79,  quarterly: 199, qSave: 38, yearly: 699,   ySave: 249, yPct: 26, accent: "blue" },
+      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 160, quarterly: 430, qSave: 50, yearly: 1499,  ySave: 421, yPct: 22, accent: "green",  cta: "trial" },
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",      monthly: 15,  quarterly: 39,  qSave: 6,  yearly: 119,   ySave: 61,  yPct: 34, accent: "purple", cta: "waitlist-reva" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",       monthly: 79,  quarterly: 199, qSave: 38, yearly: 699,   ySave: 249, yPct: 26, accent: "blue",   cta: "waitlist-hybrid" },
     ],
   },
   {
@@ -51,30 +52,38 @@ const pricingData: PricingGroup[] = [
     subtitle: "Algebra & Geometry",
     featured: true,
     tiers: [
-      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month + PSAT prep",       monthly: 200, quarterly: 549, qSave: 51, yearly: 1899, ySave: 501, yPct: 21, accent: "green" },
-      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor + PSAT",  monthly: 30,  quarterly: 79,  qSave: 11, yearly: 239,  ySave: 121, yPct: 34, accent: "purple" },
-      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month + PSAT",  monthly: 109, quarterly: 289, qSave: 38, yearly: 999,  ySave: 309, yPct: 24, accent: "blue" },
+      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month + PSAT prep",       monthly: 200, quarterly: 549, qSave: 51, yearly: 1899, ySave: 501, yPct: 21, accent: "green",  cta: "trial" },
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor + PSAT",  monthly: 30,  quarterly: 79,  qSave: 11, yearly: 239,  ySave: 121, yPct: 34, accent: "purple", cta: "waitlist-reva" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month + PSAT",  monthly: 109, quarterly: 289, qSave: 38, yearly: 999,  ySave: 309, yPct: 24, accent: "blue",   cta: "waitlist-hybrid" },
     ],
   },
   {
     group: "Grades 11-12",
     subtitle: "Pre-Calc & Advanced Math",
     tiers: [
-      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 280, quarterly: 769, qSave: 71, yearly: 2699, ySave: 661, yPct: 20, accent: "green",  needsHumanOnboard: true },
-      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",     monthly: 50,  quarterly: 129, qSave: 21, yearly: 399,  ySave: 201, yPct: 34, accent: "purple" },
-      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",      monthly: 150, quarterly: 399, qSave: 51, yearly: 1399, ySave: 401, yPct: 22, accent: "blue",   needsHumanOnboard: true },
+      { name: "Human Teacher",  icon: "👩‍🏫", tagline: "8 hrs/month · 2 hrs/week",   monthly: 280, quarterly: 769, qSave: 71, yearly: 2699, ySave: 661, yPct: 20, accent: "green",  needsHumanOnboard: true, cta: "trial" },
+      { name: "Reva AI",        icon: "🤖", tagline: "Unlimited 24/7 AI tutor",     monthly: 50,  quarterly: 129, qSave: 21, yearly: 399,  ySave: 201, yPct: 34, accent: "purple", cta: "waitlist-reva" },
+      { name: "Hybrid",         icon: "🤝", tagline: "AI + 2 hrs human/month",      monthly: 150, quarterly: 399, qSave: 51, yearly: 1399, ySave: 401, yPct: 22, accent: "blue",   needsHumanOnboard: true, cta: "waitlist-hybrid" },
     ],
   },
   {
     group: "SAT Prep",
     subtitle: "Any grade · Digital SAT practice",
     tiers: [
-      { name: "Reva + SAT + Human", icon: "👩‍🏫", tagline: "Human SAT coach + AI + SAT mode", monthly: 345, quarterly: 929, qSave: 106, yearly: 3299, ySave: 841, yPct: 21, accent: "green",  needsHumanOnboard: true },
-      { name: "Reva + SAT Prep",    icon: "🤖", tagline: "Full Reva G5-12 + SAT mode",       monthly: 65,  quarterly: 169, qSave: 26,  yearly: 499,  ySave: 281, yPct: 36, accent: "purple" },
-      { name: "SAT Prep Only",      icon: "🎯", tagline: "Reva SAT mode, no main app",       monthly: 25,  quarterly: 65,  qSave: 10,  yearly: 199,  ySave: 101, yPct: 34, accent: "blue" },
+      { name: "Reva + SAT + Human", icon: "👩‍🏫", tagline: "Human SAT coach + AI + SAT mode", monthly: 345, quarterly: 929, qSave: 106, yearly: 3299, ySave: 841, yPct: 21, accent: "green",  needsHumanOnboard: true, cta: "trial" },
+      { name: "Reva + SAT Prep",    icon: "🤖", tagline: "Full Reva G5-12 + SAT mode",       monthly: 65,  quarterly: 169, qSave: 26,  yearly: 499,  ySave: 281, yPct: 36, accent: "purple", cta: "waitlist-sat" },
+      { name: "SAT Prep Only",      icon: "🎯", tagline: "Reva SAT mode, no main app",       monthly: 25,  quarterly: 65,  qSave: 10,  yearly: 199,  ySave: 101, yPct: 34, accent: "blue",   cta: "waitlist-sat-only" },
     ],
   },
 ];
+
+const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = {
+  "trial":             { label: "Book Free Trial →", href: "#booking" },
+  "waitlist-reva":     { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=reva" },
+  "waitlist-hybrid":   { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=hybrid" },
+  "waitlist-sat":      { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=sat" },
+  "waitlist-sat-only": { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=sat-only" },
+};
 
 export default function Home() {
   useEffect(() => {
@@ -304,12 +313,19 @@ export default function Home() {
                               🤝 Limited slots — teacher matched within 1 week
                             </p>
                           )}
+                          <a
+                            href={CTA_CONFIG[tier.cta].href}
+                            className={`block text-center mt-3 py-2.5 rounded-full text-xs font-semibold transition-colors ${
+                              tier.cta === "trial"
+                                ? "bg-gray-900 text-white hover:bg-gray-800"
+                                : "bg-white border border-gray-300 text-gray-800 hover:bg-gray-50"
+                            }`}
+                          >
+                            {CTA_CONFIG[tier.cta].label}
+                          </a>
                         </div>
                       );
                     })}
-                    <a href="/reva?waitlist=1" className="block text-center mt-2 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
-                      Join the Waitlist →
-                    </a>
                   </div>
                 )}
               </div>
