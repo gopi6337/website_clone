@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
-import { CheckCircle, Globe, Brain, Users, BookOpen, Sparkles, Target, Clock, MapPin, Phone, Mail, GraduationCap } from "lucide-react";
+import { CheckCircle, Globe, Brain, Users, BookOpen, Sparkles, Target, Clock, MapPin, Phone, Mail, GraduationCap, Cpu, Linkedin } from "lucide-react";
 
 const stats = [
   { value: "6", label: "Countries Served", detail: "US, UK, Canada, Australia, Singapore, UAE" },
@@ -75,6 +75,16 @@ export default function AboutPage() {
       "description": "Founder & CEO of EduVerseJr. MSc, BEd. 10+ years teaching Mathematics and Coding to international students online.",
       "email": "revathi.ceo@eduversejr.com"
     },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Gopinath Krishnan",
+        "jobTitle": "Chief Technology & AI Officer (CTAIO)",
+        "description": "Chief Technology & AI Officer of EduVerseJr. MCA. 24+ years in IT and telecom. Leads the architecture and AI strategy behind Reva AI — multi-model LLM orchestration on Google Vertex AI (Gemini 3 Flash/Pro), proactive whiteboard generation, voice teaching, and the SAT/PSAT exam product.",
+        "email": "Gopinath.ctaio@eduversejr.com",
+        "sameAs": "https://www.linkedin.com/in/gopinath-krishnan-286839171"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk",
@@ -338,16 +348,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder & Company */}
+      {/* Leadership & Company */}
       <section className="py-14 md:py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-center">
-            Founder & Company
+            Leadership & Company
           </h2>
           <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
-            EduVerseJr is a registered India MSME, founded and led by an experienced classroom teacher.
+            EduVerseJr is a registered India MSME, led by an experienced classroom teacher and an AI/technology leader.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Founder card */}
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-purple-50 mb-4">
@@ -363,6 +373,37 @@ export default function AboutPage() {
                 <a href="mailto:revathi.ceo@eduversejr.com" className="hover:text-purple-700 transition-colors">
                   revathi.ceo@eduversejr.com
                 </a>
+              </div>
+            </div>
+
+            {/* CTAIO card */}
+            <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-cyan-50 mb-4">
+                <Cpu className="w-7 h-7 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Gopinath Krishnan</h3>
+              <p className="text-sm text-cyan-700 font-semibold mb-3">Chief Technology & AI Officer (CTAIO) · MCA</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Gopinath leads the technology and AI strategy behind EduVerseJr's Reva AI — multi-model LLM orchestration on Google Vertex AI, real-time voice and whiteboard teaching, and the SAT/PSAT exam product. He brings 24+ years of engineering and IT leadership across telecom, SaaS, and AI startups.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <Mail className="w-4 h-4 text-cyan-600" />
+                  <a href="mailto:Gopinath.ctaio@eduversejr.com" className="hover:text-cyan-700 transition-colors break-all">
+                    Gopinath.ctaio@eduversejr.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <Linkedin className="w-4 h-4 text-cyan-600" />
+                  <a
+                    href="https://www.linkedin.com/in/gopinath-krishnan-286839171"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-700 transition-colors"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </div>
               </div>
             </div>
 
