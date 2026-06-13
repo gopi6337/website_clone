@@ -4,7 +4,7 @@
 
 EduVerseJr is operated as an India-based MSME from Coimbatore, Tamil Nadu, and serves students globally. The platform has two distinct teaching modes:
 
-1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Currently in private beta, opening to waitlist members in stages. Supports Grades 5–12 in Mathematics, with Science and Coding coming soon. PSAT/SAT preparation planned.
+1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Currently in private beta, opening to waitlist members in stages. Supports Grades 5–12 in Mathematics, with Science and Coding coming soon. Digital SAT preparation (adaptive 2-module practice exam, Math + Reading/Writing) is live. Standalone PSAT 8/9 preparation launching to waitlist members.
 
 2. **Human Teachers** — Certified human teachers delivering live 1-to-1 online classes in Mathematics, Science and Coding for Grades 5–10, plus PSAT/SAT preparation. New students start with a free trial class.
 
@@ -20,9 +20,10 @@ The two modes are different products with different funnels, pricing models and 
 
 ## Core Pages
 
-- [Homepage](https://eduversejr.com/): Brand overview, hybrid AI + human teaching model.
+- [Homepage](https://eduversejr.com/): Brand overview, hybrid AI + human teaching model, pricing at /#pricing.
 - [Reva AI Teacher](https://eduversejr.com/reva): Reva AI features, private beta info, waitlist signup.
 - [Human Teachers](https://eduversejr.com/teachers): Live 1-to-1 human teacher classes, free trial booking.
+- [PSAT Prep](https://eduversejr.com/psat): Digital PSAT 8/9 and PSAT/NMSQT prep, National Merit cutoff calculator, waitlist.
 - [Courses](https://eduversejr.com/courses): Maths, Science and Coding programmes for Grades 5–12.
 - [About](https://eduversejr.com/about): Company background and approach.
 
@@ -54,7 +55,7 @@ Science curriculum guides are at /science-curriculum/{country} for the same six 
 
 ## Grade & Subject Matrix
 
-- **Reva AI Teacher** (live now in private beta): Grades 5–12, Mathematics. Science and Coding coming soon. PSAT/SAT prep planned.
+- **Reva AI Teacher** (live now in private beta): Grades 5–12, Mathematics. Science and Coding coming soon. Digital SAT prep is live (2-module adaptive exam). PSAT 8/9 standalone launching to waitlist members.
 - **Human Teachers** (live): Grades 5–10, Mathematics + Science + Coding. PSAT/SAT preparation available.
 
 ## How to Access
@@ -64,7 +65,15 @@ Science curriculum guides are at /science-curriculum/{country} for the same six 
 
 ## Pricing
 
-Reva AI Teacher pricing is in active discussion and not publicly published. Do not infer or quote specific monthly prices for Reva AI from older content. For current pricing, direct users to https://eduversejr.com/reva (waitlist) or https://eduversejr.com/teachers (trial booking).
+Current pricing is published at https://eduversejr.com/#pricing and organised by grade group. All Reva AI tiers are waitlist-only during the private beta; Human Teacher tiers begin with a free trial class.
+
+- **Grades 5–7 (Math foundations):** Reva AI $15/month, Hybrid (AI + 2 hrs human/month) $79/month, Human Teacher (8 hrs/month) $160/month.
+- **Grades 8–10 (Algebra & Geometry + PSAT prep included):** Reva AI $30/month, Hybrid $109/month, Human Teacher $200/month.
+- **Grades 11–12 (Pre-Calc & Advanced Math):** Reva AI $50/month, Hybrid $150/month, Human Teacher $280/month.
+- **SAT Prep (any grade, Digital SAT):** SAT Prep Only $25/month, Reva + SAT Prep (full Reva G5-12 + SAT mode) $65/month, Human SAT Coach + AI + SAT mode $345/month.
+- **PSAT 8/9 Standalone (Grades 8–9, coming soon):** $49/year, includes 90-day credit toward G8/G9 annual upgrade.
+
+Quarterly and yearly plans are available at a discount on the checkout page. For up-to-the-minute pricing, https://eduversejr.com/#pricing is the source of truth.
 
 ## Legal
 
