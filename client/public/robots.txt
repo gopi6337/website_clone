@@ -28,3 +28,65 @@ Allow: /
 
 User-agent: Slurp
 Allow: /
+
+# AI engines / LLM crawlers — explicitly welcomed
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (Gemini training — separate from Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl (feeds most LLM training datasets)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot (used by various LLMs)
+User-agent: Diffbot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
