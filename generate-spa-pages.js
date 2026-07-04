@@ -267,38 +267,6 @@ const topLevelMeta = {
       ],
     }),
   },
-  'tutors': {
-    title: 'Expert Human Teachers — Live 1-to-1 Classes | EduVerseJr',
-    description: 'Book a free trial class with our expert human teachers. Live 1-to-1 online Maths, Science and Coding lessons for Grades 5–10 + PSAT/SAT preparation.',
-    ogTitle: 'Expert Human Teachers — Book a Free Trial Class | EduVerseJr',
-    ogDesc: 'Live 1-to-1 online classes with certified human teachers for Maths, Science, Coding (Grades 5–10) + PSAT/SAT prep.',
-    bodyContent: renderSeoBlock({
-      h1: 'Online Tutors — Live 1-to-1 Maths, Science & Coding Tutoring',
-      intro: [
-        'EduVerseJr connects students in Grades 5–10 (plus PSAT/SAT prep for Grades 9–12) with expert human tutors for live 1-to-1 online lessons in Mathematics, Science and Coding. Every tutor is subject-certified, classroom-experienced, and trained for online 1-to-1 teaching with an interactive whiteboard.',
-        'Tutoring is curriculum-aligned across the United States, United Kingdom, Canada, Australia, Singapore and the United Arab Emirates. Between live sessions, students get Reva AI Teacher (24/7) for homework, practice and revision. Parents see progress reports after every session.',
-      ],
-      sections: [
-        {
-          h2: 'Subjects covered',
-          p: 'Mathematics (Grades 5–10) including pre-algebra, algebra, geometry, statistics, trigonometry. Science (Grades 5–10) including biology, chemistry, physics, earth science. Coding (Grades 5–10) — Scratch, web (HTML/CSS/JS), and Python. PSAT and SAT Math prep for Grades 9–12.',
-        },
-        {
-          h2: 'Why 1-to-1?',
-          p: '1-to-1 tutoring means the lesson is paced exactly to your child\'s pace. The tutor sees every step, catches gaps early, and adapts within the same session. Group tutoring averages everything to the middle — 1-to-1 is built for the student in front of the screen.',
-        },
-      ],
-      faqs: [
-        { q: 'Is the first class free?', a: 'Yes — book a free trial class on this page. No payment until you decide to continue.' },
-        { q: 'Do tutors follow my child\'s school curriculum?', a: 'Yes. Choose your country during signup and tutors map every lesson to your local curriculum standards.' },
-      ],
-      links: [
-        { href: '/teachers', label: 'Visit the Teachers page' },
-        { href: '/reva', label: 'Reva AI — 24/7 maths support' },
-        { href: '/courses', label: 'All courses' },
-      ],
-    }),
-  },
   'privacy-policy': {
     title: 'Privacy Policy | EduVerseJr',
     description: 'How EduVerseJr collects, uses and protects student and parent data. COPPA-compliant, GDPR-aware. Governed under Indian law.',
