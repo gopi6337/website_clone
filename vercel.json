@@ -12,10 +12,12 @@
     { "source": "/science-curriculum/uae-\\(dubai\\)/", "destination": "/science-curriculum/uae", "permanent": true },
     { "source": "/science-curriculum/uae-%28dubai%29", "destination": "/science-curriculum/uae", "permanent": true },
     { "source": "/science-curriculum/uae-%28dubai%29/", "destination": "/science-curriculum/uae", "permanent": true },
+    { "source": "/tutors", "destination": "/teachers", "permanent": true },
+    { "source": "/curriculum", "destination": "/curriculum/united-states", "permanent": true },
+    { "source": "/science-curriculum", "destination": "/science-curriculum/united-states", "permanent": true },
+    { "source": "/login", "destination": "https://revaai.eduversejr.com/login", "permanent": false },
+    { "source": "/404", "destination": "/", "permanent": false },
     { "source": "/:path+/", "destination": "/:path+", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {

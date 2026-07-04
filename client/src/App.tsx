@@ -1,8 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router as WouterRouter, useLocation } from "wouter";
-import { useEffect } from "react";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -19,16 +18,6 @@ import TermsOfUsePage from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 
-// Permanent client-side redirect for legacy /tutors URLs.
-// Keeps old SEO links and bookmarks working without 404s.
-function TutorsRedirect() {
-  const [, setLocation] = useLocation();
-  useEffect(() => {
-    setLocation("/teachers", { replace: true });
-  }, [setLocation]);
-  return null;
-}
-
 function Router() {
   // Use Vite's BASE_URL so routing works whether served at / or /website/
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -41,8 +30,7 @@ function Router() {
         <Route path={"/psat"} component={PsatPage} />
         <Route path={"/courses"} component={CoursesPage} />
         <Route path={"/teachers"} component={TeachersPage} />
-        {/* Legacy /tutors → /teachers redirect (SEO + bookmarks) */}
-        <Route path={"/tutors"} component={TutorsRedirect} />
+        {/* /tutors now redirects → /teachers server-side via vercel.json */}
         <Route path={"/curriculum/:country"} component={CurriculumViewer} />
         <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />
         <Route path={"/login"} component={Login} />
