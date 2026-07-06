@@ -82,6 +82,9 @@ export default function FooterSection() {
               <p>
                 <a href="mailto:info@eduversejr.com" className="hover:text-white transition-colors">info@eduversejr.com</a>
               </p>
+              <p className="pt-2">
+                <a href="https://www.linkedin.com/in/revathi-gopinath-3b598b412" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Founder on LinkedIn →</a>
+              </p>
             </address>
           </div>
         </div>
