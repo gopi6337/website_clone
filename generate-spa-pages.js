@@ -147,7 +147,7 @@ const topLevelMeta = {
       sections: [
         {
           h2: 'Founder & CEO',
-          p: 'EduVerseJr is founded and led by Revathi Gopinath (MSc, BEd) — Founder & CEO. Revathi has over 10 years of experience teaching Mathematics and Coding to international students online, having taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI. Contact: revathi.ceo@eduversejr.com.',
+          p: 'EduVerseJr is founded and led by Revathi Gopinath (MSc, BEd) — Founder & CEO. Revathi has over 10 years of experience teaching Mathematics and Coding to international students online, having taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI. Contact: revathi.ceo@eduversejr.com · LinkedIn: https://www.linkedin.com/in/revathi-gopinath-3b598b412',
         },
         {
           h2: 'Company information',

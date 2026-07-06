@@ -73,7 +73,8 @@ export default function AboutPage() {
       "name": "Revathi Gopinath",
       "jobTitle": "Founder & CEO",
       "description": "Founder & CEO of EduVerseJr. MSc, BEd. 10+ years teaching Mathematics and Coding to international students online.",
-      "email": "revathi.ceo@eduversejr.com"
+      "email": "revathi.ceo@eduversejr.com",
+      "sameAs": "https://www.linkedin.com/in/revathi-gopinath-3b598b412"
     },
     "employee": [
       {
@@ -172,7 +173,10 @@ export default function AboutPage() {
         }
       ]
     },
-    "sameAs": []
+    "sameAs": [
+      "https://www.linkedin.com/in/revathi-gopinath-3b598b412",
+      "https://www.linkedin.com/in/gopinath-krishnan-286839171"
+    ]
   };
 
   const softwareSchema = {
@@ -368,11 +372,24 @@ export default function AboutPage() {
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Revathi has over 10 years of experience teaching Mathematics and Coding to international students online. She has taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI — making personalised, curriculum-aligned learning accessible to students worldwide.
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-700">
-                <Mail className="w-4 h-4 text-purple-600" />
-                <a href="mailto:revathi.ceo@eduversejr.com" className="hover:text-purple-700 transition-colors">
-                  revathi.ceo@eduversejr.com
-                </a>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <Mail className="w-4 h-4 text-purple-600" />
+                  <a href="mailto:revathi.ceo@eduversejr.com" className="hover:text-purple-700 transition-colors">
+                    revathi.ceo@eduversejr.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-700">
+                  <Linkedin className="w-4 h-4 text-purple-600" />
+                  <a
+                    href="https://www.linkedin.com/in/revathi-gopinath-3b598b412"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-purple-700 transition-colors"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </div>
               </div>
             </div>
 
