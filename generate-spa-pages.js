@@ -45,9 +45,9 @@ function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
 const topLevelMeta = {
   'reva': {
     title: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12 | EduVerseJr',
-    description: 'Meet Reva, your child\'s 24/7 AI maths teacher. Chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 + PSAT/SAT. Currently in private beta — join the waitlist.',
+    description: 'Meet Reva, your child\'s 24/7 AI maths teacher. Chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 + PSAT/SAT. Now open — start free, no credit card.',
     ogTitle: 'Reva AI Teacher — 24/7 AI Maths Tutor | EduVerseJr',
-    ogDesc: 'AI maths teacher for Grades 5–12. Chat, voice, interactive whiteboard, smart practice, progress tracking. Private beta — join the waitlist.',
+    ogDesc: 'AI maths teacher for Grades 5–12. Chat, voice, interactive whiteboard, smart practice, progress tracking. Now open — start your free trial.',
     bodyContent: renderSeoBlock({
       h1: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12',
       intro: [
@@ -65,7 +65,7 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & access',
-          p: 'Reva AI is currently in private beta. A free tier (10 messages/day, Chapter 1 of each course) is planned at public launch, along with paid tiers that unlock unlimited messages, full chapters, whiteboard interactive mode and voice practice. Join the waitlist on this page to be notified.',
+          p: 'Reva AI is open now. The free tier gives 10 AI actions/day and Chapter 1 of each course with a free trial — no credit card required. Paid tiers unlock unlimited messages, full chapters, whiteboard interactive mode and voice practice. Sign up at revaai.eduversejr.com to get started.',
         },
       ],
       faqs: [
@@ -73,7 +73,7 @@ const topLevelMeta = {
         { q: 'Which curricula does Reva follow?', a: 'US Common Core, UK GCSE / National Curriculum, Canadian provincial curricula, Australian ACARA, Singapore MOE and UAE MOE.' },
         { q: 'Is Reva safe for children?', a: 'Yes. Reva runs through a content moderation pipeline, has parent-visible violation alerts, and is restricted to maths topics. Under-18 students must use a parent-supervised account.' },
         { q: 'Does Reva replace a human teacher?', a: 'No. Reva is an always-on AI maths tutor for daily practice, homework help and revision. For exam-prep coaching, doubt-solving over video, and personalised pedagogy, EduVerseJr also offers live 1-to-1 expert human teachers.' },
-        { q: 'How much does it cost?', a: 'Reva is in private beta — no public pricing yet. The plan is a free tier (10 messages/day, limited chapters) plus paid tiers for unlimited use and premium features.' },
+        { q: 'How much does it cost?', a: 'Reva is free to start — a free tier gives 10 AI actions/day and Chapter 1 of each course, no credit card required. Paid tiers add unlimited use and premium features; pricing is on the EduVerseJr pricing page.' },
       ],
       links: [
         { href: '/teachers', label: 'Book a free trial class with an expert human teacher' },
@@ -930,7 +930,7 @@ const homepageBody = renderSeoBlock({
   sections: [
     {
       h2: 'Meet Reva — your child\'s 24/7 AI maths teacher',
-      p: 'Reva explains concepts step-by-step on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows. Five core modes — Learn, Whiteboard, Practice, Revision, and Ask Reva — cover the full daily learning loop. Currently in private beta with a free tier planned at public launch (10 messages/day, Chapter 1 of each course).',
+      p: 'Reva explains concepts step-by-step on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows. Five core modes — Learn, Whiteboard, Practice, Revision, and Ask Reva — cover the full daily learning loop. Open now with a free tier (10 AI actions/day, Chapter 1 of each course) — start free, no credit card.',
     },
     {
       h2: 'Expert human teachers — live 1-to-1 classes',
@@ -950,7 +950,7 @@ const homepageBody = renderSeoBlock({
     { q: 'Which subjects?', a: 'Mathematics, Science, and Coding. Subject availability depends on grade — see our Courses page for the full matrix.' },
     { q: 'Is Reva the same as ChatGPT?', a: 'No. Reva is restricted to curriculum-aligned maths content, runs through a content review pipeline, remembers your child\'s past topics across sessions, and is built specifically for school-age learners.' },
     { q: 'How do I book a free trial?', a: 'Visit our Teachers page, fill in the form with your child\'s grade and country, and we will email back within 24 hours to schedule.' },
-    { q: 'What does it cost?', a: 'Reva AI is in private beta; a free tier is planned at launch with paid tiers for unlimited use. Human teacher pricing is shown at checkout and varies by country and class frequency.' },
+    { q: 'What does it cost?', a: 'Reva AI is free to start — a free tier gives 10 AI actions/day, with paid tiers for unlimited use. Human teacher pricing is shown at checkout and varies by country and class frequency.' },
   ],
   links: [
     { href: '/reva', label: 'Meet Reva — 24/7 AI maths teacher' },

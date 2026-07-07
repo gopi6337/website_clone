@@ -11,6 +11,9 @@ import {
   GraduationCap, Rocket
 } from "lucide-react";
 
+/* ─── Signup (Reva is now open — free trial, no invite) ──── */
+const SIGNUP_URL = "https://revaai.eduversejr.com/register";
+
 /* ─── Feature data ─────────────────────────────────────── */
 const features = [
   {
@@ -103,26 +106,26 @@ const features = [
 const steps = [
   {
     number: "01",
-    title: "Join the waitlist",
-    description: "Drop your email and your child's grade. We'll notify you the moment Reva opens for new students.",
+    title: "Create your free account",
+    description: "Sign up in under a minute with your email and your child's grade — no credit card, no invite needed.",
   },
   {
     number: "02",
-    title: "Get your invite",
-    description: "Once your spot is ready, we'll send a personalised sign-up link by email — no credit card needed to start.",
+    title: "Start your free trial",
+    description: "Jump straight in and start learning free. Explore chat, voice, whiteboard and smart practice with Reva.",
   },
   {
     number: "03",
-    title: "Start learning",
+    title: "Learn every day",
     description: "Chat, voice mode, whiteboard, smart practice — Reva teaches Maths from day one and adapts to your child.",
   },
 ];
 
 const faqs = [
   { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
-  { q: "Is Reva really free?", a: "Reva AI is currently in private beta with a small cohort of students. Pricing for Grades 5-7 and Grades 8-10 (PSAT included) is published on the EduVerseJr pricing page (eduversejr.com/#pricing). Grades 11-12 with SAT prep pricing will be announced shortly. Join the waitlist to be notified when access opens." },
+  { q: "Is Reva really free?", a: "Yes — you can start using Reva for free with a free trial, no credit card required. Just sign up at revaai.eduversejr.com to get started. Pricing for Grades 5-7 and Grades 8-10 (PSAT included) is published on the EduVerseJr pricing page (eduversejr.com/#pricing), and Grades 11-12 with SAT prep pricing will be announced shortly." },
   { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12 plus SAT Math prep (Grades 11–12) in private pilot. Reading & Writing for SAT, PSAT, Science and Coding are coming next — all under the same Reva AI Teacher platform." },
-  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes. SAT Math prep is live in private pilot for Grades 11–12: a full Digital SAT Math simulation (44 items across two 35-minute modules), an estimated 200–800 score, a per-skill breakdown, and Reva's personalised explanations on every wrong answer via whiteboard and voice. SAT Reading & Writing and PSAT prep (Grades 8–10) are coming next — join the waitlist to hear when they open." },
+  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes. SAT Math prep is live in private pilot for Grades 11–12: a full Digital SAT Math simulation (44 items across two 35-minute modules), an estimated 200–800 score, a per-skill breakdown, and Reva's personalised explanations on every wrong answer via whiteboard and voice. SAT Reading & Writing and PSAT prep (Grades 8–10) are coming next." },
   { q: "Does Reva work with US Common Core, UK, or Australian curriculum?", a: "Yes. Reva AI Teacher is aligned to US Common Core State Standards, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian Provincial Standards, and UAE Ministry of Education standards. Reva teaches to the exact curriculum your child follows at school." },
   { q: "Can Reva help with homework?", a: "Absolutely. Upload a photo or PDF of any Maths homework — Reva AI Teacher reads it, explains it, and walks through solutions step by step." },
   { q: "How is Reva different from Khan Academy or other AI teachers?", a: "Reva is purpose-built for teaching, not just answering. It uses a live interactive whiteboard to show step-by-step visual solutions, remembers your child's weaknesses across sessions, supports voice interaction, and works alongside human teachers on the same platform. Most AI teachers provide one-off answers — Reva builds a continuous, personalised learning relationship." },
@@ -132,7 +135,7 @@ const faqs = [
 ];
 
 /* ─── Minimal custom nav ─────────────────────────────────── */
-function RevaNav({ onWaitlistClick }: { onWaitlistClick: () => void }) {
+function RevaNav() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0a0a0f]/80 backdrop-blur-xl">
@@ -161,13 +164,12 @@ function RevaNav({ onWaitlistClick }: { onWaitlistClick: () => void }) {
 
         {/* CTA */}
         <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={onWaitlistClick}
+          <a
+            href={SIGNUP_URL}
             className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all shadow-lg shadow-purple-900/30"
           >
-            Join Waitlist <ArrowRight className="w-4 h-4" />
-          </button>
+            Start Free <ArrowRight className="w-4 h-4" />
+          </a>
           <button className="md:hidden text-white/70" onClick={() => setOpen(!open)}>
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -179,13 +181,13 @@ function RevaNav({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           <a href="#features" className="block text-white/70 hover:text-white py-1" onClick={() => setOpen(false)}>Features</a>
           <a href="#how-it-works" className="block text-white/70 hover:text-white py-1" onClick={() => setOpen(false)}>How It Works</a>
           <a href="#faq" className="block text-white/70 hover:text-white py-1" onClick={() => setOpen(false)}>FAQ</a>
-          <button
-            type="button"
-            onClick={() => { setOpen(false); onWaitlistClick(); }}
+          <a
+            href={SIGNUP_URL}
+            onClick={() => setOpen(false)}
             className="block w-full mt-2 text-center bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold px-5 py-3 rounded-full"
           >
-            Join Waitlist →
-          </button>
+            Start Free →
+          </a>
         </div>
       )}
     </nav>
@@ -247,8 +249,10 @@ const structuredData = {
       "description": "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12, available 24/7. Powered by AI, Reva teaches Mathematics, Science, and Coding through conversational AI, an interactive live whiteboard, voice interaction, personalised smart practice, and weakness tracking. Aligned to US Common Core, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian, and UAE curricula.",
       "offers": {
         "@type": "Offer",
-        "availability": "https://schema.org/PreOrder",
-        "description": "Reva AI Teacher is currently in private beta with a small student cohort. Pricing and access tiers will be announced after beta. Join the waitlist for early access.",
+        "availability": "https://schema.org/InStock",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Reva AI Teacher is open now with a free trial — no credit card required. Sign up at revaai.eduversejr.com to start. Paid plans are published on the EduVerseJr pricing page.",
       },
       "provider": {
         "@type": "Organization",
@@ -311,11 +315,11 @@ export default function RevaPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>Reva AI Teacher — EduVerseJr | Maths, Science & Coding · 24/7</title>
-        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12) plus SAT Math prep in private pilot (Grades 11–12). Science, Coding, PSAT and SAT Reading & Writing coming next. Chat, voice, whiteboard, smart practice and weakness tracking. Currently in private beta — join the waitlist." />
+        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12) plus SAT Math prep in private pilot (Grades 11–12). Science, Coding, PSAT and SAT Reading & Writing coming next. Chat, voice, whiteboard, smart practice and weakness tracking. Now open — start free, no credit card." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
         <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI science teacher, AI coding teacher, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, science teacher online, coding teacher for kids, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
-        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12). SAT Math prep is now in private pilot (Grades 11–12). Science, Coding and PSAT coming next. Join the waitlist." />
+        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12). SAT Math prep is now in private pilot (Grades 11–12). Science, Coding and PSAT coming next. Now open — start free." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
         <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
         <meta property="og:type" content="website" />
@@ -325,7 +329,7 @@ export default function RevaPage() {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      <RevaNav onWaitlistClick={() => setWaitlistOpen(true)} />
+      <RevaNav />
 
       {/* Waitlist modal */}
       <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} interest={waitlistInterest} />
@@ -342,7 +346,7 @@ export default function RevaPage() {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              Maths (Live) &nbsp;·&nbsp; Science &amp; Coding (Soon) &nbsp;·&nbsp; Private Beta
+              Maths (Live) &nbsp;·&nbsp; Science &amp; Coding (Soon) &nbsp;·&nbsp; Now Open
             </div>
             <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-medium px-4 py-2 rounded-full">
               <GraduationCap className="w-3.5 h-3.5" />
@@ -367,20 +371,19 @@ export default function RevaPage() {
           </h1>
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Reva is your child's personal AI teacher — currently in private beta. Teaching Maths for Grades 5–12 now,
+            Reva is your child's personal AI teacher — now open with a free trial. Teaching Maths for Grades 5–12 now,
             with SAT Math prep in private pilot. Science, Coding, PSAT and SAT Reading &amp; Writing coming next.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <button
-              type="button"
-              onClick={() => setWaitlistOpen(true)}
+            <a
+              href={SIGNUP_URL}
               className="group flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl shadow-purple-900/40"
             >
-              Join the Waitlist
+              Start Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
             <a
               href="#features"
               className="flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-8 py-4 rounded-full text-lg transition-all"
@@ -403,7 +406,7 @@ export default function RevaPage() {
               { value: "13", label: "AI Features" },
               { value: "3", label: "Subjects" },
               { value: "24/7", label: "Always Available" },
-              { value: "Beta", label: "Private Access" },
+              { value: "Free", label: "Free Trial" },
             ].map((s) => (
               <div key={s.label} className="border border-white/10 rounded-2xl py-4 px-3 bg-white/3">
                 <div className="text-2xl font-black text-white mb-1">{s.value}</div>
@@ -464,7 +467,7 @@ export default function RevaPage() {
           </div>
           {/* Demo runs on its own white background (shows real app UI) */}
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-900/30 ring-1 ring-white/10">
-            <RevaDemo onWaitlistClick={() => setWaitlistOpen(true)} />
+            <RevaDemo />
           </div>
         </div>
       </section>
@@ -562,20 +565,19 @@ export default function RevaPage() {
                 <Sparkles className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-                Be first when Reva opens
+                Start learning with Reva today
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-                Reva AI is in private beta with a small cohort of students. Drop your email and we'll let
-                you know the moment your child can start learning with Reva.
+                Reva is open now. Create a free account and your child can start learning Maths with their
+                own AI teacher in under a minute — no credit card needed.
               </p>
-              <button
-                type="button"
-                onClick={() => setWaitlistOpen(true)}
+              <a
+                href={SIGNUP_URL}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold px-10 py-4 rounded-full text-lg transition-all shadow-2xl shadow-purple-900/50"
               >
-                Join the Waitlist <ArrowRight className="w-5 h-5" />
-              </button>
-              <p className="text-white/30 text-sm mt-4">Private beta · Limited cohort · Email notification when ready</p>
+                Start Free <ArrowRight className="w-5 h-5" />
+              </a>
+              <p className="text-white/30 text-sm mt-4">Free trial · No credit card · Start in 60 seconds</p>
             </div>
           </div>
         </div>
