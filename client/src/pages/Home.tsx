@@ -85,13 +85,14 @@ const pricingData: PricingGroup[] = [
   },
 ];
 
+const SIGNUP_URL = "https://revaai.eduversejr.com/register";
 const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = {
   "trial":             { label: "Book Free Trial →", href: "#booking" },
-  "waitlist-reva":     { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=reva" },
-  "waitlist-hybrid":   { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=hybrid" },
-  "waitlist-sat":      { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=sat" },
-  "waitlist-sat-only": { label: "Join the Waitlist →", href: "/reva?waitlist=1&interest=sat-only" },
-  "waitlist-psat":     { label: "Join the PSAT Waitlist →", href: "/psat?waitlist=1&interest=psat" },
+  "waitlist-reva":     { label: "Start Free →", href: SIGNUP_URL },
+  "waitlist-hybrid":   { label: "Get Started →", href: SIGNUP_URL },
+  "waitlist-sat":      { label: "Coming Soon", href: "/reva?waitlist=1&interest=sat" },
+  "waitlist-sat-only": { label: "Coming Soon", href: "/reva?waitlist=1&interest=sat-only" },
+  "waitlist-psat":     { label: "Coming Soon", href: "/psat?waitlist=1&interest=psat" },
 };
 
 export default function Home() {
@@ -247,11 +248,11 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              💎 Private Beta · Limited Cohort
+              ✨ Now Open · Start Free
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Pricing</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Choose the right plan for your child. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle — any grade. Join the waitlist to be notified when access opens.
+              Choose the right plan for your child. Sign up free and start today. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle — any grade (coming soon).
             </p>
           </div>
 
@@ -348,7 +349,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-xs text-gray-500 mt-8 max-w-2xl mx-auto">
-            All prices in USD. Family plans and inaugural launch offer details will follow when EduVerseJr exits private beta. PSAT 8/9 standalone includes a 90-day upgrade credit toward G8/G9 annual plans.
+            All prices in USD. Family plans and inaugural launch offer details will follow soon. PSAT 8/9 standalone includes a 90-day upgrade credit toward G8/G9 annual plans.
           </p>
         </div>
       </section>

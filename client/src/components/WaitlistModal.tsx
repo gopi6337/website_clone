@@ -167,11 +167,11 @@ export default function WaitlistModal({ open, onClose, interest }: WaitlistModal
           <form onSubmit={handleSubmit(onSubmit)} className="p-8" noValidate>
             <div className="flex items-center gap-2 mb-1">
               <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">Private Beta</span>
+              <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">Coming Soon</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Join the Reva AI waitlist</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Get notified when this launches</h3>
             <p className="text-white/50 text-sm mb-4">
-              We'll email you when access opens for your child's grade. No spam, no obligation.
+              Reva AI for Maths is open now — sign up free anytime. Leave your email and we'll tell you the moment this option is available. No spam, no obligation.
             </p>
             {interest && (
               <div className="mb-6 inline-flex items-center gap-2 bg-purple-600/15 border border-purple-500/30 rounded-full px-3 py-1.5">
