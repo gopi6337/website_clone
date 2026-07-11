@@ -12,6 +12,8 @@ import SatPage from "./pages/SatPage";
 import NationalMeritCalculatorPage from "./pages/NationalMeritCalculatorPage";
 import CoursesPage from "./pages/CoursesPage";
 import TeachersPage from "./pages/TeachersPage";
+import ResourcesPage from "./pages/ResourcesPage";
+import ResourceArticlePage from "./pages/ResourceArticlePage";
 import CurriculumViewer from "./pages/CurriculumViewer";
 import ScienceCurriculumViewer from "./pages/ScienceCurriculumViewer";
 import Login from "./pages/Login";
@@ -34,6 +36,8 @@ function Router() {
         <Route path={"/national-merit-calculator"} component={NationalMeritCalculatorPage} />
         <Route path={"/courses"} component={CoursesPage} />
         <Route path={"/teachers"} component={TeachersPage} />
+        <Route path={"/resources"} component={ResourcesPage} />
+        <Route path={"/resources/:slug"} component={ResourceArticlePage} />
         {/* /tutors now redirects → /teachers server-side via vercel.json */}
         <Route path={"/curriculum/:country"} component={CurriculumViewer} />
         <Route path={"/science-curriculum/:country"} component={ScienceCurriculumViewer} />

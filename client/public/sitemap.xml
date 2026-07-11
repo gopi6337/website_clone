@@ -176,4 +176,38 @@
     <priority>0.4</priority>
   </url>
 
+  <!-- Resources & Guides hub -->
+  <url>
+    <loc>https://eduversejr.com/resources</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Resource articles -->
+  <url>
+    <loc>https://eduversejr.com/resources/digital-sat-format-scoring-timing</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eduversejr.com/resources/psat-nmsqt-national-merit-explained</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eduversejr.com/resources/sat-vs-psat-differences</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eduversejr.com/resources/help-your-child-with-maths-at-home</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

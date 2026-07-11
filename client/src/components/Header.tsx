@@ -80,6 +80,9 @@ export default function Header() {
             <Link href="/psat" className="nav-link whitespace-nowrap">
               PSAT Prep
             </Link>
+            <Link href="/resources" className="nav-link whitespace-nowrap">
+              Resources
+            </Link>
             <a href="/#pricing" className="nav-link whitespace-nowrap">
               Pricing
             </a>
@@ -139,6 +142,9 @@ export default function Header() {
             </Link>
             <Link href="/psat" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               PSAT Prep
+            </Link>
+            <Link href="/resources" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Resources
             </Link>
             <a href="/#pricing" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Pricing

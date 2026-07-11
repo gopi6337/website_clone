@@ -64,6 +64,7 @@ export default function FooterSection() {
               <li><a href="/reva" className="hover:text-white transition-colors">Reva AI Teacher</a></li>
               <li><a href="/sat" className="hover:text-white transition-colors">SAT Prep</a></li>
               <li><a href="/psat" className="hover:text-white transition-colors">PSAT &amp; National Merit</a></li>
+              <li><a href="/resources" className="hover:text-white transition-colors">Resources &amp; Guides</a></li>
               <li><a href="/courses" className="hover:text-white transition-colors">Courses</a></li>
               <li><a href="https://revaai.eduversejr.com/login" className="hover:text-white transition-colors">Sign in to Reva AI</a></li>
             </ul>

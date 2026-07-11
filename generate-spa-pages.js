@@ -7,6 +7,7 @@ import {
   CUTOFF_CLASS_LABEL,
   SEMIFINALIST_CUTOFFS,
 } from './client/src/data/nationalMeritCutoffs.js';
+import { ARTICLES, ARTICLE_AUTHOR } from './client/src/data/resourceArticles.js';
 
 // Static National Merit Semifinalist cutoff table for the crawler prerender —
 // single source of truth shared with the React calculator page.
@@ -1201,6 +1202,126 @@ Object.entries(scienceCurriculumMeta).forEach(([page, meta]) => {
   console.log(`✓ Created science-curriculum/${page}.html (unique meta + SEO body + per-page schema)`);
 });
 
+// ─────────────────────────────────────────────────────────────────────
+// Resources / guides hub → /dist/public/resources.html + resources/<slug>.html
+// Content comes from client/src/data/resourceArticles.js (shared with the
+// React pages). Hub = CollectionPage; each article = Article + FAQPage.
+// ─────────────────────────────────────────────────────────────────────
+const resourcesDir = path.join(publicDir, 'resources');
+if (!fs.existsSync(resourcesDir)) {
+  fs.mkdirSync(resourcesDir, { recursive: true });
+}
+
+// Hub index page.
+const resourcesHubMeta = {
+  title: 'Resources & Guides — SAT, PSAT, National Merit & Maths | EduVerseJr',
+  description: 'Free EduVerseJr guides: how the digital SAT works, PSAT/NMSQT & National Merit explained, SAT vs PSAT, and how to help your child with maths at home.',
+  ogTitle: 'Resources & Guides — SAT, PSAT, National Merit & Maths | EduVerseJr',
+  ogDesc: 'Free, evergreen guides on the digital SAT, PSAT/NMSQT & National Merit, and supporting maths at home.',
+};
+const resourcesHubBlock = renderSeoBlock({
+  h1: 'Resources & Guides for students and parents',
+  intro: [
+    'Clear, factual, free guides on the digital SAT and PSAT, the National Merit Scholarship, and helping your child with maths at home — written by EduVerseJr founder Revathi Gopinath (MSc, BEd), an experienced maths and coding teacher.',
+  ],
+  sections: ARTICLES.map((a) => ({
+    h2: a.title,
+    html: `<p>${a.excerpt}</p><p><a href="/resources/${a.slug}">Read the guide: ${a.title}</a> · ${a.category} · ${a.readMins} min read</p>`,
+  })),
+  links: [
+    { href: '/sat', label: 'SAT prep by Reva AI' },
+    { href: '/psat', label: 'PSAT prep by Reva AI' },
+    { href: '/national-merit-calculator', label: 'Free National Merit calculator' },
+    { href: '/reva', label: 'Meet Reva — 24/7 AI maths tutor' },
+  ],
+});
+{
+  const canonicalUrl = 'https://eduversejr.com/resources';
+  let pageHtml = injectMeta(indexHtml, resourcesHubMeta, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, resourcesHubBlock.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: 'Resources',
+    name: 'EduVerseJr Resources & Guides',
+    description: resourcesHubMeta.description,
+    faqs: null,
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'EduVerseJr Resources & Guides',
+        url: canonicalUrl,
+        description: resourcesHubMeta.description,
+        isPartOf: { '@type': 'WebSite', name: 'EduVerseJr', url: 'https://eduversejr.com' },
+        hasPart: ARTICLES.map((a) => ({
+          '@type': 'Article',
+          headline: a.title,
+          url: `https://eduversejr.com/resources/${a.slug}`,
+        })),
+      },
+    ],
+  });
+  fs.writeFileSync(path.join(publicDir, 'resources.html'), pageHtml, 'utf-8');
+  console.log('✓ Created resources.html (hub + CollectionPage schema)');
+}
+
+// Individual article pages.
+ARTICLES.forEach((a) => {
+  const canonicalUrl = `https://eduversejr.com/resources/${a.slug}`;
+  const block = renderSeoBlock({
+    h1: a.h1,
+    intro: a.intro,
+    sections: a.sections.map((s) => ({
+      h2: s.h2,
+      html:
+        s.body.map((p) => `<p>${p}</p>`).join('') +
+        (s.bullets ? `<ul>${s.bullets.map((b) => `<li>${b}</li>`).join('')}</ul>` : ''),
+    })),
+    faqs: a.faqs,
+    links: a.related,
+  });
+  let pageHtml = injectMeta(indexHtml, {
+    title: `${a.title} | EduVerseJr`,
+    description: a.metaDescription,
+    ogTitle: a.ogTitle,
+    ogDesc: a.ogDesc,
+  }, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, block.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: a.title,
+    name: a.title,
+    description: a.metaDescription,
+    faqs: a.faqs,
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: a.title,
+        description: a.metaDescription,
+        url: canonicalUrl,
+        mainEntityOfPage: canonicalUrl,
+        datePublished: a.datePublished,
+        dateModified: a.dateModified,
+        author: {
+          '@type': 'Person',
+          name: ARTICLE_AUTHOR.name,
+          url: ARTICLE_AUTHOR.url,
+          jobTitle: 'Founder & CEO',
+        },
+        publisher: {
+          '@type': 'Organization',
+          '@id': ORG_ID,
+          name: 'EduVerseJr',
+          logo: { '@type': 'ImageObject', url: 'https://eduversejr.com/logo.jpg' },
+        },
+      },
+    ],
+  });
+  fs.writeFileSync(path.join(resourcesDir, `${a.slug}.html`), pageHtml, 'utf-8');
+  console.log(`✓ Created resources/${a.slug}.html (Article + FAQPage schema)`);
+});
+
 // Homepage — overwrite /dist/public/index.html with prerender SEO body
 // (title and meta are already correct in base index.html, we only inject body)
 const homepageBody = renderSeoBlock({
@@ -1281,5 +1402,7 @@ const total =
   Object.keys(topLevelMeta).length +
   Object.keys(curriculumMeta).length +
   Object.keys(scienceCurriculumMeta).length +
+  1 + // resources hub
+  ARTICLES.length +
   1;
 console.log(`\n✅ Generated ${total} SPA pages with unique meta tags.`);
