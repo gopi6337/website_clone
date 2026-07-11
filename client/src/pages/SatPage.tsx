@@ -380,11 +380,18 @@ export default function SatPage() {
               calculator. Selectivity Index cutoffs vary by roughly 14 points across states — Reva tells you the
               one that matters for yours, and carries your PSAT weakness data straight into SAT prep.
             </p>
-            <Link href="/psat">
-              <span className="inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 font-semibold cursor-pointer">
-                Explore PSAT &amp; National Merit prep <ArrowRight className="w-4 h-4" />
-              </span>
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              <Link href="/national-merit-calculator">
+                <span className="inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 font-semibold cursor-pointer">
+                  Try the National Merit calculator <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+              <Link href="/psat">
+                <span className="inline-flex items-center gap-2 text-white/50 hover:text-white/80 font-medium cursor-pointer">
+                  Explore PSAT prep
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

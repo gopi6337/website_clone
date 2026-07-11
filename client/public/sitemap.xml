@@ -36,6 +36,14 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- National Merit Scholarship Calculator (free tool) -->
+  <url>
+    <loc>https://eduversejr.com/national-merit-calculator</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Courses Page -->
   <url>
     <loc>https://eduversejr.com/courses</loc>

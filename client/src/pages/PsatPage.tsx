@@ -377,7 +377,14 @@ export default function PsatPage() {
               Reva's calculator takes your state, current practice scores, and target percentile (Commended · Semifinalist · Finalist) and tells you exactly how many points you need to add.
               State data is refreshed annually from College Board public releases.
             </p>
-            <p className="text-white/40 text-xs mt-3">Indicative cutoffs above. Full calculator opens with PSAT/NMSQT — coming soon.</p>
+            <p className="text-white/50 text-sm mt-4">
+              <Link href="/national-merit-calculator">
+                <span className="text-amber-300 hover:text-amber-200 underline font-semibold cursor-pointer">
+                  Try the free National Merit calculator →
+                </span>
+              </Link>
+            </p>
+            <p className="text-white/40 text-xs mt-2">Indicative cutoffs above. Enter your Selection Index and state in the calculator for a state-specific projection.</p>
           </div>
         </div>
       </section>

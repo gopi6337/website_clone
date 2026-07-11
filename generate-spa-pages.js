@@ -1,6 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {
+  STATES,
+  COMMENDED_SI,
+  CUTOFF_CLASS_LABEL,
+  SEMIFINALIST_CUTOFFS,
+} from './client/src/data/nationalMeritCutoffs.js';
+
+// Static National Merit Semifinalist cutoff table for the crawler prerender —
+// single source of truth shared with the React calculator page.
+const nmCutoffTableHtml =
+  `<table><thead><tr><th>State</th><th>Semifinalist Selection Index (${CUTOFF_CLASS_LABEL})</th></tr></thead><tbody>` +
+  STATES.map(([code, name]) => `<tr><td>${name}</td><td>~${SEMIFINALIST_CUTOFFS[code]}</td></tr>`).join('') +
+  `</tbody></table><p>National Commended cutoff: ~${COMMENDED_SI} (applies in every state).</p>`;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,7 +31,7 @@ const indexHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
 // ─────────────────────────────────────────────────────────────────────
 function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
   const sectionsHtml = sections
-    .map((s) => `<section><h2>${s.h2}</h2><p>${s.p}</p></section>`)
+    .map((s) => `<section><h2>${s.h2}</h2>${s.html || `<p>${s.p}</p>`}</section>`)
     .join('\n      ');
   const faqsHtml = faqs.length
     ? `<section aria-labelledby="faq-heading"><h2 id="faq-heading">Frequently Asked Questions</h2>${faqs
@@ -81,6 +94,45 @@ const topLevelMeta = {
         { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
         { href: '/curriculum/united-kingdom', label: 'UK Maths curriculum guide' },
         { href: '/about', label: 'About EduVerseJr' },
+      ],
+    }),
+  },
+  'national-merit-calculator': {
+    title: 'National Merit Scholarship Calculator (by State) — PSAT/NMSQT | EduVerseJr',
+    description: 'Free National Merit calculator: enter your PSAT/NMSQT Selection Index and state to project Commended or Semifinalist standing — Class of 2026 state cutoffs.',
+    ogTitle: 'National Merit Scholarship Calculator (by State) | EduVerseJr',
+    ogDesc: 'Enter your PSAT/NMSQT Selection Index and state to project Commended or Semifinalist standing. Free, no login. Class of 2026 state cutoffs.',
+    bodyContent: renderSeoBlock({
+      h1: 'National Merit Scholarship Calculator',
+      intro: [
+        'Enter your PSAT/NMSQT Selection Index and your state to project whether you are tracking toward Commended Student or Semifinalist recognition in the National Merit Scholarship Program. The tool is free and requires no sign-up. Cutoffs shown are the ' + CUTOFF_CLASS_LABEL + ' consensus and are estimates only — official recognition is determined solely by the National Merit Scholarship Corporation. This tool is not affiliated with, endorsed by, or connected to the National Merit Scholarship Corporation or the College Board.',
+        'The Selection Index (SI) is printed on your official PSAT/NMSQT score report and equals 2 × (your Reading & Writing test score + your Math test score), ranging from 48 to 228. Commended Student uses a single national cutoff (~' + COMMENDED_SI + '); Semifinalist uses a higher, state-specific cutoff. Only the PSAT/NMSQT taken in 11th grade counts toward National Merit.',
+      ],
+      sections: [
+        {
+          h2: 'Commended Student vs Semifinalist',
+          p: 'Commended Student recognises roughly the top 50,000 scorers nationwide using one national Selection Index cutoff (about ' + COMMENDED_SI + ' for the Class of 2026). Semifinalist recognises roughly the top 16,000 students using a higher cutoff set separately for each state, so the number you need depends on where you live. Only Semifinalists advance toward Finalist standing and National Merit scholarships.',
+        },
+        {
+          h2: 'Semifinalist Selection Index cutoffs by state (' + CUTOFF_CLASS_LABEL + ')',
+          html: nmCutoffTableHtml,
+        },
+        {
+          h2: 'How to raise your Selection Index',
+          p: 'Because the index is doubled, a few more questions right on the PSAT/NMSQT can move your Selection Index several points — often the difference between Commended and Semifinalist. Reva AI drills your weakest PSAT/NMSQT skills with an AI tutor on every question, and the same weakness data carries straight into SAT preparation. You can start free with no credit card.',
+        },
+      ],
+      faqs: [
+        { q: 'What is the National Merit Selection Index?', a: 'The Selection Index equals 2 × (your PSAT/NMSQT Reading & Writing test score + your Math test score), so it ranges from 48 to 228. It is printed on your official PSAT/NMSQT score report.' },
+        { q: 'What Selection Index do I need to be a Semifinalist?', a: 'It depends on your state. Cutoffs range from about 210 in lower-cutoff states to about 225 in California, Massachusetts, New Jersey and DC. Use the calculator and state table above for your state.' },
+        { q: 'What is the difference between Commended and Semifinalist?', a: 'Commended Student uses a single national cutoff (~' + COMMENDED_SI + ') for about the top 50,000 scorers. Semifinalist uses a higher, state-specific cutoff for about 16,000 students, and only Semifinalists advance toward Finalist and scholarships.' },
+        { q: 'Do the PSAT 8/9 or PSAT 10 count for National Merit?', a: 'No. Only the PSAT/NMSQT taken in 11th grade qualifies a student for National Merit. PSAT 8/9 and PSAT 10 scores never count, though practising early builds the skills that raise your junior-year index.' },
+        { q: 'Are these cutoffs official?', a: 'No. The National Merit Scholarship Corporation does not publish official cutoffs. These figures are the community-reported ' + CUTOFF_CLASS_LABEL + ' consensus and vary by ±1–2 points year to year. Treat this as a projection, not a guarantee.' },
+      ],
+      links: [
+        { href: '/psat', label: 'PSAT / NMSQT prep by Reva AI' },
+        { href: '/sat', label: 'SAT prep by Reva AI' },
+        { href: '/reva', label: 'Meet Reva — the AI tutor' },
       ],
     }),
   },
