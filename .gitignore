@@ -121,6 +121,5 @@ SESSION_SUMMARY*.txt
 !logo.jpeg
 !logo.svg
 !client/public/logo.*
-!client/public/replace-video.jpg
-!client/public/reva-logo.jpg
+!client/public/*.jpg
 !client/public/*.webp
