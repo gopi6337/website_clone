@@ -45,7 +45,7 @@ function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
 const topLevelMeta = {
   'reva': {
     title: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12 | EduVerseJr',
-    description: 'Meet Reva, your child\'s 24/7 AI maths teacher. Chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 + PSAT/SAT. Now open — start free, no credit card.',
+    description: 'Meet Reva, your child\'s 24/7 AI maths tutor: chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 plus PSAT/SAT. Start free.',
     ogTitle: 'Reva AI Teacher — 24/7 AI Maths Tutor | EduVerseJr',
     ogDesc: 'AI maths teacher for Grades 5–12. Chat, voice, interactive whiteboard, smart practice, progress tracking. Now open — start your free trial.',
     bodyContent: renderSeoBlock({
@@ -86,7 +86,7 @@ const topLevelMeta = {
   },
   'psat': {
     title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
-    description: 'Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill weakness map, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist.',
+    description: 'Digital PSAT 8/9 and PSAT/NMSQT prep by Reva AI: adaptive practice plus a state-by-state National Merit cutoff calculator. Coming soon — join the waitlist.',
     ogTitle: 'PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT',
     ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist.',
     bodyContent: renderSeoBlock({
@@ -135,7 +135,7 @@ const topLevelMeta = {
   },
   'about': {
     title: 'About EduVerseJr — Reva AI + Expert Human Teachers',
-    description: 'EduVerseJr is a hybrid learning platform combining Reva AI Teacher (24/7) with expert human teachers for live 1-to-1 Maths, Science and Coding classes for Grades 5–12.',
+    description: 'EduVerseJr blends Reva AI Teacher (24/7) with expert human teachers for live 1-to-1 Maths, Science and Coding classes, Grades 5–12.',
     ogTitle: 'About EduVerseJr — Reva AI + Expert Human Teachers',
     ogDesc: 'Hybrid AI + human teaching for Grades 5–12 in Maths, Science and Coding. Aligned with US, UK, Canadian, Australian, Singapore and UAE curricula.',
     bodyContent: renderSeoBlock({
@@ -184,7 +184,7 @@ const topLevelMeta = {
   },
   'courses': {
     title: 'Courses — Maths, Science & Coding for Grades 5–12 | EduVerseJr',
-    description: 'Live 1-to-1 online courses in Mathematics, Science and Coding for Grades 5–12. Curriculum aligned with US Common Core, UK National Curriculum, Canadian, Australian, Singapore MOE and UAE MOE standards.',
+    description: 'Live 1-to-1 online Maths, Science and Coding courses for Grades 5–12, aligned to US, UK, Canadian, Australian, Singapore and UAE curricula.',
     ogTitle: 'Courses — Maths, Science & Coding | EduVerseJr',
     ogDesc: 'Live 1-to-1 online classes for Grades 5–12 in Maths, Science and Coding — aligned with six international curricula.',
     bodyContent: renderSeoBlock({
@@ -229,7 +229,7 @@ const topLevelMeta = {
   },
   'teachers': {
     title: 'Expert Human Teachers — Live 1-to-1 Classes | EduVerseJr',
-    description: 'Book a free trial class with our expert human teachers. Live 1-to-1 online Maths, Science and Coding lessons for Grades 5–10 + PSAT/SAT preparation. Curriculum aligned with six countries.',
+    description: 'Book a free trial with expert human teachers: live 1-to-1 online Maths, Science and Coding for Grades 5–10, plus PSAT/SAT prep.',
     ogTitle: 'Expert Human Teachers — Book a Free Trial Class | EduVerseJr',
     ogDesc: 'Live 1-to-1 online classes with certified human teachers for Maths, Science, Coding (Grades 5–10) + PSAT/SAT prep. Book a free trial.',
     bodyContent: renderSeoBlock({
