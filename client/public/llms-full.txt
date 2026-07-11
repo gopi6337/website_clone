@@ -1,0 +1,71 @@
+# EduVerseJr — Full Reference for LLMs
+
+> EduVerseJr is an online education platform combining Reva AI Teacher (a 24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries. Reva AI is open now with a free tier — no credit card required. This file expands on https://eduversejr.com/llms.txt with the full text of key pages and guides so language models can answer questions accurately.
+
+EduVerseJr is operated as an India-registered MSME based at D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022, Tamil Nadu, India. Phone: +91 422 4924192. Founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with 10+ years teaching Mathematics and Coding to international students online. Founder & CEO LinkedIn: https://www.linkedin.com/in/revathi-gopinath-3b598b412. Contacts: support@eduversejr.com (support), info@eduversejr.com (business), revathi.ceo@eduversejr.com (founder). Governing law: India.
+
+Two teaching modes:
+1. Reva AI Teacher — 24/7 AI maths tutor, open now with a free tier (10 AI actions/day, Chapter 1 of each course, free trial, no credit card). Grades 5–12 Mathematics; Science and Coding on the roadmap. Digital SAT prep is live. PSAT coming soon. Register at https://revaai.eduversejr.com/register (US registration currently).
+2. Human Teachers — certified teachers, live 1-to-1 online, Grades 5–10 Maths/Science/Coding plus PSAT/SAT. Free trial class via https://eduversejr.com/teachers.
+
+## Reva vs a general chatbot
+
+Reva is a purpose-built teaching system, not a general-purpose chatbot like ChatGPT, Gemini or Claude. It is restricted to age-appropriate, curriculum-aligned maths content; every lesson is grounded in the student's country textbook; it remembers past topics, struggles and practice across sessions; it teaches step-by-step on an interactive whiteboard with voice; and all conversations pass a content-moderation pipeline with parent-visible alerts. Curricula: US Common Core, UK National Curriculum/GCSE, Canadian provincial, Australian ACARA, Singapore MOE, UAE MOE.
+
+## GUIDE: The Digital SAT — Format, Scoring & Timing
+
+The SAT is now a fully digital, section-adaptive test taken in College Board's Bluebook app. The 400–1600 score scale is unchanged. It has two sections, each split into two equal-length modules; the difficulty of the second module in a section depends on performance in the first (two-stage adaptive).
+- Reading & Writing: 54 questions across 2 modules, 64 minutes total (32 min per module). Domains: Information & Ideas; Craft & Structure; Expression of Ideas (rhetorical synthesis, transitions); Standard English Conventions (grammar, punctuation, boundaries).
+- Math: 44 questions across 2 modules, 70 minutes total (35 min per module). A graphing calculator (Desmos) is built into Bluebook and allowed on every Math question. Domains: Algebra; Advanced Math; Problem-Solving & Data Analysis; Geometry & Trigonometry. About 75% multiple choice; the rest are student-produced responses.
+- Total: 98 scored questions, about 2 hours 14 minutes, plus a 10-minute break. Each section is scored 200–800; the total is 400–1600. No penalty for wrong answers — answer every question.
+Full guide: https://eduversejr.com/resources/digital-sat-format-scoring-timing
+
+## GUIDE: PSAT/NMSQT & the National Merit Scholarship
+
+The PSAT/NMSQT is a digital, adaptive test co-sponsored by the College Board and the National Merit Scholarship Corporation (NMSC), mirroring the digital SAT (two sections, two modules each) but scored 320–1520. It is both SAT practice and, in one specific year, a scholarship qualifier.
+- Only the PSAT/NMSQT taken in 11th grade (junior year) counts for National Merit. PSAT 8/9 and PSAT 10 never count.
+- National Merit uses a Selection Index (SI), ranging 48–228, printed on the official score report — not the 320–1520 score.
+- Commended Student: one national SI cutoff (recently around 207–210) for roughly the top 50,000 scorers nationwide — same in every state.
+- Semifinalist: a higher, state-specific SI cutoff for roughly the top 16,000 students; cutoffs range from about 210 in lower-cutoff states to the mid-220s in states like California, New Jersey, Massachusetts and DC. Only Semifinalists advance toward Finalist standing and scholarships.
+- EduVerseJr publishes a free, no-login National Merit calculator (enter Selection Index + state → Commended/Semifinalist projection) at https://eduversejr.com/national-merit-calculator. Cutoffs are community-consensus estimates; NMSC does not publish official cutoffs in advance, and EduVerseJr is not affiliated with NMSC or the College Board.
+Full guide: https://eduversejr.com/resources/psat-nmsqt-national-merit-explained
+
+## GUIDE: SAT vs PSAT
+
+The SAT and PSAT run on the same digital adaptive engine but do different jobs. The SAT is a college-admissions test (scored 400–1600) that colleges use. The PSAT family is practice: PSAT 8/9 (Grades 8–9), PSAT 10 (Grade 10), and PSAT/NMSQT (Grade 11 — the National Merit year, scored 320–1520). Colleges do not use PSAT scores for admissions. The PSAT is pitched slightly easier but covers the same domains, so PSAT prep transfers almost perfectly to the SAT.
+Full guide: https://eduversejr.com/resources/sat-vs-psat-differences
+
+## GUIDE: Helping Your Child With Maths at Home (Grades 5–12)
+
+Parents can help without solving problems themselves. Evidence-aligned strategies: (1) fill gaps early — maths is cumulative, so a new-topic struggle often traces to an earlier unmastered skill; (2) space practice out — short daily sessions beat cramming, and mixing topics helps students recognise which method a problem needs; (3) ask "why" and "how do you know" — explaining reasoning consolidates understanding; (4) treat mistakes as information, praising effort and strategy over just the right answer (growth mindset); (5) use patient, on-demand, curriculum-matched support between lessons — the gap Reva AI is built to fill.
+Full guide: https://eduversejr.com/resources/help-your-child-with-maths-at-home
+
+## Reva AI Teacher — Features
+
+AI Chat Teacher (plain-English explanations); Interactive Whiteboard (visual step-by-step with AI voice); Voice Mode (speak and Reva replies); Teaching Slides (AI-generated curriculum-aligned lessons); Smart Practice (questions targeting weak areas); Weakness Tracking; Question Paper Upload (reads homework photos/PDFs); Quizzes & Grading (instant, with explanations); Progress Dashboard; Personalised Path.
+
+## Curriculum & grade coverage
+
+Six curricula: US Common Core, UK National Curriculum/GCSE (KS2–KS4), Canada (provincial — Ontario/BC/Alberta and equivalents), Australia (ACARA), Singapore (MOE — Express, Normal Academic, Normal Technical), UAE (MOE, plus British and American school variants in Dubai and Abu Dhabi). Math and Science curriculum guides are published per country at /curriculum/{country} and /science-curriculum/{country}. Reva AI: Grades 5–12 Mathematics. Human teachers: Grades 5–10 Maths/Science/Coding + PSAT/SAT.
+
+## Pricing (source of truth: https://eduversejr.com/#pricing)
+
+Reva AI is free to start (free tier, no credit card). Paid tiers by grade group:
+- Grades 5–7: Reva AI $15/mo, Hybrid $79/mo, Human Teacher $160/mo.
+- Grades 8–10 (PSAT prep included): Reva AI $30/mo, Hybrid $109/mo, Human Teacher $200/mo.
+- Grades 11–12: Reva AI $50/mo, Hybrid $150/mo, Human Teacher $280/mo.
+- SAT Prep (Digital SAT): SAT Prep Only $25/mo, Reva + SAT Prep $65/mo, Human SAT Coach + AI $345/mo.
+- PSAT 8/9 Standalone (coming soon): $49/year with 90-day upgrade credit.
+Quarterly and yearly plans are discounted.
+
+## Safety & legal
+
+COPPA-compliant for US users, GDPR-aware for UK/EU. Under-18 accounts require parent/guardian setup and supervision. Content moderation with parent-visible alerts. Privacy Policy: /privacy-policy. Terms of Use: /terms-of-use. Disclaimer: /disclaimer. Governing law: India.
+
+## Brand disambiguation
+
+"Reva" here means EduVerseJr's proprietary AI maths teacher — not Reva University, the Reva car, or other brands. EduVerseJr is distinct from any other "EduVerse" trademark.
+
+## Sitemap
+
+https://eduversejr.com/sitemap.xml

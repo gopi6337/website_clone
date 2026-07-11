@@ -1,10 +1,10 @@
 # EduVerseJr
 
-> EduVerseJr is an online education platform combining Reva AI Teacher (24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries.
+> EduVerseJr is an online education platform combining Reva AI Teacher (a 24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries. Reva AI is open now with a free tier — no credit card required.
 
-EduVerseJr is operated as an India-based MSME from Coimbatore, Tamil Nadu, and serves students globally. The platform has two distinct teaching modes:
+EduVerseJr is operated as an India-based MSME from Coimbatore, Tamil Nadu, and serves students internationally. The platform has two distinct teaching modes:
 
-1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Currently in private beta, opening to waitlist members in stages. Supports Grades 5–12 in Mathematics, with Science and Coding coming soon. Digital SAT preparation (adaptive 2-module practice exam, Math + Reading/Writing) is live. Standalone PSAT 8/9 preparation launching to waitlist members.
+1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Open now with a free tier (self-serve registration, no credit card). Supports Grades 5–12 in Mathematics, with Science and Coding on the roadmap. Digital SAT preparation (adaptive 2-module practice, Math + Reading & Writing, with step-by-step whiteboard explanations) is live. PSAT 8/9 and PSAT/NMSQT preparation is coming soon.
 
 2. **Human Teachers** — Certified human teachers delivering live 1-to-1 online classes in Mathematics, Science and Coding for Grades 5–10, plus PSAT/SAT preparation. New students start with a free trial class.
 
@@ -14,6 +14,7 @@ The two modes are different products with different funnels, pricing models and 
 
 - Name: EduVerseJr (also "EduVerse Junior")
 - AI assistant: Reva (or "Reva AI Teacher")
+- Founder & CEO: Revathi Gopinath (MSc, BEd) — https://www.linkedin.com/in/revathi-gopinath-3b598b412
 - Founded: 2026
 - Slogan: "AI Teacher + Human Teacher, Always There"
 - Mission: Curriculum-aligned, personalised teaching for school students using a hybrid AI + human teacher model.
@@ -21,11 +22,23 @@ The two modes are different products with different funnels, pricing models and 
 ## Core Pages
 
 - [Homepage](https://eduversejr.com/): Brand overview, hybrid AI + human teaching model, pricing at /#pricing.
-- [Reva AI Teacher](https://eduversejr.com/reva): Reva AI features, private beta info, waitlist signup.
+- [Reva AI Teacher](https://eduversejr.com/reva): Reva AI features and how it differs from a general chatbot; free-tier signup.
 - [Human Teachers](https://eduversejr.com/teachers): Live 1-to-1 human teacher classes, free trial booking.
-- [PSAT Prep](https://eduversejr.com/psat): Digital PSAT 8/9 and PSAT/NMSQT prep, National Merit cutoff calculator, waitlist.
+- [SAT Prep](https://eduversejr.com/sat): Digital SAT prep (Math + Reading & Writing), AI tutor on every question, PSAT/NMSQT and National Merit included. Live now.
+- [PSAT Prep](https://eduversejr.com/psat): Digital PSAT 8/9 and PSAT/NMSQT prep and National Merit info. Coming soon.
+- [National Merit Calculator](https://eduversejr.com/national-merit-calculator): Free, no-login tool — enter your PSAT/NMSQT Selection Index and state to project Commended or Semifinalist standing.
+- [Resources & Guides](https://eduversejr.com/resources): Free evergreen guides for students and parents (see below).
 - [Courses](https://eduversejr.com/courses): Maths, Science and Coding programmes for Grades 5–12.
-- [About](https://eduversejr.com/about): Company background and approach.
+- [About](https://eduversejr.com/about): Company background, founder and approach.
+
+## Resources & Guides
+
+Free, factual guides written by founder Revathi Gopinath (MSc, BEd):
+
+- [The Digital SAT: Format, Scoring & Timing Explained](https://eduversejr.com/resources/digital-sat-format-scoring-timing)
+- [PSAT/NMSQT & the National Merit Scholarship, Explained](https://eduversejr.com/resources/psat-nmsqt-national-merit-explained)
+- [SAT vs PSAT: What's the Difference?](https://eduversejr.com/resources/sat-vs-psat-differences)
+- [How to Help Your Child With Maths at Home (Grades 5–12)](https://eduversejr.com/resources/help-your-child-with-maths-at-home)
 
 ## Curriculum Coverage
 
@@ -43,7 +56,7 @@ Science curriculum guides are at /science-curriculum/{country} for the same six 
 ## Reva AI Teacher — Features
 
 - AI Chat Teacher: conversational explanations in plain English.
-- Interactive Whiteboard: visual step-by-step problem solving.
+- Interactive Whiteboard: visual step-by-step problem solving with AI voice.
 - Voice Mode: speak naturally, Reva listens and replies.
 - Teaching Slides: AI-generated curriculum-aligned lessons.
 - Smart Practice: AI-generated questions targeting student weak areas.
@@ -55,25 +68,25 @@ Science curriculum guides are at /science-curriculum/{country} for the same six 
 
 ## Grade & Subject Matrix
 
-- **Reva AI Teacher** (live now in private beta): Grades 5–12, Mathematics. Science and Coding coming soon. Digital SAT prep is live (2-module adaptive exam). PSAT 8/9 standalone launching to waitlist members.
+- **Reva AI Teacher** (open now, free tier available): Grades 5–12, Mathematics. Science and Coding on the roadmap. Digital SAT prep is live (2-module adaptive, Math + Reading & Writing). PSAT 8/9 and PSAT/NMSQT coming soon.
 - **Human Teachers** (live): Grades 5–10, Mathematics + Science + Coding. PSAT/SAT preparation available.
 
 ## How to Access
 
-- Reva AI Teacher access is currently gated by a waitlist. Parents can join via the form on https://eduversejr.com/reva. No public registration is open while the platform completes user acceptance testing with a small cohort.
+- Reva AI Teacher is open now. Parents/students can register for the free tier at https://eduversejr.com/reva (which links to https://revaai.eduversejr.com/register). The free tier gives 10 AI actions per day and Chapter 1 of each course, with a free trial and no credit card. Registration is currently available to students in the United States.
 - Human teacher classes can be booked via the contact form on https://eduversejr.com/teachers (free trial class available).
 
 ## Pricing
 
-Current pricing is published at https://eduversejr.com/#pricing and organised by grade group. All Reva AI tiers are waitlist-only during the private beta; Human Teacher tiers begin with a free trial class.
+Current pricing is published at https://eduversejr.com/#pricing and organised by grade group. Reva AI is free to start (free tier, no credit card); paid tiers unlock unlimited use and premium features.
 
 - **Grades 5–7 (Math foundations):** Reva AI $15/month, Hybrid (AI + 2 hrs human/month) $79/month, Human Teacher (8 hrs/month) $160/month.
 - **Grades 8–10 (Algebra & Geometry + PSAT prep included):** Reva AI $30/month, Hybrid $109/month, Human Teacher $200/month.
 - **Grades 11–12 (Pre-Calc & Advanced Math):** Reva AI $50/month, Hybrid $150/month, Human Teacher $280/month.
-- **SAT Prep (any grade, Digital SAT):** SAT Prep Only $25/month, Reva + SAT Prep (full Reva G5-12 + SAT mode) $65/month, Human SAT Coach + AI + SAT mode $345/month.
+- **SAT Prep (any grade, Digital SAT):** SAT Prep Only $25/month, Reva + SAT Prep (full Reva G5–12 + SAT mode) $65/month, Human SAT Coach + AI + SAT mode $345/month.
 - **PSAT 8/9 Standalone (Grades 8–9, coming soon):** $49/year, includes 90-day credit toward G8/G9 annual upgrade.
 
-Quarterly and yearly plans are available at a discount on the checkout page. For up-to-the-minute pricing, https://eduversejr.com/#pricing is the source of truth.
+Quarterly and yearly plans are available at a discount. For up-to-the-minute pricing, https://eduversejr.com/#pricing is the source of truth.
 
 ## Legal
 
@@ -85,10 +98,11 @@ EduVerseJr is governed under Indian law; under-18 accounts require parent/guardi
 
 ## Brand Disambiguation
 
-- "Reva" in EduVerseJr context refers to EduVerseJr's proprietary AI maths teacher — not Reva University, Reva car or other unrelated brands.
+- "Reva" in EduVerseJr context refers to EduVerseJr's proprietary AI maths teacher — not Reva University, the Reva car or other unrelated brands.
 - EduVerseJr is distinct from any other "EduVerse" trademark.
 - Reva AI Teacher is a purpose-built teaching system, not a general-purpose chatbot like ChatGPT, Gemini or Claude. It uses curriculum context, session memory and a live whiteboard.
 
 ## Sitemap
 
 Full sitemap: https://eduversejr.com/sitemap.xml
+Full expanded content for LLMs: https://eduversejr.com/llms-full.txt
