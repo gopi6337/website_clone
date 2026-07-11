@@ -74,6 +74,9 @@ export default function Header() {
             <Link href="/reva" className="nav-link font-semibold text-purple-600 whitespace-nowrap">
               Reva AI Teacher
             </Link>
+            <Link href="/sat" className="nav-link whitespace-nowrap">
+              SAT Prep
+            </Link>
             <Link href="/psat" className="nav-link whitespace-nowrap">
               PSAT Prep
             </Link>
@@ -130,6 +133,9 @@ export default function Header() {
             </Link>
             <Link href="/reva" className="block nav-link font-semibold text-purple-600" onClick={() => setIsMenuOpen(false)}>
               Reva AI Teacher
+            </Link>
+            <Link href="/sat" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              SAT Prep
             </Link>
             <Link href="/psat" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               PSAT Prep

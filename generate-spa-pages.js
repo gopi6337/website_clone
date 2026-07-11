@@ -84,6 +84,59 @@ const topLevelMeta = {
       ],
     }),
   },
+  'sat': {
+    title: 'SAT Prep — AI Tutor for the Digital SAT (Math & Reading) | EduVerseJr',
+    description: 'Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Start free.',
+    ogTitle: 'SAT Prep — Reva AI Tutor for the Digital SAT | EduVerseJr',
+    ogDesc: 'AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Start free.',
+    bodyContent: renderSeoBlock({
+      h1: 'SAT Prep by Reva AI — An AI Tutor on Every Digital SAT Question',
+      intro: [
+        'EduVerseJr\'s Reva AI now prepares students for the digital SAT — both the Reading & Writing and the Math sections, delivered in the real two-module adaptive format used on test day. Reva is a tutor, not a question bank: when you get a question wrong, it teaches the method step-by-step on a live whiteboard, adapts your next round of practice to your weakest skills, and remembers your progress across sessions.',
+        'Every SAT plan includes PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, because PSAT skills map directly onto SAT skills. Reva is live now — start free with no credit card and let an AI tutor walk you through every question you miss.',
+      ],
+      sections: [
+        {
+          h2: 'The whole digital SAT, in the real format',
+          p: 'The digital SAT has two sections, each delivered as two adaptive modules. Reading & Writing is 54 questions across 64 minutes; Math is 44 questions across 70 minutes; the test is scored out of 1600. Reva practises you in exactly this two-module adaptive structure, where the difficulty of your second module depends on how you performed in the first — so your practice score is a realistic projection, not a flat quiz.',
+        },
+        {
+          h2: 'Reading & Writing — all four domains',
+          p: 'Reva covers every Reading & Writing domain: Information & Ideas, Craft & Structure, Expression of Ideas and Standard English Conventions. That includes the specific skills the digital SAT tests — boundaries, form, structure and sense, transitions, and rhetorical synthesis — each drilled with per-skill feedback. Passages are curated from the public domain and modelled on the digital SAT, never scraped from Bluebook.',
+        },
+        {
+          h2: 'Math — all four domains',
+          p: 'On the Math side Reva covers Algebra, Advanced Math, Problem-Solving & Data Analysis, and Geometry & Trigonometry. The calculator is available throughout, exactly like the real digital SAT. Instead of only revealing the answer, Reva shows the full working on an interactive whiteboard and can explain it out loud, so you learn the method rather than memorising a result.',
+        },
+        {
+          h2: 'How is this different from Khan Academy or Photomath?',
+          p: 'A free question bank shows you the answer; Reva teaches you the question. When you miss one, Reva walks through the reasoning step-by-step on a live whiteboard with voice, adapts your next practice to the skills you are weakest at, and tracks your progress across sessions. It is the difference between checking an answer key and sitting next to a patient tutor who never runs out of time.',
+        },
+        {
+          h2: 'PSAT/NMSQT and National Merit included',
+          p: 'National Merit Selectivity Index cutoffs vary by roughly 14 points across U.S. states — a score that earns Semifinalist in one state falls short in another. Every SAT plan bundles PSAT/NMSQT prep plus a state-by-state National Merit cutoff calculator that tells you exactly how many points you need for Commended, Semifinalist or Finalist status in your state. Your PSAT weakness data and tutor history carry straight into SAT prep.',
+        },
+        {
+          h2: 'Pricing & access',
+          p: 'Reva SAT prep is live now. Start free with no credit card — the free tier gives daily AI actions so you can experience the tutoring, whiteboard explanations and practice. Paid plans unlock full-length practice tests, unlimited AI tutoring and the complete question pool, with PSAT/NMSQT and the National Merit calculator included. Sign up at revaai.eduversejr.com to begin.',
+        },
+      ],
+      faqs: [
+        { q: 'Is this built for the digital SAT?', a: 'Yes. EduVerseJr\'s SAT prep is built entirely for the digital SAT. Both sections run as two adaptive modules each and the test is scored out of 1600, so you practise in the real test-day format.' },
+        { q: 'Does Reva cover Reading & Writing, or just Math?', a: 'Both, in full. Reva covers all four Math domains (Algebra, Advanced Math, Problem-Solving & Data Analysis, Geometry & Trigonometry) and all four Reading & Writing domains (Information & Ideas, Craft & Structure, Expression of Ideas, Standard English Conventions).' },
+        { q: 'How is this different from Khan Academy or Photomath?', a: 'Reva is a tutor, not a question bank. It teaches every missed question step-by-step on a live whiteboard with voice, adapts practice to your weakest skills, and remembers your progress across sessions.' },
+        { q: 'Do I get PSAT/NMSQT and National Merit prep too?', a: 'Yes. Every SAT plan bundles PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, and your PSAT weakness data carries into SAT prep.' },
+        { q: 'Are these real College Board questions?', a: 'No. Reva uses original AI-generated items modelled on College Board\'s published SAT specification and difficulty bands, plus public-domain reading passages. We do not scrape Bluebook or use copyrighted College Board content.' },
+        { q: 'Is there a free way to try it?', a: 'Yes. Start free with no credit card — the free tier gives daily AI actions to experience Reva\'s SAT tutoring. Paid plans unlock full practice tests and unlimited tutoring.' },
+      ],
+      links: [
+        { href: '/psat', label: 'PSAT / NMSQT prep & National Merit calculator' },
+        { href: '/reva', label: 'Meet Reva — the AI tutor behind SAT prep' },
+        { href: '/teachers', label: 'Book a free trial with an expert human teacher' },
+        { href: '/courses', label: 'See all Maths, Science & Coding courses' },
+      ],
+    }),
+  },
   'psat': {
     title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
     description: 'Digital PSAT 8/9 and PSAT/NMSQT prep by Reva AI: adaptive practice plus a state-by-state National Merit cutoff calculator. Coming soon — join the waitlist.',

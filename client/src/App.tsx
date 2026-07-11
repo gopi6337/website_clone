@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import RevaPage from "./pages/RevaPage";
 import PsatPage from "./pages/PsatPage";
+import SatPage from "./pages/SatPage";
 import CoursesPage from "./pages/CoursesPage";
 import TeachersPage from "./pages/TeachersPage";
 import CurriculumViewer from "./pages/CurriculumViewer";
@@ -28,6 +29,7 @@ function Router() {
         <Route path={"/about"} component={AboutPage} />
         <Route path={"/reva"} component={RevaPage} />
         <Route path={"/psat"} component={PsatPage} />
+        <Route path={"/sat"} component={SatPage} />
         <Route path={"/courses"} component={CoursesPage} />
         <Route path={"/teachers"} component={TeachersPage} />
         {/* /tutors now redirects → /teachers server-side via vercel.json */}
