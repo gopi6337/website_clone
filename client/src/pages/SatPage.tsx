@@ -72,12 +72,18 @@ function SatNav() {
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0a0f]/80 border-b border-white/10">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="/">
-          <div className="flex items-center gap-2 cursor-pointer">
+        <div className="flex items-center gap-3">
+          <Link href="/">
+            <span className="text-white/50 hover:text-white/80 text-sm transition-colors cursor-pointer whitespace-nowrap">
+              ← EduVerseJr
+            </span>
+          </Link>
+          <span className="text-white/20">|</span>
+          <div className="flex items-center gap-2">
             <GraduationCap className="w-5 h-5 text-cyan-400" />
             <span className="text-white font-bold text-sm sm:text-base tracking-tight">SAT Prep</span>
           </div>
-        </Link>
+        </div>
         <div className="hidden md:flex items-center gap-6 text-sm text-white/60">
           <a href="#sections" className="hover:text-white transition-colors">The test</a>
           <a href="#how" className="hover:text-white transition-colors">How Reva teaches</a>
