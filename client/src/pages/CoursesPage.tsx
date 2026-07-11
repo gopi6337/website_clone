@@ -7,6 +7,8 @@ import CodingCurriculumSection from "@/components/CodingCurriculumSection";
 import BookingSection from "@/components/BookingSection";
 import FooterSection from "@/components/FooterSection";
 import { Brain, FlaskConical, Code2 } from "lucide-react";
+import { Link } from "wouter";
+import { GRADES } from "@/data/gradeLevels";
 
 type Subject = "maths" | "science" | "coding";
 
@@ -131,6 +133,23 @@ export default function CoursesPage() {
       {activeTab === "maths" && <MathCurriculumSection />}
       {activeTab === "science" && <ScienceCurriculumSection />}
       {activeTab === "coding" && <CodingCurriculumSection />}
+
+      {/* Maths by grade — internal links to grade-specific landing pages */}
+      <section className="container mx-auto px-4 py-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Maths tutoring by grade</h2>
+          <p className="text-gray-600 mb-6">See exactly what each grade covers and how Reva AI helps — Grades 5 to 12.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {GRADES.map((g) => (
+              <Link key={g.slug} href={`/courses/${g.slug}`}>
+                <span className="inline-flex items-center px-5 py-2.5 rounded-full border border-gray-200 hover:border-blue-300 hover:bg-blue-50 text-gray-700 hover:text-blue-600 font-semibold text-sm cursor-pointer transition-all">
+                  Grade {g.grade} Maths
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div id="booking">
         <BookingSection />

@@ -8,6 +8,7 @@ import {
   SEMIFINALIST_CUTOFFS,
 } from './client/src/data/nationalMeritCutoffs.js';
 import { ARTICLES, ARTICLE_AUTHOR } from './client/src/data/resourceArticles.js';
+import { GRADES, GRADE_REVA_NOTE } from './client/src/data/gradeLevels.js';
 
 // Static National Merit Semifinalist cutoff table for the crawler prerender —
 // single source of truth shared with the React calculator page.
@@ -1322,6 +1323,78 @@ ARTICLES.forEach((a) => {
   console.log(`✓ Created resources/${a.slug}.html (Article + FAQPage schema)`);
 });
 
+// ─────────────────────────────────────────────────────────────────────
+// Grade-specific maths landing pages → /dist/public/courses/grade-N-maths.html
+// Content from client/src/data/gradeLevels.js (shared with GradeMathsPage.tsx).
+// Each = Course + BreadcrumbList + FAQPage schema. (Vercel cleanUrls serves
+// /courses/grade-8-maths → courses/grade-8-maths.html; the flat courses.html
+// for /courses still takes precedence for the bare /courses path.)
+// ─────────────────────────────────────────────────────────────────────
+const coursesDir = path.join(publicDir, 'courses');
+if (!fs.existsSync(coursesDir)) {
+  fs.mkdirSync(coursesDir, { recursive: true });
+}
+GRADES.forEach((g) => {
+  const canonicalUrl = `https://eduversejr.com/courses/${g.slug}`;
+  const block = renderSeoBlock({
+    h1: g.h1,
+    intro: g.intro,
+    sections: [
+      {
+        h2: `What Grade ${g.grade} maths covers`,
+        html: `<ul>${g.topics.map((t) => `<li>${t}</li>`).join('')}</ul>`,
+      },
+      {
+        h2: `How EduVerseJr helps in Grade ${g.grade}`,
+        html: `<p>${GRADE_REVA_NOTE}</p>`,
+      },
+    ],
+    faqs: g.faqs,
+    links: g.related,
+  });
+  let pageHtml = injectMeta(indexHtml, {
+    title: `${g.title} | EduVerseJr`,
+    description: g.metaDescription,
+    ogTitle: g.ogTitle,
+    ogDesc: g.ogDesc,
+  }, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, block.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: `Grade ${g.grade} Maths`,
+    name: `Grade ${g.grade} Mathematics`,
+    description: g.metaDescription,
+    faqs: g.faqs,
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: `Grade ${g.grade} Mathematics`,
+        description: g.metaDescription,
+        url: canonicalUrl,
+        provider: { '@type': 'EducationalOrganization', '@id': ORG_ID, name: 'EduVerseJr' },
+        educationalLevel: `Grade ${g.grade}`,
+        teaches: g.topics.join('; '),
+        availableLanguage: 'English',
+        hasCourseInstance: {
+          '@type': 'CourseInstance',
+          courseMode: 'online',
+          courseWorkload: 'Self-paced with a 24/7 AI tutor; optional live 1-to-1 human classes',
+        },
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          price: '0',
+          priceCurrency: 'USD',
+          description: 'Free tier available — no credit card. Paid plans unlock unlimited use.',
+        },
+      },
+    ],
+  });
+  fs.writeFileSync(path.join(coursesDir, `${g.slug}.html`), pageHtml, 'utf-8');
+  console.log(`✓ Created courses/${g.slug}.html (Course + FAQPage schema)`);
+});
+
 // Homepage — overwrite /dist/public/index.html with prerender SEO body
 // (title and meta are already correct in base index.html, we only inject body)
 const homepageBody = renderSeoBlock({
@@ -1404,5 +1477,6 @@ const total =
   Object.keys(scienceCurriculumMeta).length +
   1 + // resources hub
   ARTICLES.length +
+  GRADES.length +
   1;
 console.log(`\n✅ Generated ${total} SPA pages with unique meta tags.`);
