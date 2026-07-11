@@ -130,8 +130,12 @@ export default function LearningStyleSection() {
           {/* Image */}
           <div className="rounded-lg h-96 overflow-hidden">
             <img
-              src="/replace-video.jpg"
+              src="/replace-video.webp"
               alt="Learning Experience"
+              width="1600"
+              height="1068"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>

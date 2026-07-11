@@ -27,7 +27,7 @@ export default function HeroSection() {
             {/* Reva AI — FIRST */}
             <div className="bg-white/15 border border-yellow-300/60 rounded-2xl p-5 mb-4">
               <div className="flex items-center gap-3 mb-3 flex-wrap">
-                <img src="/reva-logo.jpg" alt="Reva AI" className="w-9 h-9 rounded-full object-contain bg-white flex-shrink-0" />
+                <img src="/reva-logo.webp" alt="Reva AI" width="36" height="36" decoding="async" className="w-9 h-9 rounded-full object-contain bg-white flex-shrink-0" />
                 <div className="flex items-center gap-2 flex-wrap">
                   <h2 className="text-base font-bold">Reva AI Teacher</h2>
                   <span className="text-xs bg-yellow-400 text-gray-900 px-2 py-0.5 rounded-full font-bold">NEW</span>
@@ -91,8 +91,12 @@ export default function HeroSection() {
           {/* Right — child learning photo */}
           <div className="relative h-96 md:h-full flex items-center justify-center">
             <img
-              src="/edu_pic1.jpg"
+              src="/edu_pic1.webp"
               alt="Child learning with EduVerseJr"
+              width="390"
+              height="255"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover rounded-3xl"
               style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 15%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)' }}
             />

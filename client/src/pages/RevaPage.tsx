@@ -149,7 +149,7 @@ function RevaNav() {
           </Link>
           <span className="text-white/20">|</span>
           <div className="flex items-center gap-2">
-            <img src="/reva-logo.jpg" alt="Reva AI" className="w-7 h-7 rounded-lg object-contain" />
+            <img src="/reva-logo.webp" alt="Reva AI" width="28" height="28" decoding="async" className="w-7 h-7 rounded-lg object-contain" />
             <span className="text-white font-bold text-sm sm:text-base tracking-tight">Reva AI Teacher</span>
           </div>
         </div>

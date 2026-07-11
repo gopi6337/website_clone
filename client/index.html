@@ -8,6 +8,9 @@
       content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <link rel="apple-touch-icon" href="/logo.jpg" />
+    <!-- Preload the homepage hero (LCP) image so the browser fetches it during
+         HTML parse instead of waiting for React to hydrate and render the <img>. -->
+    <link rel="preload" as="image" href="/edu_pic1.webp" fetchpriority="high" />
     <title>EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science &amp; Coding</title>
 
     <!-- Meta Description -->

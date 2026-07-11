@@ -150,7 +150,7 @@ export default function CodingCurriculumSection() {
               >
                 <div className={`bg-gradient-to-br ${concept.color} text-white p-4 rounded-lg mb-3 transform group-hover:scale-110 transition-transform inline-flex items-center justify-center`}>
                   {concept.iconImg ? (
-                    <img src={concept.iconImg} alt={concept.name} className="w-12 h-12 object-contain" />
+                    <img src={concept.iconImg} alt={concept.name} width="48" height="48" loading="lazy" decoding="async" className="w-12 h-12 object-contain" />
                   ) : (
                     concept.icon
                   )}
@@ -216,7 +216,7 @@ export default function CodingCurriculumSection() {
                 <div className="text-center mb-6">
                   <div className="flex justify-center mb-4">
                     {course.iconImg ? (
-                      <img src={course.iconImg} alt={course.title} className="w-16 h-16 object-contain" />
+                      <img src={course.iconImg} alt={course.title} width="64" height="64" loading="lazy" decoding="async" className="w-16 h-16 object-contain" />
                     ) : (
                       course.icon
                     )}
