@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-2">
+      <div className="w-full max-w-[1600px] mx-auto px-3 lg:px-5 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
@@ -42,7 +42,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-3 text-sm">
+          <nav className="hidden min-[1360px]:flex items-center gap-x-2 text-xs">
             <Link href="/about" className="nav-link whitespace-nowrap">
               About
             </Link>
@@ -104,18 +104,18 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-2">
-            <Button variant="outline" className="rounded-full text-xs px-3 py-2 leading-tight text-center bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 font-bold" onClick={() => window.location.href = '/#booking'}>
+          <div className="hidden min-[1360px]:flex items-center gap-2 shrink-0">
+            <Button variant="outline" className="rounded-full text-[11px] px-3 py-1.5 leading-tight text-center bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 font-bold whitespace-nowrap" onClick={() => window.location.href = '/#booking'}>
               Book a Free Trial<br />Human Teacher
             </Button>
-            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-xs px-3 py-2 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-[11px] px-3 py-1.5 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
               Try Reva AI Teacher
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="min-[1360px]:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -124,7 +124,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 space-y-4">
+          <nav className="min-[1360px]:hidden mt-4 space-y-4">
             <Link href="/about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
