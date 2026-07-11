@@ -18,6 +18,10 @@ const nmCutoffTableHtml =
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Canonical @id for the EduVerseJr Organization entity — every page's schema
+// references this so the knowledge graph consolidates to one entity.
+const ORG_ID = 'https://eduversejr.com';
+
 // Read the built index.html (shared template)
 const indexHtmlPath = path.join(__dirname, 'dist', 'public', 'index.html');
 const indexHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
@@ -43,13 +47,17 @@ function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
         .map((l) => `<li><a href="${l.href}">${l.label}</a></li>`)
         .join('')}</ul></nav>`
     : '';
-  return `<div id="seo-prerender" style="max-width:900px;margin:0 auto;padding:24px;font-family:system-ui,-apple-system,sans-serif;color:#1f2937;line-height:1.65">
+  const html = `<div id="seo-prerender" style="max-width:900px;margin:0 auto;padding:24px;font-family:system-ui,-apple-system,sans-serif;color:#1f2937;line-height:1.65">
       <h1 style="font-size:28px;margin:0 0 16px">${h1}</h1>
       ${intro.map((p) => `<p>${p}</p>`).join('\n      ')}
       ${sectionsHtml}
       ${faqsHtml}
       ${linksHtml}
     </div>`;
+  // Return the rendered HTML alongside the structured data used to build
+  // per-page JSON-LD (BreadcrumbList / WebPage / FAQPage). Keeping faqs + h1
+  // here means the schema always matches the visible prerender content.
+  return { html, faqs, h1 };
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -96,6 +104,19 @@ const topLevelMeta = {
         { href: '/about', label: 'About EduVerseJr' },
       ],
     }),
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Reva AI Teacher',
+        url: 'https://eduversejr.com/reva',
+        applicationCategory: 'EducationalApplication',
+        operatingSystem: 'Web',
+        description: 'Reva is EduVerseJr\'s 24/7 AI maths tutor for Grades 5–12 and PSAT/SAT — chat, voice, interactive whiteboard, smart practice and progress tracking.',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free tier — 10 AI actions/day, no credit card' },
+        provider: { '@id': ORG_ID },
+      },
+    ],
   },
   'national-merit-calculator': {
     title: 'National Merit Scholarship Calculator (by State) — PSAT/NMSQT | EduVerseJr',
@@ -135,6 +156,19 @@ const topLevelMeta = {
         { href: '/reva', label: 'Meet Reva — the AI tutor' },
       ],
     }),
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        name: 'National Merit Scholarship Calculator',
+        url: 'https://eduversejr.com/national-merit-calculator',
+        applicationCategory: 'EducationalApplication',
+        operatingSystem: 'Web',
+        description: 'Free tool: enter your PSAT/NMSQT Selection Index and state to project Commended or Semifinalist standing, using ' + CUTOFF_CLASS_LABEL + ' state cutoffs.',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        provider: { '@id': ORG_ID },
+      },
+    ],
   },
   'sat': {
     title: 'SAT Prep — AI Tutor for the Digital SAT (Math & Reading) | EduVerseJr',
@@ -188,6 +222,18 @@ const topLevelMeta = {
         { href: '/courses', label: 'See all Maths, Science & Coding courses' },
       ],
     }),
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'EducationalOccupationalProgram',
+        name: 'Digital SAT Prep by Reva AI',
+        url: 'https://eduversejr.com/sat',
+        description: 'AI-tutored digital SAT preparation covering Math and Reading & Writing in the real two-module adaptive format, with PSAT/NMSQT and National Merit included.',
+        provider: { '@id': ORG_ID },
+        educationalProgramMode: 'online',
+        occupationalCategory: 'College admission test preparation',
+      },
+    ],
   },
   'psat': {
     title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
@@ -237,6 +283,18 @@ const topLevelMeta = {
         { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
       ],
     }),
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'EducationalOccupationalProgram',
+        name: 'PSAT 8/9 & PSAT/NMSQT Prep by Reva AI',
+        url: 'https://eduversejr.com/psat',
+        description: 'AI-tutored digital PSAT 8/9 and PSAT/NMSQT preparation with a state-by-state National Merit Scholarship cutoff calculator.',
+        provider: { '@id': ORG_ID },
+        educationalProgramMode: 'online',
+        occupationalCategory: 'College admission test preparation',
+      },
+    ],
   },
   'about': {
     title: 'About EduVerseJr — Reva AI + Expert Human Teachers',
@@ -985,6 +1043,98 @@ function injectBodyContent(html, bodyContent) {
 }
 
 // ─────────────────────────────────────────────────────────────────────
+// Per-page JSON-LD schema.
+//
+// The shared base index.html carries the homepage's four JSON-LD blocks
+// (Organization, WebSite, ItemList of countries, and the homepage FAQPage).
+// Because every SPA page is cloned from that template, those homepage blocks
+// — including the homepage's FAQ — were being duplicated onto all 21 pages
+// (SEO audit 2026-07-11 finding). That is misleading structured data.
+//
+// Fix: on every generated SUBPAGE we strip all inherited ld+json blocks and
+// inject schema that actually describes that page — an Organization reference
+// (@id-linked to the homepage entity), a WebPage node, a BreadcrumbList, and
+// a FAQPage built from that page's own visible FAQs — plus any page-specific
+// primary entity (extraSchema). The homepage keeps its original blocks as-is.
+// (ORG_ID is declared near the top so entry-level extraSchema can reference it.)
+// ─────────────────────────────────────────────────────────────────────
+function orgNode() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'EducationalOrganization'],
+    '@id': ORG_ID,
+    name: 'EduVerseJr',
+    url: 'https://eduversejr.com',
+    logo: { '@type': 'ImageObject', url: 'https://eduversejr.com/logo.jpg' },
+  };
+}
+
+function webPageNode(canonicalUrl, name, description) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    url: canonicalUrl,
+    name,
+    description,
+    isPartOf: { '@type': 'WebSite', name: 'EduVerseJr', url: 'https://eduversejr.com' },
+    publisher: { '@id': ORG_ID },
+  };
+}
+
+function breadcrumbNode(canonicalUrl, crumb) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://eduversejr.com/' },
+      { '@type': 'ListItem', position: 2, name: crumb, item: canonicalUrl },
+    ],
+  };
+}
+
+function faqPageNode(faqs) {
+  if (!faqs || !faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+}
+
+// Remove every <script type="application/ld+json"> … </script> block.
+function stripJsonLd(html) {
+  return html.replace(/[ \t]*<script type="application\/ld\+json">[\s\S]*?<\/script>\n?/g, '');
+}
+
+function schemaScripts(nodes) {
+  return nodes
+    .filter(Boolean)
+    .map((n) => `<script type="application/ld+json">\n${JSON.stringify(n, null, 2)}\n    </script>`)
+    .join('\n    ');
+}
+
+// Strip inherited homepage schema, then inject this page's own JSON-LD before </head>.
+function injectSubpageSchema(html, { canonicalUrl, crumb, name, description, faqs, extraSchema = [] }) {
+  const nodes = [
+    orgNode(),
+    webPageNode(canonicalUrl, name, description),
+    breadcrumbNode(canonicalUrl, crumb),
+    faqPageNode(faqs),
+    ...extraSchema,
+  ];
+  return stripJsonLd(html).replace('</head>', `    ${schemaScripts(nodes)}\n  </head>`);
+}
+
+// Breadcrumb label = the leading segment of the page <title> (before — or |).
+function crumbFromTitle(title) {
+  return title.split(/[—|]/)[0].trim();
+}
+
+// ─────────────────────────────────────────────────────────────────────
 // Generate flat HTML files
 // ─────────────────────────────────────────────────────────────────────
 const publicDir = path.join(__dirname, 'dist', 'public');
@@ -993,10 +1143,18 @@ const publicDir = path.join(__dirname, 'dist', 'public');
 Object.entries(topLevelMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/${page}`;
   let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
-  pageHtml = injectBodyContent(pageHtml, meta.bodyContent);
+  pageHtml = injectBodyContent(pageHtml, meta.bodyContent.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: crumbFromTitle(meta.title),
+    name: meta.bodyContent.h1,
+    description: meta.description,
+    faqs: meta.bodyContent.faqs,
+    extraSchema: meta.extraSchema,
+  });
   const flatHtmlPath = path.join(publicDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, pageHtml, 'utf-8');
-  console.log(`✓ Created ${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
+  console.log(`✓ Created ${page}.html (unique meta + SEO body + per-page schema)`);
 });
 
 // Math curriculum pages → /dist/public/curriculum/<country>.html
@@ -1007,10 +1165,18 @@ if (!fs.existsSync(curriculumDir)) {
 Object.entries(curriculumMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/curriculum/${page}`;
   let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
-  pageHtml = injectBodyContent(pageHtml, meta.bodyContent);
+  pageHtml = injectBodyContent(pageHtml, meta.bodyContent.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: crumbFromTitle(meta.title),
+    name: meta.bodyContent.h1,
+    description: meta.description,
+    faqs: meta.bodyContent.faqs,
+    extraSchema: meta.extraSchema,
+  });
   const flatHtmlPath = path.join(curriculumDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, pageHtml, 'utf-8');
-  console.log(`✓ Created curriculum/${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
+  console.log(`✓ Created curriculum/${page}.html (unique meta + SEO body + per-page schema)`);
 });
 
 // Science curriculum pages → /dist/public/science-curriculum/<country>.html
@@ -1021,10 +1187,18 @@ if (!fs.existsSync(scienceCurriculumDir)) {
 Object.entries(scienceCurriculumMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/science-curriculum/${page}`;
   let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
-  pageHtml = injectBodyContent(pageHtml, meta.bodyContent);
+  pageHtml = injectBodyContent(pageHtml, meta.bodyContent.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: crumbFromTitle(meta.title),
+    name: meta.bodyContent.h1,
+    description: meta.description,
+    faqs: meta.bodyContent.faqs,
+    extraSchema: meta.extraSchema,
+  });
   const flatHtmlPath = path.join(scienceCurriculumDir, `${page}.html`);
   fs.writeFileSync(flatHtmlPath, pageHtml, 'utf-8');
-  console.log(`✓ Created science-curriculum/${page}.html (unique meta${meta.bodyContent ? ' + SEO body' : ''})`);
+  console.log(`✓ Created science-curriculum/${page}.html (unique meta + SEO body + per-page schema)`);
 });
 
 // Homepage — overwrite /dist/public/index.html with prerender SEO body
@@ -1071,7 +1245,10 @@ const homepageBody = renderSeoBlock({
     { href: '/about', label: 'About EduVerseJr' },
   ],
 });
-const homepageHtml = injectBodyContent(indexHtml, homepageBody);
+// Homepage keeps its original four JSON-LD blocks (Organization, WebSite,
+// ItemList, FAQPage) — they correctly describe the homepage — so we only
+// inject the body here, no schema surgery.
+const homepageHtml = injectBodyContent(indexHtml, homepageBody.html);
 fs.writeFileSync(indexHtmlPath, homepageHtml, 'utf-8');
 console.log(`✓ Updated index.html (homepage SEO body injected)`);
 
@@ -1090,7 +1267,9 @@ const notFoundBody = `
   </p>
 </section>
 `.trim();
-const notFoundHtml = indexHtml
+// Strip the inherited homepage JSON-LD too — a noindex 404 should not carry
+// the homepage Organization/FAQ schema.
+const notFoundHtml = stripJsonLd(indexHtml)
   .replace(/<meta name="robots" content="[^"]*"\s*\/?>/i, '<meta name="robots" content="noindex, nofollow" />')
   .replace(/<title>[^<]*<\/title>/i, '<title>Page Not Found — EduVerseJr</title>')
   .replace('<div id="root"></div>', `<div id="root">${notFoundBody}</div>`);
