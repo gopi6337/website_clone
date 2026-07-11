@@ -13,7 +13,8 @@
     "format": "prettier --write .",
     "seo:check": "node pre-deployment-check.cjs",
     "seo:verify": "node verify-deployment.cjs",
-    "seo:links": "node generate-test-links.cjs"
+    "seo:links": "node generate-test-links.cjs",
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
