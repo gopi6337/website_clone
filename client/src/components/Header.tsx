@@ -28,13 +28,13 @@ export default function Header() {
               <img
                 src="/logo.jpg"
                 alt="EduVerseJr Logo"
-                className="h-12 w-12 md:h-14 md:w-14 object-contain shrink-0"
+                className="h-10 w-10 md:h-11 md:w-11 object-contain shrink-0"
               />
               <div className="flex flex-col shrink-0">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight whitespace-nowrap">
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight whitespace-nowrap">
                   EduVerseJr
                 </div>
-                <div className="text-xs text-gray-600 italic whitespace-nowrap">
+                <div className="text-[11px] text-gray-600 italic whitespace-nowrap">
                   Explore Your Learning Universe
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden min-[1360px]:flex items-center gap-x-2 text-xs">
+          <nav className="hidden min-[1300px]:flex items-center gap-x-1.5 text-[11px]">
             <Link href="/about" className="nav-link whitespace-nowrap">
               About
             </Link>
@@ -104,18 +104,18 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden min-[1360px]:flex items-center gap-2 shrink-0">
-            <Button variant="outline" className="rounded-full text-[11px] px-3 py-1.5 leading-tight text-center bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 font-bold whitespace-nowrap" onClick={() => window.location.href = '/#booking'}>
+          <div className="hidden min-[1300px]:flex items-center gap-1.5 shrink-0">
+            <Button variant="outline" className="rounded-full text-[11px] px-2.5 py-1.5 leading-tight text-center bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 font-bold whitespace-nowrap" onClick={() => window.location.href = '/#booking'}>
               Book a Free Trial<br />Human Teacher
             </Button>
-            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-[11px] px-3 py-1.5 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-[11px] px-2.5 py-1.5 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
               Try Reva AI Teacher
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="min-[1360px]:hidden"
+            className="min-[1300px]:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -124,7 +124,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="min-[1360px]:hidden mt-4 space-y-4">
+          <nav className="min-[1300px]:hidden mt-4 space-y-4">
             <Link href="/about" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
