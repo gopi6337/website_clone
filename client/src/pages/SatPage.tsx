@@ -7,8 +7,6 @@ import {
   Award, Clock, BarChart3, Brain, Mic, Calculator,
 } from "lucide-react";
 
-const SIGNUP_URL = "https://revaai.eduversejr.com/register";
-
 const sections = [
   {
     badge: "Section 1",
@@ -64,8 +62,8 @@ const faqs = [
     a: "No — and that's deliberate. Reva uses original, AI-generated practice items modelled on College Board's published SAT specification, difficulty bands and skill taxonomy, plus curated public-domain reading passages. We do not scrape Bluebook or use any copyrighted College Board content, so the prep is copyright-safe.",
   },
   {
-    q: "Is there a free way to try it?",
-    a: "Yes. You can start free with no credit card — the free tier gives you daily AI actions to experience Reva's SAT tutoring, whiteboard explanations and practice. Paid plans unlock full-length practice tests, unlimited tutoring and the complete question pool.",
+    q: "When does SAT prep launch?",
+    a: "Reva's digital SAT prep is coming soon. The tutoring engine, adaptive Math and Reading & Writing practice, whiteboard explanations and per-skill weakness maps are being finalised now. Check back shortly — or explore our live Reva AI Teacher for Maths in the meantime.",
   },
 ];
 
@@ -89,12 +87,9 @@ function SatNav() {
           </Link>
         </div>
         <div className="flex items-center gap-3">
-          <a
-            href={SIGNUP_URL}
-            className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all shadow-lg shadow-indigo-900/30"
-          >
-            Start Free <ArrowRight className="w-4 h-4" />
-          </a>
+          <span className="hidden md:inline-flex items-center gap-2 border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 text-sm font-semibold px-5 py-2 rounded-full">
+            Coming Soon
+          </span>
           <button className="md:hidden text-white/70" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -108,12 +103,9 @@ function SatNav() {
           <Link href="/psat">
             <span className="block text-white/70 hover:text-white py-1 cursor-pointer" onClick={() => setOpen(false)}>PSAT / National Merit</span>
           </Link>
-          <a
-            href={SIGNUP_URL}
-            className="block w-full mt-2 text-center bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold px-5 py-3 rounded-full"
-          >
-            Start Free →
-          </a>
+          <span className="block w-full mt-2 text-center border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 font-semibold px-5 py-3 rounded-full">
+            Coming Soon
+          </span>
         </div>
       )}
     </nav>
@@ -179,10 +171,9 @@ const structuredData = {
       "programType": "test_prep",
       "offers": {
         "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "price": "0",
+        "availability": "https://schema.org/PreOrder",
         "priceCurrency": "USD",
-        "description": "Start free with no credit card. Paid plans unlock full-length practice tests and unlimited AI tutoring; PSAT/NMSQT and the National Merit calculator are included.",
+        "description": "Digital SAT prep by Reva AI is coming soon. PSAT/NMSQT and the National Merit calculator will be included.",
       },
     },
     {
@@ -193,7 +184,7 @@ const structuredData = {
       "url": "https://eduversejr.com/sat",
       "offers": {
         "@type": "Offer",
-        "price": "0",
+        "availability": "https://schema.org/PreOrder",
         "priceCurrency": "USD",
       },
       "featureList": [
@@ -223,17 +214,17 @@ export default function SatPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>SAT Prep — AI Tutor for the Digital SAT (Math & Reading) | EduVerseJr</title>
-        <meta name="description" content="Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Start free." />
+        <meta name="description" content="Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Coming soon." />
         <link rel="canonical" href="https://eduversejr.com/sat" />
         <meta name="keywords" content="SAT prep, digital SAT prep, AI SAT tutor, SAT Math prep, SAT Reading and Writing prep, adaptive SAT practice, SAT practice test, Reva AI SAT, EduVerseJr SAT, Khan Academy SAT alternative" />
         <meta property="og:title" content="SAT Prep — Reva AI Tutor for the Digital SAT | EduVerseJr" />
-        <meta property="og:description" content="AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Start free." />
+        <meta property="og:description" content="AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Coming soon." />
         <meta property="og:url" content="https://eduversejr.com/sat" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SAT Prep — Reva AI Tutor for the Digital SAT" />
-        <meta name="twitter:description" content="Adaptive digital SAT Math + Reading & Writing with an AI tutor on every question. PSAT/NMSQT included. Start free." />
+        <meta name="twitter:description" content="Adaptive digital SAT Math + Reading & Writing with an AI tutor on every question. PSAT/NMSQT included. Coming soon." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -248,7 +239,7 @@ export default function SatPage() {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              Digital SAT · Math + Reading &amp; Writing · Live now
+              Digital SAT · Math + Reading &amp; Writing · Coming soon
             </div>
           </div>
 
@@ -273,13 +264,10 @@ export default function SatPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a
-              href={SIGNUP_URL}
-              className="group flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl shadow-indigo-900/40"
-            >
-              Start Free
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <span className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-indigo-900/40">
+              <Sparkles className="w-5 h-5" />
+              Coming Soon
+            </span>
             <a
               href="#sections"
               className="flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-8 py-4 rounded-full text-lg transition-all"
@@ -289,7 +277,7 @@ export default function SatPage() {
           </div>
 
           <p className="text-white/40 text-xs mb-10">
-            No credit card ·{" "}
+            Launching soon ·{" "}
             <Link href="/psat">
               <span className="text-cyan-300 hover:text-cyan-200 underline cursor-pointer">Prepping for the PSAT/NMSQT? →</span>
             </Link>
@@ -300,7 +288,7 @@ export default function SatPage() {
               { value: "1600", label: "Full digital SAT scale" },
               { value: "2+2", label: "Adaptive modules R&W + Math" },
               { value: "Reva", label: "AI tutor on every Q" },
-              { value: "Free", label: "To start · no card" },
+              { value: "Soon", label: "Launching shortly" },
             ].map((s) => (
               <div key={s.label} className="border border-white/10 rounded-2xl py-4 px-3 bg-white/3">
                 <div className="text-2xl font-black text-white mb-1">{s.value}</div>
@@ -414,21 +402,18 @@ export default function SatPage() {
                 <BookOpen className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-                Start your SAT prep with a tutor tonight
+                SAT prep with an AI tutor — coming soon
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-                Reva is live now for Math and Reading &amp; Writing. Try it free — no credit card — and let an
-                AI tutor teach you every question you miss.
+                Reva's digital SAT prep for Math and Reading &amp; Writing is on the way — an AI tutor that
+                teaches every question you miss, step-by-step on a live whiteboard.
               </p>
-              <a
-                href={SIGNUP_URL}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold px-10 py-4 rounded-full text-lg transition-all shadow-2xl shadow-indigo-900/50"
-              >
-                Start Free <ArrowRight className="w-5 h-5" />
-              </a>
+              <span className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-bold px-10 py-4 rounded-full text-lg shadow-2xl shadow-indigo-900/50">
+                <Sparkles className="w-5 h-5" /> Coming Soon
+              </span>
               <p className="text-white/30 text-sm mt-4">
                 <Clock className="w-3.5 h-3.5 inline -mt-0.5 mr-1" />
-                Free tier · daily AI actions · no card required
+                Launching shortly · check back soon
               </p>
             </div>
           </div>

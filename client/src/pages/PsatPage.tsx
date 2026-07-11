@@ -1,9 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import WaitlistModal from "@/components/WaitlistModal";
 import {
-  Sparkles, Target, BookOpen, Trophy, ArrowRight,
+  Sparkles, Target, BookOpen, Trophy,
   ChevronDown, ChevronUp, Menu, X, GraduationCap, MapPin,
   Award, Clock, BarChart3, Brain
 } from "lucide-react";
@@ -67,7 +66,7 @@ const faqs = [
   },
   {
     q: "When does PSAT prep open?",
-    a: "PSAT 8/9 and PSAT/NMSQT prep are both coming soon. Join the waitlist below and we'll notify you the moment your child's tier opens — no specific date is being promised in advance.",
+    a: "PSAT 8/9 and PSAT/NMSQT prep are both coming soon. They're built on the same Reva AI engine as our SAT prep — check back soon. No specific date is being promised in advance.",
   },
   {
     q: "Does Reva use real College Board PSAT questions?",
@@ -79,7 +78,7 @@ const faqs = [
   },
 ];
 
-function PsatNav({ onWaitlistClick }: { onWaitlistClick: () => void }) {
+function PsatNav() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0a0a0f]/80 backdrop-blur-xl">
@@ -105,13 +104,9 @@ function PsatNav({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           </Link>
         </div>
         <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={onWaitlistClick}
-            className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 hover:from-indigo-500 hover:to-amber-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all shadow-lg shadow-indigo-900/30"
-          >
-            Join Waitlist <ArrowRight className="w-4 h-4" />
-          </button>
+          <span className="hidden md:inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-semibold px-5 py-2 rounded-full">
+            Coming Soon
+          </span>
           <button className="md:hidden text-white/70" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -125,13 +120,9 @@ function PsatNav({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           <Link href="/reva">
             <span className="block text-white/70 hover:text-white py-1 cursor-pointer" onClick={() => setOpen(false)}>Reva AI</span>
           </Link>
-          <button
-            type="button"
-            onClick={() => { setOpen(false); onWaitlistClick(); }}
-            className="block w-full mt-2 text-center bg-gradient-to-r from-indigo-600 to-amber-600 text-white font-semibold px-5 py-3 rounded-full"
-          >
-            Join Waitlist →
-          </button>
+          <span className="block w-full mt-2 text-center border border-amber-500/40 bg-amber-500/10 text-amber-300 font-semibold px-5 py-3 rounded-full">
+            Coming Soon
+          </span>
         </div>
       )}
     </nav>
@@ -198,7 +189,7 @@ const structuredData = {
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/PreOrder",
-        "description": "PSAT 8/9 standalone $49/yr · PSAT/NMSQT bundled with SAT Prep plan. Coming soon — join the waitlist.",
+        "description": "PSAT 8/9 standalone $49/yr · PSAT/NMSQT bundled with SAT Prep plan. Coming soon.",
       },
     },
     {
@@ -213,30 +204,27 @@ const structuredData = {
 };
 
 export default function PsatPage() {
-  const [waitlistOpen, setWaitlistOpen] = useState(false);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT</title>
-        <meta name="description" content="Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill score report, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist." />
+        <meta name="description" content="Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill score report, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon." />
         <link rel="canonical" href="https://eduversejr.com/psat" />
         <meta name="keywords" content="PSAT prep, PSAT 8/9 prep, PSAT NMSQT prep, National Merit Scholarship prep, digital PSAT, PSAT practice test, PSAT score predictor, National Merit cutoff by state, Reva AI PSAT, EduVerseJr PSAT" />
         <meta property="og:title" content="PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT" />
-        <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist." />
+        <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon." />
         <meta property="og:url" content="https://eduversejr.com/psat" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PSAT Prep — Reva AI by EduVerseJr" />
-        <meta name="twitter:description" content="PSAT 8/9 + PSAT/NMSQT prep with state-specific National Merit cutoffs. Coming soon — join the waitlist." />
+        <meta name="twitter:description" content="PSAT 8/9 + PSAT/NMSQT prep with state-specific National Merit cutoffs. Coming soon." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      <PsatNav onWaitlistClick={() => setWaitlistOpen(true)} />
-
-      <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} interest="psat" />
+      <PsatNav />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden min-h-[80vh] flex flex-col items-center justify-center px-4 py-24">
@@ -272,14 +260,10 @@ export default function PsatPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <button
-              type="button"
-              onClick={() => setWaitlistOpen(true)}
-              className="group flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 hover:from-indigo-500 hover:to-amber-500 text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl shadow-indigo-900/40"
-            >
-              Join the PSAT Waitlist
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <span className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-indigo-900/40">
+              <Sparkles className="w-5 h-5" />
+              Coming Soon
+            </span>
             <a
               href="#products"
               className="flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-medium px-8 py-4 rounded-full text-lg transition-all"
@@ -434,19 +418,15 @@ export default function PsatPage() {
                 <Trophy className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-                Be first when PSAT opens
+                PSAT prep is coming soon
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-                Both PSAT 8/9 and PSAT/NMSQT (with the National Merit calculator) are coming soon. Join the waitlist — we'll notify you the moment your child's grade band opens.
+                Both PSAT 8/9 and PSAT/NMSQT (with the National Merit calculator) are on the way, built on the same Reva AI engine as our SAT prep. Check back soon.
               </p>
-              <button
-                type="button"
-                onClick={() => setWaitlistOpen(true)}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 hover:from-indigo-500 hover:to-amber-500 text-white font-bold px-10 py-4 rounded-full text-lg transition-all shadow-2xl shadow-indigo-900/50"
-              >
-                Join the PSAT Waitlist <ArrowRight className="w-5 h-5" />
-              </button>
-              <p className="text-white/30 text-sm mt-4">No credit card · Email notification when your tier opens</p>
+              <span className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 text-white font-bold px-10 py-4 rounded-full text-lg shadow-2xl shadow-indigo-900/50">
+                <Sparkles className="w-5 h-5" /> Coming Soon
+              </span>
+              <p className="text-white/30 text-sm mt-4">Launching shortly · check back soon</p>
             </div>
           </div>
         </div>

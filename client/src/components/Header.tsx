@@ -24,17 +24,17 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
+            <div className="flex items-center gap-2 cursor-pointer shrink-0">
               <img
                 src="/logo.jpg"
                 alt="EduVerseJr Logo"
-                className="h-12 w-12 md:h-14 md:w-14 object-contain"
+                className="h-12 w-12 md:h-14 md:w-14 object-contain shrink-0"
               />
-              <div className="flex flex-col">
-                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+              <div className="flex flex-col shrink-0">
+                <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight whitespace-nowrap">
                   EduVerseJr
                 </div>
-                <div className="text-xs text-gray-600 italic">
+                <div className="text-xs text-gray-600 italic whitespace-nowrap">
                   Explore Your Learning Universe
                 </div>
               </div>

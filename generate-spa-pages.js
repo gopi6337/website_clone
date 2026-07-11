@@ -174,14 +174,14 @@ const topLevelMeta = {
   },
   'sat': {
     title: 'SAT Prep — AI Tutor for the Digital SAT (Math & Reading) | EduVerseJr',
-    description: 'Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Start free.',
+    description: 'Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Coming soon.',
     ogTitle: 'SAT Prep — Reva AI Tutor for the Digital SAT | EduVerseJr',
-    ogDesc: 'AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Start free.',
+    ogDesc: 'AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Coming soon.',
     bodyContent: renderSeoBlock({
       h1: 'SAT Prep by Reva AI — An AI Tutor on Every Digital SAT Question',
       intro: [
-        'EduVerseJr\'s Reva AI now prepares students for the digital SAT — both the Reading & Writing and the Math sections, delivered in the real two-module adaptive format used on test day. Reva is a tutor, not a question bank: when you get a question wrong, it teaches the method step-by-step on a live whiteboard, adapts your next round of practice to your weakest skills, and remembers your progress across sessions.',
-        'Every SAT plan includes PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, because PSAT skills map directly onto SAT skills. Reva is live now — start free with no credit card and let an AI tutor walk you through every question you miss.',
+        'EduVerseJr\'s Reva AI is bringing full digital SAT preparation — both the Reading & Writing and the Math sections, delivered in the real two-module adaptive format used on test day. Reva is a tutor, not a question bank: when you get a question wrong, it teaches the method step-by-step on a live whiteboard, adapts your next round of practice to your weakest skills, and remembers your progress across sessions.',
+        'Every SAT plan will include PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, because PSAT skills map directly onto SAT skills. Reva\'s digital SAT prep is coming soon — an AI tutor that walks you through every question you miss.',
       ],
       sections: [
         {
@@ -206,7 +206,7 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & access',
-          p: 'Reva SAT prep is live now. Start free with no credit card — the free tier gives daily AI actions so you can experience the tutoring, whiteboard explanations and practice. Paid plans unlock full-length practice tests, unlimited AI tutoring and the complete question pool, with PSAT/NMSQT and the National Merit calculator included. Sign up at revaai.eduversejr.com to begin.',
+          p: 'Reva SAT prep is coming soon. The tutoring engine, adaptive Math and Reading & Writing practice, whiteboard explanations and per-skill weakness maps are being finalised now. Paid plans will unlock full-length practice tests, unlimited AI tutoring and the complete question pool, with PSAT/NMSQT and the National Merit calculator included. Check back soon — or explore our live Reva AI Teacher for Maths in the meantime.',
         },
       ],
       faqs: [
@@ -215,7 +215,7 @@ const topLevelMeta = {
         { q: 'How is this different from Khan Academy or Photomath?', a: 'Reva is a tutor, not a question bank. It teaches every missed question step-by-step on a live whiteboard with voice, adapts practice to your weakest skills, and remembers your progress across sessions.' },
         { q: 'Do I get PSAT/NMSQT and National Merit prep too?', a: 'Yes. Every SAT plan bundles PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, and your PSAT weakness data carries into SAT prep.' },
         { q: 'Are these real College Board questions?', a: 'No. Reva uses original AI-generated items modelled on College Board\'s published SAT specification and difficulty bands, plus public-domain reading passages. We do not scrape Bluebook or use copyrighted College Board content.' },
-        { q: 'Is there a free way to try it?', a: 'Yes. Start free with no credit card — the free tier gives daily AI actions to experience Reva\'s SAT tutoring. Paid plans unlock full practice tests and unlimited tutoring.' },
+        { q: 'When does SAT prep launch?', a: 'Reva\'s digital SAT prep is coming soon — the tutoring, adaptive practice and whiteboard explanations are being finalised now. Check back shortly, or explore our live Reva AI Teacher for Maths in the meantime.' },
       ],
       links: [
         { href: '/psat', label: 'PSAT / NMSQT prep & National Merit calculator' },
@@ -239,9 +239,9 @@ const topLevelMeta = {
   },
   'psat': {
     title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
-    description: 'Digital PSAT 8/9 and PSAT/NMSQT prep by Reva AI: adaptive practice plus a state-by-state National Merit cutoff calculator. Coming soon — join the waitlist.',
+    description: 'Digital PSAT 8/9 and PSAT/NMSQT prep by Reva AI: adaptive practice plus a state-by-state National Merit cutoff calculator. Coming soon.',
     ogTitle: 'PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT',
-    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon — join the waitlist.',
+    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon.',
     bodyContent: renderSeoBlock({
       h1: 'PSAT Prep by Reva AI — PSAT 8/9 & PSAT/NMSQT for Grades 8–11',
       intro: [
@@ -267,13 +267,13 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & access',
-          p: 'PSAT 8/9 standalone plans are $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT is bundled with every SAT Prep plan alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade. Both products are coming soon — no specific launch date is being promised in advance; join the waitlist for notification.',
+          p: 'PSAT 8/9 standalone plans are $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT is bundled with every SAT Prep plan alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade. Both products are coming soon — no specific launch date is being promised in advance; check back soon.',
         },
       ],
       faqs: [
         { q: 'What\'s the difference between PSAT 8/9 and PSAT/NMSQT?', a: 'PSAT 8/9 is the introductory test for Grades 8–9; it familiarises students with the digital SAT format before high school. PSAT/NMSQT is the Grade 10–11 test that also qualifies students for the National Merit Scholarship. Both are digital, adaptive, and structured exactly like the SAT (two modules each for Reading & Writing and Math).' },
         { q: 'Is PSAT prep included with my Reva subscription?', a: 'PSAT 8/9 prep is included for students on the Grade 8 or Grade 9 annual plan. PSAT/NMSQT prep is bundled with every SAT Prep plan (Grades 10–11). Standalone PSAT 8/9 is $49/year for parents who want a low-commitment intro.' },
-        { q: 'When does PSAT prep launch?', a: 'PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are both coming soon. Join the waitlist to be notified the moment your child\'s tier opens — no specific date is being promised in advance.' },
+        { q: 'When does PSAT prep launch?', a: 'PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are both coming soon, built on the same Reva AI engine as our SAT prep. Check back soon — no specific date is being promised in advance.' },
         { q: 'What is the National Merit Scholarship cutoff calculator?', a: 'National Merit cutoffs differ by state, ranging from approximately 208 (Wyoming, West Virginia) to 222 (California, New Jersey). Our calculator takes your state, target percentile, and current practice scores and tells you exactly how many more points you need for Commended, Semifinalist, or Finalist status in YOUR state.' },
         { q: 'Does Reva use real College Board PSAT questions?', a: 'No — Reva uses original AI-generated practice items modelled on the official PSAT specification, plus a curated set of public-domain reading passages. We do not scrape Bluebook or use any copyrighted College Board content. Our items follow the same difficulty bands and skill taxonomy that College Board publishes.' },
         { q: 'Can my child upgrade from PSAT 8/9 to a full G8–G10 plan?', a: 'Yes. If you start with the $49/yr PSAT 8/9 plan and upgrade to the full G8 or G9 annual plan within the first 90 days, the PSAT 8/9 fee is credited toward your upgrade. After 90 days the plan continues as standalone PSAT prep.' },
