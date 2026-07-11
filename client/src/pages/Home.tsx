@@ -116,12 +116,12 @@ export default function Home() {
         <meta property="og:description" content="Reva AI Teacher (24/7) + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
         <meta property="og:url" content="https://eduversejr.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:image:alt" content="EduVerseJr - AI + Human Teaching Platform" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
         <meta name="twitter:description" content="Reva AI Teacher + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
-        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
+        <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg" />
         {/*
           Self-serving review schema removed 2026-06-11 (Fable 5 finding M2).
           Google has ignored review markup on first-party orgs since 2019;

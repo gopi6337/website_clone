@@ -44,7 +44,7 @@ export default function ResourcesPage() {
         <meta property="og:title" content="Resources & Guides — SAT, PSAT, National Merit & Maths | EduVerseJr" />
         <meta property="og:description" content="Free, evergreen guides on the digital SAT, PSAT/NMSQT & National Merit, and supporting maths at home." />
         <meta property="og:url" content="https://eduversejr.com/resources" />
-        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Resources & Guides — EduVerseJr" />

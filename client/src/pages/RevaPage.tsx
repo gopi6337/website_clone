@@ -321,7 +321,7 @@ export default function RevaPage() {
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
         <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12). SAT Math prep is coming soon (Grades 11–12). Science, Coding and PSAT coming next. Now open — start free." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
-        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Reva AI Teacher — EduVerseJr" />

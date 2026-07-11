@@ -34,11 +34,11 @@ export default function TeachersPage() {
         <meta property="og:description" content="Experienced online teachers for Maths, Science, Coding, SAT & PSAT prep. Live 1-to-1 classes for Grades 5–10 across 6 countries. Book a free trial today." />
         <meta property="og:url" content="https://eduversejr.com/teachers" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Human Teachers — EduVerseJr | Live 1-to-1 Online Classes" />
         <meta name="twitter:description" content="Expert 1-to-1 online teaching for Maths, Science, Coding, SAT & PSAT prep. Grades 5–10 across US, UK, Canada, Australia, Singapore and UAE." />
-        <meta name="twitter:image" content="https://eduversejr.com/logo.jpg" />
+        <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

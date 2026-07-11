@@ -229,7 +229,7 @@ export default function SatPage() {
         <meta property="og:title" content="SAT Prep — Reva AI Tutor for the Digital SAT | EduVerseJr" />
         <meta property="og:description" content="AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Start free." />
         <meta property="og:url" content="https://eduversejr.com/sat" />
-        <meta property="og:image" content="https://eduversejr.com/logo.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SAT Prep — Reva AI Tutor for the Digital SAT" />
