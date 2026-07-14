@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router as WouterRouter } from "wouter";
+import { useEffect } from "react";
+import { Route, Switch, Router as WouterRouter, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -23,11 +24,27 @@ import TermsOfUsePage from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 
+// 2026-07-14 (visitor bug report): wouter keeps the scroll position across
+// client-side route changes, and several pages (Home, About, Teachers, Courses)
+// didn't reset it. So navigating from a scrolled page landed the visitor deep
+// in the next page — "the page doesn't appear, it goes to some other area."
+// This resets scroll to the top on every PATH change (hash-only changes, e.g.
+// /#pricing section jumps, don't change wouter's location, so in-page anchors
+// still work). Replaces the fragile, inconsistent per-page scrollTo effects.
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
+
 function Router() {
   // Use Vite's BASE_URL so routing works whether served at / or /website/
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   return (
     <WouterRouter base={base}>
+      <ScrollToTop />
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/about"} component={AboutPage} />
