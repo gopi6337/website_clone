@@ -35,7 +35,7 @@ const INTEREST_LABELS: Record<WaitlistInterest, string> = {
   "hybrid": "Hybrid (Reva AI + Human Teacher)",
   "sat": "Reva AI + SAT Prep",
   "sat-only": "SAT Prep Only",
-  "psat": "PSAT Prep (Coming Soon)",
+  "psat": "PSAT Prep (On the roadmap)",
 };
 
 interface WaitlistModalProps {
@@ -167,7 +167,7 @@ export default function WaitlistModal({ open, onClose, interest }: WaitlistModal
           <form onSubmit={handleSubmit(onSubmit)} className="p-8" noValidate>
             <div className="flex items-center gap-2 mb-1">
               <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">Coming Soon</span>
+              <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">On the roadmap</span>
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Get notified when this launches</h3>
             <p className="text-white/50 text-sm mb-4">
@@ -292,7 +292,7 @@ export default function WaitlistModal({ open, onClose, interest }: WaitlistModal
                   Submitting…
                 </>
               ) : (
-                <>Join the Waitlist</>
+                <>Request access</>
               )}
             </button>
 

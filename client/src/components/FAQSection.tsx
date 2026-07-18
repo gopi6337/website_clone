@@ -147,7 +147,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "When does PSAT prep launch?",
-      answer: "PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are both coming soon. Visit eduversejr.com/psat for updates — no specific date is being promised in advance. Reva AI for Maths is open now, so you can sign up free today and add PSAT prep when it launches.",
+      answer: "PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are on the roadmap. Visit eduversejr.com/psat for updates — no specific date is being promised in advance. Reva AI for Maths is open now, so you can sign up free today and add PSAT prep when it launches.",
     },
   ];
 

@@ -38,13 +38,13 @@ export default function HeroSection() {
                 <li>• AI-powered personalised teaching</li>
                 <li>• Text, Voice &amp; Slide interactions</li>
                 <li>• Interactive whiteboard — step-by-step</li>
-                <li>• Mathematics: Live &nbsp;·&nbsp; Science &amp; Coding: Coming Soon</li>
+                <li>• Mathematics for Grades 5–12 — live now</li>
+                <li>• SAT &amp; PSAT prep included with Grade 8–12 plans</li>
                 <li>• Available 24/7, free to start</li>
               </ul>
-              <div className="flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 rounded-xl px-3 py-2 mb-4">
-                <span className="text-amber-300 text-sm">🎓</span>
-                <span className="text-xs text-white/90"><span className="font-bold text-amber-300">SAT &amp; PSAT Prep</span> — Coming Soon</span>
-                <span className="ml-auto bg-amber-400 text-gray-900 text-xs font-bold px-2 py-0.5 rounded-full shrink-0">Soon</span>
+              <div className="flex items-center gap-2 bg-white/15 border border-emerald-300/50 rounded-xl px-3 py-2 mb-4">
+                <span className="text-emerald-300 text-sm">✓</span>
+                <span className="text-xs text-white/90"><span className="font-bold text-emerald-300">Live now</span> — sign up and start learning free, no credit card needed</span>
               </div>
               <Button
                 className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-full font-bold"

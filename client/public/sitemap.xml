@@ -20,18 +20,18 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- SAT Prep Page -->
+  <!-- SAT Prep Page (live — included with Grade 8–12 plans) -->
   <url>
     <loc>https://eduversejr.com/sat</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- PSAT Prep Page -->
+  <!-- PSAT Prep Page (live — included with Grade 8–12 plans) -->
   <url>
     <loc>https://eduversejr.com/psat</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>

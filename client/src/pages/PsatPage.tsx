@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "When does PSAT prep open?",
-    a: "PSAT 8/9 and PSAT/NMSQT prep are both coming soon. They're built on the same Reva AI engine as our SAT prep — check back soon. No specific date is being promised in advance.",
+    a: "PSAT 8/9 and PSAT/NMSQT prep are both available now, included with Grade 8–12 plans. They run on the same Reva AI engine as our SAT prep.",
   },
   {
     q: "Does Reva use real College Board PSAT questions?",
@@ -105,7 +105,7 @@ function PsatNav() {
         </div>
         <div className="flex items-center gap-3">
           <span className="hidden md:inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-semibold px-5 py-2 rounded-full">
-            Coming Soon
+            Included with Grade 8–12 plans
           </span>
           <button className="md:hidden text-white/70" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -121,7 +121,7 @@ function PsatNav() {
             <span className="block text-white/70 hover:text-white py-1 cursor-pointer" onClick={() => setOpen(false)}>Reva AI</span>
           </Link>
           <span className="block w-full mt-2 text-center border border-amber-500/40 bg-amber-500/10 text-amber-300 font-semibold px-5 py-3 rounded-full">
-            Coming Soon
+            Included with Grade 8–12 plans
           </span>
         </div>
       )}
@@ -189,7 +189,7 @@ const structuredData = {
       "offers": {
         "@type": "Offer",
         "availability": "https://schema.org/PreOrder",
-        "description": "PSAT 8/9 standalone $49/yr · PSAT/NMSQT bundled with SAT Prep plan. Coming soon.",
+        "description": "PSAT 8/9 standalone $49/yr · PSAT/NMSQT bundled with SAT Prep plan. Included with Grade 8–12 plans.",
       },
     },
     {
@@ -210,17 +210,17 @@ export default function PsatPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT</title>
-        <meta name="description" content="Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill score report, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon." />
+        <meta name="description" content="Digital PSAT 8/9 (Grades 8–9) and PSAT/NMSQT (Grades 10–11) prep by Reva AI. Adaptive practice tests, per-skill score report, and a state-by-state National Merit Scholarship cutoff calculator. Standalone $49/yr or bundled with SAT Prep." />
         <link rel="canonical" href="https://eduversejr.com/psat" />
         <meta name="keywords" content="PSAT prep, PSAT 8/9 prep, PSAT NMSQT prep, National Merit Scholarship prep, digital PSAT, PSAT practice test, PSAT score predictor, National Merit cutoff by state, Reva AI PSAT, EduVerseJr PSAT" />
         <meta property="og:title" content="PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT" />
-        <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon." />
+        <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Included with Grade 8–12 plans." />
         <meta property="og:url" content="https://eduversejr.com/psat" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PSAT Prep — Reva AI by EduVerseJr" />
-        <meta name="twitter:description" content="PSAT 8/9 + PSAT/NMSQT prep with state-specific National Merit cutoffs. Coming soon." />
+        <meta name="twitter:description" content="PSAT 8/9 + PSAT/NMSQT prep with state-specific National Merit cutoffs. Included with Grade 8–12 plans." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -235,7 +235,7 @@ export default function PsatPage() {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-medium px-4 py-2 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              PSAT 8/9 · Coming Soon &nbsp;·&nbsp; PSAT/NMSQT · Coming Soon
+              PSAT 8/9 · Included with Grade 8–12 plans &nbsp;·&nbsp; PSAT/NMSQT · Included with Grade 8–12 plans
             </div>
           </div>
 
@@ -262,7 +262,7 @@ export default function PsatPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <span className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-indigo-900/40">
               <Sparkles className="w-5 h-5" />
-              Coming Soon
+              Included with Grade 8–12 plans
             </span>
             <a
               href="#products"
@@ -418,15 +418,15 @@ export default function PsatPage() {
                 <Trophy className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-                PSAT prep is coming soon
+                PSAT prep is available now, included with Grade 8–12 plans
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-                Both PSAT 8/9 and PSAT/NMSQT (with the National Merit calculator) are on the way, built on the same Reva AI engine as our SAT prep. Check back soon.
+                Both PSAT 8/9 and PSAT/NMSQT (with the National Merit calculator) are available now — included with Grade 8–12 plans, built on the same Reva AI engine as our SAT prep.
               </p>
               <span className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 text-white font-bold px-10 py-4 rounded-full text-lg shadow-2xl shadow-indigo-900/50">
-                <Sparkles className="w-5 h-5" /> Coming Soon
+                <Sparkles className="w-5 h-5" /> Included with Grade 8–12 plans
               </span>
-              <p className="text-white/30 text-sm mt-4">Launching shortly · check back soon</p>
+              <p className="text-white/30 text-sm mt-4">Included with Grade 8–12 plans · sign up to start</p>
             </div>
           </div>
         </div>

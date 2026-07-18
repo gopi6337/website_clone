@@ -30,7 +30,7 @@ export default function ComparisonBlock() {
     grades: "Grades 5–12",
     rows: [
       "Teaches new topics step-by-step",
-      "Maths now · Science & Coding coming soon",
+      "Maths now · Science & Coding on the roadmap",
       "Chat · Voice · Whiteboard · Slides",
       "Auto-tracks weak areas across sessions",
       "Smart practice & instant feedback",

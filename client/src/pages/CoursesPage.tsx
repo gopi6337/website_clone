@@ -107,7 +107,7 @@ export default function CoursesPage() {
           </h1>
           <p className="text-white/90 text-base max-w-xl mx-auto mb-6">
             All three subjects available with expert human teachers. Reva AI is live for
-            Mathematics — Science and Coding AI coming soon.
+            Mathematics — Science and Coding AI on the roadmap.
           </p>
 
           {/* Subject Tabs */}

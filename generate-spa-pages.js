@@ -174,14 +174,14 @@ const topLevelMeta = {
   },
   'sat': {
     title: 'SAT Prep — AI Tutor for the Digital SAT (Math & Reading) | EduVerseJr',
-    description: 'Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Coming soon.',
+    description: 'Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Included with Grade 8–12 plans.',
     ogTitle: 'SAT Prep — Reva AI Tutor for the Digital SAT | EduVerseJr',
-    ogDesc: 'AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Coming soon.',
+    ogDesc: 'AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Included with Grade 8–12 plans.',
     bodyContent: renderSeoBlock({
       h1: 'SAT Prep by Reva AI — An AI Tutor on Every Digital SAT Question',
       intro: [
         'EduVerseJr\'s Reva AI is bringing full digital SAT preparation — both the Reading & Writing and the Math sections, delivered in the real two-module adaptive format used on test day. Reva is a tutor, not a question bank: when you get a question wrong, it teaches the method step-by-step on a live whiteboard, adapts your next round of practice to your weakest skills, and remembers your progress across sessions.',
-        'Every SAT plan will include PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, because PSAT skills map directly onto SAT skills. Reva\'s digital SAT prep is coming soon — an AI tutor that walks you through every question you miss.',
+        'Every SAT plan will include PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, because PSAT skills map directly onto SAT skills. Reva\'s digital SAT prep is available now, included with Grade 8–12 plans — an AI tutor that walks you through every question you miss.',
       ],
       sections: [
         {
@@ -206,7 +206,7 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & access',
-          p: 'Reva SAT prep is coming soon. The tutoring engine, adaptive Math and Reading & Writing practice, whiteboard explanations and per-skill weakness maps are being finalised now. Paid plans will unlock full-length practice tests, unlimited AI tutoring and the complete question pool, with PSAT/NMSQT and the National Merit calculator included. Check back soon — or explore our live Reva AI Teacher for Maths in the meantime.',
+          p: 'Reva SAT prep is available now, included with Grade 8–12 plans. The tutoring engine, adaptive Math and Reading & Writing practice, whiteboard explanations and per-skill weakness maps are being finalised now. Paid plans will unlock full-length practice tests, unlimited AI tutoring and the complete question pool, with PSAT/NMSQT and the National Merit calculator included. Sign up for a Grade 8–12 plan to start, or explore our Reva AI Teacher for Maths too.',
         },
       ],
       faqs: [
@@ -215,7 +215,7 @@ const topLevelMeta = {
         { q: 'How is this different from Khan Academy or Photomath?', a: 'Reva is a tutor, not a question bank. It teaches every missed question step-by-step on a live whiteboard with voice, adapts practice to your weakest skills, and remembers your progress across sessions.' },
         { q: 'Do I get PSAT/NMSQT and National Merit prep too?', a: 'Yes. Every SAT plan bundles PSAT/NMSQT preparation and a state-by-state National Merit Scholarship cutoff calculator at no extra cost, and your PSAT weakness data carries into SAT prep.' },
         { q: 'Are these real College Board questions?', a: 'No. Reva uses original AI-generated items modelled on College Board\'s published SAT specification and difficulty bands, plus public-domain reading passages. We do not scrape Bluebook or use copyrighted College Board content.' },
-        { q: 'When does SAT prep launch?', a: 'Reva\'s digital SAT prep is coming soon — the tutoring, adaptive practice and whiteboard explanations are being finalised now. Check back shortly, or explore our live Reva AI Teacher for Maths in the meantime.' },
+        { q: 'Is SAT prep available now?', a: 'Reva\'s digital SAT prep is available now, included with Grade 8–12 plans — the tutoring, adaptive practice and whiteboard explanations are all live. Sign up for a Grade 8–12 plan to start, or explore our Reva AI Teacher for Maths too.' },
       ],
       links: [
         { href: '/psat', label: 'PSAT / NMSQT prep & National Merit calculator' },
@@ -239,9 +239,9 @@ const topLevelMeta = {
   },
   'psat': {
     title: 'PSAT Prep — PSAT 8/9 & NMSQT for Grades 8–11 | EduVerseJr',
-    description: 'Digital PSAT 8/9 and PSAT/NMSQT prep by Reva AI: adaptive practice plus a state-by-state National Merit cutoff calculator. Coming soon.',
+    description: 'Digital PSAT 8/9 and PSAT/NMSQT prep by Reva AI: adaptive practice plus a state-by-state National Merit cutoff calculator. Included with Grade 8–12 plans.',
     ogTitle: 'PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT',
-    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Coming soon.',
+    ogDesc: 'Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Included with Grade 8–12 plans.',
     bodyContent: renderSeoBlock({
       h1: 'PSAT Prep by Reva AI — PSAT 8/9 & PSAT/NMSQT for Grades 8–11',
       intro: [
@@ -267,20 +267,20 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & access',
-          p: 'PSAT 8/9 standalone plans are $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT is bundled with every SAT Prep plan alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade. Both products are coming soon — no specific launch date is being promised in advance; check back soon.',
+          p: 'PSAT 8/9 standalone plans are $49/year (single yearly plan — no monthly to keep it sticky). Students on G8 or G9 annual plans get PSAT 8/9 included at no extra cost. PSAT/NMSQT is bundled with every SAT Prep plan alongside the National Merit cutoff calculator. If you start with the $49/yr standalone and upgrade to a full G8 or G9 annual plan within 90 days, the PSAT fee is credited toward the upgrade. Both are included with Grade 8–12 plans; the standalone plan is available by request.',
         },
       ],
       faqs: [
         { q: 'What\'s the difference between PSAT 8/9 and PSAT/NMSQT?', a: 'PSAT 8/9 is the introductory test for Grades 8–9; it familiarises students with the digital SAT format before high school. PSAT/NMSQT is the Grade 10–11 test that also qualifies students for the National Merit Scholarship. Both are digital, adaptive, and structured exactly like the SAT (two modules each for Reading & Writing and Math).' },
         { q: 'Is PSAT prep included with my Reva subscription?', a: 'PSAT 8/9 prep is included for students on the Grade 8 or Grade 9 annual plan. PSAT/NMSQT prep is bundled with every SAT Prep plan (Grades 10–11). Standalone PSAT 8/9 is $49/year for parents who want a low-commitment intro.' },
-        { q: 'When does PSAT prep launch?', a: 'PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are both coming soon, built on the same Reva AI engine as our SAT prep. Check back soon — no specific date is being promised in advance.' },
+        { q: 'Is PSAT prep available now?', a: 'PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are available now, included with Grade 8–12 plans, built on the same Reva AI engine as our SAT prep.' },
         { q: 'What is the National Merit Scholarship cutoff calculator?', a: 'National Merit cutoffs differ by state, ranging from approximately 208 (Wyoming, West Virginia) to 222 (California, New Jersey). Our calculator takes your state, target percentile, and current practice scores and tells you exactly how many more points you need for Commended, Semifinalist, or Finalist status in YOUR state.' },
         { q: 'Does Reva use real College Board PSAT questions?', a: 'No — Reva uses original AI-generated practice items modelled on the official PSAT specification, plus a curated set of public-domain reading passages. We do not scrape Bluebook or use any copyrighted College Board content. Our items follow the same difficulty bands and skill taxonomy that College Board publishes.' },
         { q: 'Can my child upgrade from PSAT 8/9 to a full G8–G10 plan?', a: 'Yes. If you start with the $49/yr PSAT 8/9 plan and upgrade to the full G8 or G9 annual plan within the first 90 days, the PSAT 8/9 fee is credited toward your upgrade. After 90 days the plan continues as standalone PSAT prep.' },
       ],
       links: [
         { href: '/reva', label: 'Meet Reva — the AI tutor behind PSAT prep' },
-        { href: '/teachers', label: 'Live human PSAT coaching (coming soon)' },
+        { href: '/teachers', label: 'Live human PSAT coaching (included with grade plans)' },
         { href: '/#pricing', label: 'See full EduVerseJr pricing' },
         { href: '/curriculum/united-states', label: 'US Math curriculum guide' },
       ],
@@ -312,7 +312,11 @@ const topLevelMeta = {
       sections: [
         {
           h2: 'Founder & CEO',
-          p: 'EduVerseJr is founded and led by Revathi Gopinath (MSc, BEd) — Founder & CEO. Revathi has over 10 years of experience teaching Mathematics and Coding to international students online, having taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI. Contact: revathi.ceo@eduversejr.com · LinkedIn: https://www.linkedin.com/in/revathi-gopinath-3b598b412',
+          p: 'EduVerseJr is founded and led by Revathi Gopinath (MSc, BEd) — Founder &amp; CEO. Revathi has over 10 years of experience teaching Mathematics and Coding to international students online, having taught on multiple online learning platforms before founding EduVerseJr in 2026 to combine her teaching expertise with AI. Contact: <a href="mailto:revathi.ceo@eduversejr.com">revathi.ceo@eduversejr.com</a> · <a href="https://www.linkedin.com/in/revathi-gopinath-3b598b412" target="_blank" rel="noopener noreferrer">Revathi Gopinath on LinkedIn</a>',
+        },
+        {
+          h2: 'Co-Founder & CTAIO',
+          p: 'EduVerseJr\'s technology and AI are led by Gopinath Krishnan (MCA) — Co-Founder &amp; Chief Technology &amp; AI Officer (CTAIO). Gopinath architects Reva AI: multi-model LLM orchestration on Google Vertex AI, real-time voice and interactive-whiteboard teaching, and the SAT/PSAT exam product. He brings 24+ years of engineering and IT leadership across telecom, SaaS and AI startups. Contact: <a href="mailto:gopinath.ctaio@eduversejr.com">gopinath.ctaio@eduversejr.com</a> · <a href="https://www.linkedin.com/in/gopinath-krishnan-286839171" target="_blank" rel="noopener noreferrer">Gopinath Krishnan on LinkedIn</a>',
         },
         {
           h2: 'Company information',
@@ -1406,6 +1410,10 @@ const homepageBody = renderSeoBlock({
   ],
   sections: [
     {
+      h2: 'See Reva in action — the live app',
+      p: 'Reva is live now at <a href="https://revaai.eduversejr.com">revaai.eduversejr.com</a>. These are real screenshots from the working product — step-by-step whiteboard teaching and instant graded practice feedback: <br><img src="/screenshots/reva-whiteboard.jpg" alt="Reva AI teaching trigonometry step-by-step on the interactive whiteboard in the live EduVerseJr app" width="640" height="360" style="max-width:100%;height:auto;border-radius:8px;margin:8px 0" /> <img src="/screenshots/reva-practice.jpg" alt="Reva AI giving instant graded practice feedback in the live EduVerseJr app" width="640" height="360" style="max-width:100%;height:auto;border-radius:8px;margin:8px 0" /> <br>Start learning free: <a href="https://revaai.eduversejr.com/register">open the live Reva AI app</a>.',
+    },
+    {
       h2: 'Meet Reva — your child\'s 24/7 AI maths teacher',
       p: 'Reva explains concepts step-by-step on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows. Five core modes — Learn, Whiteboard, Practice, Revision, and Ask Reva — cover the full daily learning loop. Open now with a free tier (10 AI actions/day, Chapter 1 of each course) — start free, no credit card.',
     },
@@ -1430,6 +1438,8 @@ const homepageBody = renderSeoBlock({
     { q: 'What does it cost?', a: 'Reva AI is free to start — a free tier gives 10 AI actions/day, with paid tiers for unlimited use. Human teacher pricing is shown at checkout and varies by country and class frequency.' },
   ],
   links: [
+    { href: 'https://revaai.eduversejr.com/register', label: 'Start learning free — open the live Reva AI app' },
+    { href: 'https://revaai.eduversejr.com/login', label: 'Sign in to Reva AI' },
     { href: '/reva', label: 'Meet Reva — 24/7 AI maths teacher' },
     { href: '/teachers', label: 'Book a free trial with an expert human teacher' },
     { href: '/courses', label: 'See all Maths, Science & Coding courses' },

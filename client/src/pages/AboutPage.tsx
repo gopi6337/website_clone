@@ -399,15 +399,15 @@ export default function AboutPage() {
                 <Cpu className="w-7 h-7 text-cyan-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Gopinath Krishnan</h3>
-              <p className="text-sm text-cyan-700 font-semibold mb-3">Chief Technology & AI Officer (CTAIO) · MCA</p>
+              <p className="text-sm text-cyan-700 font-semibold mb-3">Co-Founder & Chief Technology & AI Officer (CTAIO) · MCA</p>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Gopinath leads the technology and AI strategy behind EduVerseJr's Reva AI — multi-model LLM orchestration on Google Vertex AI, real-time voice and whiteboard teaching, and the SAT/PSAT exam product. He brings 24+ years of engineering and IT leadership across telecom, SaaS, and AI startups.
               </p>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <Mail className="w-4 h-4 text-cyan-600" />
-                  <a href="mailto:Gopinath.ctaio@eduversejr.com" className="hover:text-cyan-700 transition-colors break-all">
-                    Gopinath.ctaio@eduversejr.com
+                  <a href="mailto:gopinath.ctaio@eduversejr.com" className="hover:text-cyan-700 transition-colors break-all">
+                    gopinath.ctaio@eduversejr.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-700">

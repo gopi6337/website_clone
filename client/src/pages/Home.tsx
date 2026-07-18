@@ -73,14 +73,6 @@ const pricingData: PricingGroup[] = [
     tiers: [
       { name: "Reva + SAT + Human", icon: "👩‍🏫", tagline: "Human SAT coach + AI + SAT mode", monthly: 345, quarterly: 929, qSave: 106, yearly: 3299, ySave: 841, yPct: 21, accent: "green",  needsHumanOnboard: true, cta: "trial" },
       { name: "Reva + SAT Prep",    icon: "🤖", tagline: "Full Reva G5-12 + SAT mode",       monthly: 65,  quarterly: 169, qSave: 26,  yearly: 499,  ySave: 281, yPct: 36, accent: "purple", cta: "waitlist-sat" },
-      { name: "SAT Prep Only",      icon: "🎯", tagline: "Reva SAT mode, no main app",       monthly: 25,  quarterly: 65,  qSave: 10,  yearly: 199,  ySave: 101, yPct: 34, accent: "blue",   cta: "waitlist-sat-only" },
-    ],
-  },
-  {
-    group: "PSAT 8/9 Standalone",
-    subtitle: "Grades 8–9 · Coming Soon · 90-day credit toward G8/G9 annual",
-    tiers: [
-      { name: "PSAT 8/9 Prep",      icon: "🏆", tagline: "Reva AI scoped to PSAT skills · 2 practice tests", monthly: 0, quarterly: 0, qSave: 0, yearly: 49, ySave: 0, yPct: 0, accent: "blue", cta: "waitlist-psat", yearlyOnly: true },
     ],
   },
 ];
@@ -90,9 +82,9 @@ const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = 
   "trial":             { label: "Book Free Trial →", href: "#booking" },
   "waitlist-reva":     { label: "Start Free →", href: SIGNUP_URL },
   "waitlist-hybrid":   { label: "Get Started →", href: SIGNUP_URL },
-  "waitlist-sat":      { label: "Coming Soon", href: "/reva?waitlist=1&interest=sat" },
-  "waitlist-sat-only": { label: "Coming Soon", href: "/reva?waitlist=1&interest=sat-only" },
-  "waitlist-psat":     { label: "Coming Soon", href: "/psat?waitlist=1&interest=psat" },
+  "waitlist-sat":      { label: "Request access →", href: "/reva?waitlist=1&interest=sat" },
+  "waitlist-sat-only": { label: "Request access →", href: "/reva?waitlist=1&interest=sat-only" },
+  "waitlist-psat":     { label: "Request access →", href: "/psat?waitlist=1&interest=psat" },
 };
 
 export default function Home() {
@@ -139,6 +131,37 @@ export default function Home() {
       <Header />
       <HeroSection />
       <TrustStrip />
+
+      {/* See Reva in action — real screenshots of the live product (visible without login) */}
+      <section id="see-reva" className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full mb-3">
+              ● Live product
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">See Reva in action</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Real screenshots from the live app — Reva teaches step-by-step on an interactive whiteboard and gives instant, graded practice feedback. Open now at{" "}
+              <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">revaai.eduversejr.com</a>.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <figure className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
+              <img src="/screenshots/reva-whiteboard.jpg" alt="Reva AI teaching trigonometry step-by-step on the interactive whiteboard in the live EduVerseJr app" width="1280" height="720" loading="lazy" className="w-full h-auto" />
+              <figcaption className="text-sm text-gray-600 px-4 py-3 border-t border-gray-100">Step-by-step whiteboard teaching with voice</figcaption>
+            </figure>
+            <figure className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
+              <img src="/screenshots/reva-practice.jpg" alt="Reva AI giving instant graded feedback and a worked solution in the live EduVerseJr practice mode" width="1280" height="720" loading="lazy" className="w-full h-auto" />
+              <figcaption className="text-sm text-gray-600 px-4 py-3 border-t border-gray-100">Smart practice with instant feedback</figcaption>
+            </figure>
+          </div>
+          <div className="text-center mt-8">
+            <a href="https://revaai.eduversejr.com/register" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors shadow-lg shadow-blue-600/30">
+              Start learning free →
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div id="about">
         <AboutUsSection />
@@ -252,7 +275,7 @@ export default function Home() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Pricing</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Choose the right plan for your child. Sign up free and start today. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle — any grade (coming soon).
+              Choose the right plan for your child. Sign up free and start today. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle for any grade.
             </p>
           </div>
 

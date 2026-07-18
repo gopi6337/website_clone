@@ -123,3 +123,4 @@ SESSION_SUMMARY*.txt
 !client/public/logo.*
 !client/public/*.jpg
 !client/public/*.webp
+!client/public/screenshots/*.jpg

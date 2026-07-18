@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: "When does SAT prep launch?",
-    a: "Reva's digital SAT prep is coming soon. The tutoring engine, adaptive Math and Reading & Writing practice, whiteboard explanations and per-skill weakness maps are being finalised now. Check back shortly — or explore our live Reva AI Teacher for Maths in the meantime.",
+    a: "Reva's digital SAT prep is available now, included with Grade 8–12 plans. The tutoring engine, adaptive Math and Reading & Writing practice, whiteboard explanations and per-skill weakness maps are being finalised now. Sign up for a Grade 8–12 plan to start, or explore our Reva AI Teacher for Maths too.",
   },
 ];
 
@@ -94,7 +94,7 @@ function SatNav() {
         </div>
         <div className="flex items-center gap-3">
           <span className="hidden md:inline-flex items-center gap-2 border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 text-sm font-semibold px-5 py-2 rounded-full">
-            Coming Soon
+            Included with Grade 8–12 plans
           </span>
           <button className="md:hidden text-white/70" onClick={() => setOpen(!open)} aria-label="Toggle menu">
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -110,7 +110,7 @@ function SatNav() {
             <span className="block text-white/70 hover:text-white py-1 cursor-pointer" onClick={() => setOpen(false)}>PSAT / National Merit</span>
           </Link>
           <span className="block w-full mt-2 text-center border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 font-semibold px-5 py-3 rounded-full">
-            Coming Soon
+            Included with Grade 8–12 plans
           </span>
         </div>
       )}
@@ -179,7 +179,7 @@ const structuredData = {
         "@type": "Offer",
         "availability": "https://schema.org/PreOrder",
         "priceCurrency": "USD",
-        "description": "Digital SAT prep by Reva AI is coming soon. PSAT/NMSQT and the National Merit calculator will be included.",
+        "description": "Digital SAT prep by Reva AI is available now, included with Grade 8–12 plans. PSAT/NMSQT and the National Merit calculator will be included.",
       },
     },
     {
@@ -220,17 +220,17 @@ export default function SatPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>SAT Prep — AI Tutor for the Digital SAT (Math & Reading) | EduVerseJr</title>
-        <meta name="description" content="Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included. Coming soon." />
+        <meta name="description" content="Digital SAT prep by Reva AI: an AI tutor on every question, adaptive Math + Reading & Writing practice, weakness maps, PSAT/NMSQT included." />
         <link rel="canonical" href="https://eduversejr.com/sat" />
         <meta name="keywords" content="SAT prep, digital SAT prep, AI SAT tutor, SAT Math prep, SAT Reading and Writing prep, adaptive SAT practice, SAT practice test, Reva AI SAT, EduVerseJr SAT, Khan Academy SAT alternative" />
         <meta property="og:title" content="SAT Prep — Reva AI Tutor for the Digital SAT | EduVerseJr" />
-        <meta property="og:description" content="AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included. Coming soon." />
+        <meta property="og:description" content="AI-tutored digital SAT prep — adaptive Math and Reading & Writing, step-by-step whiteboard explanations, PSAT/NMSQT and National Merit included." />
         <meta property="og:url" content="https://eduversejr.com/sat" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SAT Prep — Reva AI Tutor for the Digital SAT" />
-        <meta name="twitter:description" content="Adaptive digital SAT Math + Reading & Writing with an AI tutor on every question. PSAT/NMSQT included. Coming soon." />
+        <meta name="twitter:description" content="Adaptive digital SAT Math + Reading & Writing with an AI tutor on every question. PSAT/NMSQT included." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -245,7 +245,7 @@ export default function SatPage() {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 border border-cyan-500/40 bg-cyan-500/10 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              Digital SAT · Math + Reading &amp; Writing · Coming soon
+              Digital SAT · Math + Reading &amp; Writing · Included with Grade 8–12 plans
             </div>
           </div>
 
@@ -272,7 +272,7 @@ export default function SatPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <span className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-bold px-8 py-4 rounded-full text-lg shadow-xl shadow-indigo-900/40">
               <Sparkles className="w-5 h-5" />
-              Coming Soon
+              Included with Grade 8–12 plans
             </span>
             <a
               href="#sections"
@@ -283,7 +283,7 @@ export default function SatPage() {
           </div>
 
           <p className="text-white/40 text-xs mb-10">
-            Launching soon ·{" "}
+            Included with Grade 8–12 plans ·{" "}
             <Link href="/psat">
               <span className="text-cyan-300 hover:text-cyan-200 underline cursor-pointer">Prepping for the PSAT/NMSQT? →</span>
             </Link>
@@ -294,7 +294,7 @@ export default function SatPage() {
               { value: "1600", label: "Full digital SAT scale" },
               { value: "2+2", label: "Adaptive modules R&W + Math" },
               { value: "Reva", label: "AI tutor on every Q" },
-              { value: "Soon", label: "Launching shortly" },
+              { value: "Live", label: "Included with Grades 8–12" },
             ].map((s) => (
               <div key={s.label} className="border border-white/10 rounded-2xl py-4 px-3 bg-white/3">
                 <div className="text-2xl font-black text-white mb-1">{s.value}</div>
@@ -408,18 +408,18 @@ export default function SatPage() {
                 <BookOpen className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-                SAT prep with an AI tutor — coming soon
+                SAT prep with an AI tutor — available now, included with Grade 8–12 plans
               </h2>
               <p className="text-white/60 text-lg mb-8 max-w-lg mx-auto">
-                Reva's digital SAT prep for Math and Reading &amp; Writing is on the way — an AI tutor that
+                Reva's digital SAT prep for Math and Reading &amp; Writing is available now with Grade 8–12 plans — an AI tutor that
                 teaches every question you miss, step-by-step on a live whiteboard.
               </p>
               <span className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-bold px-10 py-4 rounded-full text-lg shadow-2xl shadow-indigo-900/50">
-                <Sparkles className="w-5 h-5" /> Coming Soon
+                <Sparkles className="w-5 h-5" /> Included with Grade 8–12 plans
               </span>
               <p className="text-white/30 text-sm mt-4">
                 <Clock className="w-3.5 h-3.5 inline -mt-0.5 mr-1" />
-                Launching shortly · check back soon
+                Included with Grade 8–12 plans · sign up to start
               </p>
             </div>
           </div>
