@@ -97,7 +97,7 @@ export default function Header() {
             </a>
             <a
               href="https://revaai.eduversejr.com/login"
-              className="nav-link whitespace-nowrap text-gray-600 hover:text-blue-600"
+              className="whitespace-nowrap font-bold text-base text-blue-600 border border-blue-200 hover:bg-blue-50 rounded-full px-4 py-1.5 transition-colors"
             >
               Sign in
             </a>
@@ -160,7 +160,7 @@ export default function Header() {
             </a>
             <a
               href="https://revaai.eduversejr.com/login"
-              className="block nav-link text-gray-600"
+              className="block nav-link font-bold text-blue-600"
               onClick={() => setIsMenuOpen(false)}
             >
               Sign in to Reva AI

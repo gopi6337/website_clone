@@ -13,6 +13,7 @@ import {
 
 /* ─── Signup (Reva is now open — free trial, no invite) ──── */
 const SIGNUP_URL = "https://revaai.eduversejr.com/register";
+const LOGIN_URL = "https://revaai.eduversejr.com/login";
 
 /* ─── Feature data ─────────────────────────────────────── */
 const features = [
@@ -165,6 +166,12 @@ function RevaNav() {
         {/* CTA */}
         <div className="flex items-center gap-3">
           <a
+            href={LOGIN_URL}
+            className="hidden md:inline-flex items-center font-bold text-base text-white/90 hover:text-white border border-white/20 hover:border-white/40 rounded-full px-4 py-1.5 transition-colors"
+          >
+            Sign in
+          </a>
+          <a
             href={SIGNUP_URL}
             className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all shadow-lg shadow-purple-900/30"
           >
@@ -182,9 +189,16 @@ function RevaNav() {
           <a href="#how-it-works" className="block text-white/70 hover:text-white py-1" onClick={() => setOpen(false)}>How It Works</a>
           <a href="#faq" className="block text-white/70 hover:text-white py-1" onClick={() => setOpen(false)}>FAQ</a>
           <a
+            href={LOGIN_URL}
+            onClick={() => setOpen(false)}
+            className="block w-full mt-2 text-center border border-white/20 text-white font-bold px-5 py-3 rounded-full"
+          >
+            Sign in
+          </a>
+          <a
             href={SIGNUP_URL}
             onClick={() => setOpen(false)}
-            className="block w-full mt-2 text-center bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold px-5 py-3 rounded-full"
+            className="block w-full text-center bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold px-5 py-3 rounded-full"
           >
             Start Free →
           </a>
