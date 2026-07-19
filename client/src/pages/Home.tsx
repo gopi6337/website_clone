@@ -141,9 +141,23 @@ export default function Home() {
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">See Reva in action</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Real screenshots from the live app — Reva teaches step-by-step on an interactive whiteboard and gives instant, graded practice feedback. Open now at{" "}
+              Watch a real walkthrough of the live app — Reva teaches step-by-step on an interactive whiteboard and gives instant, graded practice feedback. Open now at{" "}
               <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">revaai.eduversejr.com</a>.
             </p>
+          </div>
+          {/* Product walkthrough video */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster="/reva-demo-poster.jpg"
+              className="w-full h-auto rounded-2xl border border-gray-200 shadow-xl bg-black"
+            >
+              <source src="/reva-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p className="text-center text-sm text-gray-500 mt-3">2-minute walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <figure className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
