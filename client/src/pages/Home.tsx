@@ -157,7 +157,7 @@ export default function Home() {
               <source src="/reva-demo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <p className="text-center text-sm text-gray-500 mt-3">2-minute walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
+            <p className="text-center text-sm text-gray-500 mt-3">Full product walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <figure className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
