@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import RevaDemo from "@/components/RevaDemo";
 import WaitlistModal, { type WaitlistInterest } from "@/components/WaitlistModal";
 import {
   Sparkles, MessageSquare, Mic, Target, GalleryHorizontal,
@@ -493,11 +492,6 @@ export default function RevaPage() {
               Your browser does not support the video tag.
             </video>
             <p className="text-center text-sm text-white/40 mt-3">Full product walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
-          </div>
-
-          {/* Interactive demo runs on its own white background (shows real app UI) */}
-          <div className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-900/30 ring-1 ring-white/10">
-            <RevaDemo />
           </div>
         </div>
       </section>
