@@ -479,7 +479,23 @@ export default function RevaPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Watch Reva teach a real lesson</h2>
             <p className="text-white/50 max-w-xl mx-auto">Chat · Whiteboard · Slides · Voice · Smart Practice · Upload · Progress — all in one session.</p>
           </div>
-          {/* Demo runs on its own white background (shows real app UI) */}
+
+          {/* Full product walkthrough video (real app) */}
+          <div className="mb-10">
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster="/reva-demo-poster.jpg"
+              className="w-full h-auto rounded-3xl border border-white/10 shadow-2xl shadow-purple-900/30 bg-black"
+            >
+              <source src="/reva-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p className="text-center text-sm text-white/40 mt-3">Full product walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
+          </div>
+
+          {/* Interactive demo runs on its own white background (shows real app UI) */}
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-900/30 ring-1 ring-white/10">
             <RevaDemo />
           </div>
