@@ -82,9 +82,9 @@ const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = 
   "trial":             { label: "Book Free Trial →", href: "#booking" },
   "waitlist-reva":     { label: "Start Free →", href: SIGNUP_URL },
   "waitlist-hybrid":   { label: "Get Started →", href: SIGNUP_URL },
-  "waitlist-sat":      { label: "Request access →", href: "/reva?waitlist=1&interest=sat" },
-  "waitlist-sat-only": { label: "Request access →", href: "/reva?waitlist=1&interest=sat-only" },
-  "waitlist-psat":     { label: "Request access →", href: "/psat?waitlist=1&interest=psat" },
+  "waitlist-sat":      { label: "Start Free →", href: SIGNUP_URL },
+  "waitlist-sat-only": { label: "Start Free →", href: SIGNUP_URL },
+  "waitlist-psat":     { label: "Start Free →", href: SIGNUP_URL },
 };
 
 export default function Home() {
@@ -309,12 +309,12 @@ export default function Home() {
                 {group.comingSoon ? (
                   <div className="text-center py-12">
                     <div className="text-5xl mb-4">🚀</div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">SAT Prep Tier</h4>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">SAT &amp; PSAT Math Prep</h4>
                     <p className="text-sm text-gray-600 mb-5">
-                      We're finalising the Grades 11-12 SAT-prep plans. Drop your email to be notified first.
+                      Digital SAT &amp; PSAT Math practice is live and included with Grade 8–12 plans. Start free today.
                     </p>
-                    <a href="/reva?waitlist=1" className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
-                      Notify Me →
+                    <a href={SIGNUP_URL} className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
+                      Start Free →
                     </a>
                   </div>
                 ) : (

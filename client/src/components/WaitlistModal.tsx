@@ -35,7 +35,7 @@ const INTEREST_LABELS: Record<WaitlistInterest, string> = {
   "hybrid": "Hybrid (Reva AI + Human Teacher)",
   "sat": "Reva AI + SAT Prep",
   "sat-only": "SAT Prep Only",
-  "psat": "PSAT Prep (On the roadmap)",
+  "psat": "PSAT Prep",
 };
 
 interface WaitlistModalProps {
@@ -167,11 +167,11 @@ export default function WaitlistModal({ open, onClose, interest }: WaitlistModal
           <form onSubmit={handleSubmit(onSubmit)} className="p-8" noValidate>
             <div className="flex items-center gap-2 mb-1">
               <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">On the roadmap</span>
+              <span className="text-purple-300 text-xs font-semibold uppercase tracking-widest">Reva AI</span>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Get notified when this launches</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Start learning with Reva</h3>
             <p className="text-white/50 text-sm mb-4">
-              Reva AI for Maths is open now — sign up free anytime. Leave your email and we'll tell you the moment this option is available. No spam, no obligation.
+              Reva AI for Maths is live now — sign up free anytime, no credit card required. Leave your email if you'd like us to stay in touch. No spam, no obligation.
             </p>
             {interest && (
               <div className="mb-6 inline-flex items-center gap-2 bg-purple-600/15 border border-purple-500/30 rounded-full px-3 py-1.5">

@@ -67,7 +67,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "What is Reva AI Teacher by EduVerseJr?",
-      answer: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice mode, smart practice sessions, and personalised weakness tracking. Unlike a general AI chatbot, Reva is purpose-built for curriculum-aligned teaching — it knows your child's grade, curriculum, and past sessions.",
+      answer: "Reva AI Teacher is EduVerseJr's AI-powered maths teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches Mathematics — including SAT and PSAT Math prep — through conversational AI, an interactive whiteboard, voice mode, smart practice sessions, and personalised weakness tracking. Unlike a general AI chatbot, Reva is purpose-built for curriculum-aligned teaching — it knows your child's grade, curriculum, and past sessions.",
     },
     {
       type: "reva",
@@ -77,7 +77,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "What subjects can Reva teach?",
-      answer: "Reva currently teaches Mathematics (US curriculum, Grades 5–10). Science and Coding programmes are in development and will be available soon.",
+      answer: "Reva teaches Mathematics for Grades 5–12, aligned to US, UK, Canada, Australia, Singapore and UAE curricula, and includes SAT Math and PSAT Math preparation with Grade 8–12 plans.",
     },
     {
       type: "reva",
@@ -142,12 +142,12 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "Is PSAT prep included with my Reva subscription?",
-      answer: "PSAT 8/9 prep is included for students on the Grade 8 or Grade 9 annual plan. PSAT/NMSQT prep is bundled with every SAT Prep plan (Grades 10–11). Standalone PSAT 8/9 is also available at $49/year for parents who want a low-commitment intro before a full G8–G9 subscription.",
+      answer: "Yes. PSAT 8/9 Math prep is included for students on the Grade 8 or Grade 9 plan, and PSAT/NMSQT Math prep is included with the Grade 10–11 plans. There's no separate sign-up — it's part of your Reva subscription.",
     },
     {
       type: "reva",
-      question: "When does PSAT prep launch?",
-      answer: "PSAT 8/9 and PSAT/NMSQT (with the National Merit Scholarship state cutoff calculator) are on the roadmap. Visit eduversejr.com/psat for updates — no specific date is being promised in advance. Reva AI for Maths is open now, so you can sign up free today and add PSAT prep when it launches.",
+      question: "Is PSAT prep available now?",
+      answer: "Yes. PSAT 8/9 and PSAT/NMSQT Math prep (with the National Merit Scholarship state cutoff calculator) are live and included with Grade 8–12 plans. Sign up free today at revaai.eduversejr.com and start straight away. See eduversejr.com/psat for details.",
     },
   ];
 

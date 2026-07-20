@@ -92,7 +92,7 @@ const topLevelMeta = {
         },
       ],
       faqs: [
-        { q: 'What grades does Reva AI support?', a: 'Grades 5 through 12, plus PSAT and SAT preparation. Science and Coding subjects are on the roadmap.' },
+        { q: 'What grades does Reva AI support?', a: 'Grades 5 through 12 for Mathematics, plus PSAT and SAT Math preparation included with Grade 8–12 plans.' },
         { q: 'Which curricula does Reva follow?', a: 'US Common Core, UK GCSE / National Curriculum, Canadian provincial curricula, Australian ACARA, Singapore MOE and UAE MOE.' },
         { q: 'Is Reva safe for children?', a: 'Yes. Reva runs through a content moderation pipeline, has parent-visible violation alerts, and is restricted to maths topics. Under-18 students must use a parent-supervised account.' },
         { q: 'Does Reva replace a human teacher?', a: 'No. Reva is an always-on AI maths tutor for daily practice, homework help and revision. For exam-prep coaching, doubt-solving over video, and personalised pedagogy, EduVerseJr also offers live 1-to-1 expert human teachers.' },

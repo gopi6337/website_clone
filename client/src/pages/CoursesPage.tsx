@@ -106,8 +106,8 @@ export default function CoursesPage() {
             Our Courses
           </h1>
           <p className="text-white/90 text-base max-w-xl mx-auto mb-6">
-            All three subjects available with expert human teachers. Reva AI is live for
-            Mathematics — Science and Coding AI on the roadmap.
+            Expert human teachers for one-to-one classes, and Reva AI live for
+            Mathematics (Grades 5–12) with SAT &amp; PSAT Math prep included.
           </p>
 
           {/* Subject Tabs */}

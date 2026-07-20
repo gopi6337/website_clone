@@ -125,7 +125,7 @@ export const GRADES = [
     ],
     faqs: [
       { q: 'Why is Grade 8 maths so important?', a: 'Grade 8 introduces functions and the linear-equation and systems work that Algebra I depends on. A strong Grade 8 makes the jump to high-school maths much smoother; gaps here tend to compound quickly.' },
-      { q: 'Does EduVerseJr offer PSAT prep in Grade 8?', a: 'Yes. Students on the Grade 8 annual plan get PSAT 8/9 preparation included, and a standalone PSAT 8/9 plan is on the roadmap. PSAT 8/9 is a low-stakes introduction to the digital SAT format.' },
+      { q: 'Does EduVerseJr offer PSAT prep in Grade 8?', a: 'Yes. Students on the Grade 8 plan get PSAT 8/9 Math preparation included at no extra cost. PSAT 8/9 is a low-stakes introduction to the digital SAT format.' },
       { q: 'My child finds functions confusing — can Reva help?', a: 'Yes. Reva explains functions with worked examples and a live whiteboard, then adapts practice to the exact skill your child is missing. You can start free with no credit card.' },
     ],
     related: [

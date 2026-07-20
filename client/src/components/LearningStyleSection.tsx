@@ -114,7 +114,7 @@ export default function LearningStyleSection() {
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></span>
-                    Maths now — Science & Coding on the roadmap
+                    Maths for Grades 5–12 — SAT & PSAT Math prep included
                   </li>
                 </ul>
                 <Button

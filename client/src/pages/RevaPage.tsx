@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import WaitlistModal, { type WaitlistInterest } from "@/components/WaitlistModal";
 import {
   Sparkles, MessageSquare, Mic, Target, GalleryHorizontal,
   Dumbbell, TrendingDown, Upload, Award, BarChart3, Brain,
   BookOpen, Clock, ArrowRight, CheckCircle, Zap, Globe,
-  FlaskConical, Code2, Lock, ChevronDown, ChevronUp, Menu, X,
+  Lock, ChevronDown, ChevronUp, Menu, X,
   GraduationCap, Rocket
 } from "lucide-react";
 
@@ -96,10 +95,9 @@ const features = [
   },
   {
     icon: GraduationCap, color: "text-amber-400", bg: "bg-amber-500/10",
-    title: "SAT Prep — Math",
-    description: "On the roadmap — full Digital SAT Math simulation (44 items across two 35-minute modules), an estimated 200–800 score with per-skill breakdown, and a question-by-question report. Reading & Writing and PSAT coming next.",
+    title: "SAT & PSAT Prep — Math",
+    description: "Full Digital SAT Math practice (44 items across two 35-minute modules), an estimated 200–800 score with per-skill breakdown, and a question-by-question report — plus PSAT Math practice. Included with Grade 8–12 plans.",
     size: "md",
-    comingSoon: true,
   },
 ];
 
@@ -123,9 +121,9 @@ const steps = [
 
 const faqs = [
   { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
-  { q: "Is Reva really free?", a: "Yes — you can start using Reva for free with a free trial, no credit card required. Just sign up at revaai.eduversejr.com to get started. Pricing for Grades 5-7 and Grades 8-10 (PSAT included) is published on the EduVerseJr pricing page (eduversejr.com/#pricing), and Grades 11-12 with SAT prep pricing will be announced shortly." },
-  { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher currently covers Mathematics for Grades 5–12 plus SAT Math prep (Grades 11–12) on the roadmap. Reading & Writing for SAT, PSAT, Science and Coding are coming next — all under the same Reva AI Teacher platform." },
-  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes. SAT Math prep is on the roadmap for Grades 11–12: a full Digital SAT Math simulation (44 items across two 35-minute modules), an estimated 200–800 score, a per-skill breakdown, and Reva's personalised explanations on every wrong answer via whiteboard and voice. SAT Reading & Writing and PSAT prep (Grades 8–10) are coming next." },
+  { q: "Is Reva really free?", a: "Yes — you can start using Reva for free with a free trial, no credit card required. Just sign up at revaai.eduversejr.com to get started. Pricing for Grades 5-7, Grades 8-10 (PSAT included) and Grades 11-12 (SAT prep included) is published on the EduVerseJr pricing page (eduversejr.com/#pricing)." },
+  { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher covers Mathematics for Grades 5–12, plus SAT Math and PSAT Math prep — all live now under the same Reva AI Teacher platform. SAT and PSAT Math prep are included with Grade 8–12 plans." },
+  { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes. SAT Math and PSAT Math prep are live: a full Digital SAT Math practice experience (44 items across two 35-minute modules), an estimated 200–800 score, a per-skill breakdown, and Reva's personalised explanations on every wrong answer via whiteboard and voice. SAT and PSAT Math prep are included with Grade 8–12 plans." },
   { q: "Does Reva work with US Common Core, UK, or Australian curriculum?", a: "Yes. Reva AI Teacher is aligned to US Common Core State Standards, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian Provincial Standards, and UAE Ministry of Education standards. Reva teaches to the exact curriculum your child follows at school." },
   { q: "Can Reva help with homework?", a: "Absolutely. Upload a photo or PDF of any Maths homework — Reva AI Teacher reads it, explains it, and walks through solutions step by step." },
   { q: "How is Reva different from Khan Academy or other AI teachers?", a: "Reva is purpose-built for teaching, not just answering. It uses a live interactive whiteboard to show step-by-step visual solutions, remembers your child's weaknesses across sessions, supports voice interaction, and works alongside human teachers on the same platform. Most AI teachers provide one-off answers — Reva builds a continuous, personalised learning relationship." },
@@ -310,42 +308,27 @@ const structuredData = {
 };
 
 /* ─── Main page ─────────────────────────────────────────── */
-const VALID_INTERESTS: ReadonlyArray<WaitlistInterest> = ["reva", "hybrid", "sat", "sat-only"];
-
 export default function RevaPage() {
-  const [waitlistOpen, setWaitlistOpen] = useState(false);
-  const [waitlistInterest, setWaitlistInterest] = useState<WaitlistInterest | undefined>();
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("waitlist") === "1") setWaitlistOpen(true);
-    const raw = params.get("interest");
-    if (raw && (VALID_INTERESTS as ReadonlyArray<string>).includes(raw)) {
-      setWaitlistInterest(raw as WaitlistInterest);
-    }
-  }, []);
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
-        <title>Reva AI Teacher — EduVerseJr | Maths, Science & Coding · 24/7</title>
-        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12) plus SAT Math prep on the roadmap (Grades 11–12). Science, Coding, PSAT and SAT Reading & Writing coming next. Chat, voice, whiteboard, smart practice and weakness tracking. Now open — start free, no credit card." />
+        <title>Reva AI Teacher — EduVerseJr | AI Maths Teacher · 24/7</title>
+        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12), plus SAT Math and PSAT Math prep included with Grade 8–12 plans. Chat, voice, whiteboard, smart practice and weakness tracking. Live now — start free, no credit card." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
-        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI science teacher, AI coding teacher, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, science teacher online, coding teacher for kids, EduVerseJr Reva" />
-        <meta property="og:title" content="Reva AI Teacher — EduVerseJr | Maths, Science & Coding" />
-        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12). SAT Math prep is on the roadmap (Grades 11–12). Science, Coding and PSAT coming next. Now open — start free." />
+        <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI math tutor, SAT Math prep, PSAT Math prep, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, digital SAT practice, EduVerseJr Reva" />
+        <meta property="og:title" content="Reva AI Teacher — EduVerseJr | AI Maths Teacher" />
+        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12), with SAT Math and PSAT Math prep included in Grade 8–12 plans. Live now — start free." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Reva AI Teacher — EduVerseJr" />
-        <meta name="twitter:description" content="AI teacher for Maths (Grades 5–12). SAT Math prep on the roadmap (Grades 11–12). Science, Coding & PSAT coming next." />
+        <meta name="twitter:description" content="AI teacher for Maths (Grades 5–12), with SAT Math and PSAT Math prep included in Grade 8–12 plans. Live now." />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <RevaNav />
-
-      {/* Waitlist modal */}
-      <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} interest={waitlistInterest} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden min-h-[90vh] flex flex-col items-center justify-center px-4 py-24">
@@ -359,11 +342,11 @@ export default function RevaPage() {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium px-4 py-2 rounded-full">
               <Sparkles className="w-3.5 h-3.5" />
-              Maths (Live) &nbsp;·&nbsp; Science &amp; Coding (Soon) &nbsp;·&nbsp; Now Open
+              Maths (Live) &nbsp;·&nbsp; Now Open
             </div>
             <div className="inline-flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 text-sm font-medium px-4 py-2 rounded-full">
               <GraduationCap className="w-3.5 h-3.5" />
-              SAT Math Prep — On the roadmap
+              SAT Math Prep — Live
             </div>
           </div>
 
@@ -384,8 +367,8 @@ export default function RevaPage() {
           </h1>
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Reva is your child's personal AI teacher — now open with a free trial. Teaching Maths for Grades 5–12 now,
-            with SAT Math prep on the roadmap. Science, Coding, PSAT and SAT Reading &amp; Writing coming next.
+            Reva is your child's personal AI teacher — open now with a free trial. Teaching Maths for Grades 5–12,
+            plus SAT Math prep for Grades 11–12.
           </p>
 
           {/* CTAs */}
@@ -524,14 +507,14 @@ export default function RevaPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-white/40 text-sm uppercase tracking-widest mb-2">Reva AI Teacher — Subjects</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">One AI teacher for all core subjects</h2>
-            <p className="text-white/40 text-sm mt-2">Maths is live now. Science and Coding are on the way.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Your child's AI Maths teacher — live now</h2>
+            <p className="text-white/40 text-sm mt-2">Maths for Grades 5–12, with SAT & PSAT Math prep included in Grade 8–12 plans.</p>
           </div>
           <div className="grid grid-cols-3 gap-4">
             {[
               { icon: Brain, label: "Mathematics", sub: "Grades 5–12 · Multi-curriculum", live: true, gradient: "from-purple-600 to-violet-600" },
-              { icon: FlaskConical, label: "Science", sub: "On the roadmap", live: false, gradient: "from-slate-700 to-slate-700" },
-              { icon: Code2, label: "Coding", sub: "On the roadmap", live: false, gradient: "from-slate-700 to-slate-700" },
+              { icon: GraduationCap, label: "SAT Math Prep", sub: "Grades 11–12 · Included", live: true, gradient: "from-purple-600 to-violet-600" },
+              { icon: GraduationCap, label: "PSAT Math Prep", sub: "Grades 8–10 · Included", live: true, gradient: "from-purple-600 to-violet-600" },
             ].map((s) => (
               <div
                 key={s.label}
