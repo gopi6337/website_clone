@@ -88,7 +88,7 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & access',
-          p: 'Reva AI is open now. The free tier gives 10 AI actions/day and Chapter 1 of each course with a free trial — no credit card required. Paid tiers unlock unlimited messages, full chapters, whiteboard interactive mode and voice practice. Sign up at revaai.eduversejr.com to get started.',
+          p: 'Reva AI is open now with a 7-day free trial — 10 AI actions/day and Chapter 1 of each course, no credit card required. After 7 days, paid plans unlock unlimited messages, full chapters, whiteboard interactive mode and voice practice. Sign up at revaai.eduversejr.com to get started.',
         },
       ],
       faqs: [

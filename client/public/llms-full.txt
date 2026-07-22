@@ -1,11 +1,11 @@
 # EduVerseJr — Full Reference for LLMs
 
-> EduVerseJr is an online education platform combining Reva AI Teacher (a 24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries. Reva AI is open now with a free tier — no credit card required. This file expands on https://eduversejr.com/llms.txt with the full text of key pages and guides so language models can answer questions accurately.
+> EduVerseJr is an online education platform combining Reva AI Teacher (a 24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries. Reva AI is open now with a 7-day free trial — no credit card required. This file expands on https://eduversejr.com/llms.txt with the full text of key pages and guides so language models can answer questions accurately.
 
 EduVerseJr is operated as an India-registered MSME based at D. No. 78, Gem Enclave, Maniyakarampalayam, Idikarai, Annoor Taluk, Coimbatore – 641022, Tamil Nadu, India. Phone: +91 422 4924192. Founded in 2026 by Revathi Gopinath (MSc, BEd), an experienced classroom teacher with 10+ years teaching Mathematics and Coding to international students online. Founder & CEO LinkedIn: https://www.linkedin.com/in/revathi-gopinath-3b598b412. Contacts: support@eduversejr.com (support), info@eduversejr.com (business), revathi.ceo@eduversejr.com (founder). Governing law: India.
 
 Two teaching modes:
-1. Reva AI Teacher — 24/7 AI maths tutor, open now with a free tier (10 AI actions/day, Chapter 1 of each course, free trial, no credit card). Grades 5–12 Mathematics; Science and Coding on the roadmap. Digital SAT prep is live. PSAT coming soon. Register at https://revaai.eduversejr.com/register (US registration currently).
+1. Reva AI Teacher — 24/7 AI maths tutor, open now with a 7-day free trial (10 AI actions/day, Chapter 1 of each course, no credit card; paid plan for unlimited use after). Grades 5–12 Mathematics; Science and Coding on the roadmap. Digital SAT prep is live. PSAT coming soon. Register at https://revaai.eduversejr.com/register (US registration currently).
 2. Human Teachers — certified teachers, live 1-to-1 online, Grades 5–10 Maths/Science/Coding plus PSAT/SAT. Free trial class via https://eduversejr.com/teachers.
 
 ## Reva vs a general chatbot
@@ -50,7 +50,7 @@ Six curricula: US Common Core, UK National Curriculum/GCSE (KS2–KS4), Canada (
 
 ## Pricing (source of truth: https://eduversejr.com/#pricing)
 
-Reva AI is free to start (free tier, no credit card). Paid tiers by grade group:
+Reva AI starts with a 7-day free trial (10 AI actions/day, Chapter 1 of each course, no credit card). Paid plans by grade group:
 - Grades 5–7: Reva AI $15/mo, Hybrid $79/mo, Human Teacher $160/mo.
 - Grades 8–10 (PSAT prep included): Reva AI $30/mo, Hybrid $109/mo, Human Teacher $200/mo.
 - Grades 11–12: Reva AI $50/mo, Hybrid $150/mo, Human Teacher $280/mo.
