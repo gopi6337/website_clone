@@ -121,7 +121,7 @@ export default function LearningStyleSection() {
                   className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full"
                   onClick={() => window.location.href = '/reva'}
                 >
-                  Try Reva for Free
+                  Try Reva Free Trial
                 </Button>
               </>
             )}

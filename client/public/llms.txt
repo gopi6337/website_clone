@@ -1,10 +1,10 @@
 # EduVerseJr
 
-> EduVerseJr is an online education platform combining Reva AI Teacher (a 24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries. Reva AI is open now with a free tier — no credit card required.
+> EduVerseJr is an online education platform combining Reva AI Teacher (a 24/7 AI tutor) with expert human teachers for live 1-to-1 classes in Mathematics, Science and Coding for students in Grades 5–12 across six countries. Reva AI is open now with a 7-day free trial — no credit card required.
 
 EduVerseJr is operated as an India-based MSME from Coimbatore, Tamil Nadu, and serves students internationally. The platform has two distinct teaching modes:
 
-1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Open now with a free tier (self-serve registration, no credit card). Supports Grades 5–12 in Mathematics, with Science and Coding on the roadmap. Digital SAT preparation (adaptive 2-module practice, Math + Reading & Writing, with step-by-step whiteboard explanations) is live. PSAT 8/9 and PSAT/NMSQT preparation is coming soon.
+1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Open now with a 7-day free trial (self-serve registration, no credit card). Supports Grades 5–12 in Mathematics, with Science and Coding on the roadmap. Digital SAT preparation (adaptive 2-module practice, Math + Reading & Writing, with step-by-step whiteboard explanations) is live. PSAT 8/9 and PSAT/NMSQT preparation is coming soon.
 
 2. **Human Teachers** — Certified human teachers delivering live 1-to-1 online classes in Mathematics, Science and Coding for Grades 5–10, plus PSAT/SAT preparation. New students start with a free trial class.
 
@@ -68,17 +68,17 @@ Science curriculum guides are at /science-curriculum/{country} for the same six 
 
 ## Grade & Subject Matrix
 
-- **Reva AI Teacher** (open now, free tier available): Grades 5–12, Mathematics. Science and Coding on the roadmap. Digital SAT prep is live (2-module adaptive, Math + Reading & Writing). PSAT 8/9 and PSAT/NMSQT coming soon.
+- **Reva AI Teacher** (open now, 7-day free trial): Grades 5–12, Mathematics. Science and Coding on the roadmap. Digital SAT prep is live (2-module adaptive, Math + Reading & Writing). PSAT 8/9 and PSAT/NMSQT coming soon.
 - **Human Teachers** (live): Grades 5–10, Mathematics + Science + Coding. PSAT/SAT preparation available.
 
 ## How to Access
 
-- Reva AI Teacher is open now. Parents/students can register for the free tier at https://eduversejr.com/reva (which links to https://revaai.eduversejr.com/register). The free tier gives 10 AI actions per day and Chapter 1 of each course, with a free trial and no credit card. Registration is currently available to students in the United States.
+- Reva AI Teacher is open now. Parents/students can register for the 7-day free trial at https://eduversejr.com/reva (which links to https://revaai.eduversejr.com/register). The trial gives 10 AI actions per day and Chapter 1 of each course, no credit card. After 7 days, continue on a paid plan for unlimited use. Registration is currently available to students in the United States.
 - Human teacher classes can be booked via the contact form on https://eduversejr.com/teachers (free trial class available).
 
 ## Pricing
 
-Current pricing is published at https://eduversejr.com/#pricing and organised by grade group. Reva AI is free to start (free tier, no credit card); paid tiers unlock unlimited use and premium features.
+Current pricing is published at https://eduversejr.com/#pricing and organised by grade group. Reva AI starts with a 7-day free trial (10 AI actions/day, Chapter 1 of each course, no credit card); paid plans unlock unlimited use and premium features.
 
 - **Grades 5–7 (Math foundations):** Reva AI $15/month, Hybrid (AI + 2 hrs human/month) $79/month, Human Teacher (8 hrs/month) $160/month.
 - **Grades 8–10 (Algebra & Geometry + PSAT prep included):** Reva AI $30/month, Hybrid $109/month, Human Teacher $200/month.

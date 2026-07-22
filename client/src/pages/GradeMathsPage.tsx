@@ -68,7 +68,7 @@ export default function GradeMathsPage() {
           "availability": "https://schema.org/InStock",
           "price": "0",
           "priceCurrency": "USD",
-          "description": "Free tier available — no credit card. Paid plans unlock unlimited use.",
+          "description": "7-day free trial — no credit card. Paid plans unlock unlimited use.",
         },
       },
       {
@@ -142,7 +142,7 @@ export default function GradeMathsPage() {
             href={SIGNUP_URL}
             className="inline-flex items-center gap-2 mt-5 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-colors"
           >
-            Start free with Reva <ArrowRight className="w-4 h-4" />
+            Start free trial with Reva <ArrowRight className="w-4 h-4" />
           </a>
         </section>
 

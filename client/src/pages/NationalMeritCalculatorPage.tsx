@@ -227,13 +227,13 @@ export default function NationalMeritCalculatorPage() {
           <h2 className="text-xl font-bold text-white mb-2">A few points short? You can close the gap.</h2>
           <p className="text-white/60 text-sm max-w-xl mx-auto mb-5">
             A few more questions right can move your Selection Index several points. Reva AI drills your weakest
-            PSAT/NMSQT skills with a tutor on every question — and carries straight into SAT prep. Start free.
+            PSAT/NMSQT skills with a tutor on every question — and carries straight into SAT prep. Start your free trial.
           </p>
           <a
             href={SIGNUP_URL}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-amber-600 hover:from-indigo-500 hover:to-amber-500 text-white font-bold px-8 py-3.5 rounded-full transition-all shadow-xl shadow-indigo-900/40"
           >
-            Start Free with Reva <ArrowRight className="w-4 h-4" />
+            Start Free Trial with Reva <ArrowRight className="w-4 h-4" />
           </a>
         </section>
 

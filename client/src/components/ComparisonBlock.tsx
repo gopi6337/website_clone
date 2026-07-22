@@ -34,9 +34,9 @@ export default function ComparisonBlock() {
       "Chat · Voice · Whiteboard · Slides",
       "Auto-tracks weak areas across sessions",
       "Smart practice & instant feedback",
-      "Free to start — no credit card",
+      "7-day free trial — no credit card",
     ],
-    cta: { text: "Try Reva Free", action: "/reva" },
+    cta: { text: "Try Reva Free Trial", action: "/reva" },
   };
 
   return (

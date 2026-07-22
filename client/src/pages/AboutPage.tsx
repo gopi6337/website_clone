@@ -140,8 +140,8 @@ export default function AboutPage() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Course",
-            "name": "Reva AI Mathematics Teaching — Free Tier",
-            "description": "Free AI-powered mathematics teaching by Reva for Grades 5–12. Includes 10 AI sessions per day, curriculum-aligned content, and interactive whiteboard.",
+            "name": "Reva AI Mathematics Teaching — 7-Day Free Trial",
+            "description": "7-day free trial of AI-powered mathematics teaching by Reva for Grades 5–12. Includes 10 AI actions per day and Chapter 1 of each course, curriculum-aligned content, and interactive whiteboard.",
             "educationalLevel": "Grades 5–12",
             "teaches": "Mathematics",
             "provider": { "@type": "Organization", "name": "EduVerseJr" }
@@ -192,7 +192,7 @@ export default function AboutPage() {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "description": "Free tier available. Paid plans unlock unlimited sessions, voice mode, and whiteboard."
+      "description": "7-day free trial available. Paid plans unlock unlimited sessions, voice mode, and whiteboard."
     },
     "description": "Reva is EduVerseJr's AI-powered teacher for Grades 5–12. Available 24/7, Reva teaches Mathematics, Science, and Coding through conversational AI, an interactive whiteboard, voice interaction, and personalised practice sessions. Powered by AI.",
     "featureList": [
@@ -464,7 +464,7 @@ export default function AboutPage() {
       <section className="py-14 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to start?</h2>
-          <p className="text-purple-100 mb-8">Try Reva AI Teacher free — no credit card needed. Or book a free trial class with a human teacher.</p>
+          <p className="text-purple-100 mb-8">Start your free trial of Reva AI Teacher — no credit card needed. Or book a free trial class with a human teacher.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://revaai.eduversejr.com"

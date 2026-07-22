@@ -68,7 +68,7 @@ function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
 const topLevelMeta = {
   'reva': {
     title: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12 | EduVerseJr',
-    description: 'Meet Reva, your child\'s 24/7 AI maths tutor: chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 plus PSAT/SAT. Start free.',
+    description: 'Meet Reva, your child\'s 24/7 AI maths tutor: chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 plus PSAT/SAT. Start your 7-day free trial.',
     ogTitle: 'Reva AI Teacher — 24/7 AI Maths Tutor | EduVerseJr',
     ogDesc: 'AI maths teacher for Grades 5–12. Chat, voice, interactive whiteboard, smart practice, progress tracking. Now open — start your free trial.',
     bodyContent: renderSeoBlock({
@@ -96,7 +96,7 @@ const topLevelMeta = {
         { q: 'Which curricula does Reva follow?', a: 'US Common Core, UK GCSE / National Curriculum, Canadian provincial curricula, Australian ACARA, Singapore MOE and UAE MOE.' },
         { q: 'Is Reva safe for children?', a: 'Yes. Reva runs through a content moderation pipeline, has parent-visible violation alerts, and is restricted to maths topics. Under-18 students must use a parent-supervised account.' },
         { q: 'Does Reva replace a human teacher?', a: 'No. Reva is an always-on AI maths tutor for daily practice, homework help and revision. For exam-prep coaching, doubt-solving over video, and personalised pedagogy, EduVerseJr also offers live 1-to-1 expert human teachers.' },
-        { q: 'How much does it cost?', a: 'Reva is free to start — a free tier gives 10 AI actions/day and Chapter 1 of each course, no credit card required. Paid tiers add unlimited use and premium features; pricing is on the EduVerseJr pricing page.' },
+        { q: 'How much does it cost?', a: 'Reva starts with a 7-day free trial — 10 AI actions/day and Chapter 1 of each course, no credit card required. After the trial, paid plans add unlimited use and premium features; pricing is on the EduVerseJr pricing page.' },
       ],
       links: [
         { href: '/teachers', label: 'Book a free trial class with an expert human teacher' },
@@ -115,7 +115,7 @@ const topLevelMeta = {
         applicationCategory: 'EducationalApplication',
         operatingSystem: 'Web',
         description: 'Reva is EduVerseJr\'s 24/7 AI maths tutor for Grades 5–12 and PSAT/SAT — chat, voice, interactive whiteboard, smart practice and progress tracking.',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free tier — 10 AI actions/day, no credit card' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: '7-day free trial — 10 AI actions/day, no credit card' },
         provider: { '@id': ORG_ID },
       },
     ],
@@ -142,7 +142,7 @@ const topLevelMeta = {
         },
         {
           h2: 'How to raise your Selection Index',
-          p: 'Because the index is doubled, a few more questions right on the PSAT/NMSQT can move your Selection Index several points — often the difference between Commended and Semifinalist. Reva AI drills your weakest PSAT/NMSQT skills with an AI tutor on every question, and the same weakness data carries straight into SAT preparation. You can start free with no credit card.',
+          p: 'Because the index is doubled, a few more questions right on the PSAT/NMSQT can move your Selection Index several points — often the difference between Commended and Semifinalist. Reva AI drills your weakest PSAT/NMSQT skills with an AI tutor on every question, and the same weakness data carries straight into SAT preparation. You can start your 7-day free trial with no credit card.',
         },
       ],
       faqs: [
@@ -377,7 +377,7 @@ const topLevelMeta = {
         },
         {
           h2: 'Pricing & free trial',
-          p: 'New students are eligible for a free trial class with a human teacher — book on the Teachers page. Reva AI Teacher offers a free tier (10 messages/day, Chapter 1 of each course) at launch with paid tiers for unlimited use. Full subscription pricing is confirmed at checkout.',
+          p: 'New students are eligible for a free trial class with a human teacher — book on the Teachers page. Reva AI Teacher offers a 7-day free trial (10 AI actions/day, Chapter 1 of each course) with paid plans for unlimited use after. Full subscription pricing is confirmed at checkout.',
         },
       ],
       faqs: [
@@ -1390,7 +1390,7 @@ GRADES.forEach((g) => {
           availability: 'https://schema.org/InStock',
           price: '0',
           priceCurrency: 'USD',
-          description: 'Free tier available — no credit card. Paid plans unlock unlimited use.',
+          description: '7-day free trial — no credit card. Paid plans unlock unlimited use.',
         },
       },
     ],
@@ -1411,11 +1411,11 @@ const homepageBody = renderSeoBlock({
   sections: [
     {
       h2: 'See Reva in action — the live app',
-      p: 'Reva is live now at <a href="https://revaai.eduversejr.com">revaai.eduversejr.com</a>. These are real screenshots from the working product — step-by-step whiteboard teaching and instant graded practice feedback: <br><img src="/screenshots/reva-whiteboard.jpg" alt="Reva AI teaching trigonometry step-by-step on the interactive whiteboard in the live EduVerseJr app" width="640" height="360" style="max-width:100%;height:auto;border-radius:8px;margin:8px 0" /> <img src="/screenshots/reva-practice.jpg" alt="Reva AI giving instant graded practice feedback in the live EduVerseJr app" width="640" height="360" style="max-width:100%;height:auto;border-radius:8px;margin:8px 0" /> <br>Start learning free: <a href="https://revaai.eduversejr.com/register">open the live Reva AI app</a>.',
+      p: 'Reva is live now at <a href="https://revaai.eduversejr.com">revaai.eduversejr.com</a>. These are real screenshots from the working product — step-by-step whiteboard teaching and instant graded practice feedback: <br><img src="/screenshots/reva-whiteboard.jpg" alt="Reva AI teaching trigonometry step-by-step on the interactive whiteboard in the live EduVerseJr app" width="640" height="360" style="max-width:100%;height:auto;border-radius:8px;margin:8px 0" /> <img src="/screenshots/reva-practice.jpg" alt="Reva AI giving instant graded practice feedback in the live EduVerseJr app" width="640" height="360" style="max-width:100%;height:auto;border-radius:8px;margin:8px 0" /> <br>Start your free trial: <a href="https://revaai.eduversejr.com/register">open the live Reva AI app</a>.',
     },
     {
       h2: 'Meet Reva — your child\'s 24/7 AI maths teacher',
-      p: 'Reva explains concepts step-by-step on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows. Five core modes — Learn, Whiteboard, Practice, Revision, and Ask Reva — cover the full daily learning loop. Open now with a free tier (10 AI actions/day, Chapter 1 of each course) — start free, no credit card.',
+      p: 'Reva explains concepts step-by-step on an interactive whiteboard, listens to spoken questions, and adapts each lesson to the country curriculum your child follows. Five core modes — Learn, Whiteboard, Practice, Revision, and Ask Reva — cover the full daily learning loop. Open now with a 7-day free trial (10 AI actions/day, Chapter 1 of each course) — no credit card. After the trial, continue on a paid plan for unlimited use.',
     },
     {
       h2: 'Expert human teachers — live 1-to-1 classes',
@@ -1435,10 +1435,10 @@ const homepageBody = renderSeoBlock({
     { q: 'Which subjects?', a: 'Mathematics, Science, and Coding. Subject availability depends on grade — see our Courses page for the full matrix.' },
     { q: 'Is Reva the same as ChatGPT?', a: 'No. Reva is restricted to curriculum-aligned maths content, runs through a content review pipeline, remembers your child\'s past topics across sessions, and is built specifically for school-age learners.' },
     { q: 'How do I book a free trial?', a: 'Visit our Teachers page, fill in the form with your child\'s grade and country, and we will email back within 24 hours to schedule.' },
-    { q: 'What does it cost?', a: 'Reva AI is free to start — a free tier gives 10 AI actions/day, with paid tiers for unlimited use. Human teacher pricing is shown at checkout and varies by country and class frequency.' },
+    { q: 'What does it cost?', a: 'Reva AI starts with a 7-day free trial — 10 AI actions/day and Chapter 1 of each course, then paid plans for unlimited use. Human teacher pricing is shown at checkout and varies by country and class frequency.' },
   ],
   links: [
-    { href: 'https://revaai.eduversejr.com/register', label: 'Start learning free — open the live Reva AI app' },
+    { href: 'https://revaai.eduversejr.com/register', label: 'Start your free trial — open the live Reva AI app' },
     { href: 'https://revaai.eduversejr.com/login', label: 'Sign in to Reva AI' },
     { href: '/reva', label: 'Meet Reva — 24/7 AI maths teacher' },
     { href: '/teachers', label: 'Book a free trial with an expert human teacher' },

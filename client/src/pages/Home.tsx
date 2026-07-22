@@ -80,11 +80,11 @@ const pricingData: PricingGroup[] = [
 const SIGNUP_URL = "https://revaai.eduversejr.com/register";
 const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = {
   "trial":             { label: "Book Free Trial →", href: "#booking" },
-  "waitlist-reva":     { label: "Start Free →", href: SIGNUP_URL },
+  "waitlist-reva":     { label: "Start Free Trial →", href: SIGNUP_URL },
   "waitlist-hybrid":   { label: "Get Started →", href: SIGNUP_URL },
-  "waitlist-sat":      { label: "Start Free →", href: SIGNUP_URL },
-  "waitlist-sat-only": { label: "Start Free →", href: SIGNUP_URL },
-  "waitlist-psat":     { label: "Start Free →", href: SIGNUP_URL },
+  "waitlist-sat":      { label: "Start Free Trial →", href: SIGNUP_URL },
+  "waitlist-sat-only": { label: "Start Free Trial →", href: SIGNUP_URL },
+  "waitlist-psat":     { label: "Start Free Trial →", href: SIGNUP_URL },
 };
 
 export default function Home() {
@@ -171,7 +171,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <a href="https://revaai.eduversejr.com/register" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors shadow-lg shadow-blue-600/30">
-              Start learning free →
+              Start your free trial →
             </a>
           </div>
         </div>
@@ -192,7 +192,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              <Sparkles className="w-4 h-4" /> AI-Powered · Free to Start
+              <Sparkles className="w-4 h-4" /> AI-Powered · Free Trial
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Meet Reva — Your Child's AI Teacher
@@ -285,11 +285,11 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              ✨ Now Open · Start Free
+              ✨ Now Open · Start Free Trial
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Pricing</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Choose the right plan for your child. Sign up free and start today. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle for any grade.
+              Choose the right plan for your child. Start your 7-day free trial today. PSAT prep is bundled into Grades 8-10. SAT Prep is its own bundle for any grade.
             </p>
           </div>
 
@@ -311,10 +311,10 @@ export default function Home() {
                     <div className="text-5xl mb-4">🚀</div>
                     <h4 className="text-lg font-bold text-gray-900 mb-2">SAT &amp; PSAT Math Prep</h4>
                     <p className="text-sm text-gray-600 mb-5">
-                      Digital SAT &amp; PSAT Math practice is live and included with Grade 8–12 plans. Start free today.
+                      Digital SAT &amp; PSAT Math practice is live and included with Grade 8–12 plans. Start your free trial today.
                     </p>
                     <a href={SIGNUP_URL} className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
-                      Start Free →
+                      Start Free Trial →
                     </a>
                   </div>
                 ) : (

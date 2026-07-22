@@ -453,7 +453,7 @@ export default function RevaDemo() {
               className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-6 rounded-full text-lg font-bold"
               onClick={() => { window.location.href = "https://revaai.eduversejr.com/register"; }}
             >
-              Start Free
+              Start Free Trial
             </Button>
           </div>
         </div>

@@ -110,7 +110,7 @@ const steps = [
   {
     number: "02",
     title: "Start your free trial",
-    description: "Jump straight in and start learning free. Explore chat, voice, whiteboard and smart practice with Reva.",
+    description: "Jump straight in and start your free trial. Explore chat, voice, whiteboard and smart practice with Reva.",
   },
   {
     number: "03",
@@ -121,7 +121,7 @@ const steps = [
 
 const faqs = [
   { q: "What is Reva AI Teacher?", a: "Reva AI Teacher is EduVerseJr's AI-powered teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches through conversational AI, an interactive whiteboard, voice mode, and smart practice sessions aligned to each student's curriculum. It tracks weaknesses across sessions and adapts its teaching to each individual student." },
-  { q: "Is Reva really free?", a: "Yes — you can start using Reva for free with a free trial, no credit card required. Just sign up at revaai.eduversejr.com to get started. Pricing for Grades 5-7, Grades 8-10 (PSAT included) and Grades 11-12 (SAT prep included) is published on the EduVerseJr pricing page (eduversejr.com/#pricing)." },
+  { q: "Is Reva really free?", a: "Reva starts with a 7-day free trial — 10 AI actions a day and Chapter 1 of every course, no credit card required. Just sign up at revaai.eduversejr.com to get started. After the 7 days, continue on a paid plan for unlimited use. Pricing for Grades 5-7, Grades 8-10 (PSAT included) and Grades 11-12 (SAT prep included) is published on the EduVerseJr pricing page (eduversejr.com/#pricing)." },
   { q: "What subjects and grades does Reva cover?", a: "Reva AI Teacher covers Mathematics for Grades 5–12, plus SAT Math and PSAT Math prep — all live now under the same Reva AI Teacher platform. SAT and PSAT Math prep are included with Grade 8–12 plans." },
   { q: "Will Reva help with SAT and PSAT preparation?", a: "Yes. SAT Math and PSAT Math prep are live: a full Digital SAT Math practice experience (44 items across two 35-minute modules), an estimated 200–800 score, a per-skill breakdown, and Reva's personalised explanations on every wrong answer via whiteboard and voice. SAT and PSAT Math prep are included with Grade 8–12 plans." },
   { q: "Does Reva work with US Common Core, UK, or Australian curriculum?", a: "Yes. Reva AI Teacher is aligned to US Common Core State Standards, UK National Curriculum, Singapore MOE, ACARA (Australia), Canadian Provincial Standards, and UAE Ministry of Education standards. Reva teaches to the exact curriculum your child follows at school." },
@@ -172,7 +172,7 @@ function RevaNav() {
             href={SIGNUP_URL}
             className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all shadow-lg shadow-purple-900/30"
           >
-            Start Free <ArrowRight className="w-4 h-4" />
+            Start Free Trial <ArrowRight className="w-4 h-4" />
           </a>
           <button className="md:hidden text-white/70" onClick={() => setOpen(!open)}>
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -197,7 +197,7 @@ function RevaNav() {
             onClick={() => setOpen(false)}
             className="block w-full text-center bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold px-5 py-3 rounded-full"
           >
-            Start Free →
+            Start Free Trial →
           </a>
         </div>
       )}
@@ -314,11 +314,11 @@ export default function RevaPage() {
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
         <title>Reva AI Teacher — EduVerseJr | AI Maths Teacher · 24/7</title>
-        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12), plus SAT Math and PSAT Math prep included with Grade 8–12 plans. Chat, voice, whiteboard, smart practice and weakness tracking. Live now — start free, no credit card." />
+        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12), plus SAT Math and PSAT Math prep included with Grade 8–12 plans. Chat, voice, whiteboard, smart practice and weakness tracking. Live now — start your 7-day free trial, no credit card." />
         <link rel="canonical" href="https://eduversejr.com/reva" />
         <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI math tutor, SAT Math prep, PSAT Math prep, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, digital SAT practice, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | AI Maths Teacher" />
-        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12), with SAT Math and PSAT Math prep included in Grade 8–12 plans. Live now — start free." />
+        <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12), with SAT Math and PSAT Math prep included in Grade 8–12 plans. Live now — start your 7-day free trial." />
         <meta property="og:url" content="https://eduversejr.com/reva" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
         <meta property="og:type" content="website" />
@@ -377,7 +377,7 @@ export default function RevaPage() {
               href={SIGNUP_URL}
               className="group flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl shadow-purple-900/40"
             >
-              Start Free
+              Start Free Trial
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
@@ -582,7 +582,7 @@ export default function RevaPage() {
                 href={SIGNUP_URL}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold px-10 py-4 rounded-full text-lg transition-all shadow-2xl shadow-purple-900/50"
               >
-                Start Free <ArrowRight className="w-5 h-5" />
+                Start Free Trial <ArrowRight className="w-5 h-5" />
               </a>
               <p className="text-white/30 text-sm mt-4">Free trial · No credit card · Start in 60 seconds</p>
             </div>

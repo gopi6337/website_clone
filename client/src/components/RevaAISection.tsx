@@ -101,7 +101,7 @@ export default function RevaAISection() {
     { icon: <Zap className="w-5 h-5 text-yellow-500" />, text: "Instant answers — no waiting" },
     { icon: <Globe className="w-5 h-5 text-blue-500" />, text: "Works on mobile & desktop" },
     { icon: <Sparkles className="w-5 h-5 text-purple-500" />, text: "Powered by AI" },
-    { icon: <Award className="w-5 h-5 text-green-500" />, text: "Free to start — no credit card" },
+    { icon: <Award className="w-5 h-5 text-green-500" />, text: "7-day free trial — no credit card" },
   ];
 
   return (
@@ -170,7 +170,7 @@ export default function RevaAISection() {
         {/* CTA Block */}
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8 md:p-12 text-center text-white">
           <h3 className="text-2xl md:text-3xl font-bold mb-3">
-            Let Your Child Try Reva — It's Free
+            Let Your Child Try Reva — Free Trial
           </h3>
           <p className="text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Sign up in seconds. No credit card. No downloads. Just start learning
@@ -181,7 +181,7 @@ export default function RevaAISection() {
               className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-10 py-6 rounded-full text-lg font-bold"
               onClick={() => window.location.href = '/reva'}
             >
-              Start Free with Reva
+              Start Free Trial with Reva
             </Button>
             <Button
               variant="outline"

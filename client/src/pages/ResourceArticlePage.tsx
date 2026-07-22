@@ -180,13 +180,13 @@ export default function ResourceArticlePage() {
         <div className="mt-12 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-2">A tutor on every question</h2>
           <p className="text-white/90 mb-5 max-w-lg mx-auto">
-            Reva teaches the method step-by-step — maths, SAT and PSAT — and adapts to your child&apos;s level. Start free, no credit card.
+            Reva teaches the method step-by-step — maths, SAT and PSAT — and adapts to your child&apos;s level. Start your free trial, no credit card.
           </p>
           <a
             href="https://revaai.eduversejr.com/register"
             className="inline-flex items-center gap-2 bg-white text-blue-600 font-bold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors"
           >
-            Start free with Reva <ArrowRight className="w-4 h-4" />
+            Start free trial with Reva <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 

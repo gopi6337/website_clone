@@ -107,7 +107,7 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     {
       type: "reva",
       question: "Is Reva free to use?",
-      answer: "Yes — you can start using Reva for free with no credit card required. Simply sign up at revaai.eduversejr.com to get started with AI-powered maths teaching.",
+      answer: "Reva starts with a 7-day free trial — 10 AI actions a day and Chapter 1 of every course, no credit card required. Simply sign up at revaai.eduversejr.com to get started with AI-powered maths teaching. After the 7 days, continue on a paid plan for unlimited use.",
     },
     {
       type: "reva",

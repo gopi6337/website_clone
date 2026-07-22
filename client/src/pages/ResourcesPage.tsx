@@ -96,7 +96,7 @@ export default function ResourcesPage() {
             href="https://revaai.eduversejr.com/register"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-colors"
           >
-            Start free with Reva <ArrowRight className="w-4 h-4" />
+            Start free trial with Reva <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </main>
