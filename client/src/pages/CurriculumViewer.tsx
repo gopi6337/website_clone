@@ -139,14 +139,14 @@ export default function CurriculumViewer() {
         <meta property="og:description" content={`Comprehensive ${curriculum.name} parent information guide. Explore our detailed math curriculum for grades 5-10.`} />
         <meta property="og:url" content={`https://eduversejr.com/curriculum/${country}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta property="og:image:alt" content="EduVerseJr Math Curriculum" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${curriculum.name} - EduVerseJr`} />
         <meta name="twitter:description" content={`Grade-by-grade Math curriculum for ${country.replace(/-/g, ' ')}. Algebra, Geometry, Statistics and more for Grade 5-10 by EduVerseJr.`} />
-        <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Course",

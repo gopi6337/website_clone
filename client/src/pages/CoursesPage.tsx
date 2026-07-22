@@ -31,11 +31,11 @@ export default function CoursesPage() {
         <meta property="og:description" content="Curriculum-aligned Maths, Science and Coding for Grades 5–12 across 6 countries. Human teachers + Reva AI Teacher." />
         <meta property="og:url" content="https://eduversejr.com/courses" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Courses — EduVerseJr | Maths, Science & Coding for Grades 5–12" />
         <meta name="twitter:description" content="Maths, Science and Coding for Grades 5–12 across US, UK, Australia, Singapore, Canada and UAE. Human teachers + Reva AI." />
-        <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

@@ -216,7 +216,7 @@ export default function PsatPage() {
         <meta property="og:title" content="PSAT Prep — Reva AI by EduVerseJr | PSAT 8/9 & NMSQT" />
         <meta property="og:description" content="Adaptive digital PSAT 8/9 and PSAT/NMSQT prep with a state-by-state National Merit cutoff calculator. Standalone $49/yr or bundled with SAT Prep. Included with Grade 8–12 plans." />
         <meta property="og:url" content="https://eduversejr.com/psat" />
-        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PSAT Prep — Reva AI by EduVerseJr" />

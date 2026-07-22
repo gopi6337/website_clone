@@ -88,7 +88,7 @@ export default function ResourceArticlePage() {
         <meta property="og:title" content={article.ogTitle} />
         <meta property="og:description" content={article.ogDesc} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={article.ogTitle} />

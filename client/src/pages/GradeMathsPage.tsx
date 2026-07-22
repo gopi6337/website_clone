@@ -91,7 +91,7 @@ export default function GradeMathsPage() {
         <meta property="og:title" content={g.ogTitle} />
         <meta property="og:description" content={g.ogDesc} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={g.ogTitle} />

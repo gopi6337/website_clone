@@ -110,7 +110,7 @@ export default function NationalMeritCalculatorPage() {
         <meta property="og:title" content="National Merit Scholarship Calculator (by State) | EduVerseJr" />
         <meta property="og:description" content="Enter your PSAT/NMSQT Selection Index and state to project Commended or Semifinalist standing. Free, no login. Class of 2026 state cutoffs." />
         <meta property="og:url" content="https://eduversejr.com/national-merit-calculator" />
-        <meta property="og:image" content="https://eduversejr.com/og-image.jpg" />
+        <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="National Merit Scholarship Calculator (by State)" />
