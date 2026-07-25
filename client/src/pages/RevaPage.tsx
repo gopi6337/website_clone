@@ -468,10 +468,10 @@ export default function RevaPage() {
               controls
               playsInline
               preload="none"
-              poster="/reva-demo-poster.jpg"
+              poster="/reva-demo-poster.jpg?v=18"
               className="w-full h-auto rounded-3xl border border-white/10 shadow-2xl shadow-purple-900/30 bg-black"
             >
-              <source src="/reva-demo.mp4" type="video/mp4" />
+              <source src="/reva-demo.mp4?v=18" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <p className="text-center text-sm text-white/40 mt-3">Full product walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
