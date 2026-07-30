@@ -22,6 +22,8 @@ import Login from "./pages/Login";
 import DisclaimerPage from "./pages/DisclaimerPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import RefundPolicyPage from "./pages/RefundPolicyPage";
+import DpaPage from "./pages/DpaPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 // 2026-07-14 (visitor bug report): wouter keeps the scroll position across
@@ -64,6 +66,8 @@ function Router() {
         <Route path={"/disclaimer"} component={DisclaimerPage} />
         <Route path={"/terms-of-use"} component={TermsOfUsePage} />
         <Route path={"/privacy-policy"} component={PrivacyPolicyPage} />
+        <Route path={"/refund-policy"} component={RefundPolicyPage} />
+        <Route path={"/dpa"} component={DpaPage} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
