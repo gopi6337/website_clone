@@ -106,8 +106,6 @@ export default function FooterSection() {
             {" "}·{" "}
             <a href="/refund-policy" className="hover:text-white transition-colors underline">Refund &amp; Cancellation</a>
             {" "}·{" "}
-            <a href="/dpa" className="hover:text-white transition-colors underline">Data Processing Agreement</a>
-            {" "}·{" "}
             <a href="/disclaimer" className="hover:text-white transition-colors underline">Content &amp; Copyright Disclaimer</a>
           </p>
         </div>

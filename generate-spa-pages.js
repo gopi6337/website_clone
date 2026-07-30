@@ -553,6 +553,47 @@ const topLevelMeta = {
       ],
     }),
   },
+  'refund-policy': {
+    title: 'Refund & Cancellation Policy | EduVerseJr',
+    description: 'EduVerseJr refund and cancellation policy: 7-day money-back guarantee on your first Reva AI subscription, cancel anytime, and live class cancellation terms.',
+    ogTitle: 'Refund & Cancellation Policy — EduVerseJr',
+    ogDesc: '7-day money-back on your first Reva AI subscription. Cancel anytime. Fair live-class cancellation terms.',
+    bodyContent: renderSeoBlock({
+      h1: 'EduVerseJr Refund & Cancellation Policy',
+      intro: [
+        'This policy explains refunds and cancellations for both Reva AI Teacher subscriptions and live 1-to-1 human teaching sessions. EduVerseJr is operated by an India-registered MSME based in Coimbatore, Tamil Nadu. Payments are processed by Razorpay.',
+        'The full policy is rendered by our web application below. This summary highlights the key points.',
+      ],
+      sections: [
+        {
+          h2: 'Reva AI subscriptions — 7-day money-back',
+          p: 'Every new account starts with a 7-day free trial. If you are not satisfied, you can request a full refund of your first paid subscription within 7 days of that first payment. After the first 7 days, payments are non-refundable, but you can cancel anytime and keep access until the end of the billing period you already paid for.',
+        },
+        {
+          h2: 'Renewals',
+          p: 'Subscriptions renew automatically until cancelled. Cancel before the renewal date to avoid a charge. If you are charged for an unintended renewal and contact us within 48 hours, before significant use, we will review and may refund or credit at our discretion.',
+        },
+        {
+          h2: 'Live 1-on-1 sessions',
+          p: 'Cancel or reschedule a live session free of charge at least 24 hours before the start time and the credit is returned. Late cancellations or no-shows are treated as delivered. If a teacher cancels, you get a free replacement slot or a refund of that credit.',
+        },
+        {
+          h2: 'When we always refund',
+          p: 'We refund charges made in error, charges after a valid cancellation, prolonged service failures on our side, and any refund required by your local consumer-protection law.',
+        },
+      ],
+      faqs: [
+        { q: 'Is there a money-back guarantee?', a: 'Yes — a full refund on your first paid Reva AI subscription if you request it within 7 days of the first payment.' },
+        { q: 'What happens when I cancel?', a: 'Future billing stops immediately and you keep access until the end of the period you already paid for.' },
+        { q: 'How do I request a refund?', a: 'Email support@eduversejr.com from your account email with the payment date and reason. We decide within 7 business days; approved refunds post in 5-10 business days via Razorpay.' },
+      ],
+      links: [
+        { href: '/terms-of-use', label: 'Terms of Use' },
+        { href: '/privacy-policy', label: 'Privacy Policy' },
+        { href: '/about', label: 'About EduVerseJr' },
+      ],
+    }),
+  },
 };
 
 // ─────────────────────────────────────────────────────────────────────
