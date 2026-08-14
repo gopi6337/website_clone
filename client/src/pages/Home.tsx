@@ -101,18 +101,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science & Coding</title>
-        <meta name="description" content="EduVerseJr combines Reva AI Teacher (24/7) with expert human teachers for Maths, Science and Coding. Grades 5–12 across US, UK, Canada, Australia and UAE." />
+        <title>Expert Online Maths, Science & Coding Tutors + Reva AI | EduVerseJr</title>
+        <meta name="description" content="Live 1-to-1 online classes with expert human teachers for Maths, Science & Coding, Grades 5–12 — plus Reva, a 24/7 AI teacher. Curriculum-aligned for US, UK, Canada, Australia, Singapore & UAE." />
         <link rel="canonical" href="https://eduversejr.com/" />
-        <meta property="og:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
-        <meta property="og:description" content="Reva AI Teacher (24/7) + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
+        <meta property="og:title" content="EduVerseJr — Expert Human Teachers + Reva AI | Maths, Science & Coding" />
+        <meta property="og:description" content="Live 1-to-1 online classes with expert human teachers for Maths, Science & Coding, Grades 5–12 — plus Reva, a 24/7 AI teacher. US, UK, Canada, Australia, Singapore & UAE." />
         <meta property="og:url" content="https://eduversejr.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         <meta property="og:image:alt" content="EduVerseJr - AI + Human Teaching Platform" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers" />
-        <meta name="twitter:description" content="Reva AI Teacher + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
+        <meta name="twitter:title" content="EduVerseJr — Expert Human Teachers + Reva AI | Maths, Science & Coding" />
+        <meta name="twitter:description" content="Live 1-to-1 online Maths, Science & Coding classes with expert human teachers, plus Reva — a 24/7 AI teacher. Grades 5–12, 6 countries." />
         <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg?v=2" />
         {/*
           Self-serving review schema removed 2026-06-11 (Fable 5 finding M2).

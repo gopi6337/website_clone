@@ -11,10 +11,10 @@
     <!-- Preload the homepage hero (LCP) image so the browser fetches it during
          HTML parse instead of waiting for React to hydrate and render the <img>. -->
     <link rel="preload" as="image" href="/edu_pic1.webp" fetchpriority="high" />
-    <title>EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science &amp; Coding</title>
+    <title>Expert Online Maths, Science &amp; Coding Tutors + Reva AI | EduVerseJr</title>
 
     <!-- Meta Description -->
-    <meta name="description" content="Reva AI Teacher (24/7) + expert human teachers for live 1-to-1 Maths, Science &amp; Coding, Grades 5–12. US, UK, Canada, Australia, Singapore &amp; UAE." />
+    <meta name="description" content="Live 1-to-1 online classes with expert human teachers for Maths, Science &amp; Coding, Grades 5–12 — plus Reva, a 24/7 AI teacher. Curriculum-aligned for US, UK, Canada, Australia, Singapore &amp; UAE." />
 
     <!-- Meta Keywords -->
     <meta name="keywords" content="AI maths teacher, AI science teacher, AI coding teacher, online maths teacher, Reva AI teacher, 1-to-1 online teacher, maths teacher grades 5-12, science teacher online, coding teacher for kids, EduVerseJr, AI teacher for kids, online learning platform" />
@@ -29,11 +29,22 @@
     <!-- Canonical (static fallback for JS-less / AI crawlers; React Helmet overrides per-route) -->
     <link rel="canonical" href="https://eduversejr.com/" />
 
+    <!-- hreflang — one English site serving six English-speaking regions.
+         The SPA generator (generate-spa-pages.js → injectMeta) rewrites these
+         hrefs to each page's own canonical so every route is self-referential. -->
+    <link rel="alternate" hreflang="en-US" href="https://eduversejr.com/" />
+    <link rel="alternate" hreflang="en-GB" href="https://eduversejr.com/" />
+    <link rel="alternate" hreflang="en-CA" href="https://eduversejr.com/" />
+    <link rel="alternate" hreflang="en-AU" href="https://eduversejr.com/" />
+    <link rel="alternate" hreflang="en-SG" href="https://eduversejr.com/" />
+    <link rel="alternate" hreflang="en-AE" href="https://eduversejr.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://eduversejr.com/" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://eduversejr.com/" />
-    <meta property="og:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science &amp; Coding" />
-    <meta property="og:description" content="EduVerseJr combines Reva AI Teacher (24/7) with expert human teachers for Maths, Science and Coding. Grades 5–12 across US, UK, Canada, Australia, Singapore and UAE." />
+    <meta property="og:title" content="EduVerseJr — Expert Human Teachers + Reva AI | Maths, Science &amp; Coding" />
+    <meta property="og:description" content="Live 1-to-1 online classes with expert human teachers for Maths, Science &amp; Coding, Grades 5–12 — plus Reva, a 24/7 AI teacher. US, UK, Canada, Australia, Singapore &amp; UAE." />
     <!-- og:image — real 1200×630 branded social card (2026-07-11), replacing
          the bare logo. Dimensions are now accurate so they are declared. -->
     <meta property="og:image" content="https://eduversejr.com/og-image.jpg?v=2" />
@@ -46,8 +57,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://eduversejr.com/" />
-    <meta name="twitter:title" content="EduVerseJr — Reva AI Teacher + Expert Human Teachers | Maths, Science &amp; Coding" />
-    <meta name="twitter:description" content="Reva AI Teacher (24/7) + expert human teachers for Maths, Science and Coding. Grades 5–12, 6 countries." />
+    <meta name="twitter:title" content="EduVerseJr — Expert Human Teachers + Reva AI | Maths, Science &amp; Coding" />
+    <meta name="twitter:description" content="Live 1-to-1 online Maths, Science &amp; Coding classes with expert human teachers, plus Reva — a 24/7 AI teacher. Grades 5–12, 6 countries." />
     <meta name="twitter:image" content="https://eduversejr.com/og-image.jpg?v=2" />
 
     <!-- Additional SEO Meta Tags -->

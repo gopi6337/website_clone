@@ -17,15 +17,38 @@ export default function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
-              Two Ways to Learn. <span className="text-yellow-300 inline-block">One Platform.</span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
+              Expert Online Teachers for Maths, Science &amp; Coding <span className="text-yellow-300 inline-block">— Grades 5–12</span>
             </h1>
             <p className="text-white/90 mb-6 text-sm md:text-base">
-              EduVerseJr brings together Reva, our AI-powered teacher, and expert human teachers — so your child always has the right support.
+              Live 1-to-1 classes with experienced human teachers, plus Reva — your child's 24/7 AI teacher. Two ways to learn, one platform.
             </p>
 
-            {/* Reva AI — FIRST */}
-            <div className="bg-white/15 border border-yellow-300/60 rounded-2xl p-5 mb-4">
+            {/* Human Teachers — FIRST */}
+            <div className="bg-white/15 border border-emerald-300/60 rounded-2xl p-5 mb-4">
+              <div className="flex items-center gap-3 mb-3 flex-wrap">
+                <div className="bg-blue-500 rounded-full p-2 flex-shrink-0">
+                  <Users className="w-4 h-4 text-white" />
+                </div>
+                <h2 className="text-base font-bold">Expert Human Teachers</h2>
+                <span className="text-xs bg-white/25 text-white px-2 py-0.5 rounded-full font-bold border border-white/30">Grades 5–10</span>
+              </div>
+              <ul className="text-sm text-white/90 space-y-1 mb-4">
+                <li>• Live 1-to-1 online classes</li>
+                <li>• Experienced teachers, real rapport</li>
+                <li>• Maths · Science · Coding · SAT · PSAT</li>
+                <li>• Flexible scheduling, same teacher every session</li>
+              </ul>
+              <Button
+                className="w-full bg-emerald-500 hover:bg-emerald-400 text-white rounded-full font-bold shadow-lg shadow-emerald-500/30"
+                onClick={() => window.location.hash = '#booking'}
+              >
+                Book a FREE Trial
+              </Button>
+            </div>
+
+            {/* Reva AI — SECOND */}
+            <div className="bg-white/15 border border-yellow-300/60 rounded-2xl p-5">
               <div className="flex items-center gap-3 mb-3 flex-wrap">
                 <img src="/reva-logo.webp" alt="Reva AI" width="36" height="36" decoding="async" className="w-9 h-9 rounded-full object-contain bg-white flex-shrink-0" />
                 <div className="flex items-center gap-2 flex-wrap">
@@ -51,29 +74,6 @@ export default function HeroSection() {
                 onClick={() => window.location.href = '/reva'}
               >
                 Try Reva Free Trial
-              </Button>
-            </div>
-
-            {/* Human Teachers — SECOND */}
-            <div className="bg-white/15 border border-white/30 rounded-2xl p-5">
-              <div className="flex items-center gap-3 mb-3 flex-wrap">
-                <div className="bg-blue-500 rounded-full p-2 flex-shrink-0">
-                  <Users className="w-4 h-4 text-white" />
-                </div>
-                <h2 className="text-base font-bold">Expert Human Teachers</h2>
-                <span className="text-xs bg-white/25 text-white px-2 py-0.5 rounded-full font-bold border border-white/30">Grades 5–10</span>
-              </div>
-              <ul className="text-sm text-white/90 space-y-1 mb-4">
-                <li>• Live 1-to-1 online classes</li>
-                <li>• Experienced teachers, real rapport</li>
-                <li>• Maths · Science · Coding · SAT · PSAT</li>
-                <li>• Flexible scheduling, same teacher every session</li>
-              </ul>
-              <Button
-                className="w-full bg-emerald-500 hover:bg-emerald-400 text-white rounded-full font-bold shadow-lg shadow-emerald-500/30"
-                onClick={() => window.location.hash = '#booking'}
-              >
-                Book a FREE Trial
               </Button>
             </div>
 

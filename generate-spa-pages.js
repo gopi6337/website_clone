@@ -67,10 +67,14 @@ function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
 // ─────────────────────────────────────────────────────────────────────
 const topLevelMeta = {
   'reva': {
-    title: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12 | EduVerseJr',
-    description: 'Meet Reva, your child\'s 24/7 AI maths tutor: chat, voice, whiteboard, smart practice and progress tracking for Grades 5–12 plus PSAT/SAT. Start your 7-day free trial.',
-    ogTitle: 'Reva AI Teacher — 24/7 AI Maths Tutor | EduVerseJr',
-    ogDesc: 'AI maths teacher for Grades 5–12. Chat, voice, interactive whiteboard, smart practice, progress tracking. Now open — start your free trial.',
+    // Cross-domain canonical → revaaiteacher.com is the primary home for the
+    // Reva AI product, so eduversejr.com/reva no longer competes for the same
+    // "AI maths tutor" query. Title reframed toward EduVerseJr's blended model.
+    canonical: 'https://revaaiteacher.com/',
+    title: 'Reva AI Teacher inside EduVerseJr — AI + Human Blended Learning',
+    description: 'Reva is the 24/7 AI teacher built into EduVerseJr\'s blended programme — pairing an always-on AI maths tutor with expert human teachers for Grades 5–12, plus PSAT/SAT. Start your 7-day free trial.',
+    ogTitle: 'Reva AI Teacher inside EduVerseJr — AI + Human Blended Learning',
+    ogDesc: 'The 24/7 AI teacher inside EduVerseJr\'s blended AI + human programme for Grades 5–12. Chat, voice, interactive whiteboard, smart practice. Start your free trial.',
     bodyContent: renderSeoBlock({
       h1: 'Reva AI Teacher — 24/7 AI Maths Tutor for Grades 5–12',
       intro: [
@@ -1053,6 +1057,14 @@ function injectMeta(html, meta, canonicalUrl) {
     );
   }
 
+  // hreflang — rewrite every alternate href to this page's own canonical so
+  // each route is self-referential across the six English regions (the base
+  // index.html carries the homepage URLs; cloned pages must point to self).
+  html = html.replace(
+    /(<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href=")[^"]*("\s*\/?>)/g,
+    `$1${canonicalUrl}$2`
+  );
+
   return html;
 }
 
@@ -1190,6 +1202,19 @@ const publicDir = path.join(__dirname, 'dist', 'public');
 Object.entries(topLevelMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/${page}`;
   let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  // Cross-domain canonical override (e.g. /reva defers to revaaiteacher.com so
+  // the AI product consolidates on one domain). Override the canonical link and
+  // drop hreflang — this URL points authority to another domain.
+  if (meta.canonical) {
+    pageHtml = pageHtml.replace(
+      /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
+      `<link rel="canonical" href="${meta.canonical}" />`
+    );
+    pageHtml = pageHtml.replace(
+      /\s*<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href="[^"]*"\s*\/?>/g,
+      ''
+    );
+  }
   pageHtml = injectBodyContent(pageHtml, meta.bodyContent.html);
   pageHtml = injectSubpageSchema(pageHtml, {
     canonicalUrl,

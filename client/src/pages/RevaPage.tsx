@@ -313,9 +313,9 @@ export default function RevaPage() {
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0f", color: "#fff" }}>
       <Helmet>
-        <title>Reva AI Teacher — EduVerseJr | AI Maths Teacher · 24/7</title>
-        <meta name="description" content="Reva AI Teacher — 24/7 AI teaching for Maths (Grades 5–12), plus SAT Math and PSAT Math prep included with Grade 8–12 plans. Chat, voice, whiteboard, smart practice and weakness tracking. Live now — start your 7-day free trial, no credit card." />
-        <link rel="canonical" href="https://eduversejr.com/reva" />
+        <title>Reva AI Teacher inside EduVerseJr — AI + Human Blended Learning</title>
+        <meta name="description" content="Reva is the 24/7 AI teacher built into EduVerseJr's blended programme — pairing an always-on AI maths tutor with expert human teachers for Grades 5–12, plus SAT/PSAT Math. Start your 7-day free trial." />
+        <link rel="canonical" href="https://revaaiteacher.com/" />
         <meta name="keywords" content="Reva AI Teacher, AI maths teacher, AI math tutor, SAT Math prep, PSAT Math prep, AI teacher for kids, online AI teacher, maths AI teacher grades 5-12, digital SAT practice, EduVerseJr Reva" />
         <meta property="og:title" content="Reva AI Teacher — EduVerseJr | AI Maths Teacher" />
         <meta property="og:description" content="Reva is your child's AI teacher — available 24/7 for Maths (Grades 5–12), with SAT Math and PSAT Math prep included in Grade 8–12 plans. Live now — start your 7-day free trial." />
