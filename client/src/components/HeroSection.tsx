@@ -18,7 +18,7 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
-              Expert Online Teachers for Maths, Science &amp; Coding <span className="text-yellow-300 inline-block">— Grades 5–12</span>
+              Expert Online Teachers for Maths, Science &amp; Coding <span className="text-yellow-300 inline-block">— Grades 5–10</span>
             </h1>
             <p className="text-white/90 mb-6 text-sm md:text-base">
               Live 1-to-1 classes with experienced human teachers, plus Reva — your child's 24/7 AI teacher. Two ways to learn, one platform.
