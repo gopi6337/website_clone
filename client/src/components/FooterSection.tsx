@@ -94,12 +94,6 @@ export default function FooterSection() {
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
           <p className="mb-3">© 2026 EduVerseJr. All rights reserved.</p>
-          <p className="mb-3 text-sm">
-            All content is original material created by{" "}
-            <a href="https://revaaiteacher.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">revaaiteacher.com</a>
-            {" "}and reviewed by human educators.
-            Not copied from any textbook or publisher. For personal educational use only.
-          </p>
           <p className="text-sm">
             By using this site you agree to our{" "}
             <a href="/terms-of-use" className="hover:text-white transition-colors underline">Terms of Use</a>
