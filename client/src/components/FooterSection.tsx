@@ -95,7 +95,9 @@ export default function FooterSection() {
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
           <p className="mb-3">© 2026 EduVerseJr. All rights reserved.</p>
           <p className="mb-3 text-sm">
-            All content is original material created by Reva AI and reviewed by human educators.
+            All content is original material created by{" "}
+            <a href="https://revaaiteacher.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">revaaiteacher.com</a>
+            {" "}and reviewed by human educators.
             Not copied from any textbook or publisher. For personal educational use only.
           </p>
           <p className="text-sm">
