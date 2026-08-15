@@ -1,4 +1,4 @@
-# US Math Curriculum for Grades 5-10
+# US Math Curriculum & Syllabus for Grades 5-10
 ## Parent Information Guide
 
 ### Overview

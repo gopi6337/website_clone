@@ -617,9 +617,9 @@ function renderCurriculumBlock({ country, standard, slugMath, grades, examPrep, 
   const otherSection = isScience ? '/curriculum/' : '/science-curriculum/';
   const otherSubject = isScience ? 'Maths' : 'Science';
   return renderSeoBlock({
-    h1: `${country} ${subjectLabel} Curriculum Grades 5–10 — Grade-by-Grade Guide for Parents`,
+    h1: `${country} ${subjectLabel} Curriculum & Syllabus (Grades 5–10) — Grade-by-Grade Guide for Parents`,
     intro: [
-      `EduVerseJr's ${country} ${subjectLabel} curriculum guide is built for parents who want to know exactly what their child should be learning each year. Every topic on this page is aligned with ${standard} — the official ${country.toLowerCase().includes('united') || country.toLowerCase().includes('australia') ? 'national' : country.toLowerCase().includes('canad') ? 'provincial' : 'national'} standard followed in ${country} schools. We have mapped Grade 5 through Grade 10 ${subjectLower} topic by topic, so you can see what your child has covered, what is coming next, and where you might want extra 1-to-1 help.`,
+      `EduVerseJr's ${country} ${subjectLabel} curriculum and syllabus guide is built for parents who want to know exactly what their child should be learning each year. Every topic on this page is aligned with ${standard} — the official ${country.toLowerCase().includes('united') || country.toLowerCase().includes('australia') ? 'national' : country.toLowerCase().includes('canad') ? 'provincial' : 'national'} standard followed in ${country} schools. We have mapped Grade 5 through Grade 10 ${subjectLower} topic by topic, so you can see what your child has covered, what is coming next, and where you might want extra 1-to-1 help.`,
       `Every student on our platform also gets Reva AI Teacher — a 24/7 AI ${subjectLower} tutor that explains any topic on this page step-by-step, with worked examples and practice questions. For deeper coaching, our expert human teachers run live 1-to-1 online classes for ${country} students with built-in timezone scheduling.`,
     ],
     sections: [
@@ -642,10 +642,10 @@ function renderCurriculumBlock({ country, standard, slugMath, grades, examPrep, 
 
 const curriculumMeta = {
   'united-states': {
-    title: 'US Math Curriculum Grades 5–10 | EduVerseJr Online Math Teacher',
-    description: 'Explore EduVerseJr\'s US Math Curriculum guide for Grades 5–10. Covers Common Core Algebra, Geometry, Statistics and more. Expert 1-on-1 online Math teaching aligned with US standards.',
-    ogTitle: 'US Math Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade US Common Core Math curriculum guide for parents. Algebra, Geometry, Statistics and more for Grades 5–10 by EduVerseJr.',
+    title: 'US Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s US Math Curriculum & Syllabus guide for Grades 5–10. Covers Common Core Algebra, Geometry, Statistics and more. Expert 1-on-1 online Math teaching aligned with US standards.',
+    ogTitle: 'US Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade US Common Core Math curriculum & syllabus guide for parents. Algebra, Geometry, Statistics and more for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'United States',
       standard: 'the Common Core State Standards for Mathematics (CCSS-M)',
@@ -670,10 +670,10 @@ const curriculumMeta = {
     }),
   },
   'united-kingdom': {
-    title: 'UK Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
-    description: 'Explore EduVerseJr\'s UK Maths Curriculum guide for Grades 5–10. Covers GCSE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UK students.',
-    ogTitle: 'UK Maths Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade UK Maths curriculum guide for parents. GCSE-aligned Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    title: 'UK Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s UK Maths Curriculum & Syllabus guide for Grades 5–10. Covers GCSE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UK students.',
+    ogTitle: 'UK Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade UK Maths curriculum & syllabus guide for parents. GCSE-aligned Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'United Kingdom',
       standard: 'the National Curriculum for England (Key Stage 2, Key Stage 3 and GCSE)',
@@ -698,10 +698,10 @@ const curriculumMeta = {
     }),
   },
   'canada': {
-    title: 'Canadian Math Curriculum Grades 5–10 | EduVerseJr Online Math Teacher',
-    description: 'Explore EduVerseJr\'s Canadian Math Curriculum guide for Grades 5–10. Covers provincial Algebra, Geometry, Data Management and more. Expert 1-on-1 online Math teaching for Canadian students.',
-    ogTitle: 'Canadian Math Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade Canadian Math curriculum guide for parents. Provincial Algebra, Geometry, Data Management for Grades 5–10 by EduVerseJr.',
+    title: 'Canadian Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Canadian Math Curriculum & Syllabus guide for Grades 5–10. Covers provincial Algebra, Geometry, Data Management and more. Expert 1-on-1 online Math teaching for Canadian students.',
+    ogTitle: 'Canadian Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade Canadian Math curriculum & syllabus guide for parents. Provincial Algebra, Geometry, Data Management for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'Canada',
       standard: 'Canadian provincial curricula (Ontario, BC, Alberta and equivalents)',
@@ -726,10 +726,10 @@ const curriculumMeta = {
     }),
   },
   'australia': {
-    title: 'Australian Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
-    description: 'Explore EduVerseJr\'s Australian Maths Curriculum guide for Grades 5–10. Covers ACARA-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Australian students.',
-    ogTitle: 'Australian Maths Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade Australian ACARA Maths curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    title: 'Australian Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Australian Maths Curriculum & Syllabus guide for Grades 5–10. Covers ACARA-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Australian students.',
+    ogTitle: 'Australian Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade Australian ACARA Maths curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'Australia',
       standard: 'the ACARA Australian Curriculum: Mathematics',
@@ -754,10 +754,10 @@ const curriculumMeta = {
     }),
   },
   'singapore': {
-    title: 'Singapore Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
-    description: 'Explore EduVerseJr\'s Singapore Maths Curriculum guide for Grades 5–10. Covers MOE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Singapore students.',
-    ogTitle: 'Singapore Maths Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade Singapore MOE Maths curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    title: 'Singapore Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Singapore Maths Curriculum & Syllabus guide for Grades 5–10. Covers MOE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Singapore students.',
+    ogTitle: 'Singapore Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade Singapore MOE Maths curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'Singapore',
       standard: 'the Singapore Ministry of Education (MOE) Mathematics syllabus',
@@ -782,10 +782,10 @@ const curriculumMeta = {
     }),
   },
   'uae': {
-    title: 'UAE Math Curriculum Grades 5–10 | EduVerseJr Online Maths Teacher',
-    description: 'Explore EduVerseJr\'s UAE Math Curriculum guide for Grades 5–10. Covers MOE UAE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UAE and Dubai students.',
-    ogTitle: 'UAE Math Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade UAE MOE Math curriculum guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    title: 'UAE Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s UAE Math Curriculum & Syllabus guide for Grades 5–10. Covers MOE UAE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UAE and Dubai students.',
+    ogTitle: 'UAE Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade UAE MOE Math curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'United Arab Emirates',
       standard: 'the UAE Ministry of Education (MOE) Mathematics framework — also serving Dubai (KHDA) and Abu Dhabi (ADEK) schools',
@@ -816,10 +816,10 @@ const curriculumMeta = {
 // ─────────────────────────────────────────────────────────────────────
 const scienceCurriculumMeta = {
   'united-states': {
-    title: 'US Science Curriculum Grades 5–10 | EduVerseJr Online Science Teacher',
-    description: 'Explore EduVerseJr\'s US Science Curriculum guide for Grades 5–10. Covers NGSS-aligned Biology, Chemistry, Physics and Earth Science. Expert 1-on-1 online Science teaching for US students.',
-    ogTitle: 'US Science Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade US NGSS Science curriculum guide for parents. Biology, Chemistry, Physics and Earth Science for Grades 5–10.',
+    title: 'US Science Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s US Science Curriculum & Syllabus guide for Grades 5–10. Covers NGSS-aligned Biology, Chemistry, Physics and Earth Science. Expert 1-on-1 online Science teaching for US students.',
+    ogTitle: 'US Science Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade US NGSS Science curriculum & syllabus guide for parents. Biology, Chemistry, Physics and Earth Science for Grades 5–10.',
     bodyContent: renderCurriculumBlock({
       isScience: true,
       country: 'United States',
@@ -845,9 +845,9 @@ const scienceCurriculumMeta = {
     }),
   },
   'united-kingdom': {
-    title: 'UK Science Curriculum Grades 5–10 | EduVerseJr Online Science Teacher',
-    description: 'Explore EduVerseJr\'s UK Science Curriculum guide for Grades 5–10. Covers KS2–KS4 Biology, Chemistry, Physics. Expert 1-on-1 online Science teaching for UK students.',
-    ogTitle: 'UK Science Curriculum Grades 5–10 — EduVerseJr',
+    title: 'UK Science Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s UK Science Curriculum & Syllabus guide for Grades 5–10. Covers KS2–KS4 Biology, Chemistry, Physics. Expert 1-on-1 online Science teaching for UK students.',
+    ogTitle: 'UK Science Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
     ogDesc: 'Grade-by-grade UK National Curriculum Science guide for parents. Biology, Chemistry, Physics for KS2–KS4.',
     bodyContent: renderCurriculumBlock({
       isScience: true,
@@ -874,10 +874,10 @@ const scienceCurriculumMeta = {
     }),
   },
   'canada': {
-    title: 'Canadian Science Curriculum Grades 5–10 | EduVerseJr Online Science Teacher',
-    description: 'Explore EduVerseJr\'s Canadian Science Curriculum guide for Grades 5–10. Provincial-aligned Biology, Chemistry, Physics and Earth Science. Expert 1-on-1 online Science teaching for Canadian students.',
-    ogTitle: 'Canadian Science Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade Canadian provincial Science curriculum guide for parents. Biology, Chemistry, Physics for Grades 5–10.',
+    title: 'Canadian Science Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Canadian Science Curriculum & Syllabus guide for Grades 5–10. Provincial-aligned Biology, Chemistry, Physics and Earth Science. Expert 1-on-1 online Science teaching for Canadian students.',
+    ogTitle: 'Canadian Science Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade Canadian provincial Science curriculum & syllabus guide for parents. Biology, Chemistry, Physics for Grades 5–10.',
     bodyContent: renderCurriculumBlock({
       isScience: true,
       country: 'Canada',
@@ -903,10 +903,10 @@ const scienceCurriculumMeta = {
     }),
   },
   'australia': {
-    title: 'Australian Science Curriculum Grades 5–10 | EduVerseJr Online Science Teacher',
-    description: 'Explore EduVerseJr\'s Australian Science Curriculum guide for Grades 5–10. ACARA-aligned Biology, Chemistry, Physics and Earth Science. Expert 1-on-1 online Science teaching for Australian students.',
-    ogTitle: 'Australian Science Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade Australian ACARA Science curriculum guide for parents. Biology, Chemistry, Physics for Years 5–10.',
+    title: 'Australian Science Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Australian Science Curriculum & Syllabus guide for Grades 5–10. ACARA-aligned Biology, Chemistry, Physics and Earth Science. Expert 1-on-1 online Science teaching for Australian students.',
+    ogTitle: 'Australian Science Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade Australian ACARA Science curriculum & syllabus guide for parents. Biology, Chemistry, Physics for Years 5–10.',
     bodyContent: renderCurriculumBlock({
       isScience: true,
       country: 'Australia',
@@ -932,10 +932,10 @@ const scienceCurriculumMeta = {
     }),
   },
   'singapore': {
-    title: 'Singapore Science Curriculum Grades 5–10 | EduVerseJr Online Science Teacher',
-    description: 'Explore EduVerseJr\'s Singapore Science Curriculum guide for Grades 5–10. MOE-aligned Biology, Chemistry, Physics. Expert 1-on-1 online Science teaching for Singapore students.',
-    ogTitle: 'Singapore Science Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade Singapore MOE Science curriculum guide for parents. Biology, Chemistry, Physics for Primary 5 to Secondary 4.',
+    title: 'Singapore Science Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Singapore Science Curriculum & Syllabus guide for Grades 5–10. MOE-aligned Biology, Chemistry, Physics. Expert 1-on-1 online Science teaching for Singapore students.',
+    ogTitle: 'Singapore Science Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade Singapore MOE Science curriculum & syllabus guide for parents. Biology, Chemistry, Physics for Primary 5 to Secondary 4.',
     bodyContent: renderCurriculumBlock({
       isScience: true,
       country: 'Singapore',
@@ -961,10 +961,10 @@ const scienceCurriculumMeta = {
     }),
   },
   'uae': {
-    title: 'UAE Science Curriculum Grades 5–10 | EduVerseJr Online Science Teacher',
-    description: 'Explore EduVerseJr\'s UAE Science Curriculum guide for Grades 5–10. UAE MOE-aligned Biology, Chemistry, Physics. Expert 1-on-1 online Science teaching for UAE and Dubai students.',
-    ogTitle: 'UAE Science Curriculum Grades 5–10 — EduVerseJr',
-    ogDesc: 'Grade-by-grade UAE MOE Science curriculum guide for parents. Biology, Chemistry, Physics for Cycle 2 & 3.',
+    title: 'UAE Science Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s UAE Science Curriculum & Syllabus guide for Grades 5–10. UAE MOE-aligned Biology, Chemistry, Physics. Expert 1-on-1 online Science teaching for UAE and Dubai students.',
+    ogTitle: 'UAE Science Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade UAE MOE Science curriculum & syllabus guide for parents. Biology, Chemistry, Physics for Cycle 2 & 3.',
     bodyContent: renderCurriculumBlock({
       isScience: true,
       country: 'United Arab Emirates',

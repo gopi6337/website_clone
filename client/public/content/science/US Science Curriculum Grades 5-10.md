@@ -1,4 +1,4 @@
-# US Science Curriculum — Grades 5 to 10
+# US Science Curriculum & Syllabus — Grades 5 to 10
 ### Aligned with Next Generation Science Standards (NGSS)
 
 ---

@@ -1,4 +1,4 @@
-# UAE Science Curriculum — Grades 5 to 10
+# UAE Science Curriculum & Syllabus — Grades 5 to 10
 ### Aligned with UAE Ministry of Education (MoE) Standards
 
 ---

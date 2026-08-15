@@ -110,10 +110,10 @@ export default function ScienceCurriculumViewer() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{curriculum.name} - Online Science Teacher Grade 5-10 | EduVerseJr</title>
+        <title>{curriculum.name.replace(" Curriculum", " Curriculum & Syllabus")} | EduVerseJr</title>
         <meta
           name="description"
-          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Biology, Chemistry and Physics topics aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Science teaching for Grade 5-10.`}
+          content={`Explore EduVerseJr's ${curriculum.name} & syllabus guide. Grade-by-grade Biology, Chemistry and Physics topics aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Science teaching for Grade 5-10 (incl. 10th grade).`}
         />
         <link rel="canonical" href={`https://eduversejr.com/science-curriculum/${country}`} />
 

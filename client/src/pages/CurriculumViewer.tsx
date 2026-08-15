@@ -127,10 +127,10 @@ export default function CurriculumViewer() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{curriculum.name} - Online Math Teacher Grade 5-10 | EduVerseJr</title>
+        <title>{curriculum.name.replace(" Curriculum", " Curriculum & Syllabus")} | EduVerseJr</title>
         <meta
           name="description"
-          content={`Explore EduVerseJr's ${curriculum.name}. Grade-by-grade Algebra, Geometry, Statistics and more aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Math teaching for Grade 5-10.`}
+          content={`Explore EduVerseJr's ${curriculum.name} & syllabus guide. Grade-by-grade Algebra, Geometry, Statistics and more aligned with ${country.replace(/-/g, ' ')} educational standards. Expert 1-on-1 online Math teaching for Grade 5-10 (incl. 10th grade).`}
         />
         <link rel="canonical" href={`https://eduversejr.com/curriculum/${country}`} />
 

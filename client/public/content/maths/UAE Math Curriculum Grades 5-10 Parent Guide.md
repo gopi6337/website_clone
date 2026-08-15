@@ -1,4 +1,4 @@
-# UAE Math Curriculum for Grades 5-10
+# UAE Math Curriculum & Syllabus for Grades 5-10
 ## Parent Information Guide
 
 ### Overview

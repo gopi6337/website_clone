@@ -1,4 +1,4 @@
-# Singapore Math Curriculum for Grades 5-10
+# Singapore Math Curriculum & Syllabus for Grades 5-10
 ## Parent Information Guide
 
 ### Overview
