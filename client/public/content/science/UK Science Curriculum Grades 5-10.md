@@ -1,4 +1,4 @@
-# UK Science Curriculum — Grades 5 to 10
+# UK Science Curriculum & Syllabus — Grades 5 to 10
 ### Aligned with UK National Curriculum (KS2–KS4)
 
 ---

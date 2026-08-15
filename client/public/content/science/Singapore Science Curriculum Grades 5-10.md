@@ -1,4 +1,4 @@
-# Singapore Science Curriculum — Grades 5 to 10
+# Singapore Science Curriculum & Syllabus — Grades 5 to 10
 ### Aligned with Ministry of Education (MOE) Singapore Syllabus
 
 ---

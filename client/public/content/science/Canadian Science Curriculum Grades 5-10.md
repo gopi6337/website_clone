@@ -1,4 +1,4 @@
-# Canadian Science Curriculum — Grades 5 to 10
+# Canadian Science Curriculum & Syllabus — Grades 5 to 10
 ### Aligned with Provincial Curriculum Standards (Across Major Provinces)
 
 ---

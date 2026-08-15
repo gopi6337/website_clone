@@ -1,4 +1,4 @@
-# Australian Science Curriculum — Grades 5 to 10
+# Australian Science Curriculum & Syllabus — Grades 5 to 10
 ### Aligned with Australian Curriculum (ACARA)
 
 ---
