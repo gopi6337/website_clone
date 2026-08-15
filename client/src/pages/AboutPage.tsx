@@ -82,7 +82,7 @@ export default function AboutPage() {
         "name": "Gopinath Krishnan",
         "jobTitle": "Chief Technology & AI Officer (CTAIO)",
         "description": "Chief Technology & AI Officer of EduVerseJr. MCA. 24+ years in IT and telecom. Leads the architecture and AI strategy behind Reva AI — multi-model LLM orchestration on Google Vertex AI (Gemini 3 Flash/Pro), proactive whiteboard generation, voice teaching, and the SAT/PSAT exam product.",
-        "email": "Gopinath.ctaio@eduversejr.com",
+        "email": "gopinath.ctaio@eduversejr.com",
         "sameAs": "https://www.linkedin.com/in/gopinath-krishnan-286839171"
       }
     ],
