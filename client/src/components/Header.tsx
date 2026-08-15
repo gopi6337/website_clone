@@ -83,9 +83,6 @@ export default function Header() {
             <Link href="/resources" className="nav-link whitespace-nowrap">
               Resources
             </Link>
-            <a href="/#pricing" className="nav-link whitespace-nowrap">
-              Pricing
-            </a>
             <a href="/#testimonials" className="nav-link whitespace-nowrap">
               Testimonials
             </a>
@@ -146,9 +143,6 @@ export default function Header() {
             <Link href="/resources" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Resources
             </Link>
-            <a href="/#pricing" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
-              Pricing
-            </a>
             <a href="/#testimonials" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>

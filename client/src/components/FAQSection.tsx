@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ChevronDown, Users, Sparkles } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 interface FAQSectionProps {
   defaultTab?: "all" | "human" | "reva";
 }
 
-export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
+// Reva AI FAQs removed from eduversejr.com — Reva content lives on revaaiteacher.com.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function FAQSection(_props: FAQSectionProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<"all" | "human" | "reva">(defaultTab);
 
   const humanFaqs = [
     {
@@ -63,105 +64,12 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
     },
   ];
 
-  const revaFaqs = [
-    {
-      type: "reva",
-      question: "What is Reva AI Teacher by EduVerseJr?",
-      answer: "Reva AI Teacher is EduVerseJr's AI-powered maths teaching platform for students in Grades 5–12. Powered by AI, Reva is available 24/7 and teaches Mathematics — including SAT and PSAT Math prep — through conversational AI, an interactive whiteboard, voice mode, smart practice sessions, and personalised weakness tracking. Unlike a general AI chatbot, Reva is purpose-built for curriculum-aligned teaching — it knows your child's grade, curriculum, and past sessions.",
-    },
-    {
-      type: "reva",
-      question: "What is Reva and how is it different from a regular AI chatbot?",
-      answer: "Reva is EduVerseJr's AI-powered teacher — not just a chatbot. Reva understands your child's curriculum, tracks their progress session by session, identifies weak areas, teaches through conversation and a live whiteboard, and adapts to each student's pace. It's designed to teach, not just answer.",
-    },
-    {
-      type: "reva",
-      question: "What subjects can Reva teach?",
-      answer: "Reva teaches Mathematics for Grades 5–12, aligned to US, UK, Canada, Australia, Singapore and UAE curricula, and includes SAT Math and PSAT Math preparation with Grade 8–12 plans.",
-    },
-    {
-      type: "reva",
-      question: "Is Reva available 24/7?",
-      answer: "Yes — Reva is available any time of day or night. Whether your child needs help with homework at 10pm or wants to revise before a morning exam, Reva is ready instantly.",
-    },
-    {
-      type: "reva",
-      question: "How does Reva's interactive whiteboard work?",
-      answer: "When solving a problem, Reva uses a live whiteboard to show each step visually — drawing graphs, writing equations, and annotating diagrams — just like a human teacher would at a physical whiteboard.",
-    },
-    {
-      type: "reva",
-      question: "Can my child speak to Reva instead of typing?",
-      answer: "Yes! Reva supports voice interaction. Students can speak their questions aloud and Reva will listen, understand, and respond — making it feel more like a natural teaching session.",
-    },
-    {
-      type: "reva",
-      question: "How does Reva track my child's progress?",
-      answer: "Reva automatically tracks performance across every topic and chapter, identifies weak areas, recommends targeted revision, and gives parents and students a clear view of where improvement is needed.",
-    },
-    {
-      type: "reva",
-      question: "Does Reva give quizzes and tests?",
-      answer: "Yes. Reva generates practice quizzes tailored to your child's level, grades them instantly, and explains every incorrect answer in detail — turning mistakes into learning moments.",
-    },
-    {
-      type: "reva",
-      question: "Is Reva free to use?",
-      answer: "Reva starts with a 7-day free trial — 10 AI actions a day and Chapter 1 of every course, no credit card required. Simply sign up at revaai.eduversejr.com to get started with AI-powered maths teaching. After the 7 days, continue on a paid plan for unlimited use.",
-    },
-    {
-      type: "reva",
-      question: "What technology powers Reva?",
-      answer: "Reva is powered by advanced AI — one of the most advanced AI models available — combined with EduVerseJr's proprietary curriculum content and progress tracking system.",
-    },
-    {
-      type: "reva",
-      question: "Can Reva replace a human teacher?",
-      answer: "Reva is a powerful complement to human teaching, not a replacement. For students who need structured live classes and personal accountability, our human teachers are still the best choice. Many families use both — Reva for daily practice and a human teacher for weekly deep-dive sessions.",
-    },
-    {
-      type: "reva",
-      question: "Does Reva AI Teacher work with US Common Core Math curriculum?",
-      answer: "Yes. Reva AI Teacher is fully aligned with the US Common Core State Standards (CCSS) for Mathematics, Grades 5–12. Reva knows the exact topics, units, and learning objectives in the US Common Core curriculum and teaches them in the correct sequence. Students can reference their grade level and Reva will teach to that standard.",
-    },
-    {
-      type: "reva",
-      question: "How is EduVerseJr different from Khan Academy or other AI teachers?",
-      answer: "EduVerseJr's Reva AI Teacher differs from Khan Academy and other AI tools in three key ways: (1) Reva combines AI teaching with live human teacher sessions in a single platform; (2) Reva uses a live interactive whiteboard to show step-by-step solutions visually, just like a real teacher; (3) Reva remembers each student's weaknesses across sessions and builds a personalised revision plan. Most AI teachers provide one-off answers — Reva builds a continuous, personalised teaching relationship.",
-    },
-    {
-      type: "reva",
-      question: "What grades does Reva AI Teacher support?",
-      answer: "Reva AI Teacher supports students from Grade 5 through Grade 12 (ages 10–18). Content is curriculum-aligned for each grade level across US, UK, Canada, Australia, Singapore, and UAE standards.",
-    },
-    {
-      type: "reva",
-      question: "What's the difference between PSAT 8/9 and PSAT/NMSQT?",
-      answer: "PSAT 8/9 is the low-stakes introductory test for Grades 8–9 — it familiarises students with the digital SAT format before high school. PSAT/NMSQT is the Grade 10–11 test that also qualifies students for the National Merit Scholarship. Both are digital, adaptive, and structured exactly like the SAT (two modules each for Reading & Writing and Math). See eduversejr.com/psat for full details.",
-    },
-    {
-      type: "reva",
-      question: "Is PSAT prep included with my Reva subscription?",
-      answer: "Yes. PSAT 8/9 Math prep is included for students on the Grade 8 or Grade 9 plan, and PSAT/NMSQT Math prep is included with the Grade 10–11 plans. There's no separate sign-up — it's part of your Reva subscription.",
-    },
-    {
-      type: "reva",
-      question: "Is PSAT prep available now?",
-      answer: "Yes. PSAT 8/9 and PSAT/NMSQT Math prep (with the National Merit Scholarship state cutoff calculator) are live and included with Grade 8–12 plans. Sign up free today at revaai.eduversejr.com and start straight away. See eduversejr.com/psat for details.",
-    },
-  ];
-
-  const allFaqs = [...humanFaqs, ...revaFaqs];
-
-  const displayFaqs =
-    activeTab === "all" ? allFaqs :
-    activeTab === "human" ? humanFaqs :
-    revaFaqs;
+  const displayFaqs = humanFaqs;
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": allFaqs.map(faq => ({
+    "mainEntity": humanFaqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -182,44 +90,21 @@ export default function FAQSection({ defaultTab = "all" }: FAQSectionProps) {
         <div className="text-center mb-10">
           <h2 className="section-heading">Frequently Asked Questions</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            Questions about our human teachers, Reva AI teacher, or both — we've got answers.
+            Questions about our expert human teachers — we've got answers.
           </p>
-        </div>
-
-        {/* Tab Filter */}
-        <div className="flex justify-center gap-3 mb-8 flex-wrap">
-          <button
-            onClick={() => { setActiveTab("all"); setOpenIndex(null); }}
-            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${activeTab === "all" ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-          >
-            All Questions
-          </button>
-          <button
-            onClick={() => { setActiveTab("human"); setOpenIndex(null); }}
-            className={`px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all ${activeTab === "human" ? "bg-blue-600 text-white" : "bg-blue-50 text-blue-700 hover:bg-blue-100"}`}
-          >
-            <Users className="w-4 h-4" /> Human Teachers
-          </button>
-          <button
-            onClick={() => { setActiveTab("reva"); setOpenIndex(null); }}
-            className={`px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-all ${activeTab === "reva" ? "bg-purple-600 text-white" : "bg-purple-50 text-purple-700 hover:bg-purple-100"}`}
-          >
-            <Sparkles className="w-4 h-4" /> Reva AI
-          </button>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-3">
           {displayFaqs.map((faq, idx) => (
             <div
               key={idx}
-              className={`border rounded-lg overflow-hidden ${faq.type === "reva" ? "border-purple-200" : "border-gray-200"}`}
+              className="border border-gray-200 rounded-lg overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 className="w-full flex justify-between items-center px-5 py-4 text-left gap-4 hover:bg-gray-50 transition-colors"
               >
                 <div className="flex items-center gap-2">
-                  {faq.type === "reva" && <Sparkles className="w-4 h-4 text-purple-500 flex-shrink-0" />}
                   <span className="font-medium text-gray-900 text-sm">{faq.question}</span>
                 </div>
                 <ChevronDown
