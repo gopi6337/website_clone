@@ -1,4 +1,5 @@
-import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award, Sparkles, Globe } from "lucide-react";
+import { Code, Lightbulb, Target, Rocket, Users, Code2, Zap, Palette, Gamepad2, Bot, Wifi, Blocks, Award, Sparkles, Globe, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
 export default function CodingCurriculumSection() {
@@ -43,6 +44,7 @@ export default function CodingCurriculumSection() {
   const codingCourses = [
     {
       title: "Python Fundamentals and Data Visualization",
+      slug: "python-fundamentals",
       lessons: 60,
       grade: "Grade 5-10",
       description: "Learn Python fundamentals with interactive apps and games. Explore the basics, learn about different libraries, OOPs and data visualization concepts with real-time examples.",
@@ -56,6 +58,7 @@ export default function CodingCurriculumSection() {
     },
     {
       title: "Python with AI",
+      slug: "python-with-ai",
       lessons: 36,
       grade: "Grade 5-10",
       description: "Master AI-based concepts like machine learning, neural networks, natural language processing etc. with real-world projects.",
@@ -69,6 +72,7 @@ export default function CodingCurriculumSection() {
     },
     {
       title: "Block-Based Coding",
+      slug: "block-based-coding",
       lessons: 30,
       grade: "Grade 5-10",
       description: "Dive into the world of coding with blocks, easy to learn and use. Learn logic of app and game creation, animations with ease.",
@@ -81,6 +85,7 @@ export default function CodingCurriculumSection() {
     },
     {
       title: "Web Development",
+      slug: "web-development",
       lessons: 50,
       grade: "Grade 5-10",
       description: "Learn fundamentals of website development using HTML, CSS, JavaScript and incorporate AI into it. Build interactive websites.",
@@ -94,6 +99,7 @@ export default function CodingCurriculumSection() {
     },
     {
       title: "App/Game Development with AI",
+      slug: "app-game-development",
       lessons: 96,
       grade: "Grade 5-10",
       description: "Learn to create interactive responsive apps and games using HTML, CSS, JS. Boost your app and game development skills with Visual Studio platform and database connectivity.",
@@ -107,6 +113,7 @@ export default function CodingCurriculumSection() {
     },
     {
       title: "Certifications",
+      slug: "coding-certifications",
       lessons: null,
       grade: "Grade 5-10",
       description: "Excellent support for professional certifications. Providing resources like course materials, study guides, PowerPoint presentations and practice assessments.",
@@ -245,6 +252,15 @@ export default function CodingCurriculumSection() {
                     </div>
                   ))}
                 </div>
+
+                {/* Learn more → dedicated course page */}
+                {course.slug && (
+                  <Link href={`/coding/${course.slug}`}>
+                    <span className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-semibold cursor-pointer">
+                      Learn more <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                )}
               </div>
             ))}
           </div>

@@ -9,6 +9,7 @@ import {
 } from './client/src/data/nationalMeritCutoffs.js';
 import { ARTICLES, ARTICLE_AUTHOR } from './client/src/data/resourceArticles.js';
 import { GRADES, GRADE_REVA_NOTE } from './client/src/data/gradeLevels.js';
+import { CODING_COURSES, CODING_REVA_NOTE } from './client/src/data/codingCourses.js';
 
 // Static National Merit Semifinalist cutoff table for the crawler prerender —
 // single source of truth shared with the React calculator page.
@@ -1465,6 +1466,77 @@ GRADES.forEach((g) => {
   console.log(`✓ Created courses/${g.slug}.html (Course + FAQPage schema)`);
 });
 
+// ─────────────────────────────────────────────────────────────────────
+// Coding course landing pages → /dist/public/coding/<slug>.html
+// Content from client/src/data/codingCourses.js (shared with
+// CodingCoursePage.tsx). Each = Course + BreadcrumbList + FAQPage schema.
+// Vercel cleanUrls serves /coding/python-fundamentals → coding/*.html.
+// ─────────────────────────────────────────────────────────────────────
+const codingDir = path.join(publicDir, 'coding');
+if (!fs.existsSync(codingDir)) {
+  fs.mkdirSync(codingDir, { recursive: true });
+}
+CODING_COURSES.forEach((c) => {
+  const canonicalUrl = `https://eduversejr.com/coding/${c.slug}`;
+  const block = renderSeoBlock({
+    h1: c.h1,
+    intro: c.intro,
+    sections: [
+      {
+        h2: 'What this course covers',
+        html: `<ul>${c.topics.map((t) => `<li>${t}</li>`).join('')}</ul>`,
+      },
+      {
+        h2: 'How EduVerseJr teaches coding',
+        html: `<p>${CODING_REVA_NOTE}</p>`,
+      },
+    ],
+    faqs: c.faqs,
+    links: c.related,
+  });
+  let pageHtml = injectMeta(indexHtml, {
+    title: `${c.title} | EduVerseJr`,
+    description: c.metaDescription,
+    ogTitle: c.ogTitle,
+    ogDesc: c.ogDesc,
+  }, canonicalUrl);
+  pageHtml = injectBodyContent(pageHtml, block.html);
+  pageHtml = injectSubpageSchema(pageHtml, {
+    canonicalUrl,
+    crumb: c.title,
+    name: c.title,
+    description: c.metaDescription,
+    faqs: c.faqs,
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: c.title,
+        description: c.metaDescription,
+        url: canonicalUrl,
+        provider: { '@type': 'EducationalOrganization', '@id': ORG_ID, name: 'EduVerseJr' },
+        educationalLevel: c.grade,
+        teaches: c.topics.join('; '),
+        availableLanguage: 'English',
+        hasCourseInstance: {
+          '@type': 'CourseInstance',
+          courseMode: 'online',
+          courseWorkload: 'Live 1-to-1 online classes with an expert teacher; Reva AI Teacher for practice between sessions',
+        },
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          price: '0',
+          priceCurrency: 'USD',
+          description: 'Free trial class — no commitment. Regular pricing confirmed at signup.',
+        },
+      },
+    ],
+  });
+  fs.writeFileSync(path.join(codingDir, `${c.slug}.html`), pageHtml, 'utf-8');
+  console.log(`✓ Created coding/${c.slug}.html (Course + FAQPage schema)`);
+});
+
 // Homepage — overwrite /dist/public/index.html with prerender SEO body
 // (title and meta are already correct in base index.html, we only inject body)
 const homepageBody = renderSeoBlock({
@@ -1554,5 +1626,6 @@ const total =
   1 + // resources hub
   ARTICLES.length +
   GRADES.length +
+  CODING_COURSES.length +
   1;
 console.log(`\n✅ Generated ${total} SPA pages with unique meta tags.`);

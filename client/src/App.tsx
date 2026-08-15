@@ -16,6 +16,7 @@ import TeachersPage from "./pages/TeachersPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import ResourceArticlePage from "./pages/ResourceArticlePage";
 import GradeMathsPage from "./pages/GradeMathsPage";
+import CodingCoursePage from "./pages/CodingCoursePage";
 import CurriculumViewer from "./pages/CurriculumViewer";
 import ScienceCurriculumViewer from "./pages/ScienceCurriculumViewer";
 import Login from "./pages/Login";
@@ -55,6 +56,7 @@ function Router() {
         <Route path={"/national-merit-calculator"} component={NationalMeritCalculatorPage} />
         <Route path={"/courses"} component={CoursesPage} />
         <Route path={"/courses/:slug"} component={GradeMathsPage} />
+        <Route path={"/coding/:slug"} component={CodingCoursePage} />
         <Route path={"/teachers"} component={TeachersPage} />
         <Route path={"/resources"} component={ResourcesPage} />
         <Route path={"/resources/:slug"} component={ResourceArticlePage} />
