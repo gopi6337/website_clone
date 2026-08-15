@@ -1,9 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
+import MathCurriculumSection from "@/components/MathCurriculumSection";
+import ScienceCurriculumSection from "@/components/ScienceCurriculumSection";
+import CodingCurriculumSection from "@/components/CodingCurriculumSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import ComparisonBlock from "@/components/ComparisonBlock";
@@ -88,6 +91,7 @@ const CTA_CONFIG: Record<PricingTier["cta"], { label: string; href: string }> = 
 };
 
 export default function Home() {
+  const [activeSubject, setActiveSubject] = useState<"maths" | "science" | "coding">("maths");
   useEffect(() => {
     if (window.location.hash) {
       const id = window.location.hash.substring(1);
@@ -132,49 +136,42 @@ export default function Home() {
       <HeroSection />
       <TrustStrip />
 
-      {/* See Reva in action — real screenshots of the live product (visible without login) */}
-      <section id="see-reva" className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-8">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full mb-3">
-              ● Live product
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">See Reva in action</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Watch a real walkthrough of the live app — Reva teaches step-by-step on an interactive whiteboard and gives instant, graded practice feedback. Open now at{" "}
-              <a href="https://revaai.eduversejr.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">revaai.eduversejr.com</a>.
+      {/* Region-based curriculum — full sections, subject-tabbed (Maths / Science / Coding).
+          Reuses the exact /courses sections + copy; promoted to top priority. */}
+      <section id="courses" className="pt-10 md:pt-14 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Courses</h2>
+            <p className="text-gray-600 text-base max-w-xl mx-auto mb-6">
+              Expert human teachers for one-to-one classes, and Reva AI live for
+              Mathematics (Grades 5–12) with SAT &amp; PSAT Math prep included.
             </p>
-          </div>
-          {/* Product walkthrough video */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <video
-              controls
-              playsInline
-              preload="none"
-              poster="/reva-demo-poster.jpg?v=18"
-              className="w-full h-auto rounded-2xl border border-gray-200 shadow-xl bg-black"
-            >
-              <source src="/reva-demo.mp4?v=18" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p className="text-center text-sm text-gray-500 mt-3">Full product walkthrough — curriculum aligned Grades 5–12 · PSAT &amp; SAT prep · now live in the US</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <figure className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
-              <img src="/screenshots/reva-whiteboard.jpg" alt="Reva AI teaching trigonometry step-by-step on the interactive whiteboard in the live EduVerseJr app" width="1280" height="720" loading="lazy" className="w-full h-auto" />
-              <figcaption className="text-sm text-gray-600 px-4 py-3 border-t border-gray-100">Step-by-step whiteboard teaching with voice</figcaption>
-            </figure>
-            <figure className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg bg-white">
-              <img src="/screenshots/reva-practice.jpg" alt="Reva AI giving instant graded feedback and a worked solution in the live EduVerseJr practice mode" width="1280" height="720" loading="lazy" className="w-full h-auto" />
-              <figcaption className="text-sm text-gray-600 px-4 py-3 border-t border-gray-100">Smart practice with instant feedback</figcaption>
-            </figure>
-          </div>
-          <div className="text-center mt-8">
-            <a href="https://revaai.eduversejr.com/register" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors shadow-lg shadow-blue-600/30">
-              Start your free trial →
-            </a>
+            {/* Subject Tabs */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {([
+                { id: "maths", label: "Mathematics", icon: <Brain className="w-4 h-4" /> },
+                { id: "science", label: "Science", icon: <FlaskConical className="w-4 h-4" /> },
+                { id: "coding", label: "Coding", icon: <Code2 className="w-4 h-4" /> },
+              ] as const).map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveSubject(tab.id)}
+                  className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all border ${
+                    activeSubject === tab.id
+                      ? "bg-gray-900 text-white border-gray-900 shadow-lg"
+                      : "bg-white hover:bg-gray-50 border-gray-300 text-gray-700"
+                  }`}
+                >
+                  {tab.icon} {tab.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
+        {/* Content — only active subject shown */}
+        {activeSubject === "maths" && <MathCurriculumSection />}
+        {activeSubject === "science" && <ScienceCurriculumSection />}
+        {activeSubject === "coding" && <CodingCurriculumSection />}
       </section>
 
       <div id="about">
@@ -240,39 +237,6 @@ export default function Home() {
               onClick={() => window.open('https://revaai.eduversejr.com', '_blank')}>
               Try Reva Free
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Courses Teaser */}
-      <section id="courses" className="py-10 md:py-14 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Courses</h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Three subjects, six country curricula, Grades 5–12. Available with both human teachers and Reva AI.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto mb-8">
-            {[
-              { icon: <Brain className="w-8 h-8 text-blue-600" />, subject: "Mathematics", badge: "🤖 Reva AI + 👨‍🏫 Human", desc: "Human Teachers: Grades 5–10 · Reva AI: Grades 5–12 · Aligned with 6 curricula", color: "border-blue-200 bg-blue-50" },
-              { icon: <FlaskConical className="w-8 h-8 text-green-600" />, subject: "Science", badge: "👨‍🏫 Human Teachers", desc: "Biology, Chemistry, Physics, Earth & Space · Grades 5–10", color: "border-green-200 bg-green-50" },
-              { icon: <Code2 className="w-8 h-8 text-orange-600" />, subject: "Coding", badge: "👨‍🏫 Human Teachers", desc: "Python, JavaScript, HTML/CSS, Web & App Dev · Grades 5–10", color: "border-orange-200 bg-orange-50" },
-            ].map((c, i) => (
-              <div key={i} className={`rounded-2xl p-5 border ${c.color}`}>
-                <div className="mb-3">{c.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-1">{c.subject}</h3>
-                <span className="text-xs bg-white border border-gray-200 rounded-full px-2 py-0.5 text-gray-600 mb-2 inline-block">{c.badge}</span>
-                <p className="text-xs text-gray-600">{c.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <Link href="/courses">
-              <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 rounded-full font-semibold flex items-center gap-2 mx-auto">
-                View Full Curriculum <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
