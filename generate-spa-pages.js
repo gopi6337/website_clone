@@ -994,7 +994,7 @@ const scienceCurriculumMeta = {
 // ─────────────────────────────────────────────────────────────────────
 // Meta-injection helper — replaces title, description, og:* and adds canonical
 // ─────────────────────────────────────────────────────────────────────
-function injectMeta(html, meta, canonicalUrl) {
+function injectMeta(html, meta, canonicalUrl, hreflangMap = null) {
   if (!meta) return html;
 
   // <title>
@@ -1058,12 +1058,16 @@ function injectMeta(html, meta, canonicalUrl) {
     );
   }
 
-  // hreflang — rewrite every alternate href to this page's own canonical so
-  // each route is self-referential across the six English regions (the base
-  // index.html carries the homepage URLs; cloned pages must point to self).
+  // hreflang — regional page families (curriculum / science-curriculum) pass a
+  // hreflangMap that routes each English region code to its correct country
+  // sibling (en-GB → /curriculum/united-kingdom, etc.), so Google serves the
+  // right per-country page instead of all six pages claiming every region.
+  // Non-regional pages pass no map and stay self-referential (one global page
+  // serving all six English regions → every alternate points to its own canonical).
   html = html.replace(
-    /(<link\s+rel="alternate"\s+hreflang="[^"]*"\s+href=")[^"]*("\s*\/?>)/g,
-    `$1${canonicalUrl}$2`
+    /(<link\s+rel="alternate"\s+hreflang=")([^"]*)("\s+href=")[^"]*("\s*\/?>)/g,
+    (_m, p1, code, p3, p4) =>
+      `${p1}${code}${p3}${(hreflangMap && hreflangMap[code]) || canonicalUrl}${p4}`
   );
 
   return html;
@@ -1235,9 +1239,29 @@ const curriculumDir = path.join(publicDir, 'curriculum');
 if (!fs.existsSync(curriculumDir)) {
   fs.mkdirSync(curriculumDir, { recursive: true });
 }
+// Region code for each country slug → builds the regional hreflang cluster so
+// each /curriculum/<country> (and /science-curriculum/<country>) page points
+// every English region to its correct sibling. x-default → the US page.
+const HREFLANG_REGION_BY_SLUG = {
+  'united-states': 'en-US',
+  'united-kingdom': 'en-GB',
+  'canada': 'en-CA',
+  'australia': 'en-AU',
+  'singapore': 'en-SG',
+  'uae': 'en-AE',
+};
+function regionalHreflangMap(base) {
+  const map = {};
+  for (const [slug, region] of Object.entries(HREFLANG_REGION_BY_SLUG)) {
+    map[region] = `https://eduversejr.com${base}${slug}`;
+  }
+  map['x-default'] = `https://eduversejr.com${base}united-states`;
+  return map;
+}
+
 Object.entries(curriculumMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/curriculum/${page}`;
-  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl, regionalHreflangMap('/curriculum/'));
   pageHtml = injectBodyContent(pageHtml, meta.bodyContent.html);
   pageHtml = injectSubpageSchema(pageHtml, {
     canonicalUrl,
@@ -1259,7 +1283,7 @@ if (!fs.existsSync(scienceCurriculumDir)) {
 }
 Object.entries(scienceCurriculumMeta).forEach(([page, meta]) => {
   const canonicalUrl = `https://eduversejr.com/science-curriculum/${page}`;
-  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl);
+  let pageHtml = injectMeta(indexHtml, meta, canonicalUrl, regionalHreflangMap('/science-curriculum/'));
   pageHtml = injectBodyContent(pageHtml, meta.bodyContent.html);
   pageHtml = injectSubpageSchema(pageHtml, {
     canonicalUrl,
