@@ -611,11 +611,15 @@ const topLevelMeta = {
 // content data.
 // ─────────────────────────────────────────────────────────────────────
 function renderCurriculumBlock({ country, standard, slugMath, grades, examPrep, faqs, isScience = false }) {
-  const subjectLabel = isScience ? 'Science' : 'Maths';
-  const subjectLower = isScience ? 'science' : 'maths';
+  // Localise the maths word: North America uses "Math", the rest use "Maths".
+  const northAmerica = /united states|canad/i.test(country);
+  const mathsWord = northAmerica ? 'Math' : 'Maths';
+  const mathsLower = northAmerica ? 'math' : 'maths';
+  const subjectLabel = isScience ? 'Science' : mathsWord;
+  const subjectLower = isScience ? 'science' : mathsLower;
   const slugBase = isScience ? '/science-curriculum/' : '/curriculum/';
   const otherSection = isScience ? '/curriculum/' : '/science-curriculum/';
-  const otherSubject = isScience ? 'Maths' : 'Science';
+  const otherSubject = isScience ? mathsWord : 'Science';
   return renderSeoBlock({
     h1: `${country} ${subjectLabel} Curriculum & Syllabus (Grades 5–10) — Grade-by-Grade Guide for Parents`,
     intro: [
@@ -642,9 +646,9 @@ function renderCurriculumBlock({ country, standard, slugMath, grades, examPrep, 
 
 const curriculumMeta = {
   'united-states': {
-    title: 'US Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
-    description: 'Explore EduVerseJr\'s US Math Curriculum & Syllabus guide for Grades 5–10. Covers Common Core Algebra, Geometry, Statistics and more. Expert 1-on-1 online Math teaching aligned with US standards.',
-    ogTitle: 'US Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    title: 'US Common Core Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s US Common Core Math Curriculum & Syllabus guide for Grades 5–10. Covers Common Core Algebra, Geometry, Statistics and more. Expert 1-on-1 online Math teaching aligned with US standards.',
+    ogTitle: 'US Common Core Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
     ogDesc: 'Grade-by-grade US Common Core Math curriculum & syllabus guide for parents. Algebra, Geometry, Statistics and more for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'United States',
@@ -670,9 +674,9 @@ const curriculumMeta = {
     }),
   },
   'united-kingdom': {
-    title: 'UK Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
-    description: 'Explore EduVerseJr\'s UK Maths Curriculum & Syllabus guide for Grades 5–10. Covers GCSE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UK students.',
-    ogTitle: 'UK Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    title: 'UK GCSE & KS3 Maths Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s UK GCSE & KS3 Maths Curriculum & Syllabus guide for Grades 5–10. Covers GCSE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UK students.',
+    ogTitle: 'UK GCSE & KS3 Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
     ogDesc: 'Grade-by-grade UK Maths curriculum & syllabus guide for parents. GCSE-aligned Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'United Kingdom',
@@ -698,9 +702,9 @@ const curriculumMeta = {
     }),
   },
   'canada': {
-    title: 'Canadian Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
-    description: 'Explore EduVerseJr\'s Canadian Math Curriculum & Syllabus guide for Grades 5–10. Covers provincial Algebra, Geometry, Data Management and more. Expert 1-on-1 online Math teaching for Canadian students.',
-    ogTitle: 'Canadian Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    title: 'Canadian Provincial Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Canadian Provincial Math Curriculum & Syllabus guide for Grades 5–10. Covers provincial Algebra, Geometry, Data Management and more. Expert 1-on-1 online Math teaching for Canadian students.',
+    ogTitle: 'Canadian Provincial Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
     ogDesc: 'Grade-by-grade Canadian Math curriculum & syllabus guide for parents. Provincial Algebra, Geometry, Data Management for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'Canada',
@@ -726,9 +730,9 @@ const curriculumMeta = {
     }),
   },
   'australia': {
-    title: 'Australian Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
-    description: 'Explore EduVerseJr\'s Australian Maths Curriculum & Syllabus guide for Grades 5–10. Covers ACARA-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Australian students.',
-    ogTitle: 'Australian Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    title: 'Australian ACARA Maths Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Australian ACARA Maths Curriculum & Syllabus guide for Grades 5–10. Covers ACARA-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Australian students.',
+    ogTitle: 'Australian ACARA Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
     ogDesc: 'Grade-by-grade Australian ACARA Maths curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'Australia',
@@ -754,9 +758,9 @@ const curriculumMeta = {
     }),
   },
   'singapore': {
-    title: 'Singapore Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
-    description: 'Explore EduVerseJr\'s Singapore Maths Curriculum & Syllabus guide for Grades 5–10. Covers MOE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Singapore students.',
-    ogTitle: 'Singapore Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    title: 'Singapore MOE Maths Syllabus & Curriculum (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s Singapore MOE Maths Syllabus & Curriculum guide for Grades 5–10. Covers MOE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for Singapore students.',
+    ogTitle: 'Singapore MOE Maths Syllabus & Curriculum (Grades 5–10) — EduVerseJr',
     ogDesc: 'Grade-by-grade Singapore MOE Maths curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'Singapore',
@@ -782,10 +786,10 @@ const curriculumMeta = {
     }),
   },
   'uae': {
-    title: 'UAE Math Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
-    description: 'Explore EduVerseJr\'s UAE Math Curriculum & Syllabus guide for Grades 5–10. Covers MOE UAE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UAE and Dubai students.',
-    ogTitle: 'UAE Math Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
-    ogDesc: 'Grade-by-grade UAE MOE Math curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
+    title: 'UAE MOE Maths Curriculum & Syllabus (Grades 5–10) | EduVerseJr',
+    description: 'Explore EduVerseJr\'s UAE MOE Maths Curriculum & Syllabus guide for Grades 5–10. Covers MOE UAE-aligned Algebra, Geometry, Statistics and more. Expert 1-on-1 online Maths teaching for UAE and Dubai students.',
+    ogTitle: 'UAE MOE Maths Curriculum & Syllabus (Grades 5–10) — EduVerseJr',
+    ogDesc: 'Grade-by-grade UAE MOE Maths curriculum & syllabus guide for parents. Algebra, Geometry, Statistics for Grades 5–10 by EduVerseJr.',
     bodyContent: renderCurriculumBlock({
       country: 'United Arab Emirates',
       standard: 'the UAE Ministry of Education (MOE) Mathematics framework — also serving Dubai (KHDA) and Abu Dhabi (ADEK) schools',
