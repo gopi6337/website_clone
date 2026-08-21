@@ -1,6 +1,5 @@
 import { Users, Sparkles, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
 
 /**
  * ComparisonBlock — "Which is right for your child?" side-by-side card.
@@ -36,7 +35,7 @@ export default function ComparisonBlock() {
       "Smart practice & instant feedback",
       "7-day free trial — no credit card",
     ],
-    cta: { text: "Try Reva Free Trial", action: "/reva" },
+    cta: { text: "Try Reva Free Trial", action: "https://revaaiteacher.com" },
   };
 
   return (
@@ -109,11 +108,12 @@ export default function ComparisonBlock() {
                 </li>
               ))}
             </ul>
-            <Link href={reva.cta.action}>
-              <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold py-5">
-                {reva.cta.text}
-              </Button>
-            </Link>
+            <Button
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold py-5"
+              onClick={() => (window.location.href = reva.cta.action)}
+            >
+              {reva.cta.text}
+            </Button>
           </div>
         </div>
 

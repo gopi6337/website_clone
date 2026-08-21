@@ -105,7 +105,7 @@ export default function Header() {
             <Button variant="outline" className="rounded-full text-[11px] px-2.5 py-1.5 leading-tight text-center bg-blue-50 border-blue-200 text-blue-600 hover:bg-blue-100 font-bold whitespace-nowrap" onClick={() => window.location.href = '/#booking'}>
               Book a Free Trial<br />Human Teacher
             </Button>
-            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-[11px] px-2.5 py-1.5 whitespace-nowrap" onClick={() => window.location.href = '/reva'}>
+            <Button className="rounded-full bg-purple-600 hover:bg-purple-700 text-white text-[11px] px-2.5 py-1.5 whitespace-nowrap" onClick={() => window.location.href = 'https://revaaiteacher.com'}>
               Try Reva AI Teacher
             </Button>
           </div>
@@ -161,7 +161,7 @@ export default function Header() {
             </a>
             <div className="space-y-2 pt-4">
               <Button className="w-full rounded-full" onClick={() => { setIsMenuOpen(false); window.location.href = '/#booking'; }}>Book a Free Trial Human Teacher</Button>
-              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.location.href = '/reva'; }}>
+              <Button className="w-full rounded-full bg-purple-600 hover:bg-purple-700 text-white" onClick={() => { setIsMenuOpen(false); window.location.href = 'https://revaaiteacher.com'; }}>
                 Try Reva AI Teacher
               </Button>
             </div>

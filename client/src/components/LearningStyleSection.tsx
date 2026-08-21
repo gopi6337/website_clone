@@ -119,7 +119,7 @@ export default function LearningStyleSection() {
                 </ul>
                 <Button
                   className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full"
-                  onClick={() => window.location.href = '/reva'}
+                  onClick={() => window.location.href = 'https://revaaiteacher.com'}
                 >
                   Try Reva Free Trial
                 </Button>

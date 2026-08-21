@@ -18,7 +18,7 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
-              Expert Online Teachers for Maths, Science &amp; Coding <span className="text-yellow-300 inline-block">— Grades 5–10</span>
+              Expert Online <span className="bg-gradient-to-r from-pink-300 via-rose-200 to-amber-200 bg-clip-text text-transparent inline-block font-extrabold">Experienced Female</span> Teachers for Maths, Science &amp; Coding <span className="text-yellow-300 inline-block">— Grades 5–10</span>
             </h1>
             <p className="text-white/90 mb-6 text-sm md:text-base">
               Live 1-to-1 classes with experienced human teachers, plus Reva — your child's 24/7 AI teacher. Two ways to learn, one platform.
@@ -71,7 +71,7 @@ export default function HeroSection() {
               </div>
               <Button
                 className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-full font-bold"
-                onClick={() => window.location.href = '/reva'}
+                onClick={() => window.location.href = 'https://revaaiteacher.com'}
               >
                 Try Reva Free Trial
               </Button>
