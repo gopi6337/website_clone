@@ -1102,11 +1102,29 @@ const SPLASH_HTML = `<noscript><style>#boot-splash{display:none!important}</styl
     </div>
     <script>(function(){setTimeout(function(){var s=document.getElementById('boot-splash');if(s){s.style.opacity='0';setTimeout(function(){s.parentNode&&s.parentNode.removeChild(s)},300)}},2500)})();</script>`;
 
+// 2026-08-21: Site-wide internal-link hub, injected into EVERY prerendered
+// page inside <div id="root">. The real footer/nav render client-side only,
+// so Googlebot's raw-HTML crawl previously saw almost no internal links —
+// leaving /sat, /psat, all /courses/grade-*-maths and /coding/* pages
+// effectively orphaned (unknown / discovered-not-indexed in GSC). This block
+// gives every page the full internal link graph in static HTML. React's
+// createRoot() wipes it on hydration, so real users never see it (the fixed
+// white boot-splash covers the pre-hydration paint anyway).
+const SITE_LINKS_HTML = `<nav aria-label="Explore EduVerseJr" style="max-width:900px;margin:32px auto 0;padding:24px;border-top:1px solid #e5e7eb;font-family:system-ui,-apple-system,sans-serif;color:#1f2937;line-height:1.8;font-size:14px">
+      <h2 style="font-size:18px;margin:0 0 12px">Explore EduVerseJr</h2>
+      <p style="margin:0 0 8px"><strong>Test prep:</strong> <a href="/sat">Digital SAT Prep</a> &middot; <a href="/psat">PSAT 8/9 &amp; NMSQT Prep</a> &middot; <a href="/national-merit-calculator">National Merit Calculator</a></p>
+      <p style="margin:0 0 8px"><strong>Maths courses:</strong> <a href="/courses">All Maths Courses</a> &middot; <a href="/courses/grade-5-maths">Grade 5 Maths</a> &middot; <a href="/courses/grade-6-maths">Grade 6 Maths</a> &middot; <a href="/courses/grade-7-maths">Grade 7 Maths</a> &middot; <a href="/courses/grade-8-maths">Grade 8 Maths</a> &middot; <a href="/courses/grade-9-maths">Grade 9 Maths (Algebra I)</a> &middot; <a href="/courses/grade-10-maths">Grade 10 Maths (Geometry)</a> &middot; <a href="/courses/grade-11-maths">Grade 11 Maths (Algebra II)</a> &middot; <a href="/courses/grade-12-maths">Grade 12 Maths (Pre-Calc)</a></p>
+      <p style="margin:0 0 8px"><strong>Coding for kids:</strong> <a href="/coding/python-fundamentals">Python Fundamentals</a> &middot; <a href="/coding/python-with-ai">Python with AI</a> &middot; <a href="/coding/block-based-coding">Block-Based Coding</a> &middot; <a href="/coding/web-development">Web Development</a> &middot; <a href="/coding/app-game-development">App &amp; Game Development</a> &middot; <a href="/coding/coding-certifications">Coding Certifications</a></p>
+      <p style="margin:0 0 8px"><strong>Maths curriculum:</strong> <a href="/curriculum/united-states">United States</a> &middot; <a href="/curriculum/united-kingdom">United Kingdom</a> &middot; <a href="/curriculum/canada">Canada</a> &middot; <a href="/curriculum/australia">Australia</a> &middot; <a href="/curriculum/singapore">Singapore</a> &middot; <a href="/curriculum/uae">UAE</a></p>
+      <p style="margin:0 0 8px"><strong>Science curriculum:</strong> <a href="/science-curriculum/united-states">United States</a> &middot; <a href="/science-curriculum/united-kingdom">United Kingdom</a> &middot; <a href="/science-curriculum/canada">Canada</a> &middot; <a href="/science-curriculum/australia">Australia</a> &middot; <a href="/science-curriculum/singapore">Singapore</a> &middot; <a href="/science-curriculum/uae">UAE</a></p>
+      <p style="margin:0 0 8px"><strong>More:</strong> <a href="/reva">Reva AI Tutor</a> &middot; <a href="/teachers">Expert Teachers</a> &middot; <a href="/about">About EduVerseJr</a> &middot; <a href="/resources">Resources</a></p>
+    </nav>`;
+
 function injectBodyContent(html, bodyContent) {
   if (!bodyContent) return html;
   return html.replace(
     /<div\s+id="root">\s*<\/div>/,
-    `<div id="root">${SPLASH_HTML}${bodyContent}</div>`
+    `<div id="root">${SPLASH_HTML}${bodyContent}${SITE_LINKS_HTML}</div>`
   );
 }
 
