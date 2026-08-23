@@ -1463,7 +1463,7 @@ GRADES.forEach((g) => {
       },
       {
         h2: `How EduVerseJr helps in Grade ${g.grade}`,
-        html: `<p>${GRADE_REVA_NOTE}</p>`,
+        html: `<p>${g.helpNote || GRADE_REVA_NOTE}</p>`,
       },
     ],
     faqs: g.faqs,
@@ -1534,7 +1534,7 @@ CODING_COURSES.forEach((c) => {
       },
       {
         h2: 'How EduVerseJr teaches coding',
-        html: `<p>${CODING_REVA_NOTE}</p>`,
+        html: `<p>${c.teachingNote || CODING_REVA_NOTE}</p>`,
       },
     ],
     faqs: c.faqs,

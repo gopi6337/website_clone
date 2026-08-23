@@ -138,7 +138,7 @@ export default function CodingCoursePage() {
         {/* How EduVerseJr helps */}
         <section className="mt-10 rounded-2xl border border-gray-200 p-6 bg-gray-50">
           <h2 className="text-xl font-bold text-gray-900 mb-3">How EduVerseJr teaches coding</h2>
-          <p className="text-gray-700 leading-relaxed">{CODING_REVA_NOTE}</p>
+          <p className="text-gray-700 leading-relaxed">{c.teachingNote || CODING_REVA_NOTE}</p>
           <a
             href={SIGNUP_URL}
             className="inline-flex items-center gap-2 mt-5 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-colors"
