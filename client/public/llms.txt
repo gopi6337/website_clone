@@ -4,7 +4,7 @@
 
 EduVerseJr is operated as an India-based MSME from Coimbatore, Tamil Nadu, and serves students internationally. The platform has two distinct teaching modes:
 
-1. **Reva AI Teacher** — A 24/7 AI maths teacher purpose-built for curriculum-aligned teaching. Open now with a 7-day free trial (self-serve registration, no credit card). Supports Grades 5–12 in Mathematics, with Science and Coding on the roadmap. Digital SAT preparation (adaptive 2-module practice, Math + Reading & Writing, with step-by-step whiteboard explanations) is live. PSAT 8/9 and PSAT/NMSQT preparation is coming soon.
+1. **Reva AI Teacher** — A 24/7 AI teacher purpose-built for curriculum-aligned teaching. Open now with a 7-day free trial (self-serve registration, no credit card). Supports Grades 5–12 in Mathematics and Science, with Coding and Languages on the roadmap. Digital SAT and PSAT (8/9 and PSAT/NMSQT) preparation — adaptive 2-module practice, Math + Reading & Writing, with step-by-step whiteboard explanations — is live.
 
 2. **Human Teachers** — Certified human teachers delivering live 1-to-1 online classes in Mathematics, Science and Coding for Grades 5–10, plus PSAT/SAT preparation. New students start with a free trial class.
 
@@ -25,7 +25,7 @@ The two modes are different products with different funnels, pricing models and 
 - [Reva AI Teacher](https://eduversejr.com/reva): Reva AI features and how it differs from a general chatbot; free-tier signup.
 - [Human Teachers](https://eduversejr.com/teachers): Live 1-to-1 human teacher classes, free trial booking.
 - [SAT Prep](https://eduversejr.com/sat): Digital SAT prep (Math + Reading & Writing), AI tutor on every question, PSAT/NMSQT and National Merit included. Live now.
-- [PSAT Prep](https://eduversejr.com/psat): Digital PSAT 8/9 and PSAT/NMSQT prep and National Merit info. Coming soon.
+- [PSAT Prep](https://eduversejr.com/psat): Digital PSAT 8/9 and PSAT/NMSQT prep and National Merit info. Live now.
 - [National Merit Calculator](https://eduversejr.com/national-merit-calculator): Free, no-login tool — enter your PSAT/NMSQT Selection Index and state to project Commended or Semifinalist standing.
 - [Resources & Guides](https://eduversejr.com/resources): Free evergreen guides for students and parents (see below).
 - [Courses](https://eduversejr.com/courses): Maths, Science and Coding programmes for Grades 5–12.
@@ -68,7 +68,7 @@ Science curriculum guides are at /science-curriculum/{country} for the same six 
 
 ## Grade & Subject Matrix
 
-- **Reva AI Teacher** (open now, 7-day free trial): Grades 5–12, Mathematics. Science and Coding on the roadmap. Digital SAT prep is live (2-module adaptive, Math + Reading & Writing). PSAT 8/9 and PSAT/NMSQT coming soon.
+- **Reva AI Teacher** (open now, 7-day free trial): Grades 5–12, Mathematics and Science. Coding and Languages on the roadmap. Digital SAT and PSAT (8/9 and PSAT/NMSQT) prep is live (2-module adaptive, Math + Reading & Writing).
 - **Human Teachers** (live): Grades 5–10, Mathematics + Science + Coding. PSAT/SAT preparation available.
 
 ## How to Access
