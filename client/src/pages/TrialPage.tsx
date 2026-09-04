@@ -96,7 +96,10 @@ const CSS = `
   font-weight: 700; font-size: 13px; padding: 7px 15px; border-radius: 999px;
   background: rgba(30,64,175,.10); color: var(--blue); border: 1px solid rgba(30,64,175,.20);
 }
-.tp-root .chip.grade { background: transparent; color: var(--ink-soft); font-weight: 600; border-color: var(--line); }
+.tp-root .chip.math  { background: rgba(30,64,175,.10);  color: #1E40AF; border-color: rgba(30,64,175,.28); }
+.tp-root .chip.sci   { background: rgba(21,128,61,.10);  color: #15803D; border-color: rgba(21,128,61,.28); }
+.tp-root .chip.code  { background: rgba(124,58,237,.10); color: #7C3AED; border-color: rgba(124,58,237,.28); }
+.tp-root .chip.grade { background: rgba(180,120,10,.10); color: #B4780A; border-color: var(--gold-line); font-weight: 700; }
 
 .tp-root ul.feats { list-style: none; margin: 0 0 22px; padding: 0; }
 .tp-root ul.feats li {
@@ -205,7 +208,7 @@ export default function TrialPage() {
         <div className="top">
           <span className="eyebrow">👩‍🏫 Female Expert Online Teacher · US · Grade 5–10</span>
           <h1>
-            A real teacher who knows your child <em>by name</em>.
+            Expert Online Experienced <em>Female Teachers</em> for Maths, Science &amp; Coding — Grades 5–10
           </h1>
           <p className="sub">
             Live 1-on-1 online classes with experienced, caring female teachers — taught to your
@@ -230,9 +233,9 @@ export default function TrialPage() {
 
         <div className="body">
           <div className="chips">
-            <span className="chip">Mathematics</span>
-            <span className="chip">Science</span>
-            <span className="chip">Coding</span>
+            <span className="chip math">Mathematics</span>
+            <span className="chip sci">Science</span>
+            <span className="chip code">Coding</span>
             <span className="chip grade">Grades 5–10</span>
           </div>
 
