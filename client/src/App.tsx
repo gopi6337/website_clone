@@ -13,6 +13,7 @@ import SatPage from "./pages/SatPage";
 import NationalMeritCalculatorPage from "./pages/NationalMeritCalculatorPage";
 import CoursesPage from "./pages/CoursesPage";
 import TeachersPage from "./pages/TeachersPage";
+import TrialPage from "./pages/TrialPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import ResourceArticlePage from "./pages/ResourceArticlePage";
 import GradeMathsPage from "./pages/GradeMathsPage";
@@ -58,6 +59,7 @@ function Router() {
         <Route path={"/courses/:slug"} component={GradeMathsPage} />
         <Route path={"/coding/:slug"} component={CodingCoursePage} />
         <Route path={"/teachers"} component={TeachersPage} />
+        <Route path={"/trial"} component={TrialPage} />
         <Route path={"/resources"} component={ResourcesPage} />
         <Route path={"/resources/:slug"} component={ResourceArticlePage} />
         {/* /tutors now redirects → /teachers server-side via vercel.json */}

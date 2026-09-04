@@ -67,6 +67,50 @@ function renderSeoBlock({ h1, intro, sections = [], faqs = [], links = [] }) {
 // Top-level pages — one entry per app route (relative to site root)
 // ─────────────────────────────────────────────────────────────────────
 const topLevelMeta = {
+  'trial': {
+    title: 'Free Trial Class — EduVerseJr Female Expert Online Teachers',
+    description:
+      'Book a free trial class with an experienced female online teacher — live 1-on-1 Maths, Science & Coding for US students in Grades 5–10. No payment, no credit card, no commitment.',
+    ogTitle: 'Free Trial Class with an Expert Female Teacher — EduVerseJr',
+    ogDesc:
+      'Live 1-on-1 online Maths, Science & Coding classes with experienced female teachers, taught to your child\'s US curriculum. Grades 5–10. Book a free trial — no card needed.',
+    bodyContent: renderSeoBlock({
+      h1: 'Free Trial Class — Live 1-on-1 Online Teaching for Grades 5–10',
+      intro: [
+        'EduVerseJr pairs your child with an experienced, background-verified female teacher for live 1-on-1 online classes in Mathematics, Science and Coding, aligned to the United States curriculum (Common Core). Every session is with the same teacher, so your child builds real rapport instead of meeting a new tutor each week.',
+        'Book a free trial class to see it in action — there is no payment, no credit card and no commitment. You choose the time, we adjust around your schedule, and you get a direct WhatsApp line to the teacher plus a progress report after the session.',
+      ],
+      sections: [
+        {
+          h2: 'What is included',
+          p: 'Live 1-on-1 video classes with an interactive whiteboard, the same teacher every session, flexible slot booking, a direct WhatsApp channel with the teacher, and parent progress reports. Subjects cover Mathematics, Science and Coding for Grades 5 through 10.',
+        },
+        {
+          h2: 'How the free trial works',
+          p: 'Tell us your child\'s grade, subject, US state and preferred timing. We confirm a 30–45 minute trial class slot at no cost. After the trial, you decide whether to continue — there is no obligation and no card required to try.',
+        },
+      ],
+      faqs: [
+        {
+          q: 'Is the trial class really free?',
+          a: 'Yes. The first trial class is completely free — no payment and no credit card required. You only continue if you are happy after the trial.',
+        },
+        {
+          q: 'Which grades and subjects do you teach?',
+          a: 'We offer live 1-on-1 Mathematics, Science and Coding classes for students in Grades 5 to 10, taught to the US curriculum.',
+        },
+        {
+          q: 'Will my child have the same teacher each time?',
+          a: 'Yes. Your child is matched with one experienced female teacher who takes every session, so they build a real learning relationship.',
+        },
+      ],
+      links: [
+        { href: '/teachers', label: 'Meet our expert human teachers' },
+        { href: '/courses', label: 'Browse maths courses by grade' },
+        { href: '/', label: 'EduVerseJr home' },
+      ],
+    }),
+  },
   'reva': {
     // Cross-domain canonical → revaaiteacher.com is the primary home for the
     // Reva AI product, so eduversejr.com/reva no longer competes for the same
