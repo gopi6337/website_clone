@@ -176,6 +176,8 @@ export default function TrialPage() {
           content="Book a free trial class with an experienced female online teacher — live 1-on-1 Maths, Science & Coding for US students, Grades 5–10. No payment, no credit card."
         />
         <link rel="canonical" href="https://eduversejr.com/trial" />
+        <meta property="og:image" content="https://eduversejr.com/trial-og.jpg?v=1" />
+        <meta name="twitter:image" content="https://eduversejr.com/trial-og.jpg?v=1" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"

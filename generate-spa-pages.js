@@ -74,6 +74,9 @@ const topLevelMeta = {
     ogTitle: 'Free Trial Class with an Expert Female Teacher — EduVerseJr',
     ogDesc:
       'Live 1-on-1 online Maths, Science & Coding classes with experienced female teachers, taught to your child\'s US curriculum. Grades 5–10. Book a free trial — no card needed.',
+    ogImage: 'https://eduversejr.com/trial-og.jpg?v=1',
+    ogImageAlt:
+      'EduVerseJr — free trial class with an expert female online teacher for Maths, Science & Coding, Grades 5–10, US curriculum.',
     bodyContent: renderSeoBlock({
       h1: 'Free Trial Class — Live 1-on-1 Online Teaching for Grades 5–10',
       intro: [
@@ -1092,6 +1095,27 @@ function injectMeta(html, meta, canonicalUrl, hreflangMap = null) {
     /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/,
     `<meta name="twitter:description" content="${meta.ogDesc}" />`
   );
+
+  // og:image / twitter:image / og:image:alt — per-page social card override.
+  // When a page sets its own ogImage it replaces the site-wide default card so
+  // the link preview matches that page's message (e.g. /trial). Width/height
+  // stay 1200×630 (all our cards use that size).
+  if (meta.ogImage) {
+    html = html.replace(
+      /<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/,
+      `<meta property="og:image" content="${meta.ogImage}" />`
+    );
+    html = html.replace(
+      /<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:image" content="${meta.ogImage}" />`
+    );
+    if (meta.ogImageAlt) {
+      html = html.replace(
+        /<meta\s+property="og:image:alt"\s+content="[^"]*"\s*\/?>/,
+        `<meta property="og:image:alt" content="${meta.ogImageAlt}" />`
+      );
+    }
+  }
 
   // <link rel="canonical"> — insert after </title> or replace existing
   if (!html.includes(`rel="canonical"`)) {
