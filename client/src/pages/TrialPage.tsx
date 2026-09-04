@@ -154,6 +154,14 @@ const CHECK = (
   </svg>
 );
 
+// WhatsApp opens reliably on any phone (unlike mailto:, which needs a
+// configured mail app and is blocked inside some in-app browsers).
+const WHATSAPP_HREF =
+  "https://wa.me/917010879998?text=" +
+  encodeURIComponent(
+    "Hi EduVerseJr! I'd like to book a free trial class for my child (Grades 5–10). "
+  );
+
 const EMAIL_HREF =
   "mailto:info@eduversejr.com?subject=" +
   encodeURIComponent("Free trial class — EduVerseJr") +
@@ -277,16 +285,16 @@ export default function TrialPage() {
               <a className="btn btn-ghost" href="https://eduversejr.com">
                 🌐 Website
               </a>
-              <a className="btn btn-ghost" href={EMAIL_HREF}>
-                ✉️ Email Us
+              <a className="btn btn-ghost" href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer">
+                💬 WhatsApp
               </a>
             </div>
           </div>
         </div>
 
         <div className="foot">
-          <a href="https://eduversejr.com">eduversejr.com</a> &nbsp;·&nbsp; Live online tutoring ·
-          Grades 5–10
+          <a href="https://eduversejr.com">eduversejr.com</a> &nbsp;·&nbsp;{" "}
+          <a href={EMAIL_HREF}>info@eduversejr.com</a> &nbsp;·&nbsp; Grades 5–10
         </div>
       </div>
     </div>
