@@ -184,7 +184,7 @@ export default function TrialPage() {
         <title>Free Trial Class — EduVerseJr Female Expert Teachers</title>
         <meta
           name="description"
-          content="Book a free trial class with an experienced female online teacher — live 1-on-1 Maths, Science & Coding for US & UAE students, Grades 5–10. No payment, no credit card."
+          content="Book a free trial class with an experienced female online teacher — live 1-on-1 Maths, Science & Coding, Grades 5–10. Open for US & UAE, plus Australia, Singapore, UK & Canada. No payment, no credit card."
         />
         <link rel="canonical" href="https://eduversejr.com/trial" />
         <meta property="og:image" content="https://eduversejr.com/trial-og.jpg?v=1" />
@@ -212,7 +212,10 @@ export default function TrialPage() {
           </h1>
           <p className="sub">
             Live 1-on-1 online classes with experienced, caring female teachers — taught to your
-            child's US or UAE school curriculum.
+            child's local school curriculum.
+          </p>
+          <p className="sub" style={{ fontSize: "12.5px", opacity: 0.82, marginTop: "8px" }}>
+            Now open for <strong style={{ color: "#FDE9BB" }}>US &amp; UAE</strong> · also Australia · Singapore · UK · Canada
           </p>
 
           <div className="creds">
@@ -249,7 +252,7 @@ export default function TrialPage() {
             <li>
               {CHECK}
               <span>
-                Post-graduate qualified &amp; background-verified, trained in <b>US &amp; UAE curriculum</b>.
+                Post-graduate qualified &amp; background-verified, trained in <b>your child's curriculum</b>.
               </span>
             </li>
             <li>
