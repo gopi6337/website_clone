@@ -178,6 +178,10 @@ export default function BookingForm() {
                   <SelectContent>
                     <SelectItem value="United States">United States</SelectItem>
                     <SelectItem value="United Arab Emirates (UAE)">United Arab Emirates (UAE)</SelectItem>
+                    <SelectItem value="Australia">Australia</SelectItem>
+                    <SelectItem value="Singapore">Singapore</SelectItem>
+                    <SelectItem value="United Kingdom">United Kingdom</SelectItem>
+                    <SelectItem value="Canada">Canada</SelectItem>
                   </SelectContent>
                 </Select>
               )}

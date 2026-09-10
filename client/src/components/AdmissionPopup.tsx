@@ -11,8 +11,13 @@ import { X, GraduationCap, CheckCircle2 } from "lucide-react";
  * the site. To disable entirely, set POPUP_ON = false (kill-switch).
  */
 const POPUP_ON = true;
-const SEEN_KEY = "eduversejr_admission_popup_seen_v1";
+const SEEN_KEY = "eduversejr_admission_popup_seen_v1"; // stores last-dismissed timestamp (ms)
 const OPEN_DELAY_MS = 1500;
+// Admissions drive runs ~3 months — popup auto-stops showing after this date.
+const CAMPAIGN_END = new Date("2026-12-10T23:59:59");
+// A visitor who dismisses is reminded again after this many days (keeps the
+// drive active across the 3-month window without nagging on every visit).
+const REMIND_AFTER_DAYS = 7;
 
 export default function AdmissionPopup() {
   const [open, setOpen] = useState(false);
@@ -20,13 +25,15 @@ export default function AdmissionPopup() {
   // Auto-open once per visitor, after a short delay.
   useEffect(() => {
     if (!POPUP_ON) return;
-    let seen = false;
+    if (Date.now() > CAMPAIGN_END.getTime()) return; // drive over — stop showing
+    let last = 0;
     try {
-      seen = localStorage.getItem(SEEN_KEY) === "1";
+      last = parseInt(localStorage.getItem(SEEN_KEY) || "0", 10) || 0;
     } catch {
       // localStorage blocked (private mode) — just show once this session.
     }
-    if (seen) return;
+    const remindMs = REMIND_AFTER_DAYS * 24 * 60 * 60 * 1000;
+    if (last && Date.now() - last < remindMs) return; // dismissed recently
     const t = setTimeout(() => setOpen(true), OPEN_DELAY_MS);
     return () => clearTimeout(t);
   }, []);
@@ -34,7 +41,7 @@ export default function AdmissionPopup() {
   const close = () => {
     setOpen(false);
     try {
-      localStorage.setItem(SEEN_KEY, "1");
+      localStorage.setItem(SEEN_KEY, String(Date.now()));
     } catch {
       /* ignore */
     }
@@ -100,8 +107,12 @@ export default function AdmissionPopup() {
             Expert Online Experienced <span className="text-amber-300">Female Teachers</span>
           </h3>
           <p className="mt-2 text-sm text-white/90">
-            Live 1-on-1 Maths, Science &amp; Coding — Grades 5–10, taught to your child's US or UAE
+            Live 1-on-1 Maths, Science &amp; Coding — Grades 5–10, taught to your child's local
             school curriculum.
+          </p>
+          <p className="mt-3 text-[11px] text-white/70">
+            Now open for <span className="font-semibold text-white/90">US &amp; UAE</span> · also
+            Australia · Singapore · UK · Canada
           </p>
         </div>
 
