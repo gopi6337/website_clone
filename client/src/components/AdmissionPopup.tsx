@@ -97,8 +97,8 @@ export default function AdmissionPopup() {
 
         {/* Header band */}
         <div className="bg-gradient-to-br from-blue-700 to-blue-500 px-7 pt-7 pb-6 text-white">
-          <span className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide">
-            <GraduationCap className="w-3.5 h-3.5" /> Admissions Open · US &amp; UAE
+          <span className="inline-flex items-center gap-2 bg-amber-400 text-blue-900 border border-amber-300 rounded-full px-4 py-1.5 text-sm font-extrabold uppercase tracking-wide shadow-md">
+            <GraduationCap className="w-4 h-4" /> Admissions Open · US &amp; UAE
           </span>
           <h3
             id="admission-popup-title"
