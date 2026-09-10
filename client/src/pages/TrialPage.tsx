@@ -184,7 +184,7 @@ export default function TrialPage() {
         <title>Free Trial Class — EduVerseJr Female Expert Teachers</title>
         <meta
           name="description"
-          content="Book a free trial class with an experienced female online teacher — live 1-on-1 Maths, Science & Coding for US students, Grades 5–10. No payment, no credit card."
+          content="Book a free trial class with an experienced female online teacher — live 1-on-1 Maths, Science & Coding for US & UAE students, Grades 5–10. No payment, no credit card."
         />
         <link rel="canonical" href="https://eduversejr.com/trial" />
         <meta property="og:image" content="https://eduversejr.com/trial-og.jpg?v=1" />
@@ -206,13 +206,13 @@ export default function TrialPage() {
         </div>
 
         <div className="top">
-          <span className="eyebrow">👩‍🏫 Female Expert Online Teacher · US · Grade 5–10</span>
+          <span className="eyebrow">🎓 Admissions Open · US &amp; UAE · Grades 5–10</span>
           <h1>
             Expert Online Experienced <em>Female Teachers</em> for Maths, Science &amp; Coding — Grades 5–10
           </h1>
           <p className="sub">
             Live 1-on-1 online classes with experienced, caring female teachers — taught to your
-            child's US school curriculum.
+            child's US or UAE school curriculum.
           </p>
 
           <div className="creds">
@@ -249,7 +249,7 @@ export default function TrialPage() {
             <li>
               {CHECK}
               <span>
-                Post-graduate qualified &amp; background-verified, trained in <b>US curriculum</b>.
+                Post-graduate qualified &amp; background-verified, trained in <b>US &amp; UAE curriculum</b>.
               </span>
             </li>
             <li>
@@ -277,7 +277,7 @@ export default function TrialPage() {
           <p className="proof">
             <span className="stars">★★★★★</span>
             <br />
-            Trusted by <b>families across multiple US states</b>
+            Trusted by <b>families across the US &amp; UAE</b>
           </p>
 
           <div className="cta">

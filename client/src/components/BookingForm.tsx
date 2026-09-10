@@ -32,6 +32,7 @@ const countryCodes = [
 const bookingSchema = z.object({
   parentName: z.string().min(2, "Name must be at least 2 characters"),
   parentEmail: z.string().email("Please enter a valid email address"),
+  country: z.string().min(1, "Please select your country"),
   countryCode: z.string().min(1, "Please select a country code"),
   phoneNumber: z.string().min(6, "Please enter a valid phone number"),
   childGrade: z.string().min(1, "Please select a grade"),
@@ -62,6 +63,7 @@ export default function BookingForm() {
     defaultValues: {
       parentName: "",
       parentEmail: "",
+      country: "",
       countryCode: "+91",
       phoneNumber: "",
       childGrade: "",
@@ -87,6 +89,7 @@ export default function BookingForm() {
           subject: data.subjectInterest,
           preferred_time: "",
           notes: [
+            `Country: ${data.country}`,
             `Phone: ${data.countryCode} ${data.phoneNumber}`,
             data.message ? `Message: ${data.message}` : "",
           ].filter(Boolean).join("\n"),
@@ -152,6 +155,35 @@ export default function BookingForm() {
             />
             {errors.parentEmail && (
               <p className="text-red-500 text-sm mt-1">{errors.parentEmail.message}</p>
+            )}
+          </div>
+
+          {/* Country */}
+          <div>
+            <Label htmlFor="country" className="text-base font-semibold">
+              Country <span className="text-red-500">*</span>
+            </Label>
+            <Controller
+              name="country"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  disabled={submitStatus === "loading"}
+                >
+                  <SelectTrigger className="mt-2">
+                    <SelectValue placeholder="Select your country" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="United States">United States</SelectItem>
+                    <SelectItem value="United Arab Emirates (UAE)">United Arab Emirates (UAE)</SelectItem>
+                  </SelectContent>
+                </Select>
+              )}
+            />
+            {errors.country && (
+              <p className="text-red-500 text-sm mt-1">{errors.country.message}</p>
             )}
           </div>
 
