@@ -1,22 +1,10 @@
-import { useState, useEffect, useRef } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
-  const coursesRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (coursesRef.current && !coursesRef.current.contains(e.target as Node)) {
-        setIsCoursesOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -46,28 +34,9 @@ export default function Header() {
             <Link href="/about" className="nav-link whitespace-nowrap">
               About
             </Link>
-            <div className="relative" ref={coursesRef}>
-              <button
-                onClick={() => setIsCoursesOpen(!isCoursesOpen)}
-                className="nav-link flex items-center gap-1 whitespace-nowrap"
-              >
-                Courses
-                <ChevronDown size={16} className={`transition-transform ${isCoursesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {isCoursesOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[150px] border border-gray-100">
-                  <Link href="/courses" onClick={() => setIsCoursesOpen(false)}>
-                    <span className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Maths</span>
-                  </Link>
-                  <Link href="/courses" onClick={() => setIsCoursesOpen(false)}>
-                    <span className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Science</span>
-                  </Link>
-                  <Link href="/courses" onClick={() => setIsCoursesOpen(false)}>
-                    <span className="block px-4 py-2 hover:bg-blue-50 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">Coding</span>
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link href="/courses" className="nav-link whitespace-nowrap">
+              Courses
+            </Link>
             <Link href="/teachers" className="nav-link whitespace-nowrap">
               Human Teachers
             </Link>

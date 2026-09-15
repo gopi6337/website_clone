@@ -1,5 +1,48 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Users } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const HERO_SLIDES = [
+  { src: "/hero1.webp", alt: "A girl wearing headphones smiling during an online lesson" },
+  { src: "/hero2.webp", alt: "A boy taking notes while studying online on a laptop" },
+  { src: "/hero3.webp", alt: "A boy wearing headphones focused on an online class" },
+  { src: "/hero4.webp", alt: "A girl wearing headphones smiling at her computer" },
+  { src: "/hero5.webp", alt: "A boy learning online on a laptop in a bright room" },
+  { src: "/hero6.webp", alt: "A boy attentively watching an online lesson on a laptop" },
+  { src: "/hero7.webp", alt: "A cheerful boy waving during a video online class" },
+  { src: "/hero8.webp", alt: "A girl enjoying an online lesson with headphones" },
+];
+
+function HeroSlideshow() {
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setActive((p) => (p + 1) % HERO_SLIDES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="relative w-full h-full">
+      {HERO_SLIDES.map((s, idx) => (
+        <img
+          key={s.src}
+          src={s.src}
+          alt={s.alt}
+          width={900}
+          height={600}
+          fetchPriority={idx === 0 ? "high" : undefined}
+          loading={idx === 0 ? "eager" : "lazy"}
+          decoding="async"
+          aria-hidden={idx === active ? undefined : true}
+          className="absolute inset-0 w-full h-full object-cover rounded-3xl transition-opacity duration-1000 ease-in-out"
+          style={{
+            opacity: idx === active ? 1 : 0,
+            maskImage: 'linear-gradient(to right, transparent 0%, black 15%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)',
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function HeroSection() {
   return (
@@ -88,18 +131,9 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Right — child learning photo */}
+          {/* Right — child learning photos (crossfade slideshow) */}
           <div className="relative h-96 md:h-full flex items-center justify-center">
-            <img
-              src="/edu_pic1.webp"
-              alt="Child learning with EduVerseJr"
-              width="390"
-              height="255"
-              fetchPriority="high"
-              decoding="async"
-              className="w-full h-full object-cover rounded-3xl"
-              style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 15%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)' }}
-            />
+            <HeroSlideshow />
           </div>
 
         </div>
