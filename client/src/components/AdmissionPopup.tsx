@@ -7,8 +7,9 @@ import { X, GraduationCap, CheckCircle2 } from "lucide-react";
  * once per visitor (persisted in localStorage), and is dismissible via ✕,
  * click-outside, or Esc. CTA scrolls to the booking form (#booking).
  *
- * Scoped to the homepage only (rendered from Home.tsx). Light theme to match
- * the site. To disable entirely, set POPUP_ON = false (kill-switch).
+ * Mounted app-wide from App.tsx so it shows on every route (any inbound or
+ * shared link, not just the homepage). Light theme to match the site. To
+ * disable entirely, set POPUP_ON = false (kill-switch).
  */
 const POPUP_ON = true;
 const SEEN_KEY = "eduversejr_admission_popup_seen_v1"; // stores last-dismissed timestamp (ms)
@@ -63,11 +64,18 @@ export default function AdmissionPopup() {
 
   const goToBooking = () => {
     close();
-    // Let the modal unmount, then smooth-scroll to the booking form.
+    // Let the modal unmount, then reach the booking form. The popup now mounts
+    // app-wide, so it can fire on a page that has no #booking section — in that
+    // case send the visitor to the homepage booking form (Home scrolls to the
+    // hash target on load), otherwise smooth-scroll in place.
     setTimeout(() => {
       const el = document.getElementById("booking");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-      else window.location.hash = "#booking";
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+        window.location.href = `${base}/#booking`;
+      }
     }, 60);
   };
 

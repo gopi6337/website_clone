@@ -15,7 +15,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingSection from "@/components/BookingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
-import AdmissionPopup from "@/components/AdmissionPopup";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Brain, FlaskConical, Code2, ArrowRight } from "lucide-react";
 
@@ -186,8 +185,6 @@ export default function Home() {
       <div id="contact">
         <FooterSection />
       </div>
-
-      <AdmissionPopup />
     </div>
   );
 }

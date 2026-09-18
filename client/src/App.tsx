@@ -26,6 +26,7 @@ import TermsOfUsePage from "./pages/TermsOfUsePage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import RefundPolicyPage from "./pages/RefundPolicyPage";
 import WhatsAppButton from "./components/WhatsAppButton";
+import AdmissionPopup from "./components/AdmissionPopup";
 
 // 2026-07-14 (visitor bug report): wouter keeps the scroll position across
 // client-side route changes, and several pages (Home, About, Teachers, Courses)
@@ -94,6 +95,9 @@ function App() {
           <Toaster />
           <Router />
           <WhatsAppButton />
+          {/* Admissions-drive popup — mounted app-wide (not just Home) so it
+              shows no matter which page an inbound/shared link lands on. */}
+          <AdmissionPopup />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
