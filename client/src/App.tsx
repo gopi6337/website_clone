@@ -84,9 +84,9 @@ function Router() {
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
-// Kill-switch for the admissions-drive popup. Set back to `true` to re-enable it.
-// Disabled 2026-10-09 to keep the landing page clean during the Claude Startups review.
-const SHOW_ADMISSION_POPUP = false;
+// Kill-switch for the admissions-drive popup. Set to `false` to hide it.
+// Re-enabled 2026-10-09 after the Claude Startups application.
+const SHOW_ADMISSION_POPUP = true;
 
 function App() {
   return (
