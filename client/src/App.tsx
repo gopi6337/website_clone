@@ -84,6 +84,10 @@ function Router() {
 //   to keep consistent foreground/background color across components
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
+// Kill-switch for the admissions-drive popup. Set back to `true` to re-enable it.
+// Disabled 2026-10-09 to keep the landing page clean during the Claude Startups review.
+const SHOW_ADMISSION_POPUP = false;
+
 function App() {
   return (
     <ErrorBoundary>
@@ -96,8 +100,9 @@ function App() {
           <Router />
           <WhatsAppButton />
           {/* Admissions-drive popup — mounted app-wide (not just Home) so it
-              shows no matter which page an inbound/shared link lands on. */}
-          <AdmissionPopup />
+              shows no matter which page an inbound/shared link lands on.
+              Gated by SHOW_ADMISSION_POPUP (currently OFF). */}
+          {SHOW_ADMISSION_POPUP && <AdmissionPopup />}
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
