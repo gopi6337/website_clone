@@ -10,6 +10,7 @@ import AboutPage from "./pages/AboutPage";
 import RevaPage from "./pages/RevaPage";
 import PsatPage from "./pages/PsatPage";
 import SatPage from "./pages/SatPage";
+import NaplanPage from "./pages/NaplanPage";
 import NationalMeritCalculatorPage from "./pages/NationalMeritCalculatorPage";
 import CoursesPage from "./pages/CoursesPage";
 import TeachersPage from "./pages/TeachersPage";
@@ -55,6 +56,7 @@ function Router() {
         <Route path={"/reva"} component={RevaPage} />
         <Route path={"/psat"} component={PsatPage} />
         <Route path={"/sat"} component={SatPage} />
+        <Route path={"/naplan-prep"} component={NaplanPage} />
         <Route path={"/national-merit-calculator"} component={NationalMeritCalculatorPage} />
         <Route path={"/courses"} component={CoursesPage} />
         <Route path={"/courses/:slug"} component={GradeMathsPage} />

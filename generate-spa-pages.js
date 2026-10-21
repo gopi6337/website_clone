@@ -350,6 +350,67 @@ const topLevelMeta = {
       },
     ],
   },
+  'naplan-prep': {
+    title: 'NAPLAN Numeracy Prep (Years 7 & 9) — AI That Teaches | EduVerseJr',
+    description: 'Free NAPLAN numeracy practice for Years 7 & 9 by Reva AI: a diagnostic mock, step-by-step teaching on your weak ACARA strands, and an indicative proficiency report. Aligned to the Australian Curriculum (ACARA v9).',
+    ogTitle: 'NAPLAN Numeracy Prep that Actually Teaches — Reva AI',
+    ogDesc: 'Free Years 7 & 9 NAPLAN numeracy prep: diagnostic mock → Reva teaches your weak strands step-by-step → re-test. Aligned to ACARA v9. No payment required.',
+    bodyContent: renderSeoBlock({
+      h1: 'NAPLAN Numeracy Prep for Years 7 & 9 — An AI Tutor That Teaches the Gaps',
+      intro: [
+        'Most NAPLAN prep only tests your child. Reva AI is different: it runs a short diagnostic mock across all three numeracy strands, finds exactly which skills are weak, then teaches each one step-by-step — with full worked solutions, not just the answer. Built for Australian students in Years 7 and 9 and aligned to the Australian Curriculum (ACARA v9).',
+        'Reva covers Number & Algebra, Measurement & Geometry, and Statistics & Probability in the real NAPLAN structure — a calculator section (Part A) and a non-calculator section (Part B). After each timed mock, your child gets an indicative proficiency level and a per-strand breakdown that points straight to what to practise next. It is free to start, with no payment required.',
+      ],
+      sections: [
+        {
+          h2: 'The diagnostic → teach → re-test loop',
+          p: 'Good tutoring follows a simple loop: find the gaps, teach them, then check again. Reva does this at AI scale. Your child takes a short timed mock, Reva marks it and identifies the weakest ACARA strands, then works through each weak skill with step-by-step explanations. A follow-up mock shows the proficiency climbing — the same loop a private tutor uses, available any time.',
+        },
+        {
+          h2: 'Full ACARA numeracy coverage',
+          p: 'Reva practises every NAPLAN numeracy strand: Number & Algebra (fractions, ratios, percentages, indices, linear and non-linear relationships), Measurement & Geometry (area, volume, angles, Pythagoras, trigonometry, scale and transformations), and Statistics & Probability (data displays, summarising data, probability and relative frequency). Hundreds of practice questions, for both Year 7 and Year 9.',
+        },
+        {
+          h2: 'A timed mock exam with an indicative proficiency report',
+          p: 'The mock mirrors NAPLAN: a calculator-allowed Part A and a non-calculator Part B across all three strands. At the end your child gets an indicative proficiency level (Exceeding, Strong, Developing, or Needs additional support), a per-part and per-strand score breakdown, and a direct link to practise the weakest strands. It is an indicative guide to help prepare — not an official NAPLAN test or score.',
+        },
+        {
+          h2: 'Not another practice bank',
+          p: 'Static practice tests tell your child what they got wrong. Reva shows them why — teaching the method on each missed question, adapting the next round to their weak skills, and tracking progress over time. The difference is between an answer key and a patient tutor who never runs out of time.',
+        },
+        {
+          h2: 'Free to start',
+          p: 'NAPLAN numeracy prep with Reva is free for Australian students — create an account and begin a diagnostic mock straight away, no payment required. Reva runs on the same AI maths-teaching engine that powers EduVerseJr\'s full Years 5–12 maths courses, aligned to ACARA.',
+        },
+      ],
+      faqs: [
+        { q: 'Which year levels is this NAPLAN prep for?', a: 'Reva\'s NAPLAN numeracy prep is built for Years 7 and 9 — the secondary NAPLAN year levels — and is aligned to the Australian Curriculum (ACARA v9).' },
+        { q: 'Does it cover both the calculator and non-calculator sections?', a: 'Yes. The mock exam mirrors NAPLAN with a calculator-allowed Part A and a non-calculator Part B, across all three numeracy strands.' },
+        { q: 'Is it really free?', a: 'Yes — you can create an account and start a diagnostic mock with no payment required. Reva\'s NAPLAN numeracy practice is free to Australian students.' },
+        { q: 'Is this an official NAPLAN test?', a: 'No. Reva provides original practice questions and an indicative proficiency result to help your child prepare. It is not an official NAPLAN test or score, and is not affiliated with or endorsed by ACARA.' },
+        { q: 'How is this different from a practice-test booklet?', a: 'A booklet marks your child and stops there. Reva teaches every missed question step-by-step, finds the weak ACARA strands, and re-tests to show improvement — the diagnostic-teach-retest loop a tutor uses.' },
+        { q: 'What does the proficiency report show?', a: 'After each timed mock, your child gets an indicative proficiency level plus a per-part (calculator / non-calculator) and per-strand breakdown, with a direct link to practise their weakest strands next.' },
+      ],
+      links: [
+        { href: 'https://au.eduversejr.com/register', label: 'Start free NAPLAN practice (Years 7 & 9)' },
+        { href: '/curriculum/australia', label: 'Australian ACARA Maths curriculum guide (Years 5–10)' },
+        { href: '/reva', label: 'Meet Reva — the AI tutor behind NAPLAN prep' },
+        { href: '/courses', label: 'See all Maths, Science & Coding courses' },
+      ],
+    }),
+    extraSchema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'EducationalOccupationalProgram',
+        name: 'NAPLAN Numeracy Prep by Reva AI (Years 7 & 9)',
+        url: 'https://eduversejr.com/naplan-prep',
+        description: 'Free AI-tutored NAPLAN numeracy preparation for Years 7 and 9, aligned to the Australian Curriculum (ACARA v9): a diagnostic mock, step-by-step teaching on weak strands, and an indicative proficiency report.',
+        provider: { '@id': ORG_ID },
+        educationalProgramMode: 'online',
+        occupationalCategory: 'NAPLAN numeracy preparation',
+      },
+    ],
+  },
   'about': {
     title: 'About EduVerseJr — Reva AI + Expert Human Teachers',
     description: 'EduVerseJr blends Reva AI Teacher (24/7) with expert human teachers for live 1-to-1 Maths, Science and Coding classes, Grades 5–12.',
