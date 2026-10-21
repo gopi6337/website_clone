@@ -49,6 +49,9 @@ export default function Header() {
             <Link href="/psat" className="nav-link whitespace-nowrap">
               PSAT Prep
             </Link>
+            <Link href="/naplan-prep" className="nav-link whitespace-nowrap">
+              NAPLAN Prep
+            </Link>
             <Link href="/resources" className="nav-link whitespace-nowrap">
               Resources
             </Link>
@@ -108,6 +111,9 @@ export default function Header() {
             </Link>
             <Link href="/psat" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               PSAT Prep
+            </Link>
+            <Link href="/naplan-prep" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              NAPLAN Prep
             </Link>
             <Link href="/resources" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Resources
